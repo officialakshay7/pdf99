@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cookie Policy - PDF99</title>
+  <meta name="description"
+    content="PDF99 Cookie Policy - Learn which cookies we use, why we use them, how long they last and how to control or opt out of cookie tracking." />
+  <meta name="keywords"
+    content="pdf99 cookies, cookie policy, cookie consent, analytics cookies, tracking, cookie settings" />
+  <link rel="canonical" href="https://www.pdf99.org/pages/cookie" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#ef4444" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cookie Policy - PDF99" />
+  <meta property="og:description"
+    content="Learn which cookies PDF99 uses, why we use them, retention and how to manage your cookie preferences." />
+  <meta property="og:url" content="https://www.pdf99.org/pages/cookie" />
+  <meta property="og:site_name" content="PDF99" />
+  <meta property="og:image" content="https://www.pdf99.org/assets/og-image-cookie.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cookie Policy - PDF99" />
+  <meta name="twitter:description"
+    content="Learn which cookies PDF99 uses, why we use them, retention and how to manage your cookie preferences." />
+  <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-cookie.png" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    as="style" />
+
+  <!-- Favicon & manifest -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <!-- Structured data (WebPage + ItemList of cookie categories) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Cookie Policy",
+        "url": "https://www.pdf99.org/pages/cookie",
+        "description": "Cookie Policy for PDF99 describing cookie usage, retention and opt-out options."
+      }
+    </script>
+
+  <!-- libs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+    /* Hide scrollbar universally but keep scroll functionality */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    :root {
+      --nav-h: 72px;
+      --footer-h: auto;
+      --content-max-w: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body {
+      background: #f9fafb;
+      padding-top: var(--nav-h);
+      padding-bottom: var(--footer-h);
+      color: #111827;
+    }
+
+    nav.site-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: var(--nav-h);
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: var(--content-max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 18px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 70;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 70;
+    }
+
+    .nav-links {
+      color: #374151;
+      font-size: 13px;
+      text-transform: uppercase;
+      gap: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .more-dropdown {
+      position: relative;
+    }
+
+    .more-dropdown-menu {
+      position: absolute;
+      top: calc(var(--nav-h));
+      right: 0;
+      background: #fff;
+      border: 1px solid #e6edf3;
+      border-radius: 8px;
+      padding: 8px 0;
+      display: none;
+      min-width: 200px;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+    }
+
+    .more-dropdown-menu.open {
+      display: block;
+    }
+
+    .more-dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .more-dropdown-menu a:hover {
+      background: #fbfbfd;
+      color: #ef4444;
+    }
+
+    @media (max-width: 768px) {
+      .more-dropdown {
+        display: none !important;
+      }
+
+      .nav-center {
+        display: none !important;
+      }
+    }
+
+    .mobile-hamburger {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-hamburger {
+        display: inline-flex;
+      }
+    }
+
+    .mobile-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 260px;
+      background: #fff;
+      transform: translateX(-110%);
+      transition: transform 0.26s;
+      padding: 16px;
+      border-right: 1px solid #eef2f6;
+      z-index: 980;
+      overflow: auto;
+    }
+
+    .mobile-sidebar.open {
+      transform: translateX(0);
+    }
+
+    .mobile-sidebar .close {
+      display: block;
+      margin-bottom: 12px;
+      margin-left: auto;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .mobile-sidebar a {
+      display: block;
+      padding: 10px 8px;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .mobile-sidebar a:hover {
+      background: #f8fafc;
+      color: #ef4444;
+    }
+
+    .mobile-more-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .mobile-more-list {
+      display: none;
+      margin-top: 6px;
+      padding-left: 6px;
+    }
+
+    .mobile-more-list a {
+      padding: 8px 6px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .mobile-more-list.open {
+      display: block;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 920;
+      display: none;
+    }
+
+    .overlay.open {
+      display: block;
+    }
+
+    footer.site-footer {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: var(--footer-h);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #eee;
+      z-index: 60;
+      padding: 28px 18px;
+    }
+
+    .footer-inner {
+      width: 100%;
+      max-width: var(--content-max-w);
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col h4 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #374151;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 6px 0;
+    }
+
+    .page-wrap {
+      max-width: var(--content-max-w);
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 28px 0;
+    }
+
+    .hero .intro {
+      flex: 1;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b7280;
+    }
+
+    .cookie-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px;
+      border: 1px solid #eef2f6;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.03);
+    }
+
+    .cookie-section {
+      margin-top: 18px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .cookie-section h4 {
+      margin: 12px 0 8px;
+      font-size: 16px;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .cookie-section p,
+    .cookie-section li {
+      margin: 0 0 10px 0;
+      color: #374151;
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .cookie-table th,
+    .cookie-table td {
+      padding: 10px;
+      border: 1px solid #eef2f6;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    .cookie-table th {
+      background: #fafafa;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #ef4444;
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- hidden H1 for SEO -->
+  <h1 class="sr-only">Cookie Policy - PDF99</h1>
+
+  <!-- mobile sidebar -->
+  <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
+    <button id="mobile-sidebar-close" class="close">✕</button>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../pdf-converter">PDF Converter</a>
+      <a href="../compress-pdf">Compress PDF</a>
+      <a href="../merge-pdf">Merge PDF</a>
+
+      <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
+
+      <div>
+        <div id="mobile-more-toggle" class="mobile-more-toggle">
+          <span>More</span>
+          <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
+        </div>
+        <div id="mobile-more-list" class="mobile-more-list">
+          <a href="../jpg-to-pdf">JPG to PDF</a>
+          <a href="../split-pdf">Split PDF</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="brand">
+          <h1 class="text-2xl font-bold text-red-600">PDF99</h1>
+        </div>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <div class="nav-links">
+          <a href="../" class="hover:text-red-600">Home</a>
+          <a href="../pdf-converter" class="hover:text-red-600">PDF Converter</a>
+          <a href="../compress-pdf" class="hover:text-red-600">Compress PDF</a>
+          <a href="../merge-pdf" class="hover:text-red-600">Merge PDF</a>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="more-dropdown" id="more-dropdown">
+          <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
+            aria-expanded="false">
+            More
+            <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
+          </button>
+          <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
+            <a href="../jpg-to-pdf">JPG to PDF</a>
+            <a href="../split-pdf">Split PDF</a>
+          </div>
+        </div>
+
+        <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <div class="page-wrap">
+    <main>
+      <section class="hero" aria-labelledby="cookie-heading">
+        <div class="intro">
+          <h2 id="cookie-heading">Cookie Policy</h2>
+          <p style="margin-top: 6px; color: #6b7280">
+            This page explains the cookies and similar technologies used by
+            PDF99, why we use them, and how you can control them.
+          </p>
+        </div>
+      </section>
+
+      <section class="cookie-card" aria-labelledby="cookie-content">
+        <div id="cookie-content" class="cookie-section">
+          <h4>What are cookies?</h4>
+          <p>
+            Cookies are small text files stored on your device by websites you
+            visit. They help websites remember your preferences and improve
+            functionality. We also use similar technologies (local storage,
+            pixels) for analytics and performance.
+          </p>
+
+          <h4>Why we use cookies</h4>
+          <p>We use cookies to:</p>
+          <ul>
+            <li>Remember user preferences (e.g., language, UI choices).</li>
+            <li>Provide site functionality and keep sessions secure.</li>
+            <li>
+              Collect anonymized analytics to improve performance and fix
+              errors.
+            </li>
+            <li>
+              Support optional features such as remembering consent choices.
+            </li>
+          </ul>
+
+          <h4>Cookie categories</h4>
+          <table class="cookie-table" role="table" aria-label="Cookies used by PDF99">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Purpose</th>
+                <th>Examples & retention</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Essential</strong></td>
+                <td>
+                  Required for the site to function (session, security).
+                </td>
+                <td>
+                  Session identifiers - expire when the session ends or within
+                  24 hours.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Preferences</strong></td>
+                <td>Remember user settings (language, UI preferences).</td>
+                <td>Language/UI cookies - typically 1 month to 1 year.</td>
+              </tr>
+              <tr>
+                <td><strong>Analytics</strong></td>
+                <td>
+                  Anonymous usage metrics to improve performance and
+                  reliability.
+                </td>
+                <td>
+                  Google Analytics / similar - 14 months (or provider
+                  default).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Marketing (third-party)</strong></td>
+                <td>
+                  Used by third parties for advertising and tracking across
+                  sites (if enabled).
+                </td>
+                <td>
+                  Depends on third-party provider; often 30 days to 2 years.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Third-party cookies</h4>
+          <p>
+            We use third-party services (e.g., analytics, CDN, error
+            monitoring). Those providers may set their own cookies; we do not
+            control their retention policies. Examples of third parties we may
+            use include Google Analytics, Cloudflare, and Sentry. Consult each
+            provider’s privacy page for details.
+          </p>
+
+          <h4>How to manage cookies</h4>
+          <p>You can control cookie preferences in several ways:</p>
+          <ul>
+            <li>
+              Use the cookie controls provided by this site (if visible) to
+              enable/disable non-essential cookies.
+            </li>
+            <li>
+              Disable or clear cookies in your browser settings - see your
+              browser’s help for instructions.
+            </li>
+            <li>
+              Use browser extensions that block trackers or use your browser’s
+              Do Not Track setting (note: blocking some cookies may break
+              features).
+            </li>
+          </ul>
+
+          <h4>Opt-out links (examples)</h4>
+          <p>
+            Some analytics and advertising providers offer opt-out options.
+            Examples (visit the provider for the latest tools):
+          </p>
+          <ul>
+            <li>Google Analytics opt-out browser add-on</li>
+            <li>Network Advertising Initiative - consumer opt-out tools</li>
+          </ul>
+          <p class="muted">
+            (Note: the links above are illustrative. For up-to-date opt-out
+            tools, visit the respective provider websites.)
+          </p>
+
+          <h4>Do we use cookies for files?</h4>
+          <p>
+            We do not store file contents in cookies. Files uploaded for
+            processing are treated as User Content and are handled according
+            to our Privacy & Security policy.
+          </p>
+
+          <h4>Data retention</h4>
+          <p>
+            Cookie retention times depend on cookie type and provider.
+            Essential cookies are short-lived; analytics and marketing cookies
+            are set per provider defaults. You can remove cookies at any time
+            using browser controls.
+          </p>
+
+          <h4>Changes to this Cookie Policy</h4>
+          <p>
+            We may update this policy from time to time. Significant changes
+            will be posted here with an updated effective date.
+          </p>
+
+          <h4>Contact</h4>
+          <p>
+            If you have questions about our use of cookies or wish to request
+            cookie-related data, contact us at
+            <a href="mailto:support@pdf99.org">support@pdf99.org</a> or visit
+            our <a href="/pages/contact">Contact</a> page.
+          </p>
+
+          <p style="margin-top: 12px; color: #6b7280; font-size: 13px">
+            Effective date: <strong>October 1, 2025</strong>
+          </p>
+
+          <div style="margin-top: 16px">
+            <button id="cookie-clear" class="btn" type="button" aria-label="Clear non-essential cookies">
+              Clear non-essential cookies
+            </button>
+            <span class="muted" style="margin-left: 12px">Clearing may log you out and reset preferences.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>About PDF99</h4>
+        <p style="margin: 0; color: #6b7280; font-size: 13px">
+          PDF99 provides fast, private in-browser PDF utilities for everyday
+          document tasks - no installs, no fuss.
+        </p>
+        <div style="margin-top: 12px; font-size: 13px; color: #374151">
+          Follow us:
+        </div>
+        <div style="
+              margin-top: 8px;
+              display: flex;
+              gap: 8px;
+              align-items: center;
+            ">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="../">Home</a>
+        <a href="../pdf-converter">PDF Converter</a>
+        <a href="../merge-pdf">Merge PDF</a>
+        <a href="../split-pdf">Split PDF</a>
+        <a href="../compress-pdf">Compress PDF</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="faq">FAQ</a>
+        <a href="help">How to use</a>
+        <a href="contact">Contact</a>
+        <a href="terms">Terms of Service</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal & Privacy</h4>
+        <a href="privacy">Privacy & Security</a>
+        <a href="cookie">Cookie Policy</a>
+        <a href="security">Security</a>
+        <div style="margin-top: 18px; color: #6b7280; font-size: 13px">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          PDF99 - All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Nav & UI helpers
+      const moreToggle = document.getElementById("more-dropdown-toggle");
+      const moreMenu = document.getElementById("more-dropdown-menu");
+      if (moreToggle) {
+        moreToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          moreMenu.classList.toggle("open");
+        });
+        document.addEventListener("click", () => {
+          moreMenu.classList.remove("open");
+        });
+      }
+
+      const mobileHamburger = document.getElementById("mobile-hamburger");
+      const mobileSidebar = document.getElementById("mobile-sidebar");
+      const mobileSidebarClose = document.getElementById(
+        "mobile-sidebar-close"
+      );
+      const overlay = document.getElementById("overlay");
+
+      const mobileMoreToggle = document.getElementById("mobile-more-toggle");
+      const mobileMoreList = document.getElementById("mobile-more-list");
+      const mobileMoreIcon = document.getElementById("mobile-more-icon");
+
+      if (mobileMoreToggle) {
+        mobileMoreToggle.addEventListener("click", () => {
+          const isOpen = mobileMoreList.classList.toggle("open");
+          mobileMoreIcon.classList.toggle("fa-chevron-down", !isOpen);
+          mobileMoreIcon.classList.toggle("fa-chevron-up", isOpen);
+        });
+      }
+
+      mobileHamburger &&
+        mobileHamburger.addEventListener("click", () => {
+          mobileSidebar.classList.add("open");
+          mobileSidebar.setAttribute("aria-hidden", "false");
+          overlay.classList.add("open");
+          document.body.classList.add("panel-open");
+        });
+      mobileSidebarClose &&
+        mobileSidebarClose.addEventListener("click", () => {
+          mobileSidebar.classList.remove("open");
+          mobileSidebar.setAttribute("aria-hidden", "true");
+          overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        });
+
+      overlay &&
+        overlay.addEventListener("click", () => {
+          mobileSidebar && mobileSidebar.classList.remove("open");
+          document.querySelector(".settings-panel") &&
+            document
+              .querySelector(".settings-panel")
+              .classList.remove("open");
+          overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.getElementById("more-dropdown-menu") &&
+            document
+              .getElementById("more-dropdown-menu")
+              .classList.remove("open");
+          mobileSidebar && mobileSidebar.classList.remove("open");
+          document.querySelector(".settings-panel") &&
+            document
+              .querySelector(".settings-panel")
+              .classList.remove("open");
+          overlay && overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        }
+      });
+
+      // Clear non-essential cookies helper (best-effort; cannot remove HttpOnly cookies)
+      document.getElementById("cookie-clear") &&
+        document
+          .getElementById("cookie-clear")
+          .addEventListener("click", function () {
+            try {
+              // list cookies and remove common non-essential patterns (best-effort)
+              const cookies = document.cookie.split(";").map((c) => c.trim());
+              cookies.forEach((cookie) => {
+                const name = cookie.split("=")[0];
+                // skip session or essential cookie names you want to keep (adjust list as needed)
+                const skip = ["_session", "sessionid", "csrftoken"];
+                if (!skip.includes(name)) {
+                  document.cookie =
+                    name +
+                    "=; Max-Age=0; path=/; domain=" +
+                    location.hostname +
+                    ";";
+                  document.cookie =
+                    name +
+                    "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
+                }
+              });
+              alert(
+                "Attempted to clear non-essential cookies. You may need to clear cookies in your browser settings for full removal."
+              );
+            } catch (err) {
+              console.error(err);
+              alert(
+                "Could not clear cookies automatically. Please clear cookies via your browser settings."
+              );
+            }
+          });
+    })();
+  </script>
+
+  <noscript>
+    <div style="
+          padding: 16px;
+          background: #fff;
+          border-radius: 8px;
+          margin: 18px auto;
+          max-width: 800px;
+          text-align: center;
+        ">
+      This site uses JavaScript for interactive parts. Please enable
+      JavaScript to view the cookie controls, or clear cookies using your
+      browser settings.
+    </div>
+  </noscript>
+</body>
+
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How to Use - PDF99</title>
+  <meta name="description"
+    content="How to use PDF99 - Step by step guide to convert, merge, split, compress and manage your PDF files securely online." />
+  <meta name="keywords"
+    content="how to use pdf99, pdf guide, convert pdf guide, merge pdf help, split pdf tutorial, compress pdf help" />
+  <link rel="canonical" href="https://www.pdf99.org/help" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#ef4444" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How to Use - PDF99" />
+  <meta property="og:description"
+    content="Learn how to use PDF99 tools with this simple step by step guide: Convert, Merge, Split, Compress and secure your PDFs online." />
+  <meta property="og:url" content="https://www.pdf99.org/help" />
+  <meta property="og:site_name" content="PDF99" />
+  <meta property="og:image" content="https://www.pdf99.org/assets/og-image-how-to.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Use - PDF99" />
+  <meta name="twitter:description"
+    content="Learn how to use PDF99 tools with this simple step by step guide: Convert, Merge, Split, Compress and secure your PDFs online." />
+  <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-how-to.png" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    as="style" />
+
+  <!-- Favicon & manifest -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <!-- Structured data (HowTo) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to use PDF99",
+        "description": "Step by step guide to convert, merge, split, compress and secure your PDF files online.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Choose a tool",
+            "text": "Select the task you need - Convert, Merge, Split, Compress, etc."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Upload or drag files",
+            "text": "Upload files from your device or drag and drop into the tool area."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Download result",
+            "text": "Process and download your result file; check output and re-run if necessary."
+          }
+        ]
+      }
+    </script>
+
+  <!-- libs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+    /* Hide scrollbar universally but keep scroll functionality */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    :root {
+      --nav-h: 72px;
+      --footer-h: auto;
+      --content-max-w: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body {
+      background: #f9fafb;
+      padding-top: var(--nav-h);
+      padding-bottom: var(--footer-h);
+      color: #111827;
+    }
+
+    nav.site-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: var(--nav-h);
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: var(--content-max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 18px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 70;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 70;
+    }
+
+    .nav-links {
+      color: #374151;
+      font-size: 13px;
+      text-transform: uppercase;
+      gap: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .more-dropdown {
+      position: relative;
+    }
+
+    .more-dropdown-menu {
+      position: absolute;
+      top: calc(var(--nav-h));
+      right: 0;
+      background: #fff;
+      border: 1px solid #e6edf3;
+      border-radius: 8px;
+      padding: 8px 0;
+      display: none;
+      min-width: 200px;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+    }
+
+    .more-dropdown-menu.open {
+      display: block;
+    }
+
+    .more-dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .more-dropdown-menu a:hover {
+      background: #fbfbfd;
+      color: #ef4444;
+    }
+
+    @media (max-width: 768px) {
+      .more-dropdown {
+        display: none !important;
+      }
+
+      .nav-center {
+        display: none !important;
+      }
+    }
+
+    .mobile-hamburger {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-hamburger {
+        display: inline-flex;
+      }
+    }
+
+    .mobile-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 260px;
+      background: #fff;
+      transform: translateX(-110%);
+      transition: transform 0.26s;
+      padding: 16px;
+      border-right: 1px solid #eef2f6;
+      z-index: 980;
+      overflow: auto;
+    }
+
+    .mobile-sidebar.open {
+      transform: translateX(0);
+    }
+
+    .mobile-sidebar .close {
+      display: block;
+      margin-bottom: 12px;
+      margin-left: auto;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .mobile-sidebar a {
+      display: block;
+      padding: 10px 8px;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .mobile-sidebar a:hover {
+      background: #f8fafc;
+      color: #ef4444;
+    }
+
+    .mobile-more-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .mobile-more-list {
+      display: none;
+      margin-top: 6px;
+      padding-left: 6px;
+    }
+
+    .mobile-more-list a {
+      padding: 8px 6px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .mobile-more-list.open {
+      display: block;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 920;
+      display: none;
+    }
+
+    .overlay.open {
+      display: block;
+    }
+
+    footer.site-footer {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: var(--footer-h);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #eee;
+      z-index: 60;
+      padding: 28px 18px;
+    }
+
+    .footer-inner {
+      width: 100%;
+      max-width: var(--content-max-w);
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col h4 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #374151;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 6px 0;
+    }
+
+    .page-wrap {
+      max-width: var(--content-max-w);
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 28px 0;
+    }
+
+    .hero .intro {
+      flex: 1;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b7280;
+    }
+
+    .how-to,
+    .faq-section,
+    .privacy-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #eef2f6;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.03);
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .how-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .how-step {
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- hidden H1 for SEO -->
+  <h1 class="sr-only">How to Use PDF99 - Step by Step Guide</h1>
+
+  <!-- mobile sidebar -->
+  <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
+    <button id="mobile-sidebar-close" class="close">✕</button>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../pdf-converter">PDF Converter</a>
+      <a href="../compress-pdf">Compress PDF</a>
+      <a href="../merge-pdf">Merge PDF</a>
+
+      <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
+
+      <div>
+        <div id="mobile-more-toggle" class="mobile-more-toggle">
+          <span>More</span>
+          <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
+        </div>
+        <div id="mobile-more-list" class="mobile-more-list">
+          <a href="../jpg-to-pdf">JPG to PDF</a>
+          <a href="../split-pdf">Split PDF</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="brand">
+          <h1 class="text-2xl font-bold text-red-600">PDF99</h1>
+        </div>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <div class="nav-links">
+          <a href="../" class="hover:text-red-600">Home</a>
+          <a href="../pdf-converter" class="hover:text-red-600">PDF Converter</a>
+          <a href="../compress-pdf" class="hover:text-red-600">Compress PDF</a>
+          <a href="../merge-pdf" class="hover:text-red-600">Merge PDF</a>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="more-dropdown" id="more-dropdown">
+          <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
+            aria-expanded="false">
+            More
+            <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
+          </button>
+          <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
+            <a href="../jpg-to-pdf">JPG to PDF</a>
+            <a href="../split-pdf">Split PDF</a>
+          </div>
+        </div>
+
+        <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <div class="page-wrap">
+    <main>
+      <section class="hero" aria-labelledby="page-heading">
+        <div class="intro">
+          <h2 id="page-heading">How to Use PDF99</h2>
+          <p style="margin-top: 6px; color: #6b7280">
+            Step by step instructions for using PDF99 tools like Convert,
+            Merge, Split and Compress securely online.
+          </p>
+        </div>
+      </section>
+
+      <section id="how-to" class="how-to" aria-labelledby="how-to-heading">
+        <h3 id="how-to-heading" style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a">
+          Step by Step Guide
+        </h3>
+        <p style="margin: 6px 0 0; color: #6b7280">
+          Follow these three simple steps to process your files quickly and
+          safely.
+        </p>
+
+        <div class="how-steps">
+          <div class="how-step">
+            <strong>1. Choose a tool</strong>
+            <div style="margin-top: 8px; color: #374151">
+              Select the task (e.g. "PDF Converter" or "Merge PDF").
+            </div>
+          </div>
+
+          <div class="how-step">
+            <strong>2. Upload or drag files</strong>
+            <div style="margin-top: 8px; color: #374151">
+              Drag files into the tool area or click to select from your
+              device. You can select multiple files for batch actions where
+              supported.
+            </div>
+          </div>
+
+          <div class="how-step">
+            <strong>3. Configure & process</strong>
+            <div style="margin-top: 8px; color: #374151">
+              For tools with options (page ranges, quality, output format)
+              choose settings, then start processing.
+            </div>
+          </div>
+
+          <div class="how-step">
+            <strong>4. Download the result</strong>
+            <div style="margin-top: 8px; color: #374151">
+              When processing finishes, click download to save the file. For
+              multi-file jobs you can download a ZIP or individual files.
+            </div>
+          </div>
+
+          <div class="how-step">
+            <strong>5. Verify output</strong>
+            <div style="margin-top: 8px; color: #374151">
+              Open the downloaded file and check formatting. For critical
+              documents, compare text, images and page order.
+            </div>
+          </div>
+
+          <div class="how-step">
+            <strong>6. Troubleshooting tips</strong>
+            <div style="margin-top: 8px; color: #374151">
+              If something looks off: try different conversion settings, split
+              the source file, or export a PDF from the original app first.
+            </div>
+          </div>
+        </div>
+
+        <!-- short quick-actions for common tasks -->
+        <div style="
+              margin-top: 18px;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 12px;
+            ">
+          <a href="../pdf-converter" class="tool-card" style="text-decoration: none">
+            <div style="display: flex; gap: 12px; align-items: center">
+              <div class="tool-icon ic-navy" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                <i class="fas fa-file-export fa-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div style="font-weight: 600; color: #0f172a">
+                  Convert files
+                </div>
+                <div style="color: #6b7280; font-size: 13px">
+                  DOCX, PPTX, images - to and from PDF.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="../merge-pdf" class="tool-card" style="text-decoration: none">
+            <div style="display: flex; gap: 12px; align-items: center">
+              <div class="tool-icon ic-red" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                <i class="fas fa-layer-group fa-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div style="font-weight: 600; color: #0f172a">Merge PDFs</div>
+                <div style="color: #6b7280; font-size: 13px">
+                  Combine multiple PDFs and reorder pages before saving.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="../compress-pdf" class="tool-card" style="text-decoration: none">
+            <div style="display: flex; gap: 12px; align-items: center">
+              <div class="tool-icon ic-green" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                <i class="fas fa-compress fa-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div style="font-weight: 600; color: #0f172a">Compress</div>
+                <div style="color: #6b7280; font-size: 13px">
+                  Reduce file size while keeping readable quality.
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Small FAQ/Quick troubleshooting block -->
+      <section class="faq-section" aria-labelledby="faq-heading" style="margin-top: 8px">
+        <h3 id="faq-heading" style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a">
+          Quick Troubleshooting
+        </h3>
+        <div style="margin-top: 8px; color: #6b7280">
+          Fast answers if you run into issues.
+        </div>
+
+        <div style="margin-top: 12px">
+          <div style="border-top: 1px solid #eef2f6; padding: 10px 0">
+            <strong>Upload fails / times out</strong>
+            <div style="color: #374151; margin-top: 6px">
+              Check network speed, try a different browser, or split the file
+              if it's very large.
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid #eef2f6; padding: 10px 0">
+            <strong>Output formatting differs</strong>
+            <div style="color: #374151; margin-top: 6px">
+              Complex layouts or embedded fonts can change. Export PDF from
+              the source app or try alternate conversion settings.
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid #eef2f6; padding: 10px 0">
+            <strong>Privacy concerns</strong>
+            <div style="color: #374151; margin-top: 6px">
+              Most tools run locally. When server-side processing is used,
+              files are removed after a short window. See Privacy page for
+              details.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy & Security -->
+      <section id="privacy" class="privacy-section" aria-labelledby="privacy-heading">
+        <h3 id="privacy-heading" style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a">
+          Privacy & Security
+        </h3>
+        <div style="margin-top: 10px; color: #6b7280">
+          We prioritize privacy and security. Key points:
+        </div>
+        <ul style="margin-top: 10px; color: #374151">
+          <li>
+            <strong>Local-first processing:</strong> Many tools run entirely
+            in your browser so files never leave your device.
+          </li>
+          <li>
+            <strong>Temporary server storage:</strong> When server processing
+            is required we store files only for processing and remove them
+            automatically within a short timeframe.
+          </li>
+          <li>
+            <strong>HTTPS everywhere:</strong> All connections use HTTPS/TLS.
+          </li>
+          <li>
+            <strong>No account required:</strong> For basic usage you can
+            process files without creating an account.
+          </li>
+          <li>
+            <strong>GDPR friendly:</strong> We provide options to delete and
+            manage files; contact support for removal requests.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>About PDF99</h4>
+        <p style="margin: 0; color: #6b7280; font-size: 13px">
+          PDF99 provides fast, private in-browser PDF utilities for everyday
+          document tasks - no installs, no fuss.
+        </p>
+        <div style="margin-top: 12px; font-size: 13px; color: #374151">
+          Follow us:
+        </div>
+        <div style="
+              margin-top: 8px;
+              display: flex;
+              gap: 8px;
+              align-items: center;
+            ">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="../">Home</a>
+        <a href="../pdf-converter">PDF Converter</a>
+        <a href="../merge-pdf">Merge PDF</a>
+        <a href="../split-pdf">Split PDF</a>
+        <a href="../compress-pdf">Compress PDF</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="faq">FAQ</a>
+        <a href="help">How to use</a>
+        <a href="contact">Contact</a>
+        <a href="terms">Terms of Service</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal & Privacy</h4>
+        <a href="privacy">Privacy & Security</a>
+        <a href="cookie">Cookie Policy</a>
+        <a href="security">Security</a>
+        <div style="margin-top: 18px; color: #6b7280; font-size: 13px">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          PDF99 - All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // UI helpers (dropdown, mobile sidebar, accordion)
+    (function () {
+      const moreToggle = document.getElementById("more-dropdown-toggle");
+      const moreMenu = document.getElementById("more-dropdown-menu");
+      if (moreToggle) {
+        moreToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          moreMenu.classList.toggle("open");
+          const expanded = moreMenu.classList.contains("open");
+          moreToggle.setAttribute(
+            "aria-expanded",
+            expanded ? "true" : "false"
+          );
+        });
+        document.addEventListener("click", () => {
+          moreMenu.classList.remove("open");
+          moreToggle.setAttribute("aria-expanded", "false");
+        });
+      }
+
+      const mobileHamburger = document.getElementById("mobile-hamburger");
+      const mobileSidebar = document.getElementById("mobile-sidebar");
+      const mobileSidebarClose = document.getElementById(
+        "mobile-sidebar-close"
+      );
+      const overlay = document.getElementById("overlay");
+
+      const mobileMoreToggle = document.getElementById("mobile-more-toggle");
+      const mobileMoreList = document.getElementById("mobile-more-list");
+      const mobileMoreIcon = document.getElementById("mobile-more-icon");
+
+      if (mobileMoreToggle) {
+        mobileMoreToggle.addEventListener("click", () => {
+          const isOpen = mobileMoreList.classList.toggle("open");
+          mobileMoreIcon.classList.toggle("fa-chevron-down", !isOpen);
+          mobileMoreIcon.classList.toggle("fa-chevron-up", isOpen);
+        });
+      }
+
+      mobileHamburger &&
+        mobileHamburger.addEventListener("click", () => {
+          mobileSidebar.classList.add("open");
+          mobileSidebar.setAttribute("aria-hidden", "false");
+          overlay.classList.add("open");
+          document.body.classList.add("panel-open");
+        });
+      mobileSidebarClose &&
+        mobileSidebarClose.addEventListener("click", () => {
+          mobileSidebar.classList.remove("open");
+          mobileSidebar.setAttribute("aria-hidden", "true");
+          overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        });
+
+      overlay &&
+        overlay.addEventListener("click", () => {
+          mobileSidebar && mobileSidebar.classList.remove("open");
+          document.querySelector(".settings-panel") &&
+            document
+              .querySelector(".settings-panel")
+              .classList.remove("open");
+          overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.getElementById("more-dropdown-menu") &&
+            document
+              .getElementById("more-dropdown-menu")
+              .classList.remove("open");
+          mobileSidebar && mobileSidebar.classList.remove("open");
+          document.querySelector(".settings-panel") &&
+            document
+              .querySelector(".settings-panel")
+              .classList.remove("open");
+          overlay && overlay.classList.remove("open");
+          document.body.classList.remove("panel-open");
+        }
+      });
+    })();
+  </script>
+
+  <noscript>
+    <div style="
+          padding: 16px;
+          background: #fff;
+          border-radius: 8px;
+          margin: 18px auto;
+          max-width: 800px;
+          text-align: center;
+        ">
+      This site uses JavaScript for interactive parts. Please enable
+      JavaScript to use the tools.
+    </div>
+  </noscript>
+</body>
+
+</html>
