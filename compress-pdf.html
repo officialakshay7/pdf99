@@ -824,7 +824,7 @@
 
 <body>
   <!-- hidden H1 for SEO (visually hidden, doesn't change UI) -->
-  <h1 class="sr-only">Compress PDF - Reduce PDF size online</h1>
+  <!-- <h1 class="sr-only">Compress PDF - Reduce PDF size online</h1> -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
@@ -1938,6 +1938,10 @@
             saveAs(blob, `compressed-pdfs-${timestampString()}.zip`)
           );
       }
+      downloadPdfBtn.innerHTML = "Downloading...";
+            setTimeout(() => {
+                downloadPdfBtn.innerHTML = "Download PDF";
+            }, 1000);
     }
 
     function timestampString() {

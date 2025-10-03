@@ -830,7 +830,7 @@
 
 <body>
   <!-- hidden H1 for SEO (visually hidden, doesn't change UI) -->
-  <h1 class="sr-only">Merge PDF - Combine PDF files online</h1>
+  <!-- <h1 class="sr-only">Merge PDF - Combine PDF files online</h1> -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
@@ -1482,6 +1482,10 @@
     function handleDownload() {
       if (!state.outputs || state.outputs.length === 0) { alert("No merged file available. Please merge first."); return; }
       if (state.outputs.length === 1) { saveAs(state.outputs[0].blob, state.outputs[0].name); }
+      downloadPdfBtn.innerHTML = "Downloading...";
+            setTimeout(() => {
+                downloadPdfBtn.innerHTML = "Download PDF";
+            }, 1000);
     }
 
     function timestampString() { const now = new Date(); return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}-${String(now.getHours()).padStart(2, "0")}${String(now.getMinutes()).padStart(2, "0")}${String(now.getSeconds()).padStart(2, "0")}`; }
