@@ -44,55 +44,74 @@
   
 
   <!-- Structured data -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "url": "https://www.pdf99.org/",
-            "name": "PDF99",
-            "description": "Online PDF tools including merge, split, compress, convert and OCR."
-          },
-          {
-            "@type": "ItemList",
-            "name": "PDF Tools",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "PDF Converter",
-                "url": "https://www.pdf99.org/pdf-converter"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Merge PDF",
-                "url": "https://www.pdf99.org/merge-pdf"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Split PDF",
-                "url": "https://www.pdf99.org/split-pdf"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Compress PDF",
-                "url": "https://www.pdf99.org/compress-pdf"
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "JPG to PDF",
-                "url": "https://www.pdf99.org/jpg-to-pdf"
-              }
-            ]
-          }
-        ]
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pdf99.org/#website",
+      "url": "https://www.pdf99.org/",
+      "name": "PDF99",
+      "description": "PDF99 — Free online PDF tools to merge, split, compress, convert and manage PDF files.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PDF99",
+        "url": "https://www.pdf99.org/"
       }
-    </script>
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.pdf99.org/#tools-list",
+      "name": "PDF Tools",
+      "description": "Main free online PDF tools available on PDF99.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.pdf99.org/pdf-converter",
+            "name": "PDF Converter"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.pdf99.org/merge-pdf",
+            "name": "Merge PDF"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.pdf99.org/split-pdf",
+            "name": "Split PDF"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.pdf99.org/compress-pdf",
+            "name": "Compress PDF"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://www.pdf99.org/jpg-to-pdf",
+            "name": "JPG to PDF"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
   <!-- libs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -595,8 +614,6 @@
 </head>
 
 <body>
-  <!-- hidden H1 for SEO -->
-  <!-- <h1 class="sr-only">All PDF Tools - PDF99</h1> -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">

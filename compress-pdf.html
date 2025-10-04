@@ -41,44 +41,42 @@
   <link rel="manifest" href="manifest.json" />
 
   <!-- Structured data (JSON-LD) -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "url": "https://www.pdf99.org/",
-            "name": "PDF99",
-            "description": "Online PDF tools including PDF compression."
-          },
-          {
-            "@type": "SoftwareApplication",
-            "name": "Compress PDF",
-            "operatingSystem": "Web",
-            "applicationCategory": "Utilities",
-            "url": "https://www.pdf99.org/compress-pdf",
-            "description": "Compress PDF files in your browser."
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.pdf99.org/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Compress PDF",
-                "item": "https://www.pdf99.org/compress-pdf"
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.pdf99.org/compress-pdf#software",
+      "name": "Compress PDF",
+      "url": "https://www.pdf99.org/compress-pdf",
+      "description": "Reduce PDF file size while maintaining quality using PDF99's Compress PDF tool — fast, secure, and done entirely in the browser.",
+      "applicationCategory": "Utilities",
+      "operatingSystem": "Web"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pdf99.org/compress-pdf#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.pdf99.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compress PDF",
+          "item": "https://www.pdf99.org/compress-pdf"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
   <!-- libs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
@@ -823,8 +821,6 @@
 </head>
 
 <body>
-  <!-- hidden H1 for SEO (visually hidden, doesn't change UI) -->
-  <!-- <h1 class="sr-only">Compress PDF - Reduce PDF size online</h1> -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">

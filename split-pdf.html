@@ -42,44 +42,42 @@
     <link rel="manifest" href="manifest.json" />
 
     <!-- Structured data (JSON-LD) -->
+
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "url": "https://www.pdf99.org/",
-            "name": "PDF99",
-            "description": "Online PDF tools including Split PDF and others."
-          },
-          {
-            "@type": "SoftwareApplication",
-            "name": "Split PDF",
-            "operatingSystem": "Web",
-            "applicationCategory": "PDFTool",
-            "url": "https://www.pdf99.org/split-pdf",
-            "description": "Split PDF files and extract pages directly in your browser."
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.pdf99.org/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Split PDF",
-                "item": "https://www.pdf99.org/split-pdf"
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.pdf99.org/split-pdf#software",
+      "name": "Split PDF",
+      "url": "https://www.pdf99.org/split-pdf",
+      "description": "Split PDF pages into separate files or extract selected pages quickly using PDF99's Split PDF tool — all in your browser.",
+      "applicationCategory": "Utilities",
+      "operatingSystem": "Web"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pdf99.org/split-pdf#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.pdf99.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Split PDF",
+          "item": "https://www.pdf99.org/split-pdf"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
     <!-- libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
@@ -772,8 +770,6 @@
 </head>
 
 <body>
-    <!-- hidden H1 for SEO (visually hidden, doesn't change UI) -->
-    <!-- <h1 class="sr-only">Split PDF - Extract pages from PDF online</h1> -->
 
     <!-- mobile sidebar -->
     <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
