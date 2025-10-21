@@ -589,123 +589,143 @@
       </section>
 
       <!-- Contact card -->
-      <section class="contact-card" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a">
-          Send us a message
-        </h2>
-        <p style="margin: 8px 0 12px; color: #6b7280">
-          We try to respond within 1-2 business days. Do not include sensitive
-          personal data (passwords, payment info).
+      <!-- Contact card -->
+<section class="contact-card" aria-labelledby="contact-heading">
+  <h2 id="contact-heading" style="margin: 0; font-size: 18px; font-weight: 700; color: #0f172a">
+    Send Us a Message
+  </h2>
+  <p style="margin: 8px 0 12px; color: #6b7280">
+    We value your feedback and are always ready to assist. Whether you have a question, need technical help, 
+    or simply want to share suggestions for improving our tools, our support team is here to help. 
+    Please use the form below to contact us, and we’ll do our best to respond within 1–2 business days.
+  </p>
+
+  <p style="margin: 8px 0 16px; color: #6b7280">
+    Before you submit, please make sure your message includes all the details that can help us understand your issue clearly — 
+    such as what you were trying to do, the type of file or tool involved, and any error messages you might have seen. 
+    This helps us respond faster and more accurately. We respect your privacy, so kindly avoid including sensitive or confidential data.
+  </p>
+
+  <div class="contact-grid" role="region" aria-label="Contact form and info">
+    <!-- left: form -->
+    <div>
+      <div id="alert-container" aria-live="polite"></div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="col">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required />
+          </div>
+          <div class="col">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div style="margin-top: 12px">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Brief title for your message" required />
+        </div>
+
+        <div style="margin-top: 12px">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Describe your query, feedback, or issue" required></textarea>
+        </div>
+
+        <div style="
+              margin-top: 12px;
+              display: flex;
+              gap: 12px;
+              align-items: center;
+              flex-wrap: wrap;
+            ">
+          <button class="btn" type="submit">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+          </button>
+          <div class="muted">
+            Or email us directly at
+            <a href="mailto:support@pdf99.org">support@pdf99.org</a>
+          </div>
+        </div>
+
+        <div style="margin-top: 8px" class="muted">
+          We aim to reply to all genuine messages within 1–2 business days. 
+          If your request is urgent, please ensure your contact details are correct so our team can reach you quickly.
+        </div>
+      </form>
+    </div>
+
+    <!-- right: contact info -->
+    <aside>
+      <div class="contact-info" aria-hidden="false">
+        <div style="font-weight: 700; margin-bottom: 8px; color: #0f172a">
+          Get in Touch
+        </div>
+
+        <p style="color:#6b7280; font-size:14px; line-height:1.6;">
+          Our support team is dedicated to helping users with general inquiries, feature suggestions, and technical concerns. 
+          We take every message seriously and strive to provide a clear, friendly, and helpful response.
         </p>
 
-        <div class="contact-grid" role="region" aria-label="Contact form and info">
-          <!-- left: form -->
+        <p style="color:#6b7280; font-size:14px; line-height:1.6;">
+          If your question is related to tool performance, please include details such as your browser name, device type, 
+          and a short description of what went wrong. This allows us to troubleshoot more effectively.
+        </p>
+
+        <div class="info-row">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
           <div>
-            <div id="alert-container" aria-live="polite"></div>
-
-            <form id="contact-form" class="contact-form" novalidate>
-              <div class="form-row">
-                <div class="col">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your full name" required />
-                </div>
-                <div class="col">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
-                </div>
-              </div>
-
-              <div style="margin-top: 12px">
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Short summary" required />
-              </div>
-
-              <div style="margin-top: 12px">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Describe your issue or request" required></textarea>
-              </div>
-
-              <div style="
-                    margin-top: 12px;
-                    display: flex;
-                    gap: 12px;
-                    align-items: center;
-                    flex-wrap: wrap;
-                  ">
-                <button class="btn" type="submit">
-                  <i class="fas fa-paper-plane" aria-hidden="true"></i>Send
-                  message
-                </button>
-                <div class="muted">
-                  Or email us at
-                  <a href="mailto:support@pdf99.org">support@pdf99.org</a>
-                </div>
-              </div>
-
-              <div style="margin-top: 8px" class="muted">
-                We typically reply within 1-2 business days. Do not include
-                sensitive personal data in messages.
-              </div>
-            </form>
+            <div style="font-weight: 600">Email</div>
+            <div class="muted">
+              <a href="mailto:support@pdf99.org">support@pdf99.org</a>
+            </div>
           </div>
-
-          <!-- right: contact info -->
-          <aside>
-            <div class="contact-info" aria-hidden="false">
-              <div style="font-weight: 700; margin-bottom: 8px; color: #0f172a">
-                Get in touch
-              </div>
-
-              <div class="info-row">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <div>
-                  <div style="font-weight: 600">Email</div>
-                  <div class="muted">
-                    <a href="mailto:support@pdf99.org">support@pdf99.org</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="info-row">
-                <i class="fas fa-clock" aria-hidden="true"></i>
-                <div>
-                  <div style="font-weight: 600">Support hours</div>
-                  <div class="muted">Mon-Fri, 9:00-18:00 (IST)</div>
-                </div>
-              </div>
-
-              <div class="info-row">
-                <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                <div>
-                  <div style="font-weight: 600">Privacy</div>
-                  <div class="muted">
-                    Do not send passwords or highly-sensitive personal data.
-                    See our <a href="/pages/privacy">Privacy & Security</a>.
-                  </div>
-                </div>
-              </div>
-
-              <hr style="
-                    border: none;
-                    border-top: 1px solid #eef2f6;
-                    margin: 12px 0;
-                  " />
-
-              <div style="font-size: 14px; color: #6b7280">Other ways</div>
-              <div style="margin-top: 8px; display: flex; gap: 8px">
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-              </div>
-            </div>
-
-            <div style="margin-top: 12px; font-size: 13px; color: #6b7280">
-              If your message is about abuse or a legal request, please
-              include relevant details and a way to contact you for follow-up.
-            </div>
-          </aside>
         </div>
-      </section>
+
+        <div class="info-row">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <div>
+            <div style="font-weight: 600">Support Hours</div>
+            <div class="muted">Monday–Friday, 9:00 AM – 6:00 PM (IST)</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          <div>
+            <div style="font-weight: 600">Privacy & Security</div>
+            <div class="muted">
+              We treat all communications with care. Please do not include private login credentials, 
+              payment information, or any confidential documents. 
+              For more details, see our <a href="/pages/privacy">Privacy Policy</a>.
+            </div>
+          </div>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid #eef2f6; margin: 12px 0;" />
+
+        <div style="font-size: 14px; color: #6b7280">Connect With Us</div>
+        <div style="margin-top: 8px; display: flex; gap: 8px">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+
+      <div style="margin-top: 12px; font-size: 13px; color: #6b7280; line-height:1.6;">
+        If your message relates to abuse, copyright, or a legal matter, please include all relevant information and a 
+        verified way for us to contact you. Our team carefully reviews such requests in line with our policies.
+      </div>
+
+      <p style="margin-top: 12px; font-size: 13px; color: #6b7280;">
+        We appreciate your patience and trust. Your feedback plays a vital role in helping us improve and maintain the 
+        quality of our services for all users. Thank you for taking the time to reach out to us.
+      </p>
+    </aside>
+  </div>
+</section>
+
     </main>
   </div>
 
