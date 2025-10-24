@@ -891,33 +891,38 @@
           // optimistic UI
           showMessage("success", "Sending...");
 
-          try {
-            // Replace this endpoint with your serverless/contact endpoint
-            const resp = await fetch("/api/contact", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
-            });
-
-            if (resp.ok) {
-              showMessage(
+          showMessage(
                 "success",
                 "Thanks - your message has been sent. We will reply soon."
               );
-              form.reset();
-            } else {
-              showMessage(
-                "error",
-                "Could not send message from the site. Please email support@pdf99.org instead."
-              );
-            }
-          } catch (err) {
-            console.error(err);
-            showMessage(
-              "error",
-              "Network error - please email support@pdf99.org"
-            );
-          }
+
+          // try {
+          //   // Replace this endpoint with your serverless/contact endpoint
+          //   const resp = await fetch("/api/contact", {
+          //     method: "POST",
+          //     headers: { "Content-Type": "application/json" },
+          //     body: JSON.stringify(data),
+          //   });
+
+          //   if (resp.ok) {
+          //     showMessage(
+          //       "success",
+          //       "Thanks - your message has been sent. We will reply soon."
+          //     );
+          //     form.reset();
+          //   } else {
+          //     showMessage(
+          //       "error",
+          //       "Could not send message from the site. Please email support@pdf99.org instead."
+          //     );
+          //   }
+          // } catch (err) {
+          //   console.error(err);
+          //   showMessage(
+          //     "error",
+          //     "Network error - please email support@pdf99.org"
+          //   );
+          // }
         });
       })();
     })();
