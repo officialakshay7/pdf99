@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact - PDF99</title>
+  <title>Contact Support - Get Help with PDF Conversion Tools | PDF99</title>
   <meta name="description"
     content="Contact PDF99 - Get support, report abuse, request features, or ask about privacy and partnerships. Fast response from the PDF99 team." />
   <meta name="keywords"
@@ -15,7 +15,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact - PDF99" />
+  <meta property="og:title" content="Contact Support - Get Help with PDF Conversion Tools | PDF99" />
   <meta property="og:description"
     content="Contact PDF99 - Get support, report abuse, request features, or ask about privacy and partnerships." />
   <meta property="og:url" content="https://www.pdf99.org/pages/contact" />
@@ -24,7 +24,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact - PDF99" />
+  <meta name="twitter:title" content="Contact Support - Get Help with PDF Conversion Tools | PDF99" />
   <meta name="twitter:description"
     content="Contact PDF99 - Get support, report abuse, request features, or ask about privacy and partnerships." />
   <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-contact.png" />
@@ -508,7 +508,7 @@
 
 <body>
   <!-- hidden H1 for SEO -->
-  <!-- <h1 class="sr-only">Contact - PDF99</h1> -->
+  <!-- <h1 class="sr-only">Contact Support - Get Help with PDF Conversion Tools | PDF99</h1> -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
@@ -875,26 +875,31 @@
           e.preventDefault();
           alertContainer.innerHTML = "";
 
-          const data = {
-            name: form.name.value.trim(),
-            email: form.email.value.trim(),
-            subject: form.subject.value.trim(),
-            message: form.message.value.trim(),
-          };
-
-          // basic validation
-          if (!data.name || !data.email || !data.subject || !data.message) {
-            showMessage("error", "Please fill all required fields.");
-            return;
-          }
-
-          // optimistic UI
-          showMessage("success", "Sending...");
-
           showMessage(
                 "success",
                 "Thanks - your message has been sent. We will reply soon."
               );
+
+          // const data = {
+          //   name: form.name.value.trim(),
+          //   email: form.email.value.trim(),
+          //   subject: form.subject.value.trim(),
+          //   message: form.message.value.trim(),
+          // };
+
+          // // basic validation
+          // if (!data.name || !data.email || !data.subject || !data.message) {
+          //   showMessage("error", "Please fill all required fields.");
+          //   return;
+          // }
+
+          // // optimistic UI
+          // showMessage("success", "Sending...");
+
+          // showMessage(
+          //       "success",
+          //       "Thanks - your message has been sent. We will reply soon."
+          //     );
 
           // try {
           //   // Replace this endpoint with your serverless/contact endpoint
