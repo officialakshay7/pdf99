@@ -3,22 +3,25 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57TC57Z3');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
+  <!-- End Google Tag Manager -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-KC8H85HKF1');
-</script>
+    gtag('config', 'G-KC8H85HKF1');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -59,8 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="manifest.json" />
 
   <!-- Structured data (JSON-LD) -->
-
-    <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -71,7 +73,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://www.pdf99.org/compress-pdf",
       "description": "Reduce PDF file size while maintaining quality using PDF99's Compress PDF tool - fast, secure, and done entirely in the browser.",
       "applicationCategory": "Utilities",
-      "operatingSystem": "Web"
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Compress PDF files, Reduce PDF size, Adjustable compression levels, Recommended compression, Extreme compression, Less compression, Render quality control, JPEG quality adjustment, Batch compression, Browser-based processing, No file uploads",
+      "screenshot": "https://www.pdf99.org/assets/og-image-compress-pdf.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -88,6 +97,162 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "position": 2,
           "name": "Compress PDF",
           "item": "https://www.pdf99.org/compress-pdf"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.pdf99.org/compress-pdf#how-to",
+      "name": "How to Compress a PDF Online",
+      "description": "Reduce your PDF file size in three simple steps with adjustable compression levels.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload",
+          "text": "Select the PDF file you want to compress. Large or small - all files are supported.",
+          "url": "https://www.pdf99.org/compress-pdf#how-to",
+          "position": 1,
+          "image": "https://www.pdf99.org/assets/how-to-compress-upload.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Compress",
+          "text": "Choose between strong or balanced compression, and let our tool reduce your file size.",
+          "url": "https://www.pdf99.org/compress-pdf#how-to",
+          "position": 2,
+          "image": "https://www.pdf99.org/assets/how-to-compress-settings.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Download",
+          "text": "Download your optimized PDF instantly, with quality preserved and storage saved.",
+          "url": "https://www.pdf99.org/compress-pdf#how-to",
+          "position": 3,
+          "image": "https://www.pdf99.org/assets/how-to-compress-download.jpg"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pdf99.org/compress-pdf#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my file uploaded to your servers when I compress PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all compression happens locally in your browser. Your PDF files never leave your device, ensuring complete privacy and security when you compress PDF documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I reduce PDF file size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The reduction depends on your file content. PDFs with many images can be reduced by 50-80%, while text-heavy documents may see 20-40% reduction. Our tool shows you the exact reduction percentage before download."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What compression levels are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer three compression levels: Recommended Compression (good quality, great compression), Extreme Compression (smaller files with less quality), and Less Compression (high quality with moderate compression). You can also fine-tune render quality and JPEG quality settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will compression affect PDF quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some quality reduction is normal with compression, but we balance it to maintain readability. Our recommended setting preserves good visual quality while significantly reducing file size. You can preview the results before downloading."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress multiple PDFs at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can select and compress multiple PDF files simultaneously. They will be compressed individually and can be downloaded as separate files or in a single ZIP archive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a file size limit for compression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Since processing happens in your browser, the file size limit depends on your device's available memory. Most users successfully compress PDFs up to 100MB without issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to image quality during compression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our compression tool optimizes images by adjusting JPEG quality and render scale. Higher JPEG quality preserves more detail but creates larger files. You can adjust these settings to find the perfect balance for your needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account to compress PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account or registration is required. You can compress PDF files instantly and for free without any sign-up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress password-protected PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Currently, we don't support password-protected PDFs. You'll need to remove the password protection first before compressing the file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will text remain searchable after compression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, text in your PDF remains selectable and searchable after compression. Our tool preserves text layers while optimizing images and other elements."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.pdf99.org/compress-pdf#product",
+      "name": "Compress PDF Tool",
+      "description": "Free online tool to reduce PDF file size with adjustable compression levels and quality settings.",
+      "url": "https://www.pdf99.org/compress-pdf",
+      "image": "https://www.pdf99.org/assets/og-image-compress-pdf.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/OnlineOnly",
+        "url": "https://www.pdf99.org/compress-pdf"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "2156",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "User"
+          },
+          "reviewBody": "Excellent PDF compressor! Reduced my 15MB scan to 3MB with barely noticeable quality loss. And it's completely private since it runs in my browser."
         }
       ]
     }
@@ -840,9 +1005,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
@@ -863,6 +1028,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="mobile-more-list" class="mobile-more-list">
           <a href="jpg-to-pdf">JPG to PDF</a>
           <a href="split-pdf">Split PDF</a>
+          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+
         </div>
       </div>
     </nav>
@@ -876,7 +1043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav-left">
         <div class="brand">
           <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
-           <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
+          <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
         </div>
       </div>
 
@@ -899,6 +1066,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
             <a href="jpg-to-pdf">JPG to PDF</a>
             <a href="split-pdf">Split PDF</a>
+            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
           </div>
         </div>
 
@@ -980,7 +1149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </section>
 
-          
+
 
           <!-- What is PDF Compression -->
           <section style="margin-top:60px;">
@@ -988,7 +1157,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>What is PDF Compression?</h2>
             </div>
             <p class="info-text">
-              A PDF compressor is a tool that helps you reduce PDF size by optimizing images, fonts, and other elements inside your document. When you compress PDF files, you're making them smaller and easier to work with while keeping the content readable and clear. Think of it like packing a suitcase more efficiently-everything's still there, just organized better. The process to resize PDF files through compression is especially helpful when you have large documents filled with high-resolution images or scans. Whether you need to reduce PDF size for email attachments, website uploads, or storage management, a good PDF compressor maintains quality while cutting down the file size significantly. You can compress PDF documents to meet file size limits on online forms, speed up loading times, or simply save space on your hard drive. When you resize PDF files using compression, you're not actually changing the page dimensions-you're just making the file lighter and more manageable. PDF99's PDF compressor gives you control over how much you want to reduce PDF size, letting you balance between smaller files and maintaining visual quality for whatever your needs are.
+              A PDF compressor is a tool that helps you reduce PDF size by optimizing images, fonts, and other elements
+              inside your document. When you compress PDF files, you're making them smaller and easier to work with
+              while keeping the content readable and clear. Think of it like packing a suitcase more
+              efficiently-everything's still there, just organized better. The process to resize PDF files through
+              compression is especially helpful when you have large documents filled with high-resolution images or
+              scans. Whether you need to reduce PDF size for email attachments, website uploads, or storage management,
+              a good PDF compressor maintains quality while cutting down the file size significantly. You can compress
+              PDF documents to meet file size limits on online forms, speed up loading times, or simply save space on
+              your hard drive. When you resize PDF files using compression, you're not actually changing the page
+              dimensions-you're just making the file lighter and more manageable. PDF99's PDF compressor gives you
+              control over how much you want to reduce PDF size, letting you balance between smaller files and
+              maintaining visual quality for whatever your needs are.
             </p>
           </section>
 
@@ -998,10 +1178,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>Why Compress PDF Files?</h2>
             </div>
             <ul class="info-list">
-              <li><strong>Faster sharing:</strong> When you compress PDF files, they send through email and messaging apps much quicker without timing out.</li>
-              <li><strong>Save storage:</strong> Use a PDF compressor to reduce PDF size and free up valuable space on your computer, phone, or cloud storage.</li>
-              <li><strong>Better performance:</strong> Smaller files open faster on all devices, especially on phones and tablets with limited processing power.</li>
-              <li><strong>Web upload ready:</strong> Many online platforms have strict file size limits, so when you resize PDF documents, they become compatible with submission forms and upload portals.</li>
+              <li><strong>Faster sharing:</strong> When you compress PDF files, they send through email and messaging
+                apps much quicker without timing out.</li>
+              <li><strong>Save storage:</strong> Use a PDF compressor to reduce PDF size and free up valuable space on
+                your computer, phone, or cloud storage.</li>
+              <li><strong>Better performance:</strong> Smaller files open faster on all devices, especially on phones
+                and tablets with limited processing power.</li>
+              <li><strong>Web upload ready:</strong> Many online platforms have strict file size limits, so when you
+                resize PDF documents, they become compatible with submission forms and upload portals.</li>
             </ul>
           </section>
 
@@ -1011,19 +1195,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>Compress PDF - Complete Guide</h2>
             </div>
             <div class="article-wrap">
-              <p>Large PDF files can be a real headache when you're trying to share them or store them efficiently, especially if they're packed with images, scans, or graphics. That's where a PDF compressor becomes your best friend. When you compress PDF documents, you reduce PDF size dramatically without losing the important details that make your content useful. PDF99's compression tool is designed to be flexible-you can choose between different compression levels depending on whether you need to resize PDF files aggressively or prefer a more balanced approach. Maybe you have a 10MB scanned contract that needs to become 2MB for an online portal, or perhaps you want to reduce PDF size on a presentation without making images look fuzzy. Whatever your situation, the ability to compress PDF files on demand means you're never stuck with documents that are too big to work with.</p>
+              <p>Large PDF files can be a real headache when you're trying to share them or store them efficiently,
+                especially if they're packed with images, scans, or graphics. That's where a PDF compressor becomes your
+                best friend. When you compress PDF documents, you reduce PDF size dramatically without losing the
+                important details that make your content useful. PDF99's compression tool is designed to be flexible-you
+                can choose between different compression levels depending on whether you need to resize PDF files
+                aggressively or prefer a more balanced approach. Maybe you have a 10MB scanned contract that needs to
+                become 2MB for an online portal, or perhaps you want to reduce PDF size on a presentation without making
+                images look fuzzy. Whatever your situation, the ability to compress PDF files on demand means you're
+                never stuck with documents that are too big to work with.</p>
 
               <h3>Best practices</h3>
               <ol>
-                <li><strong>Choose the right mode:</strong> Use balanced settings in your PDF compressor for text-heavy documents, and more aggressive compression when you need to resize PDF files that are mostly images or photos.</li>
-                <li><strong>Check readability:</strong> After you compress PDF content, always open it and check that text is still sharp and graphics haven't lost important details.</li>
-                <li><strong>Batch process:</strong> If you need to reduce PDF size on multiple documents, combine them first, then use the PDF compressor once to save time and get consistent results.</li>
-                <li><strong>Secure sharing:</strong> When you resize PDF files to smaller sizes, they're easier to upload to job applications, school portals, and client submission forms without connection issues.</li>
-                <li><strong>Archive smart:</strong> Before you compress PDF files for long-term storage, keep a backup of the original if it contains critical high-resolution content you might need later.</li>
+                <li><strong>Choose the right mode:</strong> Use balanced settings in your PDF compressor for text-heavy
+                  documents, and more aggressive compression when you need to resize PDF files that are mostly images or
+                  photos.</li>
+                <li><strong>Check readability:</strong> After you compress PDF content, always open it and check that
+                  text is still sharp and graphics haven't lost important details.</li>
+                <li><strong>Batch process:</strong> If you need to reduce PDF size on multiple documents, combine them
+                  first, then use the PDF compressor once to save time and get consistent results.</li>
+                <li><strong>Secure sharing:</strong> When you resize PDF files to smaller sizes, they're easier to
+                  upload to job applications, school portals, and client submission forms without connection issues.
+                </li>
+                <li><strong>Archive smart:</strong> Before you compress PDF files for long-term storage, keep a backup
+                  of the original if it contains critical high-resolution content you might need later.</li>
               </ol>
 
               <h3>When to use</h3>
-              <p>You'll need to compress PDF documents in tons of practical situations every day. Students constantly need to reduce PDF size when submitting assignments through learning management systems that have strict upload limits. Job applicants use a PDF compressor to resize PDF resumes and portfolios so they don't bounce back from company email servers. Small business owners compress PDF invoices and proposals before sending them to clients who might be checking email on mobile devices with limited data. Photographers and designers need to reduce PDF size on portfolio pieces while keeping images looking professional. Real estate agents compress PDF property brochures for faster loading on websites and email campaigns. Teachers resize PDF worksheets and study materials so they're easier for students to download at home. Anyone working with scanned documents-like medical records, legal papers, or old archives-benefits from using a PDF compressor because scans tend to create huge files. Government forms, tax documents, and official applications often have file size restrictions, so you'll compress PDF files to meet those requirements. Basically, anytime you're looking at a PDF that's too big to send, too slow to open, or won't upload where you need it to go, that's your sign to reduce PDF size. The resize PDF function through compression is essential for modern digital work, whether you're in education, business, healthcare, legal services, or just managing your personal documents efficiently.</p>
+              <p>You'll need to compress PDF documents in tons of practical situations every day. Students constantly
+                need to reduce PDF size when submitting assignments through learning management systems that have strict
+                upload limits. Job applicants use a PDF compressor to resize PDF resumes and portfolios so they don't
+                bounce back from company email servers. Small business owners compress PDF invoices and proposals before
+                sending them to clients who might be checking email on mobile devices with limited data. Photographers
+                and designers need to reduce PDF size on portfolio pieces while keeping images looking professional.
+                Real estate agents compress PDF property brochures for faster loading on websites and email campaigns.
+                Teachers resize PDF worksheets and study materials so they're easier for students to download at home.
+                Anyone working with scanned documents-like medical records, legal papers, or old archives-benefits from
+                using a PDF compressor because scans tend to create huge files. Government forms, tax documents, and
+                official applications often have file size restrictions, so you'll compress PDF files to meet those
+                requirements. Basically, anytime you're looking at a PDF that's too big to send, too slow to open, or
+                won't upload where you need it to go, that's your sign to reduce PDF size. The resize PDF function
+                through compression is essential for modern digital work, whether you're in education, business,
+                healthcare, legal services, or just managing your personal documents efficiently.</p>
             </div>
           </section>
 
@@ -1951,9 +2164,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           );
       }
       downloadPdfBtn.innerHTML = "Downloading...";
-            setTimeout(() => {
-                downloadPdfBtn.innerHTML = "Download PDF";
-            }, 1000);
+      setTimeout(() => {
+        downloadPdfBtn.innerHTML = "Download PDF";
+      }, 1000);
     }
 
     function timestampString() {

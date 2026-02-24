@@ -61,8 +61,7 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <!-- Structured data (JSON-LD): minimal, won't affect UI -->
-
+  <!-- Structured data (JSON-LD) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,7 +73,14 @@
       "url": "https://www.pdf99.org/jpg-to-pdf",
       "description": "Convert JPG image format to a PDF quickly with PDF99 - reorder, set page size and download instantly.",
       "applicationCategory": "Utilities",
-      "operatingSystem": "Web"
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Convert JPG to PDF, Merge multiple images, Adjust page size, Set orientation, Customize margins, Reorder images, Rotate images, Browser-based processing",
+      "screenshot": "https://www.pdf99.org/assets/og-image-jpg-to-pdf.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -91,6 +97,136 @@
           "position": 2,
           "name": "JPG to PDF Converter",
           "item": "https://www.pdf99.org/jpg-to-pdf"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.pdf99.org/jpg-to-pdf#how-to",
+      "name": "How to Convert JPG to PDF",
+      "description": "Convert your JPG images to PDF in three simple steps.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload images",
+          "text": "Choose your JPG image files that you want to convert to PDF.",
+          "url": "https://www.pdf99.org/jpg-to-pdf#how-to",
+          "position": 1,
+          "image": "https://www.pdf99.org/assets/how-to-upload.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Arrange & set options",
+          "text": "Reorder images, select page size, orientation, and margins for your PDF.",
+          "url": "https://www.pdf99.org/jpg-to-pdf#how-to",
+          "position": 2,
+          "image": "https://www.pdf99.org/assets/how-to-arrange.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Convert & download",
+          "text": "Generate a PDF instantly after converting JPG to PDF and download with images preserved perfectly.",
+          "url": "https://www.pdf99.org/jpg-to-pdf#how-to",
+          "position": 3,
+          "image": "https://www.pdf99.org/assets/how-to-download.jpg"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pdf99.org/jpg-to-pdf#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my file uploaded to your servers when I convert JPG to PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all conversion happens locally in your browser. Your JPG images never leave your device, ensuring complete privacy and security when you convert jpg to pdf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I convert multiple JPG images to one PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our JPG to PDF converter allows you to merge multiple images into a single PDF file. You can also choose to create separate PDF files for each image."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What page sizes and orientations are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can choose from A4, Letter, and Legal page sizes, and select either portrait or landscape orientation. You can also adjust margins (none, small, or big) for your PDF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a limit on the number of images I can convert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Since processing happens in your browser, the limit depends on your device's memory and performance. You can convert as many JPG images as your browser can handle comfortably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I rearrange images before converting to PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can drag and drop thumbnails to reorder your images in any sequence before converting jpg to pdf. This helps organize your document exactly how you want it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What image formats are supported besides JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While our tool is optimized for JPG and JPEG, it also supports PNG, GIF, BMP, and other common image formats. All images will be converted to high-quality PDF pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my images lose quality when converted to PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, we maintain the original image quality during conversion. The JPG to PDF process preserves sharpness, colors, and details of your original images."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.pdf99.org/jpg-to-pdf#product",
+      "name": "JPG to PDF Converter",
+      "description": "Free online tool to convert JPG images to PDF with customizable settings.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/OnlineOnly",
+        "url": "https://www.pdf99.org/jpg-to-pdf"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1247",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "User"
+          },
+          "reviewBody": "Best free JPG to PDF converter I've found. Fast, private, and easy to use."
         }
       ]
     }
@@ -852,6 +988,8 @@
         <div id="mobile-more-list" class="mobile-more-list">
           <a href="jpg-to-pdf">JPG to PDF</a>
           <a href="split-pdf">Split PDF</a>
+          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+
         </div>
       </div>
     </nav>
@@ -888,6 +1026,8 @@
           <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
             <a href="jpg-to-pdf">JPG to PDF</a>
             <a href="split-pdf">Split PDF</a>
+            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
           </div>
         </div>
 

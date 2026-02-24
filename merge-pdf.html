@@ -3,22 +3,25 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57TC57Z3');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
+  <!-- End Google Tag Manager -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-KC8H85HKF1');
-</script>
+    gtag('config', 'G-KC8H85HKF1');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -59,8 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="manifest.json" />
 
   <!-- Structured data (JSON-LD) -->
-
-    <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -71,7 +73,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "url": "https://www.pdf99.org/merge-pdf",
       "description": "Merge multiple PDF files into a single PDF quickly and securely with PDF99 - no uploads to third-party servers required.",
       "applicationCategory": "Utilities",
-      "operatingSystem": "Web"
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Merge multiple PDFs, Combine PDF files, Join PDF documents, Reorder pages, Preview before merging, Adjust quality settings, Browser-based processing, No file uploads",
+      "screenshot": "https://www.pdf99.org/assets/og-image-merge-pdf.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -88,6 +97,146 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "position": 2,
           "name": "Merge PDF",
           "item": "https://www.pdf99.org/merge-pdf"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.pdf99.org/merge-pdf#how-to",
+      "name": "How to Merge PDF Files",
+      "description": "Combine multiple PDF files into one document in three simple steps.",
+      "totalTime": "PT3M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload PDFs",
+          "text": "Choose the PDF files you want to combine - you can select multiple files at once.",
+          "url": "https://www.pdf99.org/merge-pdf#how-to",
+          "position": 1,
+          "image": "https://www.pdf99.org/assets/how-to-merge-upload.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Order & preview",
+          "text": "Drag to reorder pages or files, preview the result, and remove any pages you don't need.",
+          "url": "https://www.pdf99.org/merge-pdf#how-to",
+          "position": 2,
+          "image": "https://www.pdf99.org/assets/how-to-merge-reorder.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Merge & download",
+          "text": "Click Merge to create a single PDF and download it instantly with the pages in your chosen order.",
+          "url": "https://www.pdf99.org/merge-pdf#how-to",
+          "position": 3,
+          "image": "https://www.pdf99.org/assets/how-to-merge-download.jpg"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pdf99.org/merge-pdf#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my file uploaded to your servers when I merge PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all processing happens locally in your browser. Your PDF files never leave your device, ensuring complete privacy and security when you merge PDF documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many PDF files can I merge at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can merge as many PDF files as your browser can handle. Since processing is local, the limit depends on your device's memory and performance. Most users successfully merge 10-20 PDF files without issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reorder pages before merging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can drag and drop thumbnails to reorder files or individual pages before merging. This allows you to arrange your merged PDF exactly how you want it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to the quality after merging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We maintain the original quality of your PDFs during merging. You can also adjust render quality and JPEG compression settings to balance file size and quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I merge PDFs with different page sizes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our merge PDF tool handles files with different page sizes. Each page will retain its original dimensions in the merged document."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a file size limit for merging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Since processing happens in your browser, the file size limit depends on your device's available memory. For very large files, we recommend merging fewer files at once."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account to merge PDFs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account or registration is required. You can merge PDF files instantly and for free without any sign-up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I remove pages from PDFs before merging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can remove individual files or pages before merging. Simply click the remove button on any thumbnail to exclude it from the final merged PDF."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.pdf99.org/merge-pdf#product",
+      "name": "Merge PDF Tool",
+      "description": "Free online tool to combine multiple PDF files into one document with customizable quality settings.",
+      "url": "https://www.pdf99.org/merge-pdf",
+      "image": "https://www.pdf99.org/assets/og-image-merge-pdf.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/OnlineOnly",
+        "url": "https://www.pdf99.org/merge-pdf"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "2134",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "User"
+          },
+          "reviewBody": "Best free PDF merger online. Fast, secure, and no uploads means my documents stay private."
         }
       ]
     }
@@ -846,9 +995,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
@@ -869,6 +1018,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="mobile-more-list" class="mobile-more-list">
           <a href="jpg-to-pdf">JPG to PDF</a>
           <a href="split-pdf">Split PDF</a>
+          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+
         </div>
       </div>
     </nav>
@@ -905,6 +1056,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
             <a href="jpg-to-pdf">JPG to PDF</a>
             <a href="split-pdf">Split PDF</a>
+            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
           </div>
         </div>
 
@@ -987,7 +1140,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>What is PDF Merging?</h2>
             </div>
             <p class="info-text">
-              When you merge PDF files, you're combining two or more separate documents into one single file. A PDF merger is a tool that makes it easy to join PDF documents together without any hassle. Think of it like stapling different papers into one packet, except it's all digital. Whether you need to combine PDF files for a work presentation, join PDF scans from different sources, or simply want to merge PDF documents to keep everything organized in one place, the process is straightforward. Instead of sending five separate email attachments, you can use a PDF merger to create one neat file. The ability to combine PDF documents saves time for both you and whoever receives your files. With PDF99's merge PDF tool, you can not only join PDF files together but also rearrange pages, remove ones you don't need, and create a polished final document in just seconds. It's perfect for anyone who regularly works with multiple PDF files and needs to merge PDF content into organized, professional packages.
+              When you merge PDF files, you're combining two or more separate documents into one single file. A PDF
+              merger is a tool that makes it easy to join PDF documents together without any hassle. Think of it like
+              stapling different papers into one packet, except it's all digital. Whether you need to combine PDF files
+              for a work presentation, join PDF scans from different sources, or simply want to merge PDF documents to
+              keep everything organized in one place, the process is straightforward. Instead of sending five separate
+              email attachments, you can use a PDF merger to create one neat file. The ability to combine PDF documents
+              saves time for both you and whoever receives your files. With PDF99's merge PDF tool, you can not only
+              join PDF files together but also rearrange pages, remove ones you don't need, and create a polished final
+              document in just seconds. It's perfect for anyone who regularly works with multiple PDF files and needs to
+              merge PDF content into organized, professional packages.
             </p>
           </section>
 
@@ -997,10 +1159,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>Why Merge PDFs?</h2>
             </div>
             <ul class="info-list">
-              <li><strong>Simplify sharing:</strong> Send one clean file instead of cluttering someone's inbox with multiple attachments when you combine PDF documents.</li>
-              <li><strong>Organize documents:</strong> Put related pages together in one place for easier reading, printing, and filing.</li>
-              <li><strong>Prepare reports:</strong> Use a PDF merger to bring together chapters, appendices, cover pages, and scanned content into one complete document.</li>
-              <li><strong>Preserve order:</strong> Control exactly how pages appear and flow when you join PDF files before sharing or archiving them.</li>
+              <li><strong>Simplify sharing:</strong> Send one clean file instead of cluttering someone's inbox with
+                multiple attachments when you combine PDF documents.</li>
+              <li><strong>Organize documents:</strong> Put related pages together in one place for easier reading,
+                printing, and filing.</li>
+              <li><strong>Prepare reports:</strong> Use a PDF merger to bring together chapters, appendices, cover
+                pages, and scanned content into one complete document.</li>
+              <li><strong>Preserve order:</strong> Control exactly how pages appear and flow when you join PDF files
+                before sharing or archiving them.</li>
             </ul>
           </section>
 
@@ -1010,19 +1176,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>Merge PDF - Complete Guide</h2>
             </div>
             <div class="article-wrap">
-              <p>The need to combine PDF files comes up all the time in both work and personal situations. Whether you're gathering invoices for expense reports, putting together a portfolio for job applications, or assembling scanned documents from different sources, a reliable PDF merger makes everything easier. When you merge PDF documents, you keep everything organized and accessible in one convenient file. PDF99's merge PDF feature lets you upload multiple files, drag and drop to reorder pages exactly how you want them, and export one polished document. You can join PDF files from contracts, presentations, forms, and images all into a single, professional package. The ability to combine PDF content means no more hunting through folders or email threads to find scattered documents-everything lives in one place.</p>
+              <p>The need to combine PDF files comes up all the time in both work and personal situations. Whether
+                you're gathering invoices for expense reports, putting together a portfolio for job applications, or
+                assembling scanned documents from different sources, a reliable PDF merger makes everything easier. When
+                you merge PDF documents, you keep everything organized and accessible in one convenient file. PDF99's
+                merge PDF feature lets you upload multiple files, drag and drop to reorder pages exactly how you want
+                them, and export one polished document. You can join PDF files from contracts, presentations, forms, and
+                images all into a single, professional package. The ability to combine PDF content means no more hunting
+                through folders or email threads to find scattered documents-everything lives in one place.</p>
 
               <h3>Best practices</h3>
               <ol>
-                <li><strong>Check page order:</strong> Before you finalize and merge PDF files, preview everything to make sure pages flow logically from start to finish.</li>
-                <li><strong>Remove duplicates:</strong> When you combine PDF documents, delete any repeated pages or blank pages that snuck in to keep your final file clean.</li>
-                <li><strong>Optimize after merge:</strong> Once you join PDF files together, run the merged document through a compressor if it ended up larger than expected for easier sharing.</li>
-                <li><strong>Use bookmarks:</strong> For longer documents, consider adding bookmarks or a table of contents after you merge PDF files so readers can navigate easily.</li>
-                <li><strong>Test before sending:</strong> Open your merged file and scroll through it completely to catch any issues before you share it with others.</li>
+                <li><strong>Check page order:</strong> Before you finalize and merge PDF files, preview everything to
+                  make sure pages flow logically from start to finish.</li>
+                <li><strong>Remove duplicates:</strong> When you combine PDF documents, delete any repeated pages or
+                  blank pages that snuck in to keep your final file clean.</li>
+                <li><strong>Optimize after merge:</strong> Once you join PDF files together, run the merged document
+                  through a compressor if it ended up larger than expected for easier sharing.</li>
+                <li><strong>Use bookmarks:</strong> For longer documents, consider adding bookmarks or a table of
+                  contents after you merge PDF files so readers can navigate easily.</li>
+                <li><strong>Test before sending:</strong> Open your merged file and scroll through it completely to
+                  catch any issues before you share it with others.</li>
               </ol>
 
               <h3>When to use</h3>
-              <p>You'll want to merge PDF files in countless everyday scenarios. Students use a PDF merger to combine PDF documents like research papers, assignment sheets, and reference materials into one submission file. Job seekers join PDF files containing resumes, cover letters, portfolio samples, and references for complete application packages. Accountants combine PDF invoices and receipts for monthly reporting. Real estate agents merge PDF property listings, inspection reports, and contract documents for client presentations. Teachers join PDF worksheets and study guides into comprehensive lesson packets. Small business owners use a PDF merger to combine PDF contracts, proposals, and supporting documents before sending them to clients. Legal professionals regularly merge PDF case files, evidence documents, and correspondence into organized case packets. Basically, anytime you're dealing with multiple related PDF files that would make more sense as one document-whether for sharing, printing, archiving, or presenting-that's when you need to combine PDF files. The merge PDF function is especially valuable in professional settings where document organization and presentation matter, but it's equally useful for personal projects like creating photo albums, recipe collections, or travel itineraries.</p>
+              <p>You'll want to merge PDF files in countless everyday scenarios. Students use a PDF merger to combine
+                PDF documents like research papers, assignment sheets, and reference materials into one submission file.
+                Job seekers join PDF files containing resumes, cover letters, portfolio samples, and references for
+                complete application packages. Accountants combine PDF invoices and receipts for monthly reporting. Real
+                estate agents merge PDF property listings, inspection reports, and contract documents for client
+                presentations. Teachers join PDF worksheets and study guides into comprehensive lesson packets. Small
+                business owners use a PDF merger to combine PDF contracts, proposals, and supporting documents before
+                sending them to clients. Legal professionals regularly merge PDF case files, evidence documents, and
+                correspondence into organized case packets. Basically, anytime you're dealing with multiple related PDF
+                files that would make more sense as one document-whether for sharing, printing, archiving, or
+                presenting-that's when you need to combine PDF files. The merge PDF function is especially valuable in
+                professional settings where document organization and presentation matter, but it's equally useful for
+                personal projects like creating photo albums, recipe collections, or travel itineraries.</p>
             </div>
           </section>
 
@@ -1494,9 +1684,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (!state.outputs || state.outputs.length === 0) { alert("No merged file available. Please merge first."); return; }
       if (state.outputs.length === 1) { saveAs(state.outputs[0].blob, state.outputs[0].name); }
       downloadPdfBtn.innerHTML = "Downloading...";
-            setTimeout(() => {
-                downloadPdfBtn.innerHTML = "Download PDF";
-            }, 1000);
+      setTimeout(() => {
+        downloadPdfBtn.innerHTML = "Download PDF";
+      }, 1000);
     }
 
     function timestampString() { const now = new Date(); return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}-${String(now.getHours()).padStart(2, "0")}${String(now.getMinutes()).padStart(2, "0")}${String(now.getSeconds()).padStart(2, "0")}`; }

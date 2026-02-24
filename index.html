@@ -3,22 +3,25 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57TC57Z3');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
+  <!-- End Google Tag Manager -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-KC8H85HKF1');
-</script>
+    gtag('config', 'G-KC8H85HKF1');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -59,10 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
-  
+
 
   <!-- Structured data -->
-      <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -122,6 +125,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "item": {
             "@id": "https://www.pdf99.org/jpg-to-pdf",
             "name": "JPG to PDF"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.pdf99.org/#how-to",
+      "name": "How to use PDF99",
+      "description": "Three simple steps - works in your browser, no upload to server (by default) and files are private.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Choose a tool",
+          "text": "Select the task (e.g. \"PDF Converter\" or \"Merge PDF\").",
+          "url": "https://www.pdf99.org/#how-to",
+          "position": 1
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Upload or drag files",
+          "text": "Drag files into the tool area or click to select from your device.",
+          "url": "https://www.pdf99.org/#how-to",
+          "position": 2
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Download the result",
+          "text": "Process runs in the browser (or minimal server step). Download your file instantly.",
+          "url": "https://www.pdf99.org/#how-to",
+          "position": 3
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pdf99.org/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my file uploaded to your servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By default most processing runs locally in your browser. When a server conversion is needed we only keep files temporarily for processing and remove them automatically. See Privacy & Security for details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files deleted after processing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - server-stored files are deleted after a short expiration window (typically minutes to a few hours). We do not keep processed files longer than necessary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which formats can PDF Converter handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common office formats (DOCX, XLSX, PPTX), images (JPG, PNG, TIFF) and PDF ↔ conversions. Some complex layouts may require manual checking."
           }
         }
       ]
@@ -633,15 +696,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57TC57Z3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- mobile sidebar -->
   <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
     <button id="mobile-sidebar-close" class="close">✕</button>
     <nav>
-      <a href="/">Home</a>
+      <a href="https://www.pdf99.org/">Home</a>
       <a href="pdf-converter">PDF Converter</a>
       <a href="compress-pdf">Compress PDF</a>
       <a href="merge-pdf">Merge PDF</a>
@@ -656,6 +719,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="mobile-more-list" class="mobile-more-list">
           <a href="jpg-to-pdf">JPG to PDF</a>
           <a href="split-pdf">Split PDF</a>
+          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+
         </div>
       </div>
     </nav>
@@ -675,7 +740,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="nav-center" aria-hidden="false">
         <div class="nav-links">
-          <a href="/" class="hover:text-red-600">Home</a>
+          <a href="https://www.pdf99.org/" class="hover:text-red-600">Home</a>
           <a href="pdf-converter" class="hover:text-red-600">PDF Converter</a>
           <a href="compress-pdf" class="hover:text-red-600">Compress PDF</a>
           <a href="merge-pdf" class="hover:text-red-600">Merge PDF</a>
@@ -692,6 +757,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
             <a href="jpg-to-pdf">JPG to PDF</a>
             <a href="split-pdf">Split PDF</a>
+            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
           </div>
         </div>
 
@@ -927,7 +994,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             ">
           <a href="https://x.com/" aria-label="Twitter"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
           <a href="https://github.com/" aria-label="GitHub"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"
+              aria-hidden="true"></i></a>
         </div>
       </div>
 
