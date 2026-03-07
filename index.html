@@ -2,26 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-KC8H85HKF1');
-  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -211,14 +191,16 @@
 
 
   <!-- libs -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-   <link rel="stylesheet" href="tailwind/output.css">
+  <!-- <link rel="stylesheet" href="tailwind/output.css"> -->
+  <link rel="preload" href="/tailwind/output.css" as="style">
+  <link rel="stylesheet" href="/tailwind/output.css">
 
 
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
     /* Hide scrollbar universally but keep scroll functionality */
 
     /* For Chrome, Safari, Edge */
@@ -242,6 +224,8 @@
       box-sizing: border-box;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
         "Helvetica Neue", Arial;
+      font-display: swap;
+
     }
 
     html,
@@ -883,8 +867,7 @@
             </div>
           </a>
 
-          <a role="listitem" href="rotate-pdf" class="tool-card"
-            aria-label="Rotate PDF - Rotate PDF pages permanently">
+          <a role="listitem" href="rotate-pdf" class="tool-card" aria-label="Rotate PDF - Rotate PDF pages permanently">
             <div class="tool-icon ic-navy">
               <i class="fas fa-rotate-left fa-lg" aria-hidden="true"></i>
             </div>
@@ -1079,7 +1062,7 @@
     </div>
   </footer>
 
-  <script>
+  <script defer>
     // UI helpers (dropdown, mobile sidebar, stacked buttons)
     (function () {
       const moreToggle = document.getElementById("more-dropdown-toggle");
@@ -1192,6 +1175,28 @@
       JavaScript to use the tools.
     </div>
   </noscript>
+
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC8H85HKF1');
+  </script>
 </body>
 
 </html>
