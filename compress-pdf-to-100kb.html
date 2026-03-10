@@ -1594,8 +1594,8 @@
 
         const state = {
             files: [], // { file: File, pages: number|null, origSize: number }
-            quality: 0.25, // default JPEG quality (0..1) targeting 100KB
-            renderScale: 1.2, // default render pixel scale (balanced for 100KB)
+            quality: 0.15, // default JPEG quality (0..1) targeting 100KB
+            renderScale: 1, // default render pixel scale (balanced for 100KB)
             outputs: [], // { name, blob, originalSize, newSize, compressed }
         };
 
@@ -1636,7 +1636,7 @@
                 jpegQualityRange.value = String(Math.round(state.quality * 100));
             if (jpegQualityVal)
                 jpegQualityVal.textContent = String(Math.round(state.quality * 100));
-            selectQuality(0.25); // select recommended for 100KB
+            selectQuality(0.15); // select recommended for 100KB
         }
 
         function setupListeners() {
