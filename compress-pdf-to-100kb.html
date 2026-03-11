@@ -261,7 +261,6 @@
     <link rel="stylesheet" href="/tailwind/output.css">
 
     <style>
-
         /* Hide scrollbar universally but keep scroll functionality */
 
         /* For Chrome, Safari, Edge */
@@ -1509,6 +1508,7 @@
 
     <!-- JS: UI helpers + app JS (modified for 100KB target) -->
     <script defer>
+        const TARGET_PDF_SIZE = 100 * 1024; // 100KB
         // UI helpers (dropdown, mobile sidebar, stacked buttons)
         (function () {
             const moreToggle = document.getElementById("more-dropdown-toggle");
@@ -1920,6 +1920,80 @@
             }
         }
 
+        async function smartCompressPDF(pageImages, originalSize) {
+
+            let quality = 0.6;
+            let scale = 1;
+
+            let bestBlob = null;
+
+            for (let attempt = 0; attempt < 12; attempt++) {
+
+                let outPdf = null;
+
+                for (let i = 0; i < pageImages.length; i++) {
+
+                    const img = pageImages[i];
+
+                    const canvas = document.createElement("canvas");
+                    const ctx = canvas.getContext("2d");
+
+                    canvas.width = img.pixelWidth * scale;
+                    canvas.height = img.pixelHeight * scale;
+
+                    const image = new Image();
+                    image.src = img.dataUrl;
+
+                    await new Promise(res => image.onload = res);
+
+                    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+                    const compressed = canvas.toDataURL("image/jpeg", quality);
+
+                    const pageW = img.origWidthPts;
+                    const pageH = img.origHeightPts;
+
+                    if (i === 0) {
+
+                        outPdf = new jsPDF({
+                            unit: "pt",
+                            format: [pageW, pageH]
+                        });
+
+                        outPdf.addImage(compressed, "JPEG", 0, 0, pageW, pageH);
+
+                    } else {
+
+                        outPdf.addPage([pageW, pageH]);
+                        outPdf.addImage(compressed, "JPEG", 0, 0, pageW, pageH);
+
+                    }
+                }
+
+                const blob = outPdf.output("blob");
+
+                bestBlob = blob;
+
+                if (blob.size <= TARGET_PDF_SIZE) {
+                    return blob;
+                }
+
+                // Adaptive compression
+                if (blob.size > TARGET_PDF_SIZE * 3) {
+                    quality -= 0.15;
+                    scale -= 0.15;
+                } else {
+                    quality -= 0.07;
+                    scale -= 0.07;
+                }
+
+                if (quality < 0.05) quality = 0.05;
+                if (scale < 0.35) scale = 0.35;
+            }
+
+            return bestBlob;
+        }
+
         // compressAllFiles: rasterize pages via pdf.js, encode JPEG with selected quality, rebuild with jsPDF
         async function compressAllFiles() {
             const outputs = [];
@@ -2054,7 +2128,8 @@
                     continue;
                 }
 
-                const blob = outPdf.output("blob");
+                // const blob = outPdf.output("blob");
+                const blob = await smartCompressPDF(pageImages, item.origSize);
 
                 // If compressed blob is not smaller, fallback to original to avoid forced expansion
                 if (blob.size >= (item.origSize || file.size)) {
