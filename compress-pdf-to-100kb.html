@@ -1595,7 +1595,7 @@
         const state = {
             files: [], // { file: File, pages: number|null, origSize: number }
             quality: 0.15, // default JPEG quality (0..1) targeting 100KB
-            renderScale: 1, // default render pixel scale (balanced for 100KB)
+            renderScale: 1.5, // default render pixel scale (balanced for 100KB)
             outputs: [], // { name, blob, originalSize, newSize, compressed }
         };
 
@@ -1920,79 +1920,73 @@
             }
         }
 
-        async function smartCompressPDF(pageImages, originalSize) {
+        async function smartCompressPDF(pageImages) {
 
-            let quality = 0.6;
-            let scale = 1;
+    const TARGET = 100 * 1024;
 
-            let bestBlob = null;
+    let quality = 0.85;   // start high
+    let scale = 1;        // keep full resolution first
 
-            for (let attempt = 0; attempt < 12; attempt++) {
+    let bestBlob = null;
 
-                let outPdf = null;
+    for (let attempt = 0; attempt < 15; attempt++) {
 
-                for (let i = 0; i < pageImages.length; i++) {
+        let outPdf = null;
 
-                    const img = pageImages[i];
+        for (let i = 0; i < pageImages.length; i++) {
 
-                    const canvas = document.createElement("canvas");
-                    const ctx = canvas.getContext("2d");
+            const img = pageImages[i];
 
-                    canvas.width = img.pixelWidth * scale;
-                    canvas.height = img.pixelHeight * scale;
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
 
-                    const image = new Image();
-                    image.src = img.dataUrl;
+            canvas.width = img.pixelWidth * scale;
+            canvas.height = img.pixelHeight * scale;
 
-                    await new Promise(res => image.onload = res);
+            const image = new Image();
+            image.src = img.dataUrl;
 
-                    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            await new Promise(r => image.onload = r);
 
-                    const compressed = canvas.toDataURL("image/jpeg", quality);
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-                    const pageW = img.origWidthPts;
-                    const pageH = img.origHeightPts;
+            const data = canvas.toDataURL("image/jpeg", quality);
 
-                    if (i === 0) {
+            const pageW = img.origWidthPts;
+            const pageH = img.origHeightPts;
 
-                        outPdf = new jsPDF({
-                            unit: "pt",
-                            format: [pageW, pageH]
-                        });
-
-                        outPdf.addImage(compressed, "JPEG", 0, 0, pageW, pageH);
-
-                    } else {
-
-                        outPdf.addPage([pageW, pageH]);
-                        outPdf.addImage(compressed, "JPEG", 0, 0, pageW, pageH);
-
-                    }
-                }
-
-                const blob = outPdf.output("blob");
-
-                bestBlob = blob;
-
-                if (blob.size <= TARGET_PDF_SIZE) {
-                    return blob;
-                }
-
-                // Adaptive compression
-                if (blob.size > TARGET_PDF_SIZE * 3) {
-                    quality -= 0.15;
-                    scale -= 0.15;
-                } else {
-                    quality -= 0.07;
-                    scale -= 0.07;
-                }
-
-                if (quality < 0.05) quality = 0.05;
-                if (scale < 0.35) scale = 0.35;
+            if (i === 0) {
+                outPdf = new jsPDF({
+                    unit: "pt",
+                    format: [pageW, pageH]
+                });
+                outPdf.addImage(data, "JPEG", 0, 0, pageW, pageH);
+            } else {
+                outPdf.addPage([pageW, pageH]);
+                outPdf.addImage(data, "JPEG", 0, 0, pageW, pageH);
             }
-
-            return bestBlob;
         }
+
+        const blob = outPdf.output("blob");
+
+        bestBlob = blob;
+
+        if (blob.size <= TARGET) return blob;
+
+        // Step 1: reduce quality first
+        if (quality > 0.4) {
+            quality -= 0.08;
+        }
+
+        // Step 2: reduce resolution only if necessary
+        else {
+            scale -= 0.08;
+            if (scale < 0.6) scale = 0.6;  // don't go too low
+        }
+    }
+
+    return bestBlob;
+}
 
         // compressAllFiles: rasterize pages via pdf.js, encode JPEG with selected quality, rebuild with jsPDF
         async function compressAllFiles() {
@@ -2129,7 +2123,7 @@
                 }
 
                 // const blob = outPdf.output("blob");
-                const blob = await smartCompressPDF(pageImages, item.origSize);
+                const blob = await smartCompressPDF(pageImages);
 
                 // If compressed blob is not smaller, fallback to original to avoid forced expansion
                 if (blob.size >= (item.origSize || file.size)) {
