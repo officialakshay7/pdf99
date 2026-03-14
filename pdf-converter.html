@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -248,19 +248,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-      <link rel="preload" href="/tailwind/output.css" as="style">
-  <link rel="stylesheet" href="/tailwind/output.css">
+    <link rel="preload" href="/tailwind/output.css" as="style">
+    <link rel="stylesheet" href="/tailwind/output.css">
 
     <style>
         @font-face {
-      font-family: 'Lexend';
-      src: url('/assets/font/Lexend-VariableFont_wght.woff2') format('woff2');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
+            font-family: 'Lexend';
+            src: url('/assets/font/Lexend-VariableFont_wght.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
 
         /* Hide scrollbar universally but keep scroll functionality */
 
@@ -1178,97 +1178,230 @@
                         </div>
                     </section>
 
+                    <!-- FAQ Section -->
+                    <section class="pdf-sections" style="margin-top:60px;">
+                        <div class="section-head">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
+
+                        <div style="max-width: 900px; margin: 0 auto;">
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Is my file uploaded to your servers when I convert to PDF?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    No, all conversion happens locally in your browser. Your images and documents never
+                                    leave
+                                    your device, ensuring complete privacy and security when you convert to PDF.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    What image formats can I convert to PDF?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Our PDF converter supports JPG, PNG, WebP, GIF, BMP, and other common image formats.
+                                    For PNG files with transparency, we preserve transparency when converting to PDF.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Can I convert multiple images to one PDF?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Yes, you can merge multiple images into a single PDF file. Simply upload all your
+                                    images
+                                    and they'll be combined in your chosen order. You can also choose to create separate
+                                    PDF
+                                    files for each image.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    What page sizes and orientations are available?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    You can choose from A4 (international), Letter (US), and Legal page sizes, and
+                                    select
+                                    either portrait or landscape orientation. You can also adjust margins (none, small,
+                                    or
+                                    big) for your PDF.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Can I rearrange images before converting?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Yes, you can drag and drop thumbnails to reorder your images in any sequence before
+                                    converting to PDF. This helps organize your document exactly how you want it.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Will my images lose quality when converted to PDF?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    We maintain the original image quality during conversion. For PNG images with
+                                    transparency,
+                                    we use PNG embedding to preserve alpha channels. JPEG images are converted with
+                                    high-quality
+                                    settings.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Is there a limit on the number of images I can convert?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Since processing happens in your browser, the limit depends on your device's memory
+                                    and
+                                    performance. You can convert as many images as your browser can handle comfortably.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Can I rotate images before converting?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Yes, you can rotate individual images by 90-degree increments before converting to
+                                    PDF.
+                                    This helps correct orientation issues before finalizing your document.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Do I need to create an account to use the PDF converter?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    No account or registration is required. You can convert images to PDF instantly and
+                                    for
+                                    free without any sign-up.
+                                </p>
+                            </div>
+
+                            <div style="padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Can I convert Word or Excel files to PDF?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Currently, our PDF converter specializes in image to PDF conversion. For Word,
+                                    Excel, and
+                                    other document formats, we recommend using our other tools or checking back soon as
+                                    we're
+                                    expanding our conversion capabilities.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- Explore Tools -->
-          <section style="margin-top:60px;">
-            <div class="section-head">
-              <h2>Explore Other PDF Tools</h2>
-            </div>
+                    <section style="margin-top:60px;">
+                        <div class="section-head">
+                            <h2>Explore Other PDF Tools</h2>
+                        </div>
 
-            <div class="card-grid">
+                        <div class="card-grid">
 
-              <a href="pdf-converter" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-blue"><i class="fas fa-file-pdf"></i></div>
-                  <div>
-                    <h3>PDF Converter</h3>
-                    <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting and layout.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="pdf-converter" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-blue"><i class="fas fa-file-pdf"></i></div>
+                                    <div>
+                                        <h3>PDF Converter</h3>
+                                        <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting
+                                            and layout.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="merge-pdf" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-red"><i class="fas fa-layer-group"></i></div>
-                  <div>
-                    <h3>Merge PDF</h3>
-                    <p>Combine multiple PDFs into one document. Reorder, preview, and merge in seconds.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="merge-pdf" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-red"><i class="fas fa-layer-group"></i></div>
+                                    <div>
+                                        <h3>Merge PDF</h3>
+                                        <p>Combine multiple PDFs into one document. Reorder, preview, and merge in
+                                            seconds.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="split-pdf" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
-                  <div>
-                    <h3>Split PDF</h3>
-                    <p>Extract pages or ranges into separate PDF files - useful for reorganizing and sharing.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="split-pdf" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
+                                    <div>
+                                        <h3>Split PDF</h3>
+                                        <p>Extract pages or ranges into separate PDF files - useful for reorganizing and
+                                            sharing.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="compress-pdf" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                  <div>
-                    <h3>Compress PDF</h3>
-                    <p>Reduce file size while keeping quality. Choose between balanced or strong compression.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="compress-pdf" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                                    <div>
+                                        <h3>Compress PDF</h3>
+                                        <p>Reduce file size while keeping quality. Choose between balanced or strong
+                                            compression.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="jpg-to-pdf" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
-                  <div>
-                    <h3>JPG to PDF</h3>
-                    <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images into one PDF easily.
-                    </p>
-                  </div>
-                </div>
-              </a>
+                            <a href="jpg-to-pdf" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
+                                    <div>
+                                        <h3>JPG to PDF</h3>
+                                        <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images
+                                            into one PDF easily.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="compress-pdf-to-100kb" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                  <div>
-                    <h3>Compress PDF to 100KB</h3>
-                    <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick sharing.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="compress-pdf-to-100kb" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                                    <div>
+                                        <h3>Compress PDF to 100KB</h3>
+                                        <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick
+                                            sharing.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="compress-pdf-to-200kb" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                  <div>
-                    <h3>Compress PDF to 200KB</h3>
-                    <p>Compress PDF files to 200KB while maintaining readable quality for uploads and sharing.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="compress-pdf-to-200kb" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                                    <div>
+                                        <h3>Compress PDF to 200KB</h3>
+                                        <p>Compress PDF files to 200KB while maintaining readable quality for uploads
+                                            and sharing.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-              <a href="rotate-pdf" class="tool-link">
-                <div class="tool-card">
-                  <div class="tool-icon icon-blue"><i class="fas fa-rotate-left"></i></div>
-                  <div>
-                    <h3>Rotate PDF</h3>
-                    <p>Rotate PDF pages permanently. Fix page orientation by rotating clockwise or counterclockwise.</p>
-                  </div>
-                </div>
-              </a>
+                            <a href="rotate-pdf" class="tool-link">
+                                <div class="tool-card">
+                                    <div class="tool-icon icon-blue"><i class="fas fa-rotate-left"></i></div>
+                                    <div>
+                                        <h3>Rotate PDF</h3>
+                                        <p>Rotate PDF pages permanently. Fix page orientation by rotating clockwise or
+                                            counterclockwise.</p>
+                                    </div>
+                                </div>
+                            </a>
 
-            </div>
-          </section>
+                        </div>
+                    </section>
 
                 </div>
             </div>
@@ -1403,24 +1536,24 @@
     </div>
 
     <!-- footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div style="text-align:center; padding:14px 10px; font-size:14px; color:#374151;">
+    <footer class="site-footer" role="contentinfo">
+        <div style="text-align:center; padding:14px 10px; font-size:14px; color:#374151;">
 
-      <a href="/pages/faq" style="color:#374151; text-decoration:none; margin:0 6px;">FAQ</a> |
-      <a href="/pages/help" style="color:#374151; text-decoration:none; margin:0 6px;">How to use</a> |
-      <a href="/pages/contact" style="color:#374151; text-decoration:none; margin:0 6px;">Contact</a> |
-      <a href="/pages/terms" style="color:#374151; text-decoration:none; margin:0 6px;">Terms</a> |
-      <a href="/pages/privacy" style="color:#374151; text-decoration:none; margin:0 6px;">Privacy</a> |
-      <a href="/pages/cookie" style="color:#374151; text-decoration:none; margin:0 6px;">Cookies</a> |
-      <a href="/pages/security" style="color:#374151; text-decoration:none; margin:0 6px;">Security</a>
+            <a href="/pages/faq" style="color:#374151; text-decoration:none; margin:0 6px;">FAQ</a> |
+            <a href="/pages/help" style="color:#374151; text-decoration:none; margin:0 6px;">How to use</a> |
+            <a href="/pages/contact" style="color:#374151; text-decoration:none; margin:0 6px;">Contact</a> |
+            <a href="/pages/terms" style="color:#374151; text-decoration:none; margin:0 6px;">Terms</a> |
+            <a href="/pages/privacy" style="color:#374151; text-decoration:none; margin:0 6px;">Privacy</a> |
+            <a href="/pages/cookie" style="color:#374151; text-decoration:none; margin:0 6px;">Cookies</a> |
+            <a href="/pages/security" style="color:#374151; text-decoration:none; margin:0 6px;">Security</a>
 
-      <span style="margin-left:12px; color:#6b7280;">
-        ©
-        <script>document.write(new Date().getFullYear());</script> PDF99 - All rights reserved.
-      </span>
+            <span style="margin-left:12px; color:#6b7280;">
+                ©
+                <script>document.write(new Date().getFullYear());</script> PDF99 - All rights reserved.
+            </span>
 
-    </div>
-  </footer>
+        </div>
+    </footer>
 
     <!-- Converting overlay -->
     <div id="converting-overlay" aria-hidden="true" style="
