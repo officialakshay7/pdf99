@@ -43,7 +43,7 @@
     <link rel="manifest" href="manifest.json" />
 
     <!-- Structured data (JSON-LD) -->
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -239,8 +239,197 @@
     }
   ]
 }
+</script> -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": ["SoftwareApplication","WebApplication"],
+ "@id": "https://www.pdf99.org/pdf-converter#software",
+ "name": "PDF Converter",
+ "url": "https://www.pdf99.org/pdf-converter",
+ "description": "PDF99 PDF Converter - convert images and documents (JPG, PNG, WebP, etc.) to high-quality PDF directly in your browser.",
+ "applicationCategory": "Utilities",
+ "operatingSystem": "Web",
+ "image": "https://www.pdf99.org/assets/og-image-image-to-pdf.png",
+ "screenshot": "https://www.pdf99.org/assets/og-image-image-to-pdf.png",
+ "publisher": {
+   "@type": "Organization",
+   "name": "PDF99",
+   "url": "https://www.pdf99.org"
+ },
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ },
+ "featureList": [
+   "Convert images to PDF",
+   "JPG to PDF",
+   "PNG to PDF",
+   "WebP to PDF",
+   "Multiple image formats",
+   "Merge multiple images",
+   "Adjust page orientation",
+   "Choose page size",
+   "Customize margins",
+   "Reorder images",
+   "Rotate images",
+   "Browser-based processing",
+   "No file uploads",
+   "Preserve image quality"
+ ]
+}
 </script>
 
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "@id": "https://www.pdf99.org/pdf-converter#breadcrumb",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.pdf99.org/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "PDF Converter",
+   "item": "https://www.pdf99.org/pdf-converter"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "@id": "https://www.pdf99.org/pdf-converter#how-to",
+ "name": "How to Convert Files to and from PDF Free",
+ "description": "Convert your images and documents to PDF in three simple steps.",
+ "totalTime": "PT2M",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "name": "Upload",
+   "text": "Select the Word, Excel, PowerPoint, PDF, or image files you want to convert.",
+   "url": "https://www.pdf99.org/pdf-converter#step1",
+   "position": 1,
+   "image": "https://www.pdf99.org/assets/how-to-converter-upload.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Process",
+   "text": "Our free PDF converter will process your file instantly in your browser.",
+   "url": "https://www.pdf99.org/pdf-converter#step2",
+   "position": 2,
+   "image": "https://www.pdf99.org/assets/how-to-converter-process.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Download",
+   "text": "Download your converted PDF immediately, with formatting and quality preserved.",
+   "url": "https://www.pdf99.org/pdf-converter#step3",
+   "position": 3,
+   "image": "https://www.pdf99.org/assets/how-to-converter-download.jpg"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://www.pdf99.org/pdf-converter#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is my file uploaded to your servers when I convert to PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, all conversion happens locally in your browser. Your images and documents never leave your device, ensuring complete privacy and security when you convert to PDF."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What image formats can I convert to PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Our PDF converter supports JPG, PNG, WebP, GIF, BMP, and other common image formats."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I convert multiple images to one PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can merge multiple images into a single PDF file."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What page sizes and orientations are available?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You can choose from A4, Letter, and Legal page sizes, and select portrait or landscape orientation."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rearrange images before converting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can drag and drop thumbnails to reorder your images before converting."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will my images lose quality when converted to PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We maintain the original image quality during conversion."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a limit on the number of images I can convert?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The limit depends on your device's memory and performance."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rotate images before converting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can rotate individual images by 90-degree increments before converting."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to create an account to use the PDF converter?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No account or registration is required."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I convert Word or Excel files to PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Currently, our PDF converter specializes in image to PDF conversion."
+   }
+  }
+ ]
+}
+</script>
 
     <!-- libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

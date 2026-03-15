@@ -45,7 +45,7 @@
     <link rel="manifest" href="manifest.json" />
 
     <!-- Structured data (JSON-LD) -->
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -233,8 +233,185 @@
     }
   ]
 }
+</script> -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": ["SoftwareApplication","WebApplication"],
+ "@id": "https://www.pdf99.org/split-pdf#software",
+ "name": "Split PDF",
+ "url": "https://www.pdf99.org/split-pdf",
+ "description": "Split PDF files in seconds. Extract pages from a PDF or break PDF into multiple individual PDFs - all in your browser.",
+ "applicationCategory": "Utilities",
+ "operatingSystem": "Web",
+ "image": "https://www.pdf99.org/assets/og-image-split-pdf.png",
+ "screenshot": "https://www.pdf99.org/assets/og-image-split-pdf.png",
+ "publisher": {
+   "@type": "Organization",
+   "name": "PDF99",
+   "url": "https://www.pdf99.org"
+ },
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ },
+ "featureList": [
+   "Split PDF into multiple files",
+   "Extract specific pages",
+   "Extract all pages",
+   "Page range selection",
+   "Reorder pages before splitting",
+   "Browser-based processing",
+   "No file uploads",
+   "Preserve original quality"
+ ]
+}
 </script>
 
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "@id": "https://www.pdf99.org/split-pdf#breadcrumb",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.pdf99.org/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Split PDF",
+   "item": "https://www.pdf99.org/split-pdf"
+  }
+ ]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "@id": "https://www.pdf99.org/split-pdf#how-to",
+ "name": "How to Split PDF Files",
+ "description": "Split your PDF into separate files or extract specific pages in three simple steps.",
+ "totalTime": "PT2M",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "name": "Upload PDF",
+   "text": "Choose the PDF you want to split - large or small files are supported.",
+   "url": "https://www.pdf99.org/split-pdf#step1",
+   "position": 1,
+   "image": "https://www.pdf99.org/assets/how-to-split-upload.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Select pages",
+   "text": "Pick specific pages or page ranges to extract into new PDF files.",
+   "url": "https://www.pdf99.org/split-pdf#step2",
+   "position": 2,
+   "image": "https://www.pdf99.org/assets/how-to-split-select.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Split & download",
+   "text": "Download your split PDFs instantly. Each file is created exactly as selected.",
+   "url": "https://www.pdf99.org/split-pdf#step3",
+   "position": 3,
+   "image": "https://www.pdf99.org/assets/how-to-split-download.jpg"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://www.pdf99.org/split-pdf#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is my file uploaded to your servers when I split PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, all processing happens locally in your browser. Your PDF files never leave your device, ensuring complete privacy and security when you split PDF documents."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I extract specific pages from a PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can extract specific pages by entering page numbers or ranges (e.g., 1,3,5-7). You can also choose to extract all pages and reorder them before splitting."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many pages can a PDF have for splitting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Since processing happens in your browser, the limit depends on your device's memory and performance. Most users successfully split PDFs with hundreds of pages without issues."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I reorder pages before splitting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can drag and drop thumbnails to reorder pages before splitting. The extracted pages will follow your custom order."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens to the quality after splitting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We preserve the original quality of your PDF during splitting. Each extracted page maintains its original dimensions and content quality."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I merge extracted pages into one PDF?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can choose to merge extracted pages into a single PDF file instead of creating separate files for each page."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a file size limit for splitting?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Since processing happens in your browser, the file size limit depends on your device's available memory."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to create an account to split PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No account or registration is required. You can split PDF files instantly and for free without any sign-up."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I split password-protected PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Currently, we don't support password-protected PDFs. You'll need to remove the password protection first before splitting the file."
+   }
+  }
+ ]
+}
+</script>
 
     <!-- libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>

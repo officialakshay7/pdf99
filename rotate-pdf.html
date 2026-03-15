@@ -43,7 +43,7 @@
     <link rel="manifest" href="manifest.json" />
 
     <!-- Structured data (JSON-LD) for Rotate PDF -->
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -230,6 +230,186 @@
       ]
     }
   ]
+}
+</script> -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": ["SoftwareApplication","WebApplication"],
+ "@id": "https://www.pdf99.org/rotate-pdf#software",
+ "name": "Rotate PDF",
+ "url": "https://www.pdf99.org/rotate-pdf",
+ "description": "Rotate PDF pages permanently. Change orientation clockwise or counterclockwise - fast, secure, and done entirely in the browser.",
+ "applicationCategory": "Utilities",
+ "operatingSystem": "Web",
+ "image": "https://www.pdf99.org/assets/og-image-rotate-pdf.png",
+ "screenshot": "https://www.pdf99.org/assets/og-image-rotate-pdf.png",
+ "publisher": {
+   "@type": "Organization",
+   "name": "PDF99",
+   "url": "https://www.pdf99.org"
+ },
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ },
+ "featureList": [
+   "Rotate PDF pages",
+   "Rotate all pages",
+   "Rotate individual pages",
+   "Clockwise rotation",
+   "Counterclockwise rotation",
+   "90-degree rotation",
+   "180-degree rotation",
+   "Batch rotation",
+   "Browser-based processing",
+   "No file uploads"
+ ]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "@id": "https://www.pdf99.org/rotate-pdf#breadcrumb",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.pdf99.org/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Rotate PDF",
+   "item": "https://www.pdf99.org/rotate-pdf"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "@id": "https://www.pdf99.org/rotate-pdf#how-to",
+ "name": "How to Rotate a PDF Online",
+ "description": "Change page orientation in three simple steps with individual or bulk rotation.",
+ "totalTime": "PT2M",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "name": "Upload",
+   "text": "Select the PDF file you want to rotate. All pages are supported.",
+   "url": "https://www.pdf99.org/rotate-pdf#step1",
+   "position": 1,
+   "image": "https://www.pdf99.org/assets/how-to-rotate-upload.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Rotate",
+   "text": "Click on any page to rotate it clockwise, or use bulk controls to rotate all pages at once.",
+   "url": "https://www.pdf99.org/rotate-pdf#step2",
+   "position": 2,
+   "image": "https://www.pdf99.org/assets/how-to-rotate-settings.jpg"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Download",
+   "text": "Download your rotated PDF instantly, with all pages permanently rotated.",
+   "url": "https://www.pdf99.org/rotate-pdf#step3",
+   "position": 3,
+   "image": "https://www.pdf99.org/assets/how-to-rotate-download.jpg"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://www.pdf99.org/rotate-pdf#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is my file uploaded to your servers when I rotate PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, all rotation happens locally in your browser. Your PDF files never leave your device, ensuring complete privacy and security."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rotate all pages at once?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can rotate all pages clockwise or counterclockwise simultaneously using the bulk rotation buttons. You can also rotate individual pages by clicking on them."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What rotation angles are supported?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You can rotate pages by 90° clockwise, 90° counterclockwise, or 180°. The rotation is applied permanently to the PDF."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will the PDF quality be affected by rotation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, rotation is lossless. The page orientation changes without any recompression or quality loss."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rotate multiple PDFs at once?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can select and rotate multiple PDF files simultaneously."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a file size limit for rotation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Since processing happens in your browser, the file size limit depends on your device's available memory."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to create an account to rotate PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No account or registration is required. You can rotate PDF files instantly and for free without any sign-up."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I rotate password-protected PDFs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Currently, we don't support password-protected PDFs."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will text remain selectable after rotation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, text in your PDF remains selectable and searchable after rotation."
+   }
+  }
+ ]
 }
 </script>
 
