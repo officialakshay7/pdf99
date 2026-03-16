@@ -503,9 +503,32 @@
                 border-radius: 0;
                 box-shadow: none;
                 border-left: 1px solid #f1f5f9;
-                padding: 20px;
-                overflow: auto;
+                padding: 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
                 z-index: 960;
+            }
+
+            .settings-content {
+                flex: 1;
+                overflow-y: auto;
+                padding: 20px 20px 0 20px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .settings-content::-webkit-scrollbar {
+                display: none;
+            }
+
+            .settings-footer {
+                padding: 20px;
+                background: white;
+                border-top: 1px solid #f1f5f9;
+                position: sticky;
+                bottom: 0;
+                width: 100%;
             }
 
             .main-content {
@@ -530,17 +553,10 @@
             }
 
             #watermark-btn-desktop {
-                position: absolute;
-                left: 20px;
-                right: 20px;
-                bottom: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-
-            .settings-panel .content-padding-bottom {
-                padding-bottom: 86px;
+                width: 100%;
             }
         }
 
@@ -555,12 +571,26 @@
                 transform: translateX(100%);
                 background: #fff;
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-                padding: 28px;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
                 z-index: 990;
             }
 
             .settings-panel.open {
                 transform: translateX(0);
+            }
+
+            .settings-content {
+                flex: 1;
+                overflow-y: auto;
+                padding: 28px 28px 0 28px;
+            }
+
+            .settings-footer {
+                padding: 20px 28px 28px 28px;
+                background: white;
+                border-top: 1px solid #f1f5f9;
             }
 
             #watermark-btn-mobile {
@@ -775,6 +805,46 @@
             border-color: #ef4444;
         }
 
+        /* Image upload preview */
+        .image-preview {
+            margin-top: 12px;
+            padding: 12px;
+            border: 2px dashed #e5e7eb;
+            border-radius: 8px;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .image-preview .placeholder {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        .upload-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #ef4444;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .upload-btn:hover {
+            background: #dc2626;
+        }
+
         /* new sections */
         .pdf-sections {
             max-width: 1200px;
@@ -959,6 +1029,38 @@
             height: 30px;
             border-radius: 4px;
             border: 1px solid #e5e7eb;
+        }
+
+        .image-upload-area {
+            border: 2px dashed #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: #f9fafb;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .image-upload-area:hover {
+            border-color: #ef4444;
+            background: #fffaf9;
+        }
+
+        .image-upload-area i {
+            font-size: 32px;
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+
+        .image-upload-area .upload-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .image-upload-area .upload-hint {
+            color: #9ca3af;
+            font-size: 12px;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -1356,7 +1458,7 @@
 
                         <!-- Settings Panel (watermark controls) -->
                         <div class="settings-section settings-panel" id="settings-panel" aria-hidden="false">
-                            <div class="content-padding-bottom">
+                            <div class="settings-content">
                                 <div class="flex justify-between items-center mb-6">
                                     <h3 class="text-lg font-semibold">Watermark Settings</h3>
                                     <button id="close-settings" class="md:hidden text-gray-500 hover:text-gray-700">
@@ -1405,16 +1507,40 @@
                                         </div>
                                     </div>
 
-                                    <!-- Image watermark settings (hidden by default) -->
+                                    <!-- Image watermark settings with proper upload UI -->
                                     <div id="image-settings" class="hidden">
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-700 mb-1">Upload Image</label>
-                                            <input type="file" id="watermark-image" accept="image/png,image/jpeg" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100">
-                                            <p class="text-xs text-gray-500 mt-1">PNG with transparency recommended</p>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Watermark Image</label>
+                                            
+                                            <!-- Hidden file input -->
+                                            <input type="file" id="watermark-image" accept="image/png,image/jpeg,image/jpg" class="hidden" />
+                                            
+                                            <!-- Custom upload area -->
+                                            <div id="image-upload-area" class="image-upload-area">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                                <div class="upload-text">Click to upload image</div>
+                                                <div class="upload-hint">PNG, JPG up to 5MB</div>
+                                            </div>
+                                            
+                                            <!-- Image preview -->
+                                            <div id="image-preview-container" class="image-preview hidden">
+                                                <img id="image-preview" src="" alt="Watermark preview" />
+                                                <button id="remove-image" class="text-red-600 text-sm mt-2 hover:text-red-800">
+                                                    <i class="fas fa-times mr-1"></i>Remove
+                                                </button>
+                                            </div>
+                                            
+                                            <p class="text-xs text-gray-500 mt-2">PNG with transparent background works best</p>
                                         </div>
-                                        <div class="mt-3">
+                                        
+                                        <div class="mt-4">
                                             <label class="block text-sm font-medium text-gray-700 mb-1">Image Scale (%)</label>
-                                            <input type="number" id="image-scale" value="30" min="5" max="100" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+                                            <input type="range" id="image-scale" min="5" max="100" value="30" class="w-full">
+                                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                                <span>5%</span>
+                                                <span id="image-scale-value">30%</span>
+                                                <span>100%</span>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1467,12 +1593,15 @@
                                             <i class="fas fa-lock mr-1"></i> 100% private — no file upload
                                         </p>
                                     </div>
-
-                                    <button id="watermark-btn-desktop"
-                                        class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center w-full">
-                                        <span>Apply Watermark</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
-                                    </button>
                                 </div>
+                            </div>
+                            
+                            <!-- Sticky footer with button -->
+                            <div class="settings-footer">
+                                <button id="watermark-btn-desktop"
+                                    class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center w-full">
+                                    <span>Apply Watermark</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1606,7 +1735,12 @@
             const fontSize = document.getElementById('font-size');
             const textColor = document.getElementById('text-color');
             const watermarkImage = document.getElementById('watermark-image');
+            const imageUploadArea = document.getElementById('image-upload-area');
+            const imagePreviewContainer = document.getElementById('image-preview-container');
+            const imagePreview = document.getElementById('image-preview');
+            const removeImage = document.getElementById('remove-image');
             const imageScale = document.getElementById('image-scale');
+            const imageScaleValue = document.getElementById('image-scale-value');
             const opacity = document.getElementById('opacity');
             const opacityValue = document.getElementById('opacity-value');
             const watermarkRotation = document.getElementById('watermark-rotation');
@@ -1676,9 +1810,18 @@
                         watermarkPreview.className = 'watermark-preview';
                         watermarkPreview.style.opacity = state.watermarkSettings.opacity / 100;
                         watermarkPreview.style.transform = `rotate(${state.watermarkSettings.rotation}deg)`;
-                        watermarkPreview.style.color = state.watermarkSettings.color;
-                        watermarkPreview.style.fontSize = `${state.watermarkSettings.fontSize * 0.5}px`; // Scale for preview
-                        watermarkPreview.textContent = state.watermarkSettings.type === 'text' ? state.watermarkSettings.text : '🔷';
+                        
+                        if (state.watermarkSettings.type === 'text') {
+                            watermarkPreview.style.color = state.watermarkSettings.color;
+                            watermarkPreview.style.fontSize = `${state.watermarkSettings.fontSize * 0.5}px`;
+                            watermarkPreview.textContent = state.watermarkSettings.text;
+                        } else if (state.watermarkSettings.imageData) {
+                            // For image preview, we'll use a placeholder icon
+                            watermarkPreview.innerHTML = '🖼️';
+                            watermarkPreview.style.fontSize = '48px';
+                        } else {
+                            watermarkPreview.textContent = '🔷';
+                        }
                         
                         inner.innerHTML = `
                             <i class="fas fa-file-pdf text-5xl text-red-400"></i>
@@ -1734,20 +1877,43 @@
                 renderThumbnails();
             });
 
+            // Image upload handling
+            imageUploadArea?.addEventListener('click', () => {
+                watermarkImage.click();
+            });
+
             watermarkImage?.addEventListener('change', (e) => {
                 const file = e.target.files[0];
                 if (file) {
+                    if (file.size > 5 * 1024 * 1024) {
+                        alert('Image size should be less than 5MB');
+                        return;
+                    }
+                    
                     const reader = new FileReader();
                     reader.onload = (event) => {
                         state.watermarkSettings.imageData = event.target.result;
+                        imagePreview.src = event.target.result;
+                        imageUploadArea.classList.add('hidden');
+                        imagePreviewContainer.classList.remove('hidden');
                         renderThumbnails();
                     };
                     reader.readAsDataURL(file);
                 }
             });
 
+            removeImage?.addEventListener('click', () => {
+                state.watermarkSettings.imageData = null;
+                watermarkImage.value = '';
+                imageUploadArea.classList.remove('hidden');
+                imagePreviewContainer.classList.add('hidden');
+                renderThumbnails();
+            });
+
             imageScale?.addEventListener('input', (e) => {
-                state.watermarkSettings.imageScale = parseInt(e.target.value) || 30;
+                const val = e.target.value;
+                imageScaleValue.textContent = val + '%';
+                state.watermarkSettings.imageScale = parseInt(val);
                 renderThumbnails();
             });
 
@@ -1782,6 +1948,9 @@
             // ----- Watermark Application -----
             async function applyWatermark() {
                 if (!state.files.length) return alert('Add PDFs first');
+                if (state.watermarkSettings.type === 'image' && !state.watermarkSettings.imageData) {
+                    return alert('Please select an image for watermark');
+                }
                 convertingOverlay.style.display = 'flex';
                 const outputs = [];
 
