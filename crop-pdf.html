@@ -81,7 +81,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "BreadcrumbList",
@@ -103,7 +103,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "HowTo",
@@ -140,7 +140,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "FAQPage",
@@ -734,10 +734,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             pointer-events: none;
         }
-        
+
         .crop-handle {
             position: absolute;
             width: 20px;
@@ -749,7 +749,7 @@
             cursor: move;
             z-index: 100;
         }
-        
+
         .crop-area {
             position: absolute;
             border: 2px solid #ef4444;
@@ -963,77 +963,81 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- mobile sidebar -->
-  <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
-    <button id="mobile-sidebar-close" class="close">✕</button>
-    <nav>
-      <a href="https://www.pdf99.org/">Home</a>
-      <a href="pdf-converter">PDF Converter</a>
-      <a href="compress-pdf">Compress PDF</a>
-      <a href="merge-pdf">Merge PDF</a>
+    <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
+        <button id="mobile-sidebar-close" class="close">✕</button>
+        <nav>
+            <a href="https://www.pdf99.org/">Home</a>
+            <a href="pdf-converter">PDF Converter</a>
+            <a href="compress-pdf">Compress PDF</a>
+            <a href="merge-pdf">Merge PDF</a>
 
-      <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
+            <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
 
-      <div>
-        <div id="mobile-more-toggle" class="mobile-more-toggle">
-          <span>More</span>
-          <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
-        </div>
-        <div id="mobile-more-list" class="mobile-more-list">
-          <a href="jpg-to-pdf">JPG to PDF</a>
-          <a href="crop-pdf">Crop PDF</a>
-          <a href="rotate-pdf">Rotate PDF</a>
-          <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
-          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+            <div>
+                <div id="mobile-more-toggle" class="mobile-more-toggle">
+                    <span>More</span>
+                    <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
+                </div>
+                <div id="mobile-more-list" class="mobile-more-list">
+                    <a href="jpg-to-pdf">JPG to PDF</a>
+                    <a href="pdf-to-jpg">PDF to JPG</a>
+                    <a href="split-pdf">Split PDF</a>
+                    <a href="rotate-pdf">Rotate PDF</a>
+                    <a href="watermark-pdf">Watermark PDF</a>
+                    <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
+                    <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
 
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <div id="overlay" class="overlay" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <div class="nav-left">
-        <div class="brand">
-          <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
-          <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
-        </div>
-      </div>
-
-      <div class="nav-center" aria-hidden="false">
-        <div class="nav-links">
-          <a href="https://www.pdf99.org/" class="hover:text-red-600">Home</a>
-          <a href="pdf-converter" class="hover:text-red-600">PDF Converter</a>
-          <a href="compress-pdf" class="hover:text-red-600">Compress PDF</a>
-          <a href="merge-pdf" class="hover:text-red-600">Merge PDF</a>
-        </div>
-      </div>
-
-      <div class="nav-right">
-        <div class="more-dropdown" id="more-dropdown">
-          <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
-            aria-expanded="false">
-            More
-            <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
-          </button>
-          <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
-            <a href="jpg-to-pdf">JPG to PDF</a>
-            <a href="crop-pdf">Crop PDF</a>
-            <a href="rotate-pdf">Rotate PDF</a>
-            <a href="compress-pdf-to-100kb" class="hover:text-red-600">Compress PDF to 100KB</a>
-            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
-
-          </div>
-        </div>
-
-        <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-      </div>
+                </div>
+            </div>
+        </nav>
     </div>
-  </nav>
+
+    <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <div class="nav-left">
+                <div class="brand">
+                    <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
+                    <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
+                </div>
+            </div>
+
+            <div class="nav-center" aria-hidden="false">
+                <div class="nav-links">
+                    <a href="https://www.pdf99.org/" class="hover:text-red-600">Home</a>
+                    <a href="pdf-converter" class="hover:text-red-600">PDF Converter</a>
+                    <a href="compress-pdf" class="hover:text-red-600">Compress PDF</a>
+                    <a href="merge-pdf" class="hover:text-red-600">Merge PDF</a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="more-dropdown" id="more-dropdown">
+                    <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2"
+                        aria-haspopup="true" aria-expanded="false">
+                        More
+                        <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
+                    </button>
+                    <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
+                        <a href="jpg-to-pdf">JPG to PDF</a>
+                        <a href="pdf-to-jpg">PDF to JPG</a>
+                        <a href="split-pdf">Split PDF</a>
+                        <a href="rotate-pdf">Rotate PDF</a>
+                        <a href="watermark-pdf">Watermark PDF</a>
+                        <a href="compress-pdf-to-100kb" class="hover:text-red-600">Compress PDF to 100KB</a>
+                        <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
+                    </div>
+                </div>
+
+                <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <!-- main content -->
     <div class="page-wrap">
@@ -1098,7 +1102,8 @@
                                 <div class="step-inner">
                                     <div class="step-badge">3</div>
                                     <div class="step-title">Apply & download</div>
-                                    <p class="step-desc">Apply the crop to your pages and download your cropped PDF instantly.</p>
+                                    <p class="step-desc">Apply the crop to your pages and download your cropped PDF
+                                        instantly.</p>
                                 </div>
                             </div>
                         </div>
@@ -1112,7 +1117,18 @@
                             <h2>What is PDF Cropping?</h2>
                         </div>
                         <p class="info-text">
-                            PDF cropping is essentially trimming the edges of your PDF pages to focus on specific content or remove unwanted white space. Think of it like using scissors to cut a photo down to just the part you want. When you crop PDF files, you can eliminate extra margins, remove blank areas, or focus on a particular section of a page. A PDF cropper is an essential tool for anyone working with scanned documents, presentations, or reports. Maybe you have a scanned document with large borders, or a presentation slide with excess white space around the edges. By using a PDF cropper, you can trim PDF documents to their essential content, making them look cleaner and more professional. Instead of dealing with awkward margins or wasted space, you can crop PDF pages to fit perfectly. Whether you need to crop PDF files for printing, sharing, or archiving, having control over page boundaries gives you complete flexibility. You can cut PDF pages down to exactly what matters, creating documents that are both visually appealing and space-efficient.
+                            PDF cropping is essentially trimming the edges of your PDF pages to focus on specific
+                            content or remove unwanted white space. Think of it like using scissors to cut a photo down
+                            to just the part you want. When you crop PDF files, you can eliminate extra margins, remove
+                            blank areas, or focus on a particular section of a page. A PDF cropper is an essential tool
+                            for anyone working with scanned documents, presentations, or reports. Maybe you have a
+                            scanned document with large borders, or a presentation slide with excess white space around
+                            the edges. By using a PDF cropper, you can trim PDF documents to their essential content,
+                            making them look cleaner and more professional. Instead of dealing with awkward margins or
+                            wasted space, you can crop PDF pages to fit perfectly. Whether you need to crop PDF files
+                            for printing, sharing, or archiving, having control over page boundaries gives you complete
+                            flexibility. You can cut PDF pages down to exactly what matters, creating documents that are
+                            both visually appealing and space-efficient.
                         </p>
                     </section>
 
@@ -1122,11 +1138,16 @@
                             <h2>Why Crop PDFs?</h2>
                         </div>
                         <ul class="info-list">
-                            <li><strong>Remove white space:</strong> Eliminate unnecessary margins and blank areas around your content for cleaner documents.</li>
-                            <li><strong>Focus on content:</strong> Crop PDF pages to highlight specific sections, diagrams, or important information.</li>
-                            <li><strong>Improve readability:</strong> Remove distracting borders and empty space so readers focus on what matters.</li>
-                            <li><strong>Reduce file size:</strong> Cropping away empty margins often reduces overall file size, making documents easier to share.</li>
-                            <li><strong>Prepare for printing:</strong> Adjust page boundaries to match your printing requirements and avoid cut-off content.</li>
+                            <li><strong>Remove white space:</strong> Eliminate unnecessary margins and blank areas
+                                around your content for cleaner documents.</li>
+                            <li><strong>Focus on content:</strong> Crop PDF pages to highlight specific sections,
+                                diagrams, or important information.</li>
+                            <li><strong>Improve readability:</strong> Remove distracting borders and empty space so
+                                readers focus on what matters.</li>
+                            <li><strong>Reduce file size:</strong> Cropping away empty margins often reduces overall
+                                file size, making documents easier to share.</li>
+                            <li><strong>Prepare for printing:</strong> Adjust page boundaries to match your printing
+                                requirements and avoid cut-off content.</li>
                         </ul>
                     </section>
 
@@ -1136,19 +1157,46 @@
                             <h2>Crop PDF - Complete Guide</h2>
                         </div>
                         <div class="article-wrap">
-                            <p>We've all encountered PDFs with awkward margins, excessive white space, or unwanted content around the edges. Whether it's a scanned document with large borders, a presentation slide with empty space, or a report where you only need a specific diagram-that's when a good PDF cropper becomes invaluable. With PDF99's crop PDF tool, you can quickly trim away everything you don't need and keep only what matters. It works right in your browser, keeps your files private, and doesn't require any complicated software downloads. When you need to crop PDF files for cleaner presentations or want to remove white space from PDF documents, it's straightforward and fast. The crop PDF feature handles everything from simple margin trimming to precise content selection, making it easy to refine your documents however you need them.</p>
+                            <p>We've all encountered PDFs with awkward margins, excessive white space, or unwanted
+                                content around the edges. Whether it's a scanned document with large borders, a
+                                presentation slide with empty space, or a report where you only need a specific
+                                diagram-that's when a good PDF cropper becomes invaluable. With PDF99's crop PDF tool,
+                                you can quickly trim away everything you don't need and keep only what matters. It works
+                                right in your browser, keeps your files private, and doesn't require any complicated
+                                software downloads. When you need to crop PDF files for cleaner presentations or want to
+                                remove white space from PDF documents, it's straightforward and fast. The crop PDF
+                                feature handles everything from simple margin trimming to precise content selection,
+                                making it easy to refine your documents however you need them.</p>
 
                             <h3>Best practices</h3>
                             <ol>
-                                <li><strong>Preview before cropping:</strong> Always check your crop area on a sample page before applying to all pages to ensure you're keeping the right content.</li>
-                                <li><strong>Use consistent crops:</strong> When cropping multiple pages in a document, try to apply the same crop area for consistency unless pages vary significantly.</li>
-                                <li><strong>Save originals:</strong> Consider keeping your original uncropped PDF as a backup, especially when cropping important documents.</li>
-                                <li><strong>Check after cropping:</strong> Review a few pages after cropping to ensure no important content was accidentally cut off.</li>
-                                <li><strong>Combine with other tools:</strong> After cropping, you might want to compress the PDF further or merge it with other documents.</li>
+                                <li><strong>Preview before cropping:</strong> Always check your crop area on a sample
+                                    page before applying to all pages to ensure you're keeping the right content.</li>
+                                <li><strong>Use consistent crops:</strong> When cropping multiple pages in a document,
+                                    try to apply the same crop area for consistency unless pages vary significantly.
+                                </li>
+                                <li><strong>Save originals:</strong> Consider keeping your original uncropped PDF as a
+                                    backup, especially when cropping important documents.</li>
+                                <li><strong>Check after cropping:</strong> Review a few pages after cropping to ensure
+                                    no important content was accidentally cut off.</li>
+                                <li><strong>Combine with other tools:</strong> After cropping, you might want to
+                                    compress the PDF further or merge it with other documents.</li>
                             </ol>
 
                             <h3>When to use</h3>
-                            <p>You'll want to crop PDF documents in countless everyday situations. Maybe you're a student who needs to remove large margins from scanned lecture notes to save paper when printing. Or you're a designer who needs to crop PDF files to extract specific graphics or diagrams from client materials. It's perfect for cleaning up presentation slides that have excessive white space around the content. When you're preparing documents for publication, the ability to crop PDF pages ensures consistent margins throughout. Teachers often need to crop worksheets to remove answer keys or focus on specific exercises. Business professionals crop reports to remove confidential headers or footers before sharing. Legal professionals trim PDF contracts to focus on specific clauses during review. Basically, anytime you find yourself thinking "I wish this PDF didn't have so much empty space around the edges," that's when a PDF cropper saves the day. It's especially useful in offices, schools, publishing, and anywhere people work with documents regularly and need precise control over page layouts.</p>
+                            <p>You'll want to crop PDF documents in countless everyday situations. Maybe you're a
+                                student who needs to remove large margins from scanned lecture notes to save paper when
+                                printing. Or you're a designer who needs to crop PDF files to extract specific graphics
+                                or diagrams from client materials. It's perfect for cleaning up presentation slides that
+                                have excessive white space around the content. When you're preparing documents for
+                                publication, the ability to crop PDF pages ensures consistent margins throughout.
+                                Teachers often need to crop worksheets to remove answer keys or focus on specific
+                                exercises. Business professionals crop reports to remove confidential headers or footers
+                                before sharing. Legal professionals trim PDF contracts to focus on specific clauses
+                                during review. Basically, anytime you find yourself thinking "I wish this PDF didn't
+                                have so much empty space around the edges," that's when a PDF cropper saves the day.
+                                It's especially useful in offices, schools, publishing, and anywhere people work with
+                                documents regularly and need precise control over page layouts.</p>
                         </div>
                     </section>
 
@@ -1175,7 +1223,8 @@
                                     Can I crop specific pages only?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can choose to crop all pages, a range of pages, or individual pages. You have full control over which pages get cropped.
+                                    Yes, you can choose to crop all pages, a range of pages, or individual pages. You
+                                    have full control over which pages get cropped.
                                 </p>
                             </div>
 
@@ -1184,7 +1233,9 @@
                                     How do I remove white space from my PDF?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Simply upload your PDF, use the crop handles to select the content area you want to keep (excluding the white margins), then apply the crop. The white space around your content will be removed.
+                                    Simply upload your PDF, use the crop handles to select the content area you want to
+                                    keep (excluding the white margins), then apply the crop. The white space around your
+                                    content will be removed.
                                 </p>
                             </div>
 
@@ -1193,7 +1244,8 @@
                                     Can I set custom crop dimensions?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can either drag the crop handles visually or enter exact dimensions and coordinates for precise cropping.
+                                    Yes, you can either drag the crop handles visually or enter exact dimensions and
+                                    coordinates for precise cropping.
                                 </p>
                             </div>
 
@@ -1202,7 +1254,8 @@
                                     What happens to the quality after cropping?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    We preserve the original quality of your PDF content. Only the page boundaries are adjusted - the content itself remains at its original resolution and quality.
+                                    We preserve the original quality of your PDF content. Only the page boundaries are
+                                    adjusted - the content itself remains at its original resolution and quality.
                                 </p>
                             </div>
 
@@ -1211,7 +1264,8 @@
                                     Can I crop multiple PDFs at once?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can upload a PDF with multiple pages and apply the same crop to all pages, or crop each page individually with different settings.
+                                    Yes, you can upload a PDF with multiple pages and apply the same crop to all pages,
+                                    or crop each page individually with different settings.
                                 </p>
                             </div>
 
@@ -1247,13 +1301,15 @@
                                     protection first before cropping the file.
                                 </p>
                             </div>
-                            
+
                             <div style="padding: 20px 0;">
                                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
                                     Will cropping reduce my PDF file size?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, cropping often reduces file size because you're removing empty margins and white space. However, this tool focuses on cropping first - you can always compress afterwards for further size reduction.
+                                    Yes, cropping often reduces file size because you're removing empty margins and
+                                    white space. However, this tool focuses on cropping first - you can always compress
+                                    afterwards for further size reduction.
                                 </p>
                             </div>
                         </div>
@@ -1294,7 +1350,8 @@
                                     <div class="tool-icon icon-orange"><i class="fas fa-crop"></i></div>
                                     <div>
                                         <h3>Crop PDF</h3>
-                                        <p>Trim margins, remove white space, and crop PDF pages to focus on essential content.</p>
+                                        <p>Trim margins, remove white space, and crop PDF pages to focus on essential
+                                            content.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1400,43 +1457,50 @@
 
                                     <div>
                                         <h4 class="font-medium mb-3">Crop mode</h4>
-                                        <select id="crop-mode" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+                                        <select id="crop-mode"
+                                            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
                                             <option value="manual">Manual (drag to crop)</option>
                                             <option value="auto-white">Auto-remove white space</option>
                                             <option value="custom">Custom dimensions</option>
                                         </select>
                                     </div>
-                                    
+
                                     <div id="custom-dimensions" style="display: none;">
                                         <h4 class="font-medium mb-3">Dimensions (points)</h4>
                                         <div class="grid grid-cols-2 gap-2">
                                             <div>
                                                 <label class="text-xs text-gray-600">Left</label>
-                                                <input id="crop-left" type="number" value="0" min="0" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+                                                <input id="crop-left" type="number" value="0" min="0"
+                                                    class="w-full border border-gray-300 rounded-md px-3 py-2" />
                                             </div>
                                             <div>
                                                 <label class="text-xs text-gray-600">Top</label>
-                                                <input id="crop-top" type="number" value="0" min="0" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+                                                <input id="crop-top" type="number" value="0" min="0"
+                                                    class="w-full border border-gray-300 rounded-md px-3 py-2" />
                                             </div>
                                             <div>
                                                 <label class="text-xs text-gray-600">Width</label>
-                                                <input id="crop-width" type="number" value="612" min="10" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+                                                <input id="crop-width" type="number" value="612" min="10"
+                                                    class="w-full border border-gray-300 rounded-md px-3 py-2" />
                                             </div>
                                             <div>
                                                 <label class="text-xs text-gray-600">Height</label>
-                                                <input id="crop-height" type="number" value="792" min="10" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+                                                <input id="crop-height" type="number" value="792" min="10"
+                                                    class="w-full border border-gray-300 rounded-md px-3 py-2" />
                                             </div>
                                         </div>
-                                        <button id="apply-dimensions" class="mt-2 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md">
+                                        <button id="apply-dimensions"
+                                            class="mt-2 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md">
                                             Apply dimensions
                                         </button>
                                     </div>
-                                    
+
                                     <div class="flex items-center">
                                         <input id="preview-crop" type="checkbox"
                                             class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
                                             checked />
-                                        <label for="preview-crop" class="ml-2 block text-sm text-gray-900">Show crop overlay on thumbnails</label>
+                                        <label for="preview-crop" class="ml-2 block text-sm text-gray-900">Show crop
+                                            overlay on thumbnails</label>
                                     </div>
 
                                     <button id="convert-btn-desktop"
@@ -1842,7 +1906,7 @@
                 state.cropTop = Math.round(page.origHeightPts * 0.05);
                 state.cropWidth = Math.round(page.origWidthPts * 0.9);
                 state.cropHeight = Math.round(page.origHeightPts * 0.9);
-                
+
                 if (cropLeftInput) cropLeftInput.value = state.cropLeft;
                 if (cropTopInput) cropTopInput.value = state.cropTop;
                 if (cropWidthInput) cropWidthInput.value = state.cropWidth;
@@ -1880,7 +1944,7 @@
                         const baseViewport = page.getViewport({ scale: 1 });
                         const origWidthPts = baseViewport.width;
                         const origHeightPts = baseViewport.height;
-                        
+
                         const viewport = page.getViewport({ scale: 1 });
                         const scale = Math.max(0.5, thumbTargetWidth / viewport.width);
                         const vp = page.getViewport({ scale });
@@ -1959,7 +2023,7 @@
                 .map((n) => state.pages.find((p) => p.pageNumber === n))
                 .filter(Boolean);
             const thumbWidth = 160;
-            
+
             pageObjs.forEach((pObj, index) => {
                 const container = document.createElement("div");
                 container.className = `thumbnail-container relative ${state.selectedPage === pObj.pageNumber ? 'selected' : ''}`;
@@ -1991,30 +2055,30 @@
                     imgEl.style.maxHeight = "100%";
                     imgEl.style.display = "block";
                     inner.appendChild(imgEl);
-                    
+
                     // Add crop overlay if preview is enabled and this is the selected page or all pages
                     if (state.showPreview && (state.selectedPage === pObj.pageNumber || state.mode === "all")) {
                         // Calculate crop overlay position
                         const scaleX = thumbWidth / pObj.origWidthPts;
                         const scaleY = 220 / pObj.origHeightPts;
                         const scale = Math.min(scaleX, scaleY);
-                        
+
                         const displayedWidth = pObj.origWidthPts * scale;
                         const displayedHeight = pObj.origHeightPts * scale;
                         const offsetX = (thumbWidth - displayedWidth) / 2;
                         const offsetY = (220 - displayedHeight) / 2;
-                        
+
                         const cropOverlay = document.createElement("div");
                         cropOverlay.className = "crop-area";
                         cropOverlay.style.left = (offsetX + state.cropLeft * scale) + "px";
                         cropOverlay.style.top = (offsetY + state.cropTop * scale) + "px";
                         cropOverlay.style.width = (state.cropWidth * scale) + "px";
                         cropOverlay.style.height = (state.cropHeight * scale) + "px";
-                        
+
                         // Only make draggable on selected page
                         if (state.selectedPage === pObj.pageNumber) {
                             cropOverlay.style.cursor = "move";
-                            
+
                             // Simple drag handlers (would need more sophisticated implementation)
                             cropOverlay.addEventListener("mousedown", (e) => {
                                 e.preventDefault();
@@ -2024,32 +2088,32 @@
                                 dragStartY = e.clientY;
                                 dragStartLeft = state.cropLeft;
                                 dragStartTop = state.cropTop;
-                                
+
                                 const onMouseMove = (moveEvent) => {
                                     if (!isDragging) return;
                                     const deltaX = (moveEvent.clientX - dragStartX) / scale;
                                     const deltaY = (moveEvent.clientY - dragStartY) / scale;
-                                    
+
                                     state.cropLeft = Math.max(0, Math.min(pObj.origWidthPts - state.cropWidth, dragStartLeft + deltaX));
                                     state.cropTop = Math.max(0, Math.min(pObj.origHeightPts - state.cropHeight, dragStartTop + deltaY));
-                                    
+
                                     if (cropLeftInput) cropLeftInput.value = Math.round(state.cropLeft);
                                     if (cropTopInput) cropTopInput.value = Math.round(state.cropTop);
-                                    
+
                                     renderThumbnails();
                                 };
-                                
+
                                 const onMouseUp = () => {
                                     isDragging = false;
                                     document.removeEventListener("mousemove", onMouseMove);
                                     document.removeEventListener("mouseup", onMouseUp);
                                 };
-                                
+
                                 document.addEventListener("mousemove", onMouseMove);
                                 document.addEventListener("mouseup", onMouseUp);
                             });
                         }
-                        
+
                         inner.appendChild(cropOverlay);
                     }
                 } else {
@@ -2087,7 +2151,7 @@
                     }
                 });
                 actions.appendChild(removeBtn);
-                
+
                 inner.appendChild(actions);
 
                 const meta = document.createElement("div");
@@ -2244,7 +2308,7 @@
 
                         // Render the cropped area
                         const renderScale = 2; // Higher resolution for output
-                        const viewport = page.getViewport({ 
+                        const viewport = page.getViewport({
                             scale: renderScale,
                             offsetX: cropLeft,
                             offsetY: cropTop,
@@ -2254,9 +2318,9 @@
                         canvas.width = Math.round(cropWidth * renderScale);
                         canvas.height = Math.round(cropHeight * renderScale);
                         const ctx = canvas.getContext("2d");
-                        
-                        await page.render({ 
-                            canvasContext: ctx, 
+
+                        await page.render({
+                            canvasContext: ctx,
                             viewport,
                             background: 'white',
                         }).promise;
@@ -2268,7 +2332,7 @@
                             unit: "pt",
                             format: [cropWidth, cropHeight],
                         });
-                        
+
                         doc.addImage(
                             dataUrl,
                             "JPEG",
@@ -2277,13 +2341,13 @@
                             cropWidth,
                             cropHeight
                         );
-                        
+
                         const blob = doc.output("blob");
                         const nameBase = state.fileObj.file.name.replace(
                             /\.[^/.]+$/,
                             ""
                         );
-                        
+
                         croppedPages.push({
                             name: `${nameBase}-cropped-page-${pageNum}.pdf`,
                             blob,
@@ -2383,12 +2447,12 @@
             state.showPreview = true;
             state.outputs = [];
             state.selectedPage = 1;
-            
+
             selectedPagesInput && (selectedPagesInput.value = "");
             modeAll && modeAll.classList.add("selected");
             modeSelected && modeSelected.classList.remove("selected");
             if (selectedPagesInput) selectedPagesInput.style.display = "none";
-            
+
             document.getElementById("download-screen").classList.add("hidden");
             document.getElementById("upload-screen").classList.remove("hidden");
             thumbnailsContainer && (thumbnailsContainer.innerHTML = "");

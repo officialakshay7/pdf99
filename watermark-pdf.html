@@ -517,7 +517,7 @@
                 scrollbar-width: none;
                 -ms-overflow-style: none;
             }
-            
+
             .settings-content::-webkit-scrollbar {
                 display: none;
             }
@@ -1089,10 +1089,13 @@
                 </div>
                 <div id="mobile-more-list" class="mobile-more-list">
                     <a href="jpg-to-pdf">JPG to PDF</a>
+                    <a href="pdf-to-jpg">PDF to JPG</a>
                     <a href="split-pdf">Split PDF</a>
+                    <a href="rotate-pdf">Rotate PDF</a>
                     <a href="watermark-pdf">Watermark PDF</a>
                     <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
                     <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+
                 </div>
             </div>
         </nav>
@@ -1105,6 +1108,7 @@
         <div class="nav-inner">
             <div class="nav-left">
                 <div class="brand">
+                    <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
                     <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
                 </div>
             </div>
@@ -1120,17 +1124,20 @@
 
             <div class="nav-right">
                 <div class="more-dropdown" id="more-dropdown">
-                    <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
-                        aria-expanded="false">
+                    <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2"
+                        aria-haspopup="true" aria-expanded="false">
                         More
                         <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
                     </button>
                     <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
                         <a href="jpg-to-pdf">JPG to PDF</a>
+                        <a href="pdf-to-jpg">PDF to JPG</a>
                         <a href="split-pdf">Split PDF</a>
+                        <a href="rotate-pdf">Rotate PDF</a>
                         <a href="watermark-pdf">Watermark PDF</a>
-                        <a href="compress-pdf-to-100kb">Compress PDF to 100KB</a>
-                        <a href="compress-pdf-to-200kb">Compress PDF to 200KB</a>
+                        <a href="compress-pdf-to-100kb" class="hover:text-red-600">Compress PDF to 100KB</a>
+                        <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+
                     </div>
                 </div>
 
@@ -1195,12 +1202,14 @@
                                 <div class="step-inner">
                                     <div class="step-badge">2</div>
                                     <div class="step-title">Configure</div>
-                                    <p class="step-desc">Choose text or image watermark, customize appearance, opacity, and position.</p>
+                                    <p class="step-desc">Choose text or image watermark, customize appearance, opacity,
+                                        and position.</p>
                                 </div>
                                 <div class="step-inner">
                                     <div class="step-badge">3</div>
                                     <div class="step-title">Download</div>
-                                    <p class="step-desc">Download your watermarked PDF instantly, with all pages protected.</p>
+                                    <p class="step-desc">Download your watermarked PDF instantly, with all pages
+                                        protected.</p>
                                 </div>
                             </div>
                         </div>
@@ -1212,10 +1221,14 @@
                             <h2>What is PDF Watermarking?</h2>
                         </div>
                         <p class="info-text">
-                            A PDF watermark is a semi-transparent text, logo, or image overlaid on your document's pages. 
-                            Watermarking helps protect your intellectual property, indicate document status (like "DRAFT" or "CONFIDENTIAL"), 
-                            or add branding to your PDFs. Unlike rotation which changes page orientation, watermarking adds a protective 
-                            layer that doesn't alter your original content. All processing happens locally in your browser, so your files 
+                            A PDF watermark is a semi-transparent text, logo, or image overlaid on your document's
+                            pages.
+                            Watermarking helps protect your intellectual property, indicate document status (like
+                            "DRAFT" or "CONFIDENTIAL"),
+                            or add branding to your PDFs. Unlike rotation which changes page orientation, watermarking
+                            adds a protective
+                            layer that doesn't alter your original content. All processing happens locally in your
+                            browser, so your files
                             never leave your device — completely private and secure.
                         </p>
                     </section>
@@ -1226,12 +1239,17 @@
                             <h2>Why Add Watermarks to PDF Files?</h2>
                         </div>
                         <ul class="info-list">
-                            <li><strong>Protect your work:</strong> Discourage unauthorized use or distribution of your documents.</li>
-                            <li><strong>Mark document status:</strong> Clearly label drafts, confidential files, or review copies.</li>
+                            <li><strong>Protect your work:</strong> Discourage unauthorized use or distribution of your
+                                documents.</li>
+                            <li><strong>Mark document status:</strong> Clearly label drafts, confidential files, or
+                                review copies.</li>
                             <li><strong>Brand your documents:</strong> Add your company logo or name to every page.</li>
-                            <li><strong>Copyright notices:</strong> Embed copyright information to assert ownership.</li>
-                            <li><strong>Track document versions:</strong> Indicate version numbers or dates on each page.</li>
-                            <li><strong>No quality loss:</strong> Watermarks are added without recompressing your original content.</li>
+                            <li><strong>Copyright notices:</strong> Embed copyright information to assert ownership.
+                            </li>
+                            <li><strong>Track document versions:</strong> Indicate version numbers or dates on each
+                                page.</li>
+                            <li><strong>No quality loss:</strong> Watermarks are added without recompressing your
+                                original content.</li>
                         </ul>
                     </section>
 
@@ -1241,19 +1259,32 @@
                             <h2>Watermark PDF - Complete Guide</h2>
                         </div>
                         <div class="article-wrap">
-                            <p>Whether you're sharing sensitive business documents, sending draft proposals, or distributing creative work, adding a watermark provides an extra layer of protection and professionalism. PDF watermarking lets you overlay text, logos, or custom graphics onto your document pages, making it clear who owns the content or what stage the document is in.</p>
+                            <p>Whether you're sharing sensitive business documents, sending draft proposals, or
+                                distributing creative work, adding a watermark provides an extra layer of protection and
+                                professionalism. PDF watermarking lets you overlay text, logos, or custom graphics onto
+                                your document pages, making it clear who owns the content or what stage the document is
+                                in.</p>
 
                             <h3>Best practices for watermarking PDFs</h3>
                             <ol>
-                                <li><strong>Choose the right opacity:</strong> Set transparency between 20-40% for subtle protection, or higher for prominent marking.</li>
-                                <li><strong>Consider watermark placement:</strong> Center or diagonal placement works best for protection, corners for subtle branding.</li>
-                                <li><strong>Use vector graphics:</strong> For image watermarks, use PNG with transparency for best results.</li>
-                                <li><strong>Preview before applying:</strong> Check how your watermark looks on sample pages before finalizing.</li>
-                                <li><strong>Keep text readable:</strong> Ensure watermark text is clear but doesn't obscure document content.</li>
+                                <li><strong>Choose the right opacity:</strong> Set transparency between 20-40% for
+                                    subtle protection, or higher for prominent marking.</li>
+                                <li><strong>Consider watermark placement:</strong> Center or diagonal placement works
+                                    best for protection, corners for subtle branding.</li>
+                                <li><strong>Use vector graphics:</strong> For image watermarks, use PNG with
+                                    transparency for best results.</li>
+                                <li><strong>Preview before applying:</strong> Check how your watermark looks on sample
+                                    pages before finalizing.</li>
+                                <li><strong>Keep text readable:</strong> Ensure watermark text is clear but doesn't
+                                    obscure document content.</li>
                             </ol>
 
                             <h3>When to use PDF watermarking</h3>
-                            <p>Lawyers watermark confidential documents before sharing with clients. Designers add proof watermarks to portfolios. Students mark draft thesis submissions. Businesses protect internal reports and proposals. Anyone sharing valuable PDFs can benefit from watermarking. Our tool makes it effortless — and because it works entirely in your browser, your sensitive documents never leave your computer.</p>
+                            <p>Lawyers watermark confidential documents before sharing with clients. Designers add proof
+                                watermarks to portfolios. Students mark draft thesis submissions. Businesses protect
+                                internal reports and proposals. Anyone sharing valuable PDFs can benefit from
+                                watermarking. Our tool makes it effortless — and because it works entirely in your
+                                browser, your sensitive documents never leave your computer.</p>
                         </div>
                     </section>
 
@@ -1269,7 +1300,8 @@
                                     Is my file uploaded to your servers when I add watermarks?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    No, all watermarking happens locally in your browser. Your PDF files never leave your device,
+                                    No, all watermarking happens locally in your browser. Your PDF files never leave
+                                    your device,
                                     ensuring complete privacy and security.
                                 </p>
                             </div>
@@ -1279,7 +1311,8 @@
                                     Can I add both text and image watermarks?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can add text watermarks with custom text, font size, and color, or upload an image to use as a watermark (PNG with transparency recommended).
+                                    Yes, you can add text watermarks with custom text, font size, and color, or upload
+                                    an image to use as a watermark (PNG with transparency recommended).
                                 </p>
                             </div>
 
@@ -1288,7 +1321,8 @@
                                     Can I control the opacity of the watermark?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can adjust the opacity from 0% (invisible) to 100% (solid) to achieve the perfect transparency level for your document.
+                                    Yes, you can adjust the opacity from 0% (invisible) to 100% (solid) to achieve the
+                                    perfect transparency level for your document.
                                 </p>
                             </div>
 
@@ -1297,7 +1331,8 @@
                                     Where can I position the watermark?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    You can position the watermark at any corner, center, or tile it across the entire page for maximum protection.
+                                    You can position the watermark at any corner, center, or tile it across the entire
+                                    page for maximum protection.
                                 </p>
                             </div>
 
@@ -1306,7 +1341,8 @@
                                     Will the watermark be applied to all pages?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, by default the watermark is applied to all pages. You can choose to apply it to all pages at once.
+                                    Yes, by default the watermark is applied to all pages. You can choose to apply it to
+                                    all pages at once.
                                 </p>
                             </div>
 
@@ -1315,7 +1351,8 @@
                                     Is there a file size limit for watermarking?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Since processing happens in your browser, the file size limit depends on your device's available memory.
+                                    Since processing happens in your browser, the file size limit depends on your
+                                    device's available memory.
                                     Most users successfully watermark PDFs up to 100MB without issues.
                                 </p>
                             </div>
@@ -1325,7 +1362,8 @@
                                     Do I need to create an account to watermark PDFs?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    No account or registration is required. You can watermark PDF files instantly and for free without
+                                    No account or registration is required. You can watermark PDF files instantly and
+                                    for free without
                                     any sign-up.
                                 </p>
                             </div>
@@ -1335,7 +1373,8 @@
                                     Can I rotate the watermark?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can rotate the watermark to any angle between 0 and 360 degrees for diagonal watermarks.
+                                    Yes, you can rotate the watermark to any angle between 0 and 360 degrees for
+                                    diagonal watermarks.
                                 </p>
                             </div>
 
@@ -1344,7 +1383,8 @@
                                     What image formats are supported for watermarks?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    We support PNG, JPG, and JPEG images. PNG with transparency is recommended for the best results.
+                                    We support PNG, JPG, and JPEG images. PNG with transparency is recommended for the
+                                    best results.
                                 </p>
                             </div>
                         </div>
@@ -1363,7 +1403,8 @@
                                     <div class="tool-icon icon-blue"><i class="fas fa-file-pdf"></i></div>
                                     <div>
                                         <h3>PDF Converter</h3>
-                                        <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting and layout.</p>
+                                        <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting
+                                            and layout.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1373,7 +1414,8 @@
                                     <div class="tool-icon icon-red"><i class="fas fa-layer-group"></i></div>
                                     <div>
                                         <h3>Merge PDF</h3>
-                                        <p>Combine multiple PDFs into one document. Reorder, preview, and merge in seconds.</p>
+                                        <p>Combine multiple PDFs into one document. Reorder, preview, and merge in
+                                            seconds.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1383,7 +1425,8 @@
                                     <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
                                     <div>
                                         <h3>Split PDF</h3>
-                                        <p>Extract pages or ranges into separate PDF files - useful for reorganizing and sharing.</p>
+                                        <p>Extract pages or ranges into separate PDF files - useful for reorganizing and
+                                            sharing.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1393,7 +1436,8 @@
                                     <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
                                     <div>
                                         <h3>Compress PDF</h3>
-                                        <p>Reduce file size while keeping quality. Choose between balanced or strong compression.</p>
+                                        <p>Reduce file size while keeping quality. Choose between balanced or strong
+                                            compression.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1403,7 +1447,8 @@
                                     <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
                                     <div>
                                         <h3>JPG to PDF</h3>
-                                        <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images into one PDF easily.</p>
+                                        <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images
+                                            into one PDF easily.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1413,7 +1458,8 @@
                                     <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
                                     <div>
                                         <h3>Compress PDF to 100KB</h3>
-                                        <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick sharing.</p>
+                                        <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick
+                                            sharing.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1423,7 +1469,8 @@
                                     <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
                                     <div>
                                         <h3>Compress PDF to 200KB</h3>
-                                        <p>Compress PDF files to 200KB while maintaining readable quality for uploads and sharing.</p>
+                                        <p>Compress PDF files to 200KB while maintaining readable quality for uploads
+                                            and sharing.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1433,7 +1480,8 @@
                                     <div class="tool-icon icon-blue"><i class="fas fa-watermark">💧</i></div>
                                     <div>
                                         <h3>Watermark PDF</h3>
-                                        <p>Add text or image watermarks to protect your PDF documents with custom branding.</p>
+                                        <p>Add text or image watermarks to protect your PDF documents with custom
+                                            branding.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1475,14 +1523,16 @@
                                                 <span class="radio"><span class="dot"></span></span>
                                                 <div class="text">
                                                     <div class="title">Text Watermark</div>
-                                                    <div class="subtitle">Add custom text like "CONFIDENTIAL" or "DRAFT"</div>
+                                                    <div class="subtitle">Add custom text like "CONFIDENTIAL" or "DRAFT"
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div id="type-image" class="option-card" data-type="image">
                                                 <span class="radio"><span class="dot"></span></span>
                                                 <div class="text">
                                                     <div class="title">Image Watermark</div>
-                                                    <div class="subtitle">Upload logo or graphic (PNG with transparency)</div>
+                                                    <div class="subtitle">Upload logo or graphic (PNG with transparency)
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1491,18 +1541,24 @@
                                     <!-- Text watermark settings -->
                                     <div id="text-settings">
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-700 mb-1">Watermark Text</label>
-                                            <input type="text" id="watermark-text" value="CONFIDENTIAL" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Watermark
+                                                Text</label>
+                                            <input type="text" id="watermark-text" value="CONFIDENTIAL"
+                                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
                                         </div>
 
                                         <div class="grid grid-cols-2 gap-3 mt-3">
                                             <div>
-                                                <label class="block text-sm font-medium text-gray-700 mb-1">Font Size</label>
-                                                <input type="number" id="font-size" value="48" min="8" max="200" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+                                                <label class="block text-sm font-medium text-gray-700 mb-1">Font
+                                                    Size</label>
+                                                <input type="number" id="font-size" value="48" min="8" max="200"
+                                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg">
                                             </div>
                                             <div>
-                                                <label class="block text-sm font-medium text-gray-700 mb-1">Color</label>
-                                                <input type="color" id="text-color" value="#ef4444" class="w-full h-10 rounded-lg border border-gray-300">
+                                                <label
+                                                    class="block text-sm font-medium text-gray-700 mb-1">Color</label>
+                                                <input type="color" id="text-color" value="#ef4444"
+                                                    class="w-full h-10 rounded-lg border border-gray-300">
                                             </div>
                                         </div>
                                     </div>
@@ -1510,32 +1566,38 @@
                                     <!-- Image watermark settings with proper upload UI -->
                                     <div id="image-settings" class="hidden">
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Watermark Image</label>
-                                            
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Watermark
+                                                Image</label>
+
                                             <!-- Hidden file input -->
-                                            <input type="file" id="watermark-image" accept="image/png,image/jpeg,image/jpg" class="hidden" />
-                                            
+                                            <input type="file" id="watermark-image"
+                                                accept="image/png,image/jpeg,image/jpg" class="hidden" />
+
                                             <!-- Custom upload area -->
                                             <div id="image-upload-area" class="image-upload-area">
                                                 <i class="fas fa-cloud-upload-alt"></i>
                                                 <div class="upload-text">Click to upload image</div>
                                                 <div class="upload-hint">PNG, JPG up to 5MB</div>
                                             </div>
-                                            
+
                                             <!-- Image preview -->
                                             <div id="image-preview-container" class="image-preview hidden">
                                                 <img id="image-preview" src="" alt="Watermark preview" />
-                                                <button id="remove-image" class="text-red-600 text-sm mt-2 hover:text-red-800">
+                                                <button id="remove-image"
+                                                    class="text-red-600 text-sm mt-2 hover:text-red-800">
                                                     <i class="fas fa-times mr-1"></i>Remove
                                                 </button>
                                             </div>
-                                            
-                                            <p class="text-xs text-gray-500 mt-2">PNG with transparent background works best</p>
+
+                                            <p class="text-xs text-gray-500 mt-2">PNG with transparent background works
+                                                best</p>
                                         </div>
-                                        
+
                                         <div class="mt-4">
-                                            <label class="block text-sm font-medium text-gray-700 mb-1">Image Scale (%)</label>
-                                            <input type="range" id="image-scale" min="5" max="100" value="30" class="w-full">
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Image Scale
+                                                (%)</label>
+                                            <input type="range" id="image-scale" min="5" max="100" value="30"
+                                                class="w-full">
                                             <div class="flex justify-between text-xs text-gray-500 mt-1">
                                                 <span>5%</span>
                                                 <span id="image-scale-value">30%</span>
@@ -1556,8 +1618,10 @@
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm font-medium text-gray-700 mb-1">Rotation (degrees)</label>
-                                        <input type="range" id="watermark-rotation" min="-180" max="180" value="-30" class="w-full">
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Rotation
+                                            (degrees)</label>
+                                        <input type="range" id="watermark-rotation" min="-180" max="180" value="-30"
+                                            class="w-full">
                                         <div class="flex justify-between text-xs text-gray-500 mt-1">
                                             <span>-180°</span>
                                             <span id="rotation-value">-30°</span>
@@ -1583,7 +1647,8 @@
 
                                     <div>
                                         <label class="flex items-center">
-                                            <input type="checkbox" id="tile-watermark" class="rounded border-gray-300 text-red-600 focus:ring-red-500">
+                                            <input type="checkbox" id="tile-watermark"
+                                                class="rounded border-gray-300 text-red-600 focus:ring-red-500">
                                             <span class="ml-2 text-sm text-gray-700">Tile watermark across page</span>
                                         </label>
                                     </div>
@@ -1595,7 +1660,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Sticky footer with button -->
                             <div class="settings-footer">
                                 <button id="watermark-btn-desktop"
@@ -1804,13 +1869,13 @@
 
                         const inner = document.createElement('div');
                         inner.className = 'paper-page w-full aspect-[3/4] flex items-center justify-center bg-gray-50 relative';
-                        
+
                         // Add watermark preview overlay
                         const watermarkPreview = document.createElement('div');
                         watermarkPreview.className = 'watermark-preview';
                         watermarkPreview.style.opacity = state.watermarkSettings.opacity / 100;
                         watermarkPreview.style.transform = `rotate(${state.watermarkSettings.rotation}deg)`;
-                        
+
                         if (state.watermarkSettings.type === 'text') {
                             watermarkPreview.style.color = state.watermarkSettings.color;
                             watermarkPreview.style.fontSize = `${state.watermarkSettings.fontSize * 0.5}px`;
@@ -1822,11 +1887,11 @@
                         } else {
                             watermarkPreview.textContent = '🔷';
                         }
-                        
+
                         inner.innerHTML = `
                             <i class="fas fa-file-pdf text-5xl text-red-400"></i>
                         `;
-                        
+
                         inner.appendChild(watermarkPreview);
 
                         const meta = document.createElement('div');
@@ -1889,7 +1954,7 @@
                         alert('Image size should be less than 5MB');
                         return;
                     }
-                    
+
                     const reader = new FileReader();
                     reader.onload = (event) => {
                         state.watermarkSettings.imageData = event.target.result;
@@ -2027,7 +2092,7 @@
                                     // Apply image watermark
                                     const img = new Image();
                                     await new Promise(res => { img.onload = res; img.src = state.watermarkSettings.imageData; });
-                                    
+
                                     const scale = state.watermarkSettings.imageScale / 100;
                                     const imgWidth = img.width * scale;
                                     const imgHeight = img.height * scale;
@@ -2037,9 +2102,9 @@
                                         for (let x = 0; x < canvas.width; x += imgWidth * 1.5) {
                                             for (let y = 0; y < canvas.height; y += imgHeight * 1.5) {
                                                 ctx.save();
-                                                ctx.translate(x + imgWidth/2, y + imgHeight/2);
+                                                ctx.translate(x + imgWidth / 2, y + imgHeight / 2);
                                                 ctx.rotate(state.watermarkSettings.rotation * Math.PI / 180);
-                                                ctx.drawImage(img, -imgWidth/2, -imgHeight/2, imgWidth, imgHeight);
+                                                ctx.drawImage(img, -imgWidth / 2, -imgHeight / 2, imgWidth, imgHeight);
                                                 ctx.restore();
                                             }
                                         }
@@ -2056,9 +2121,9 @@
                                         else y = (canvas.height - imgHeight) / 2;
 
                                         ctx.save();
-                                        ctx.translate(x + imgWidth/2, y + imgHeight/2);
+                                        ctx.translate(x + imgWidth / 2, y + imgHeight / 2);
                                         ctx.rotate(state.watermarkSettings.rotation * Math.PI / 180);
-                                        ctx.drawImage(img, -imgWidth/2, -imgHeight/2, imgWidth, imgHeight);
+                                        ctx.drawImage(img, -imgWidth / 2, -imgHeight / 2, imgWidth, imgHeight);
                                         ctx.restore();
                                     }
                                 }
