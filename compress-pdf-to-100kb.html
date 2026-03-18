@@ -1177,6 +1177,37 @@
             color: #374151;
             font-size: 0.95rem;
         }
+
+        /* upload section width */
+
+        /* Make upload section full width */
+        #upload-screen .max-w-md {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        #drop-area {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding: 3rem 1.5rem !important;
+        }
+
+        /* Make download section full width */
+        #download-screen .max-w-md {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        #download-screen .bg-white {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        /* Optional: Make the file list more spacious */
+        #download-file-list {
+            max-width: 100% !important;
+            padding: 0 1rem;
+        }
     </style>
 </head>
 
@@ -1276,7 +1307,7 @@
                 </p>
 
                 <div id="drop-area"
-                    class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white max-w-md w-full">
+                    class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white w-full">
                     <label for="file-input" class="cursor-pointer">
                         <div
                             class="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-red-700 transition mb-4">
@@ -1779,7 +1810,7 @@
                 <h2 class="text-3xl font-bold mb-6">
                     Your PDFs have been compressed (target 100KB)
                 </h2>
-                <div class="bg-white rounded-xl shadow-sm p-8 max-w-md mx-auto mb-8">
+                <div class="bg-white rounded-xl shadow-sm p-8 w-full mx-auto mb-8">
                     <h3 class="text-xl font-semibold mb-6">Download</h3>
                     <button id="download-pdf"
                         class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full shadow-md mb-6">
