@@ -4,31 +4,31 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Extract PDF Pages | Extract Pages from PDF Online Free - PDF99</title>
+    <title>Extract PDF Pages | Select and Save Specific Pages from PDF - PDF99</title>
 
     <!-- SEO meta -->
     <meta name="description"
-        content="Extract specific pages from PDF files instantly. Select and save only the pages you need as a new PDF document. Free and secure." />
+        content="Extract specific pages from PDF files. Select and save only the pages you need from any PDF document - all in your browser. Free and secure." />
     <meta name="keywords"
-        content="extract pdf pages, extract pages from pdf, pdf page extractor, extract pdf pages online, select pages from pdf, pdf page selector, grab pages from pdf, copy pages from pdf, pdf page ripper, extract pages pdf free" />
+        content="extract pdf pages, extract pages from pdf, pdf page extractor, select pages from pdf, save pdf pages, pdf page selector, extract specific pages from pdf, pdf page saver, grab pdf pages, pull pages from pdf" />
     <link rel="canonical" href="https://www.pdf99.org/extract-pdf-pages" />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#ef4444" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Extract PDF Pages | Extract Pages from PDF Online Free - PDF99" />
+    <meta property="og:title" content="Extract PDF Pages | Select and Save Specific Pages from PDF - PDF99" />
     <meta property="og:description"
-        content="Extract specific pages from PDF files instantly. Select and save only the pages you need as a new PDF document." />
+        content="Extract specific pages from PDF files. Select and save only the pages you need from any PDF document - all in your browser." />
     <meta property="og:url" content="https://www.pdf99.org/extract-pdf-pages" />
     <meta property="og:site_name" content="PDF99" />
     <meta property="og:image" content="https://www.pdf99.org/assets/og-image-extract-pdf-pages.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Extract PDF Pages | Extract Pages from PDF Online Free - PDF99" />
+    <meta name="twitter:title" content="Extract PDF Pages | Select and Save Specific Pages from PDF - PDF99" />
     <meta name="twitter:description"
-        content="Extract specific pages from PDF files instantly. Select and save only the pages you need as a new PDF document." />
+        content="Extract specific pages from PDF files. Select and save only the pages you need from any PDF document - all in your browser." />
     <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-extract-pdf-pages.png" />
 
     <!-- Performance hints -->
@@ -50,7 +50,7 @@
  "@id": "https://www.pdf99.org/extract-pdf-pages#software",
  "name": "Extract PDF Pages",
  "url": "https://www.pdf99.org/extract-pdf-pages",
- "description": "Extract specific pages from PDF files instantly. Select and save only the pages you need as a new PDF document.",
+ "description": "Extract specific pages from PDF files. Select and save only the pages you need from any PDF document - all in your browser.",
  "applicationCategory": "Utilities",
  "operatingSystem": "Web",
  "image": "https://www.pdf99.org/assets/og-image-extract-pdf-pages.png",
@@ -70,10 +70,10 @@
    "Select multiple pages at once",
    "Page range selection",
    "Preview pages before extraction",
-   "Create new PDF with selected pages",
    "Browser-based processing",
    "No file uploads",
-   "Preserve original quality"
+   "Preserve original quality",
+   "Save as new PDF document"
  ]
 }
 </script>
@@ -106,7 +106,7 @@
  "@type": "HowTo",
  "@id": "https://www.pdf99.org/extract-pdf-pages#how-to",
  "name": "How to Extract Pages from PDF",
- "description": "Select and extract specific pages from your PDF document in three simple steps.",
+ "description": "Select and save specific pages from your PDF document in three simple steps.",
  "totalTime": "PT2M",
  "step": [
   {
@@ -120,15 +120,15 @@
   {
    "@type": "HowToStep",
    "name": "Select pages to extract",
-   "text": "Pick specific pages or page ranges you want to extract from your PDF.",
+   "text": "Pick specific pages or page ranges you want to save to a new PDF.",
    "url": "https://www.pdf99.org/extract-pdf-pages#step2",
    "position": 2,
    "image": "https://www.pdf99.org/assets/how-to-extract-select.jpg"
   },
   {
    "@type": "HowToStep",
-   "name": "Download result",
-   "text": "Download your new PDF containing only the extracted pages.",
+   "name": "Download extracted pages",
+   "text": "Download your new PDF containing only the selected pages.",
    "url": "https://www.pdf99.org/extract-pdf-pages#step3",
    "position": 3,
    "image": "https://www.pdf99.org/assets/how-to-extract-download.jpg"
@@ -156,15 +156,15 @@
    "name": "Can I extract multiple pages at once?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes, you can extract multiple pages at once by clicking on them or entering page numbers and ranges. All selected pages will be combined into a single new PDF."
+    "text": "Yes, you can extract multiple pages at once by selecting them individually or entering page ranges (e.g., 1,3,5-7). All selected pages will be combined into a single new PDF."
    }
   },
   {
    "@type": "Question",
-   "name": "How many pages can I extract at once?",
+   "name": "How many pages can I extract?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Since processing happens in your browser, the limit depends on your device's memory and performance. Most users successfully extract hundreds of pages without issues."
+    "text": "Since processing happens in your browser, the limit depends on your device's memory and performance. Most users successfully extract pages from PDFs with hundreds of pages without issues."
    }
   },
   {
@@ -177,7 +177,7 @@
   },
   {
    "@type": "Question",
-   "name": "What happens to the quality after extracting pages?",
+   "name": "What happens to the quality after extraction?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "We preserve the original quality of your extracted PDF pages. The new document maintains the same quality as the original."
@@ -188,7 +188,7 @@
    "name": "Can I extract pages in a different order?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes, you can select pages in any order, and they will be extracted in that order. This allows you to rearrange pages while extracting."
+    "text": "Yes, you can select pages in any order. The extracted PDF will include the pages in the order you selected them."
    }
   },
   {
@@ -523,22 +523,6 @@
                 position: relative;
             }
 
-            .add-more-btn {
-                position: fixed;
-                right: calc(var(--settings-w) + 12px);
-                bottom: 15%;
-                transform: translateY(-50%);
-                z-index: 940;
-                width: 56px;
-                height: 56px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #fff;
-                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-            }
-
             #convert-btn-desktop {
                 position: absolute;
                 left: 20px;
@@ -681,13 +665,18 @@
             cursor: pointer;
         }
 
-        .extract-btn {
+        .select-btn {
             background: #dcfce7;
             color: #16a34a;
         }
 
-        .extract-btn:hover {
+        .select-btn:hover {
             background: #bbf7d0;
+        }
+
+        .select-btn.selected {
+            background: #16a34a;
+            color: white;
         }
 
         .thumbnail-container {
@@ -698,9 +687,9 @@
         }
 
         .thumbnail-container.selected-for-extraction {
-            opacity: 1;
             border: 3px solid #16a34a;
             border-radius: 8px;
+            transform: scale(1.02);
         }
 
         .extract-overlay {
@@ -738,8 +727,8 @@
         }
 
         .option-card.selected {
-            border-color: #16a34a;
-            background: #f0fdf4;
+            border-color: #ef4444;
+            background: #fef2f2;
         }
 
         .pdf-sections {
@@ -797,14 +786,14 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: #16a34a;
+            background: #ef4444;
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
             font-size: 1.1rem;
-            box-shadow: 0 10px 20px rgba(22, 163, 74, 0.15);
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.15);
         }
 
         .step-title {
@@ -865,16 +854,16 @@
             background: rgba(37, 99, 235, 0.08);
         }
 
-        .icon-green {
-            background: rgba(22, 163, 74, 0.08);
+        .icon-red {
+            background: rgba(239, 68, 68, 0.08);
         }
 
         .icon-orange {
             background: rgba(234, 88, 12, 0.08);
         }
 
-        .icon-red {
-            background: rgba(239, 68, 68, 0.08);
+        .icon-green {
+            background: rgba(5, 150, 105, 0.08);
         }
 
         .icon-purple {
@@ -936,7 +925,7 @@
             background: #f0fdf4;
             border-radius: 8px;
             font-size: 0.9rem;
-            border-left: 4px solid #16a34a;
+            border: 1px solid #bbf7d0;
         }
 
         .clear-selection {
@@ -951,10 +940,10 @@
             position: absolute;
             top: 8px;
             left: 8px;
-            background: #16a34a;
-            color: white;
             width: 24px;
             height: 24px;
+            background: #16a34a;
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1065,7 +1054,7 @@
             <div id="upload-screen" class="flex flex-col items-center justify-center py-16">
                 <h1 class="text-3xl font-bold text-center mb-6">Extract PDF Pages</h1>
                 <p class="text-gray-600 text-center mb-8">
-                    Upload a PDF and select the pages you want to extract. The selected pages will be saved as a new PDF
+                    Upload a PDF and select specific pages to extract. The selected pages will be saved as a new PDF
                     document.
                 </p>
 
@@ -1073,7 +1062,7 @@
                     class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white max-w-md w-full">
                     <label for="file-input" class="cursor-pointer">
                         <div
-                            class="bg-green-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-green-700 transition mb-4">
+                            class="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-red-700 transition mb-4">
                             Select PDF
                         </div>
                         <p class="text-gray-500">- or drop a PDF file here -</p>
@@ -1088,7 +1077,7 @@
                         <i class="fas fa-file-pdf text-gray-600"></i>
                     </div>
                     <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                        <i class="fas fa-object-group text-gray-600"></i>
+                        <i class="fas fa-copy text-gray-600"></i>
                     </div>
                     <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
                         <i class="fas fa-download text-gray-600"></i>
@@ -1115,13 +1104,14 @@
                                 <div class="step-inner">
                                     <div class="step-badge">2</div>
                                     <div class="step-title">Select pages to extract</div>
-                                    <p class="step-desc">Pick specific pages or page ranges you want to extract.</p>
+                                    <p class="step-desc">Pick specific pages or page ranges you want to save to a new
+                                        PDF.</p>
                                 </div>
 
                                 <div class="step-inner">
                                     <div class="step-badge">3</div>
-                                    <div class="step-title">Download result</div>
-                                    <p class="step-desc">Download your new PDF containing only the extracted pages.</p>
+                                    <div class="step-title">Download extracted pages</div>
+                                    <p class="step-desc">Download your new PDF containing only the selected pages.</p>
                                 </div>
                             </div>
                         </div>
@@ -1133,16 +1123,17 @@
                             <h2>What is PDF Page Extraction?</h2>
                         </div>
                         <p class="info-text">
-                            PDF page extraction is the process of pulling specific pages from a PDF document and saving
-                            them as a new, separate PDF file. Think of it like photocopying selected pages from a book
-                            to create a new booklet. When you need to extract pages from a PDF, you can choose exactly
-                            which pages to pull out and create a focused document with just that content. This is
-                            incredibly useful when you only need certain sections of a larger document - maybe you want
-                            to share specific chapters from a report, extract forms from a multipage document, or pull
-                            out diagrams from a technical manual. The ability to extract PDF pages gives you precise
-                            control over your document content. You can select pages in any order, allowing you to
-                            rearrange them as you extract. This tool works entirely in your browser, ensuring your files
-                            remain private and secure while you extract the pages you need.
+                            PDF page extraction is the process of selecting specific pages from a PDF document and
+                            saving them as a new, separate PDF file. Think of it like pulling out your favorite chapters
+                            from a book to create a custom collection. When you need to extract pages from a PDF, you
+                            can choose exactly which pages you want and create a brand new document containing only
+                            those pages. This is incredibly useful when you have a large PDF but only need certain
+                            sections - maybe you want to save just the introduction from a report, the key slides from a
+                            presentation, or specific forms from a multi-page document. The ability to extract PDF pages
+                            gives you precise control over your document content. You can select pages in any order, and
+                            the tool will preserve the original quality while creating your customized PDF. Whether
+                            you're compiling research materials, creating handouts, or organizing documents, page
+                            extraction helps you work with only the content that matters.
                         </p>
                     </section>
 
@@ -1152,18 +1143,18 @@
                             <h2>Why Extract Pages from PDFs?</h2>
                         </div>
                         <ul class="info-list">
-                            <li><strong>Share only what's needed:</strong> Extract relevant chapters, sections, or pages
-                                instead of sending entire documents.</li>
-                            <li><strong>Create focused reports:</strong> Pull specific data, charts, or findings from
-                                larger documents to create concise reports.</li>
-                            <li><strong>Build resource libraries:</strong> Extract useful pages from various PDFs to
-                                build a collection of reference materials.</li>
-                            <li><strong>Save storage space:</strong> Keep only the pages you need instead of storing
-                                entire large documents.</li>
-                            <li><strong>Prepare presentations:</strong> Extract slides or visuals from PDFs to include
-                                in presentations or teaching materials.</li>
-                            <li><strong>Reorganize content:</strong> Extract pages in a different order to rearrange
-                                document structure.</li>
+                            <li><strong>Create focused documents:</strong> Pull out only the relevant sections from
+                                large reports or manuals.</li>
+                            <li><strong>Save specific content:</strong> Extract important pages like forms,
+                                certificates, or signatures.</li>
+                            <li><strong>Reduce file size:</strong> Create smaller, more manageable PDFs by keeping only
+                                necessary pages.</li>
+                            <li><strong>Prepare presentations:</strong> Extract specific slides from a larger
+                                presentation deck.</li>
+                            <li><strong>Organize research:</strong> Gather relevant pages from multiple sources into one
+                                document.</li>
+                            <li><strong>Share selectively:</strong> Send only the pages that matter instead of entire
+                                documents.</li>
                         </ul>
                     </section>
 
@@ -1173,43 +1164,40 @@
                             <h2>Extract PDF Pages - Complete Guide</h2>
                         </div>
                         <div class="article-wrap">
-                            <p>Working with PDFs often means dealing with documents that contain more than you actually
-                                need. Whether it's a lengthy research paper, a comprehensive report, or a scanned book,
-                                knowing how to extract PDF pages is essential for efficient document management. PDF99's
-                                Extract PDF Pages tool makes this process simple and secure. You can select exactly the
-                                pages you need, in any order, and create a new PDF with just that content. Because
-                                everything happens in your browser, your sensitive documents never leave your device.
-                            </p>
+                            <p>Working with PDFs often means dealing with documents that contain more than you need.
+                                Whether it's a lengthy contract where you only need specific clauses, a research paper
+                                where you want just the methodology section, or a catalog where you need only a few
+                                pages, extracting specific pages is essential. PDF99's Extract PDF Pages tool makes this
+                                process simple and secure. You can select exactly which pages you want, preview them,
+                                and create a new PDF with just your chosen content - all without uploading files to any
+                                server.</p>
 
                             <h3>Best Practices</h3>
                             <ol>
-                                <li><strong>Always keep the original:</strong> Before you extract pages from a PDF, save
-                                    a copy of the original file. This gives you a backup if you need to extract
-                                    different pages later.</li>
-                                <li><strong>Preview before extracting:</strong> Use the thumbnail view to verify which
-                                    pages you're selecting. This helps ensure you get exactly what you need.</li>
+                                <li><strong>Preview before extracting:</strong> Use the thumbnail view to verify you're
+                                    selecting the right pages.</li>
                                 <li><strong>Use ranges for efficiency:</strong> When you need multiple consecutive
                                     pages, use page ranges (like 5-10) to select them all at once.</li>
-                                <li><strong>Consider extraction order:</strong> You can select pages in any order - they
-                                    will appear in the new PDF in the order you select them.</li>
-                                <li><strong>Check the result:</strong> After extracting, quickly scan the new PDF to
-                                    ensure all desired pages are included correctly.</li>
+                                <li><strong>Consider page order:</strong> You can select pages in any order - they'll
+                                    appear in the new PDF exactly as you selected them.</li>
+                                <li><strong>Check the result:</strong> After extraction, quickly scan the new PDF to
+                                    ensure all desired content is included.</li>
+                                <li><strong>Keep originals:</strong> Always maintain your original PDF as a backup for
+                                    future needs.</li>
                             </ol>
 
                             <h3>Common Use Cases</h3>
-                            <p>The need to extract pages from PDFs arises in countless professional and personal
-                                situations. Students frequently need to extract specific chapters from e-books or
-                                research papers for study purposes. Business professionals extract relevant sections
-                                from contracts or reports to share with colleagues or clients. Researchers pull out
-                                methodology sections or data tables from academic papers. Legal professionals extract
-                                specific clauses from lengthy legal documents. Teachers extract worksheets or lesson
-                                materials from curriculum guides. HR managers pull out relevant policy sections from
-                                employee handbooks. Graphic designers extract specific pages from portfolios. Anyone who
-                                works with multi-page PDFs regularly will find themselves needing to extract pages -
-                                whether it's to create a focused document for a specific audience, to build a reference
-                                collection, or simply to avoid sending massive files when only a few pages matter. By
-                                extracting only what you need, you create cleaner, more efficient documents that are
-                                easier to share and manage.</p>
+                            <p>There are countless situations where extracting PDF pages proves invaluable. Students
+                                frequently need to extract specific chapters from textbooks or pull out relevant
+                                research papers. Business professionals extract key pages from reports for presentations
+                                or meetings. Legal professionals pull specific clauses from lengthy contracts. HR
+                                departments extract individual forms from employee handbooks. Accountants pull out
+                                specific financial statements from annual reports. Researchers compile relevant pages
+                                from multiple papers into single documents. Teachers create custom handouts by
+                                extracting pages from curriculum guides. Real estate agents extract property details
+                                from MLS listings. The tool is essential whenever you need to create a focused document
+                                from a larger source file. By extracting only what you need, you create cleaner, more
+                                efficient documents that are easier to share, store, and reference.</p>
                         </div>
                     </section>
 
@@ -1237,8 +1225,8 @@
                                     Can I extract multiple pages at once?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can extract multiple pages at once by clicking on them or entering page
-                                    numbers and ranges.
+                                    Yes, you can extract multiple pages at once by selecting them individually or
+                                    entering page ranges.
                                     All selected pages will be combined into a single new PDF in the order you select
                                     them.
                                 </p>
@@ -1246,24 +1234,13 @@
 
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
                                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                                    Can I extract pages in a different order?
-                                </h3>
-                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    Yes, you can select pages in any order, and they will be extracted in that order.
-                                    This allows you to
-                                    rearrange pages while extracting them. Each selected page shows its position number
-                                    in the new document.
-                                </p>
-                            </div>
-
-                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                                    How many pages can I extract at once?
+                                    How many pages can I extract?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
                                     Since processing happens in your browser, the limit depends on your device's memory
                                     and
-                                    performance. Most users successfully extract hundreds of pages without issues.
+                                    performance. Most users successfully extract pages from PDFs with hundreds of pages
+                                    without issues.
                                 </p>
                             </div>
 
@@ -1280,12 +1257,23 @@
 
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
                                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                                    What happens to the quality after extracting pages?
+                                    What happens to the quality after extraction?
                                 </h3>
                                 <p style="color: #6b7280; line-height: 1.7; margin: 0;">
                                     We preserve the original quality of your extracted PDF pages. The new document
                                     maintains the same
                                     quality as the original.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                                    Can I extract pages in a different order?
+                                </h3>
+                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                    Yes, you can select pages in any order. The extracted PDF will include the pages in
+                                    the order
+                                    you selected them, allowing you to rearrange content.
                                 </p>
                             </div>
 
@@ -1359,8 +1347,8 @@
                                     <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
                                     <div>
                                         <h3>Split PDF</h3>
-                                        <p>Split PDF into multiple files by page ranges or extract each page as separate
-                                            PDF.</p>
+                                        <p>Extract pages or ranges into separate PDF files - useful for reorganizing and
+                                            sharing.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1492,20 +1480,27 @@
                                             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                                     </div>
 
+                                    <div>
+                                        <h4 class="font-medium mb-3">Order</h4>
+                                        <p class="text-sm text-gray-600">
+                                            Pages will be extracted in the order you select them. The order numbers
+                                            appear on thumbnails.
+                                        </p>
+                                    </div>
+
                                     <div class="bg-gray-50 p-3 rounded-md">
                                         <p class="text-sm font-medium text-gray-700 mb-2">Quick tips:</p>
                                         <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
-                                            <li>Click on thumbnails to select pages for extraction</li>
+                                            <li>Click on thumbnails to select/deselect pages</li>
                                             <li>Use commas for individual pages: 1,3,5</li>
                                             <li>Use hyphens for ranges: 5-10</li>
-                                            <li>Pages will appear in the new PDF in the order you select them</li>
-                                            <li>Green badges show the order in the new document</li>
+                                            <li>Pages appear in the order you select them</li>
                                         </ul>
                                     </div>
 
                                     <button id="convert-btn-desktop"
                                         class="hidden md:block bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center">
-                                        <span>Extract Selected Pages</span><i class="fas fa-object-group ml-2"
+                                        <span>Extract Selected Pages</span><i class="fas fa-copy ml-2"
                                             aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -1516,7 +1511,7 @@
 
                 <button id="convert-btn-mobile"
                     class="convert-btn bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center md:hidden">
-                    <span>Extract Pages</span><i class="fas fa-object-group ml-2" aria-hidden="true"></i>
+                    <span>Extract Pages</span><i class="fas fa-copy ml-2" aria-hidden="true"></i>
                 </button>
 
                 <button id="open-settings" class="md:hidden" aria-label="Open settings">
@@ -1708,7 +1703,7 @@
         const state = {
             fileObj: null,
             pages: [], // { pageNumber, estimatedSize, thumbDataUrl, thumbW, thumbH }
-            pagesToExtract: [], // array of page numbers in extraction order
+            selectedPages: [], // array of page numbers in the order they were selected
             outputs: [],
         };
 
@@ -1782,7 +1777,6 @@
                     document
                         .getElementById("preview-screen")
                         .classList.remove("hidden");
-                    // Re-render thumbnails to show current state
                     renderThumbnails();
                 });
             convertMoreBtn && convertMoreBtn.addEventListener("click", resetApp);
@@ -1861,7 +1855,7 @@
 
                 state.fileObj = { file, arrayBuffer, numPages, origSize: file.size };
                 state.pages = [];
-                state.pagesToExtract = [];
+                state.selectedPages = [];
                 if (pagesToExtractInput) pagesToExtractInput.value = "";
                 updateSelectionInfo();
 
@@ -1928,32 +1922,28 @@
             thumbnailsContainer.innerHTML = "";
             const thumbWidth = 160;
 
-            // Create a map for quick lookup of extraction order
-            const extractionOrderMap = new Map();
-            state.pagesToExtract.forEach((pageNum, index) => {
-                extractionOrderMap.set(pageNum, index + 1);
-            });
-
             state.pages.forEach((pObj, index) => {
+                const isSelected = state.selectedPages.includes(pObj.pageNumber);
+                const selectionIndex = state.selectedPages.indexOf(pObj.pageNumber);
+
                 const container = document.createElement("div");
-                container.className = `thumbnail-container relative ${extractionOrderMap.has(pObj.pageNumber) ? 'selected-for-extraction' : ''}`;
+                container.className = `thumbnail-container relative ${isSelected ? 'selected-for-extraction' : ''}`;
                 container.dataset.page = pObj.pageNumber;
                 container.dataset.index = index;
                 container.style.minHeight = "260px";
 
                 container.addEventListener("click", (e) => {
-                    // Don't toggle if clicking on action buttons
                     if (e.target.closest('.action-btn')) return;
 
                     const pageNum = pObj.pageNumber;
-                    const currentIndex = state.pagesToExtract.indexOf(pageNum);
+                    const currentIndex = state.selectedPages.indexOf(pageNum);
 
                     if (currentIndex === -1) {
-                        // Add to extraction list
-                        state.pagesToExtract.push(pageNum);
+                        // Add to selection
+                        state.selectedPages.push(pageNum);
                     } else {
-                        // Remove from extraction list
-                        state.pagesToExtract.splice(currentIndex, 1);
+                        // Remove from selection
+                        state.selectedPages.splice(currentIndex, 1);
                     }
 
                     updatePagesInputFromArray();
@@ -1984,19 +1974,16 @@
                     inner.appendChild(pdfIcon);
                 }
 
-                // Show order badge if page is selected for extraction
-                if (extractionOrderMap.has(pObj.pageNumber)) {
-                    const orderBadge = document.createElement("div");
-                    orderBadge.className = "order-badge";
-                    orderBadge.textContent = extractionOrderMap.get(pObj.pageNumber);
-                    inner.appendChild(orderBadge);
-                }
-
-                if (extractionOrderMap.has(pObj.pageNumber)) {
+                if (isSelected) {
                     const extractOverlay = document.createElement("div");
                     extractOverlay.className = "extract-overlay";
                     extractOverlay.innerHTML = '<i class="fas fa-check-circle"></i>';
                     inner.appendChild(extractOverlay);
+
+                    const orderBadge = document.createElement("div");
+                    orderBadge.className = "order-badge";
+                    orderBadge.textContent = selectionIndex + 1;
+                    inner.appendChild(orderBadge);
                 }
 
                 const actions = document.createElement("div");
@@ -2004,25 +1991,25 @@
                 actions.style.top = "8px";
                 actions.style.right = "8px";
 
-                const extractBtn = document.createElement("div");
-                extractBtn.className = "action-btn extract-btn";
-                extractBtn.title = "Toggle extraction";
-                extractBtn.innerHTML = '<i class="fas fa-check-circle text-green-600"></i>';
-                extractBtn.addEventListener("click", (ev) => {
+                const selectBtn = document.createElement("div");
+                selectBtn.className = `action-btn select-btn ${isSelected ? 'selected' : ''}`;
+                selectBtn.title = isSelected ? "Deselect page" : "Select page";
+                selectBtn.innerHTML = `<i class="fas ${isSelected ? 'fa-check-circle' : 'fa-circle'}"></i>`;
+                selectBtn.addEventListener("click", (ev) => {
                     ev.stopPropagation();
                     const pageNum = pObj.pageNumber;
-                    const currentIndex = state.pagesToExtract.indexOf(pageNum);
+                    const currentIndex = state.selectedPages.indexOf(pageNum);
 
                     if (currentIndex === -1) {
-                        state.pagesToExtract.push(pageNum);
+                        state.selectedPages.push(pageNum);
                     } else {
-                        state.pagesToExtract.splice(currentIndex, 1);
+                        state.selectedPages.splice(currentIndex, 1);
                     }
 
                     updatePagesInputFromArray();
                     renderThumbnails();
                 });
-                actions.appendChild(extractBtn);
+                actions.appendChild(selectBtn);
 
                 const removeFileBtn = document.createElement("div");
                 removeFileBtn.className = "action-btn";
@@ -2064,7 +2051,7 @@
             const input = e.target.value;
             const maxPages = state.fileObj?.numPages || 0;
             const parsed = parsePagesInput(input, maxPages);
-            state.pagesToExtract = parsed;
+            state.selectedPages = parsed;
             renderThumbnails();
         }
 
@@ -2072,7 +2059,7 @@
             if (!pagesToExtractInput) return;
             const ranges = [];
             let i = 0;
-            const sorted = [...state.pagesToExtract].sort((a, b) => a - b);
+            const sorted = [...state.selectedPages].sort((a, b) => a - b);
 
             while (i < sorted.length) {
                 let start = sorted[i];
@@ -2097,7 +2084,7 @@
                 .split(",")
                 .map((s) => s.trim())
                 .filter(Boolean);
-            const result = [];
+            const set = new Set();
             for (const p of parts) {
                 if (p.includes("-")) {
                     const [a, b] = p
@@ -2107,20 +2094,18 @@
                     if (!isNaN(a) && !isNaN(b)) {
                         const start = Math.max(1, Math.min(a, b));
                         const end = Math.min(maxPages, Math.max(a, b));
-                        for (let i = start; i <= end; i++) {
-                            if (!result.includes(i)) result.push(i);
-                        }
+                        for (let i = start; i <= end; i++) set.add(i);
                     }
                 } else {
                     const n = parseInt(p, 10);
-                    if (!isNaN(n) && n >= 1 && n <= maxPages && !result.includes(n)) result.push(n);
+                    if (!isNaN(n) && n >= 1 && n <= maxPages) set.add(n);
                 }
             }
-            return result;
+            return Array.from(set).sort((a, b) => a - b);
         }
 
         function updateSelectionInfo() {
-            const count = state.pagesToExtract.length;
+            const count = state.selectedPages.length;
             if (count > 0) {
                 selectionInfo?.classList.remove("hidden");
                 selectedCountSpan && (selectedCountSpan.textContent = `${count} page${count > 1 ? 's' : ''} selected for extraction`);
@@ -2130,7 +2115,7 @@
         }
 
         function clearSelection() {
-            state.pagesToExtract = [];
+            state.selectedPages = [];
             if (pagesToExtractInput) pagesToExtractInput.value = "";
             renderThumbnails();
         }
@@ -2185,7 +2170,7 @@
                 return;
             }
 
-            const pagesToExtract = state.pagesToExtract;
+            const pagesToExtract = state.selectedPages;
 
             if (pagesToExtract.length === 0) {
                 alert("Please select pages to extract.");
@@ -2203,7 +2188,7 @@
 
                 const tempPages = [];
 
-                // Render each page we want to extract (in the order selected)
+                // Render each selected page in the order they were selected
                 for (let i = 0; i < pagesToExtract.length; i++) {
                     const pageNum = pagesToExtract[i];
                     try {
@@ -2340,7 +2325,7 @@
         function resetApp() {
             state.fileObj = null;
             state.pages = [];
-            state.pagesToExtract = [];
+            state.selectedPages = [];
             state.outputs = [];
             if (pagesToExtractInput) pagesToExtractInput.value = "";
             document.getElementById("download-screen").classList.add("hidden");
