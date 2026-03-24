@@ -721,16 +721,3 @@
             min-height: 48px;
         }
     }
-
-    /*  */
-    .page-wrap {
-  min-height: 100vh;
-}
-
-.upload-area {
-  min-height: 320px;
-}
-
-header {
-  min-height: 60px;
-}
