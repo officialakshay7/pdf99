@@ -751,12 +751,14 @@ function formatFileSize(bytes) {
 }
 
 // Mobile menu toggle
+const sidebar = document.getElementById("mobile-sidebar");
+
 function openSidebar() {
-    sidebar.hidden = false;
-    sidebar.setAttribute("aria-hidden", "false");
+  sidebar.hidden = false;
+  sidebar.setAttribute("aria-hidden", "false");
 }
 
 function closeSidebar() {
-    sidebar.hidden = true;
-    sidebar.setAttribute("aria-hidden", "true");
+  sidebar.hidden = true;
+  sidebar.setAttribute("aria-hidden", "true");
 }
