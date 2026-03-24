@@ -9,14 +9,12 @@
     /* Hide scrollbar universally but keep scroll functionality */
 
     /* For Chrome, Safari, Edge */
-    html::-webkit-scrollbar,
+    /* html::-webkit-scrollbar,
     body::-webkit-scrollbar {
         display: none;
-        /* hide scrollbar */
         width: 0 !important;
-        /* ensure no width */
         height: 0 !important;
-    }
+    } */
 
     :root {
         --nav-h: 72px;
