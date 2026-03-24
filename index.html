@@ -235,11 +235,13 @@
     /* For Chrome, Safari, Edge */
     html::-webkit-scrollbar,
     body::-webkit-scrollbar {
-      display: none;
+      /* display: none; */
+      display: block;
       /* hide scrollbar */
-      width: 0 !important;
+      /* width: 0 !important; */
+      width: 10px;
       /* ensure no width */
-      height: 0 !important;
+      /* height: 0 !important; */
     }
 
     :root {
@@ -271,9 +273,11 @@
       height: 100%;
       margin: 0;
 
-      scrollbar-width: none;
+      /* scrollbar-width: none; */
+      scrollbar-width: auto;
       /* hide scrollbar */
-      -ms-overflow-style: none;
+      /* -ms-overflow-style: none; */
+      -ms-overflow-style: auto;
       /* hide scrollbar */
     }
 
