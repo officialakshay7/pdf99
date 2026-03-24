@@ -233,12 +233,12 @@
         }
 
         /* Hide scrollbar universally but keep scroll functionality */
-        /* html::-webkit-scrollbar,
+        html::-webkit-scrollbar,
         body::-webkit-scrollbar {
             display: none;
             width: 0 !important;
             height: 0 !important;
-        } */
+        }
 
         :root {
             --nav-h: 72px;
@@ -1167,28 +1167,17 @@
                 </p>
 
                 <div id="drop-area"
-    class="relative rounded-xl text-center w-full max-w-2xl"
-    style="background:#ef4444; border: 2.5px dashed rgba(255,255,255,0.7); padding: 48px 24px;">
+                    class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white max-w-md w-full">
+                    <label for="file-input" class="cursor-pointer">
+                        <div
+                            class="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-red-700 transition mb-4">
+                            Select PDFs
+                        </div>
+                        <p class="text-gray-500">- or drop PDF files here -</p>
+                    </label>
 
-    <div style="display:flex; justify-content:center; margin-bottom: 24px;">
-        <i class="fas fa-file-pdf" style="font-size: 64px; color: white;"></i>
-    </div>
-
-    <div style="display:inline-flex; border-radius:6px; overflow:hidden; background:white; margin-bottom:16px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-        <label for="file-input" style="display:flex; align-items:center; padding:12px 22px; cursor:pointer; font-weight:700; font-size:15px; color:#222; letter-spacing:0.04em; border-right: 1px solid #e5e7eb;">
-            CHOOSE FILES
-        </label>
-        <label for="file-input" style="padding: 12px 14px; background:white; cursor:pointer; display:flex; align-items:center; color:#374151;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"/>
-            </svg>
-        </label>
-    </div>
-
-    <p style="color:rgba(255,255,255,0.92); font-size:14px; margin:0;">or drop files here</p>
-
-    <input id="file-input" class="file-input" type="file" accept="application/pdf" multiple />
-</div>
+                    <input id="file-input" class="file-input" type="file" accept="application/pdf" multiple />
+                </div>
 
                 <div class="flex justify-center space-x-6 mt-8">
                     <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
