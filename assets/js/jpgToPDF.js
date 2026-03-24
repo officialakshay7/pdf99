@@ -750,15 +750,6 @@ function formatFileSize(bytes) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
 
-// Mobile menu toggle
-const sidebar = document.getElementById("mobile-sidebar");
-
-function openSidebar() {
-  sidebar.hidden = false;
-  sidebar.setAttribute("aria-hidden", "false");
-}
-
-function closeSidebar() {
-  sidebar.hidden = true;
-  sidebar.setAttribute("aria-hidden", "true");
-}
+// mobile sidebar and dropdown CSS is in jpgToPDF.css, see recent edits there
+sidebar.classList.add("active");  // open
+sidebar.classList.remove("active"); // close

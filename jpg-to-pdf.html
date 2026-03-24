@@ -225,22 +225,69 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- mobile sidebar -->
-  <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true" hidden>
+  <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
     <button id="mobile-sidebar-close" class="close">✕</button>
-      <nav>
-        <a href="https://www.pdf99.org/">Home</a>
-        <a href="pdf-converter">PDF Converter</a>
-        <a href="compress-pdf">Compress PDF</a>
-        <a href="merge-pdf">Merge PDF</a>
+    <nav>
+      <a href="https://www.pdf99.org/">Home</a>
+      <a href="pdf-converter">PDF Converter</a>
+      <a href="compress-pdf">Compress PDF</a>
+      <a href="merge-pdf">Merge PDF</a>
 
-        <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
+      <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
 
-        <div>
-          <div id="mobile-more-toggle" class="mobile-more-toggle">
-            <span>More</span>
-            <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
-          </div>
-          <div id="mobile-more-list" class="mobile-more-list">
+      <div>
+        <div id="mobile-more-toggle" class="mobile-more-toggle">
+          <span>More</span>
+          <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
+        </div>
+        <div id="mobile-more-list" class="mobile-more-list">
+          <a href="jpg-to-pdf">JPG to PDF</a>
+          <a href="pdf-to-jpg">PDF to JPG</a>
+          <a href="split-pdf">Split PDF</a>
+          <a href="rotate-pdf">Rotate PDF</a>
+          <a href="watermark-pdf">Watermark PDF</a>
+          <a href="crop-pdf">Crop PDF</a>
+          <a href="pdf-to-html">PDF to HTML</a>
+          <a href="remove-pdf-pages">Remove PDF Pages</a>
+          <a href="extract-pdf-pages">Extract PDF Pages</a>
+          <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
+          <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+          <a href="compress-pdf-to-500kb">Compress PDF to 500kb</a>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="brand">
+          <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
+          <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
+        </div>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <div class="nav-links">
+          <a href="https://www.pdf99.org/" class="hover:text-red-600">Home</a>
+          <a href="pdf-converter" class="hover:text-red-600">PDF Converter</a>
+          <a href="compress-pdf" class="hover:text-red-600">Compress PDF</a>
+          <a href="merge-pdf" class="hover:text-red-600">Merge PDF</a>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="more-dropdown" id="more-dropdown">
+          <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
+            aria-expanded="false">
+            More
+            <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
+          </button>
+          <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
             <a href="jpg-to-pdf">JPG to PDF</a>
             <a href="pdf-to-jpg">PDF to JPG</a>
             <a href="split-pdf">Split PDF</a>
@@ -250,613 +297,555 @@
             <a href="pdf-to-html">PDF to HTML</a>
             <a href="remove-pdf-pages">Remove PDF Pages</a>
             <a href="extract-pdf-pages">Extract PDF Pages</a>
-            <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
-            <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
-            <a href="compress-pdf-to-500kb">Compress PDF to 500kb</a>
-
-          </div>
-        </div>
-      </nav>
-    </div>
-
-    <div id="overlay" class="overlay" aria-hidden="true"></div>
-
-    <!-- NAV -->
-    <nav class="site-nav" role="navigation" aria-label="Main navigation">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <div class="brand">
-            <!-- <h1 class="text-2xl font-bold text-red-600">PDF99</h1> -->
-            <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
+            <a href="compress-pdf-to-100kb" class="hover:text-red-600">Compress PDF to 100KB</a>
+            <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
+            <a href="compress-pdf-to-500kb" class="hover:text-red-600">Compress PDF to 500KB</a>
           </div>
         </div>
 
-        <div class="nav-center" aria-hidden="false">
-          <div class="nav-links">
-            <a href="https://www.pdf99.org/" class="hover:text-red-600">Home</a>
-            <a href="pdf-converter" class="hover:text-red-600">PDF Converter</a>
-            <a href="compress-pdf" class="hover:text-red-600">Compress PDF</a>
-            <a href="merge-pdf" class="hover:text-red-600">Merge PDF</a>
-          </div>
-        </div>
-
-        <div class="nav-right">
-          <div class="more-dropdown" id="more-dropdown">
-            <button id="more-dropdown-toggle" class="px-2 py-1 inline-flex items-center gap-2" aria-haspopup="true"
-              aria-expanded="false">
-              More
-              <i class="fas fa-chevron-down" style="font-size: 12px" aria-hidden="true"></i>
-            </button>
-            <div id="more-dropdown-menu" class="more-dropdown-menu" aria-hidden="true">
-              <a href="jpg-to-pdf">JPG to PDF</a>
-              <a href="pdf-to-jpg">PDF to JPG</a>
-              <a href="split-pdf">Split PDF</a>
-              <a href="rotate-pdf">Rotate PDF</a>
-              <a href="watermark-pdf">Watermark PDF</a>
-              <a href="crop-pdf">Crop PDF</a>
-              <a href="pdf-to-html">PDF to HTML</a>
-              <a href="remove-pdf-pages">Remove PDF Pages</a>
-              <a href="extract-pdf-pages">Extract PDF Pages</a>
-              <a href="compress-pdf-to-100kb" class="hover:text-red-600">Compress PDF to 100KB</a>
-              <a href="compress-pdf-to-200kb" class="hover:text-red-600">Compress PDF to 200KB</a>
-              <a href="compress-pdf-to-500kb" class="hover:text-red-600">Compress PDF to 500KB</a>
-            </div>
-          </div>
-
-          <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-          </button>
-        </div>
+        <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- main content -->
-    <div class="page-wrap">
-      <main>
-        <!-- Upload -->
-        <div id="upload-screen" class="flex flex-col items-center justify-center py-16">
-          <h1 class="text-3xl font-bold text-center mb-6">JPG to PDF Converter</h1>
-          <p class="text-gray-600 text-center mb-8">
-            Convert JPG to PDF in seconds. Easily adjust orientation and
-            margins.
-          </p>
+  <!-- main content -->
+  <div class="page-wrap">
+    <main>
+      <!-- Upload -->
+      <div id="upload-screen" class="flex flex-col items-center justify-center py-16">
+        <h1 class="text-3xl font-bold text-center mb-6">JPG to PDF Converter</h1>
+        <p class="text-gray-600 text-center mb-8">
+          Convert JPG to PDF in seconds. Easily adjust orientation and
+          margins.
+        </p>
 
-          <div id="drop-area"
-            class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white max-w-md w-full">
-            <label for="file-input" class="cursor-pointer">
-              <div
-                class="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-red-700 transition mb-4">
-                Select JPG images
-              </div>
-              <p class="text-gray-500">- or drop JPG images here -</p>
-            </label>
+        <div id="drop-area"
+          class="relative border-2 border-dashed border-gray-300 rounded-xl p-12 text-center bg-white max-w-md w-full">
+          <label for="file-input" class="cursor-pointer">
+            <div
+              class="bg-red-600 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-red-700 transition mb-4">
+              Select JPG images
+            </div>
+            <p class="text-gray-500">- or drop JPG images here -</p>
+          </label>
 
-            <!-- main file input (visually hidden but available) -->
-            <input id="file-input" class="file-input" type="file" accept="image/jpeg" multiple />
+          <!-- main file input (visually hidden but available) -->
+          <input id="file-input" class="file-input" type="file" accept="image/jpeg" multiple />
+        </div>
+
+        <div class="flex justify-center space-x-6 mt-8">
+          <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+            <i class="fas fa-cloud-upload-alt text-gray-600"></i>
           </div>
-
-          <div class="flex justify-center space-x-6 mt-8">
-            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-              <i class="fas fa-cloud-upload-alt text-gray-600"></i>
-            </div>
-            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-              <i class="fas fa-file-pdf text-gray-600"></i>
-            </div>
-            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-              <i class="fas fa-download text-gray-600"></i>
-            </div>
+          <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+            <i class="fas fa-file-pdf text-gray-600"></i>
           </div>
+          <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+            <i class="fas fa-download text-gray-600"></i>
+          </div>
+        </div>
 
-          <!-- ===== HTML for JPG to PDF page ===== -->
-          <div class="pdf-sections">
+        <!-- ===== HTML for JPG to PDF page ===== -->
+        <div class="pdf-sections">
 
-            <!-- Steps -->
-            <section>
-              <div class="section-head mt-20">
-                <h2>How to Convert JPG to PDF</h2>
-              </div>
+          <!-- Steps -->
+          <section>
+            <div class="section-head mt-20">
+              <h2>How to Convert JPG to PDF</h2>
+            </div>
 
-              <div class="steps-3-wrap">
-                <div class="steps-3-grid">
-                  <div class="step-inner">
-                    <div class="step-badge">1</div>
-                    <div class="step-title">Upload images</div>
-                    <p class="step-desc">Choose your JPG image files that you want to convert to PDF.</p>
-                  </div>
-
-                  <div class="step-inner">
-                    <div class="step-badge">2</div>
-                    <div class="step-title">Arrange & set options</div>
-                    <p class="step-desc">Reorder images, select page size, orientation, and margins for your PDF.</p>
-                  </div>
-
-                  <div class="step-inner">
-                    <div class="step-badge">3</div>
-                    <div class="step-title">Convert & download</div>
-                    <p class="step-desc">Generate a PDF instantly after converting JPG to PDF and download with images
-                      preserved
-                      perfectly.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- What is JPG to PDF -->
-            <section style="margin-top:60px;">
-              <div class="section-head">
-                <h2>What is JPG to PDF Converter?</h2>
-              </div>
-              <p class="info-text">
-                A JPG to PDF converter is an essential online tool that allows you to convert JPG to PDF effortlessly.
-                This pdf converter simplifies the process of transforming your JPG or JPEG images into professional PDF
-                documents. Whether you need to convert jpeg to pdf for work presentations or personal projects, our
-                image
-                to pdf tool handles the conversion seamlessly while maintaining the original quality of your files.
-              </p>
-              <p class="info-text">
-                Our jpg to pdf converter enables you to merge multiple images into a single, organized document. When
-                you
-                convert jpg to pdf using our platform, you can combine photographs, scanned documents, receipts, ID
-                cards,
-                and design files into one compact file. This image to pdf conversion process is particularly valuable
-                for
-                creating portfolios, compiling reports, and organizing visual documentation that's easy to share, view,
-                and print across all devices.
-              </p>
-              <p class="info-text">
-                The ability to convert jpeg to pdf has become crucial in modern workflows. Our reliable pdf converter
-                ensures your images stay in perfect order while transforming jpg into pdf format. Whether you're a
-                student
-                submitting assignments, a professional preparing client materials, or simply organizing personal photos,
-                this jpg to pdf tool delivers consistent, high-quality results every time you need to convert jpg to
-                pdf.
-              </p>
-            </section>
-
-            <!-- Why Convert -->
-            <section style="margin-top:60px;">
-              <div class="section-head">
-                <h2>Why Convert JPG to PDF?</h2>
-              </div>
-              <ul class="info-list">
-                <li><strong>Universal compatibility:</strong> When you convert jpeg to pdf, your documents open
-                  identically across all devices and platforms.</li>
-                <li><strong>Professional presentation:</strong> Our jpg to pdf converter creates polished,
-                  business-ready
-                  documents perfect for official submissions.</li>
-                <li><strong>Easy organization:</strong> Merge multiple images into a single file when you convert jpg to
-                  pdf, simplifying document management.</li>
-                <li><strong>Quality preservation:</strong> The image to pdf conversion maintains sharpness and color
-                  accuracy in a compact format.</li>
-                <li><strong>Enhanced security:</strong> PDF files offer better protection options including password
-                  encryption.</li>
-                <li><strong>Simplified sharing:</strong> One PDF is easier to email and distribute than multiple
-                  individual images.</li>
-              </ul>
-            </section>
-
-            <!-- Article -->
-            <section style="margin-top:60px;">
-              <div class="section-head">
-                <h2>JPG to PDF - Complete Guide</h2>
-              </div>
-              <div class="article-wrap">
-                <p>Learning to convert jpg to pdf is straightforward with our intuitive pdf converter. Simply upload
-                  your
-                  images, arrange them in your preferred order, customize page settings, and export your finished PDF.
-                  Our
-                  image to pdf tool supports batch processing, allowing you to convert jpeg to pdf for multiple files
-                  simultaneously, saving valuable time on repetitive tasks.</p>
-
-                <h3>Best practices when you convert JPG to PDF</h3>
-                <ol>
-                  <li><strong>Optimize source quality:</strong> Ensure images have adequate resolution before you
-                    convert
-                    jpg to pdf for best results.</li>
-                  <li><strong>Group related content:</strong> Keep similar documents together when using the jpg to pdf
-                    converter for logical organization.</li>
-                  <li><strong>Check orientation:</strong> Rotate images properly before converting jpg into pdf to
-                    maintain professional appearance.</li>
-                  <li><strong>Choose appropriate dimensions:</strong> Select A4 for international documents or Letter
-                    size
-                    for US correspondence in the pdf converter.</li>
-                  <li><strong>Consider compression:</strong> Balance quality and file size when you convert jpeg to pdf
-                    for different purposes.</li>
-                </ol>
-
-                <h3>When to use image to PDF conversion</h3>
-                <p>Convert jpg to pdf when emailing multiple photographs, archiving scanned receipts, creating photo
-                  albums, or preparing official submissions. Business professionals use our jpg to pdf converter for
-                  client proposals and reports. Students convert jpeg to pdf for assignments and research materials. The
-                  image to pdf process is invaluable for organizing travel documents, preserving certificates, and
-                  compiling visual portfolios that showcase your work professionally across any platform.</p>
-              </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section class="pdf-sections" style="margin-top:60px;">
-              <div class="section-head">
-                <h2>Frequently Asked Questions</h2>
-              </div>
-
-              <div style=" margin: 0 auto;">
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    Is my file uploaded to your servers when I convert JPG to PDF?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    No, all conversion happens locally in your browser. Your JPG images never leave your device,
-                    ensuring complete privacy and security when you convert jpg to pdf.
-                  </p>
+            <div class="steps-3-wrap">
+              <div class="steps-3-grid">
+                <div class="step-inner">
+                  <div class="step-badge">1</div>
+                  <div class="step-title">Upload images</div>
+                  <p class="step-desc">Choose your JPG image files that you want to convert to PDF.</p>
                 </div>
 
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    Can I convert multiple JPG images to one PDF?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    Yes, our JPG to PDF converter allows you to merge multiple images into a single PDF file.
-                    You can also choose to create separate PDF files for each image.
-                  </p>
+                <div class="step-inner">
+                  <div class="step-badge">2</div>
+                  <div class="step-title">Arrange & set options</div>
+                  <p class="step-desc">Reorder images, select page size, orientation, and margins for your PDF.</p>
                 </div>
 
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    What page sizes and orientations are available?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    You can choose from A4, Letter, and Legal page sizes, and select either portrait or landscape
-                    orientation. You can also adjust margins (none, small, or big) for your PDF.
-                  </p>
-                </div>
-
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    Is there a limit on the number of images I can convert?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    Since processing happens in your browser, the limit depends on your device's memory and
-                    performance. You can convert as many JPG images as your browser can handle comfortably.
-                  </p>
-                </div>
-
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    Can I rearrange images before converting to PDF?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    Yes, you can drag and drop thumbnails to reorder your images in any sequence before
-                    converting jpg to pdf. This helps organize your document exactly how you want it.
-                  </p>
-                </div>
-
-                <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    What image formats are supported besides JPG?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    While our tool is optimized for JPG and JPEG, it also supports PNG, GIF, BMP, and other
-                    common image formats. All images will be converted to high-quality PDF pages.
-                  </p>
-                </div>
-
-                <div style="padding: 20px 0;">
-                  <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
-                    Will my images lose quality when converted to PDF?
-                  </h3>
-                  <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                    No, we maintain the original image quality during conversion. The JPG to PDF process
-                    preserves sharpness, colors, and details of your original images.
-                  </p>
+                <div class="step-inner">
+                  <div class="step-badge">3</div>
+                  <div class="step-title">Convert & download</div>
+                  <p class="step-desc">Generate a PDF instantly after converting JPG to PDF and download with images
+                    preserved
+                    perfectly.</p>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <!-- CTA Section -->
-            <section style="margin-top:60px; margin-bottom:40px;">
-              <div class="bg-red-600 rounded-xl p-8 text-center shadow-xl">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Need to Convert PDF Back to JPG?
-                </h2>
-                <p class="text-white mb-6 max-w-2xl mx-auto">
-                  Easily extract images from your PDF files with our fast and free PDF to JPG converter.
-                  Perfect for sharing, editing, or reusing images.
+          <!-- What is JPG to PDF -->
+          <section style="margin-top:60px;">
+            <div class="section-head">
+              <h2>What is JPG to PDF Converter?</h2>
+            </div>
+            <p class="info-text">
+              A JPG to PDF converter is an essential online tool that allows you to convert JPG to PDF effortlessly.
+              This pdf converter simplifies the process of transforming your JPG or JPEG images into professional PDF
+              documents. Whether you need to convert jpeg to pdf for work presentations or personal projects, our image
+              to pdf tool handles the conversion seamlessly while maintaining the original quality of your files.
+            </p>
+            <p class="info-text">
+              Our jpg to pdf converter enables you to merge multiple images into a single, organized document. When you
+              convert jpg to pdf using our platform, you can combine photographs, scanned documents, receipts, ID cards,
+              and design files into one compact file. This image to pdf conversion process is particularly valuable for
+              creating portfolios, compiling reports, and organizing visual documentation that's easy to share, view,
+              and print across all devices.
+            </p>
+            <p class="info-text">
+              The ability to convert jpeg to pdf has become crucial in modern workflows. Our reliable pdf converter
+              ensures your images stay in perfect order while transforming jpg into pdf format. Whether you're a student
+              submitting assignments, a professional preparing client materials, or simply organizing personal photos,
+              this jpg to pdf tool delivers consistent, high-quality results every time you need to convert jpg to pdf.
+            </p>
+          </section>
+
+          <!-- Why Convert -->
+          <section style="margin-top:60px;">
+            <div class="section-head">
+              <h2>Why Convert JPG to PDF?</h2>
+            </div>
+            <ul class="info-list">
+              <li><strong>Universal compatibility:</strong> When you convert jpeg to pdf, your documents open
+                identically across all devices and platforms.</li>
+              <li><strong>Professional presentation:</strong> Our jpg to pdf converter creates polished, business-ready
+                documents perfect for official submissions.</li>
+              <li><strong>Easy organization:</strong> Merge multiple images into a single file when you convert jpg to
+                pdf, simplifying document management.</li>
+              <li><strong>Quality preservation:</strong> The image to pdf conversion maintains sharpness and color
+                accuracy in a compact format.</li>
+              <li><strong>Enhanced security:</strong> PDF files offer better protection options including password
+                encryption.</li>
+              <li><strong>Simplified sharing:</strong> One PDF is easier to email and distribute than multiple
+                individual images.</li>
+            </ul>
+          </section>
+
+          <!-- Article -->
+          <section style="margin-top:60px;">
+            <div class="section-head">
+              <h2>JPG to PDF - Complete Guide</h2>
+            </div>
+            <div class="article-wrap">
+              <p>Learning to convert jpg to pdf is straightforward with our intuitive pdf converter. Simply upload your
+                images, arrange them in your preferred order, customize page settings, and export your finished PDF. Our
+                image to pdf tool supports batch processing, allowing you to convert jpeg to pdf for multiple files
+                simultaneously, saving valuable time on repetitive tasks.</p>
+
+              <h3>Best practices when you convert JPG to PDF</h3>
+              <ol>
+                <li><strong>Optimize source quality:</strong> Ensure images have adequate resolution before you convert
+                  jpg to pdf for best results.</li>
+                <li><strong>Group related content:</strong> Keep similar documents together when using the jpg to pdf
+                  converter for logical organization.</li>
+                <li><strong>Check orientation:</strong> Rotate images properly before converting jpg into pdf to
+                  maintain professional appearance.</li>
+                <li><strong>Choose appropriate dimensions:</strong> Select A4 for international documents or Letter size
+                  for US correspondence in the pdf converter.</li>
+                <li><strong>Consider compression:</strong> Balance quality and file size when you convert jpeg to pdf
+                  for different purposes.</li>
+              </ol>
+
+              <h3>When to use image to PDF conversion</h3>
+              <p>Convert jpg to pdf when emailing multiple photographs, archiving scanned receipts, creating photo
+                albums, or preparing official submissions. Business professionals use our jpg to pdf converter for
+                client proposals and reports. Students convert jpeg to pdf for assignments and research materials. The
+                image to pdf process is invaluable for organizing travel documents, preserving certificates, and
+                compiling visual portfolios that showcase your work professionally across any platform.</p>
+            </div>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="pdf-sections" style="margin-top:60px;">
+            <div class="section-head">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div style=" margin: 0 auto;">
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  Is my file uploaded to your servers when I convert JPG to PDF?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  No, all conversion happens locally in your browser. Your JPG images never leave your device,
+                  ensuring complete privacy and security when you convert jpg to pdf.
                 </p>
-                <a href="/pdf-to-jpg"
-                  class="inline-flex items-center bg-white text-red-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">
-                  <i class="fas fa-file-pdf mr-2"></i>
-                  Try PDF to JPG Converter
-                  <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-              </div>
-            </section>
-
-            <!-- Explore Tools -->
-            <section style="margin-top:60px;">
-              <div class="section-head">
-                <h2>Explore Other PDF Tools</h2>
               </div>
 
-              <div class="card-grid">
-
-                <a href="pdf-converter" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-file-pdf"></i></div>
-                    <div>
-                      <h3>PDF Converter</h3>
-                      <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting
-                        and layout.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="merge-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-red"><i class="fas fa-layer-group"></i></div>
-                    <div>
-                      <h3>Merge PDF</h3>
-                      <p>Combine multiple PDFs into one document. Reorder, preview, and merge in
-                        seconds.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="split-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
-                    <div>
-                      <h3>Split PDF</h3>
-                      <p>Extract pages or ranges into separate PDF files - useful for reorganizing and
-                        sharing.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="compress-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                    <div>
-                      <h3>Compress PDF</h3>
-                      <p>Reduce file size while keeping quality. Choose between balanced or strong
-                        compression.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="jpg-to-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
-                    <div>
-                      <h3>JPG to PDF</h3>
-                      <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images
-                        into one PDF easily.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="compress-pdf-to-100kb" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                    <div>
-                      <h3>Compress PDF to 100KB</h3>
-                      <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick
-                        sharing.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="compress-pdf-to-200kb" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
-                    <div>
-                      <h3>Compress PDF to 200KB</h3>
-                      <p>Compress PDF files to 200KB while maintaining readable quality for uploads
-                        and sharing.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="rotate-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-rotate-left"></i></div>
-                    <div>
-                      <h3>Rotate PDF</h3>
-                      <p>Rotate PDF pages permanently. Fix page orientation by rotating clockwise or
-                        counterclockwise.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="watermark-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
-                    <div>
-                      <h3>Watermark PDF</h3>
-                      <p>Add text or image watermarks to your PDF files for protection or branding.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="crop-pdf" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-crop"></i></div>
-                    <div>
-                      <h3>Crop PDF</h3>
-                      <p>Crop PDF pages to remove unwanted margins or focus on specific content.</p>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="pdf-to-jpg" class="tool-link">
-                  <div class="tool-card">
-                    <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
-                    <div>
-                      <h3>PDF to JPG</h3>
-                      <p>Convert PDF pages to high-quality JPG images for easy sharing and editing.</p>
-                    </div>
-                  </div>
-                </a>
-
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  Can I convert multiple JPG images to one PDF?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  Yes, our JPG to PDF converter allows you to merge multiple images into a single PDF file.
+                  You can also choose to create separate PDF files for each image.
+                </p>
               </div>
-            </section>
 
-          </div>
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  What page sizes and orientations are available?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  You can choose from A4, Letter, and Legal page sizes, and select either portrait or landscape
+                  orientation. You can also adjust margins (none, small, or big) for your PDF.
+                </p>
+              </div>
+
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  Is there a limit on the number of images I can convert?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  Since processing happens in your browser, the limit depends on your device's memory and
+                  performance. You can convert as many JPG images as your browser can handle comfortably.
+                </p>
+              </div>
+
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  Can I rearrange images before converting to PDF?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  Yes, you can drag and drop thumbnails to reorder your images in any sequence before
+                  converting jpg to pdf. This helps organize your document exactly how you want it.
+                </p>
+              </div>
+
+              <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  What image formats are supported besides JPG?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  While our tool is optimized for JPG and JPEG, it also supports PNG, GIF, BMP, and other
+                  common image formats. All images will be converted to high-quality PDF pages.
+                </p>
+              </div>
+
+              <div style="padding: 20px 0;">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                  Will my images lose quality when converted to PDF?
+                </h3>
+                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                  No, we maintain the original image quality during conversion. The JPG to PDF process
+                  preserves sharpness, colors, and details of your original images.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section style="margin-top:60px; margin-bottom:40px;">
+            <div class="bg-red-600 rounded-xl p-8 text-center shadow-xl">
+              <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                Need to Convert PDF Back to JPG?
+              </h2>
+              <p class="text-white mb-6 max-w-2xl mx-auto">
+                Easily extract images from your PDF files with our fast and free PDF to JPG converter.
+                Perfect for sharing, editing, or reusing images.
+              </p>
+              <a href="/pdf-to-jpg"
+                class="inline-flex items-center bg-white text-red-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">
+                <i class="fas fa-file-pdf mr-2"></i>
+                Try PDF to JPG Converter
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </section>
+
+          <!-- Explore Tools -->
+          <section style="margin-top:60px;">
+            <div class="section-head">
+              <h2>Explore Other PDF Tools</h2>
+            </div>
+
+            <div class="card-grid">
+
+              <a href="pdf-converter" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-file-pdf"></i></div>
+                  <div>
+                    <h3>PDF Converter</h3>
+                    <p>Convert Word, Excel, PPT, and images to PDF and back - preserve formatting
+                      and layout.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="merge-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-red"><i class="fas fa-layer-group"></i></div>
+                  <div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDFs into one document. Reorder, preview, and merge in
+                      seconds.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="split-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-orange"><i class="fas fa-cut"></i></div>
+                  <div>
+                    <h3>Split PDF</h3>
+                    <p>Extract pages or ranges into separate PDF files - useful for reorganizing and
+                      sharing.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="compress-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                  <div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce file size while keeping quality. Choose between balanced or strong
+                      compression.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="jpg-to-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
+                  <div>
+                    <h3>JPG to PDF</h3>
+                    <p>Convert JPG or PNG images to high-quality PDF files. Combine multiple images
+                      into one PDF easily.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="compress-pdf-to-100kb" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                  <div>
+                    <h3>Compress PDF to 100KB</h3>
+                    <p>Reduce PDF file size to 100KB for online forms, email attachments, and quick
+                      sharing.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="compress-pdf-to-200kb" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-green"><i class="fas fa-compress-alt"></i></div>
+                  <div>
+                    <h3>Compress PDF to 200KB</h3>
+                    <p>Compress PDF files to 200KB while maintaining readable quality for uploads
+                      and sharing.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="rotate-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-rotate-left"></i></div>
+                  <div>
+                    <h3>Rotate PDF</h3>
+                    <p>Rotate PDF pages permanently. Fix page orientation by rotating clockwise or
+                      counterclockwise.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="watermark-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
+                  <div>
+                    <h3>Watermark PDF</h3>
+                    <p>Add text or image watermarks to your PDF files for protection or branding.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="crop-pdf" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-crop"></i></div>
+                  <div>
+                    <h3>Crop PDF</h3>
+                    <p>Crop PDF pages to remove unwanted margins or focus on specific content.</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="pdf-to-jpg" class="tool-link">
+                <div class="tool-card">
+                  <div class="tool-icon icon-blue"><i class="fas fa-file-image"></i></div>
+                  <div>
+                    <h3>PDF to JPG</h3>
+                    <p>Convert PDF pages to high-quality JPG images for easy sharing and editing.</p>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </section>
+
         </div>
+      </div>
 
-        <!-- Preview -->
-        <div id="preview-screen" class="hidden">
-          <div class="main-content">
-            <div style="display: flex; gap: 18px; position: relative">
-              <div class="thumbnails-section mt-10 mb-10" style="flex: 1">
-                <div id="thumbnails-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2"></div>
-              </div>
+      <!-- Preview -->
+      <div id="preview-screen" class="hidden">
+        <div class="main-content">
+          <div style="display: flex; gap: 18px; position: relative">
+            <div class="thumbnails-section mt-10 mb-10" style="flex: 1">
+              <div id="thumbnails-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2"></div>
+            </div>
 
-              <!-- + button (only one) -->
-              <button id="add-more-btn" class="add-more-btn" title="Add more images" aria-label="Add more">
-                <i class="fas fa-plus text-red-600 text-xl"></i>
-              </button>
+            <!-- + button (only one) -->
+            <button id="add-more-btn" class="add-more-btn" title="Add more images" aria-label="Add more">
+              <i class="fas fa-plus text-red-600 text-xl"></i>
+            </button>
 
-              <!-- Settings panel -->
-              <div class="settings-section settings-panel" id="settings-panel" aria-hidden="false">
-                <div class="content-padding-bottom">
-                  <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-lg font-semibold">PDF settings</h3>
-                    <button id="close-settings" class="md:hidden text-gray-500 hover:text-gray-700">
-                      <i class="fas fa-times text-xl" aria-hidden="true"></i>
-                    </button>
-                  </div>
+            <!-- Settings panel -->
+            <div class="settings-section settings-panel" id="settings-panel" aria-hidden="false">
+              <div class="content-padding-bottom">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-lg font-semibold">PDF settings</h3>
+                  <button id="close-settings" class="md:hidden text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl" aria-hidden="true"></i>
+                  </button>
+                </div>
 
-                  <div class="space-y-6">
-                    <div>
-                      <h4 class="font-medium mb-3">Page orientation</h4>
-                      <div class="grid grid-cols-2 gap-3">
-                        <div class="option-card selected" data-value="portrait" id="orientation-portrait">
-                          <div class="text-center">Portrait</div>
-                        </div>
-                        <div class="option-card" data-value="landscape" id="orientation-landscape">
-                          <div class="text-center">Landscape</div>
-                        </div>
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="font-medium mb-3">Page orientation</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="option-card selected" data-value="portrait" id="orientation-portrait">
+                        <div class="text-center">Portrait</div>
+                      </div>
+                      <div class="option-card" data-value="landscape" id="orientation-landscape">
+                        <div class="text-center">Landscape</div>
                       </div>
                     </div>
+                  </div>
 
-                    <div>
-                      <h4 class="font-medium mb-3">Page size</h4>
-                      <select id="page-size-select"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
-                        <option value="a4" selected>A4 (297x210 mm)</option>
-                        <option value="letter">Letter (215.9x279.4 mm)</option>
-                        <option value="legal">Legal (215.9x355.6 mm)</option>
-                      </select>
-                    </div>
+                  <div>
+                    <h4 class="font-medium mb-3">Page size</h4>
+                    <select id="page-size-select"
+                      class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                      <option value="a4" selected>A4 (297x210 mm)</option>
+                      <option value="letter">Letter (215.9x279.4 mm)</option>
+                      <option value="legal">Legal (215.9x355.6 mm)</option>
+                    </select>
+                  </div>
 
-                    <div>
-                      <h4 class="font-medium mb-3">Page Margin</h4>
-                      <div class="grid grid-cols-3 gap-3">
-                        <div class="option-card selected" data-value="none" id="margin-none">
-                          <div class="text-center">No margin</div>
-                        </div>
-                        <div class="option-card" data-value="small" id="margin-small">
-                          <div class="text-center">Small margin</div>
-                        </div>
-                        <div class="option-card" data-value="big" id="margin-big">
-                          <div class="text-center">Big margin</div>
-                        </div>
+                  <div>
+                    <h4 class="font-medium mb-3">Page Margin</h4>
+                    <div class="grid grid-cols-3 gap-3">
+                      <div class="option-card selected" data-value="none" id="margin-none">
+                        <div class="text-center">No margin</div>
+                      </div>
+                      <div class="option-card" data-value="small" id="margin-small">
+                        <div class="text-center">Small margin</div>
+                      </div>
+                      <div class="option-card" data-value="big" id="margin-big">
+                        <div class="text-center">Big margin</div>
                       </div>
                     </div>
-
-                    <div class="flex items-center">
-                      <input id="merge-pdf" type="checkbox"
-                        class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded" checked />
-                      <label for="merge-pdf" class="ml-2 block text-sm text-gray-900">Merge all images in one PDF
-                        file</label>
-                    </div>
-
-                    <!-- On desktop this button is pinned inside the panel; on mobile convert-btn-mobile is used -->
-                    <button id="convert-btn-desktop"
-                      class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center">
-                      <span>Convert to PDF</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
-                    </button>
                   </div>
+
+                  <div class="flex items-center">
+                    <input id="merge-pdf" type="checkbox"
+                      class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded" checked />
+                    <label for="merge-pdf" class="ml-2 block text-sm text-gray-900">Merge all images in one PDF
+                      file</label>
+                  </div>
+
+                  <!-- On desktop this button is pinned inside the panel; on mobile convert-btn-mobile is used -->
+                  <button id="convert-btn-desktop"
+                    class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center">
+                    <span>Convert to PDF</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Mobile convert button (stacked on right with settings and +) -->
-          <button id="convert-btn-mobile"
-            class="convert-btn bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center md:hidden">
-            <span>Convert to PDF</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
-          </button>
-
-          <!-- mobile settings trigger (only mobile) -->
-          <button id="open-settings" class="md:hidden" aria-label="Open settings">
-            <i class="fas fa-cog text-gray-700 text-xl" aria-hidden="true"></i>
-          </button>
-
-          <!-- single add-more file input -->
-          <input id="add-more-input" class="file-input" type="file" accept="image/jpeg" multiple />
         </div>
 
-        <!-- Download Screen (unchanged) -->
-        <div id="download-screen" class="hidden py-16 text-center">
-          <h2 class="text-3xl font-bold mb-6">
-            Your images have been converted to PDF
-          </h2>
-          <div class="bg-white rounded-xl shadow-sm p-8 max-w-md mx-auto mb-8">
-            <h3 class="text-xl font-semibold mb-6">Download PDF</h3>
-            <button id="download-pdf"
-              class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full shadow-md mb-6">
-              Download PDF
-            </button>
+        <!-- Mobile convert button (stacked on right with settings and +) -->
+        <button id="convert-btn-mobile"
+          class="convert-btn bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md flex items-center justify-center md:hidden">
+          <span>Convert to PDF</span><i class="fas fa-download ml-2" aria-hidden="true"></i>
+        </button>
 
-            <div class="flex justify-center space-x-4 mb-8">
-              <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <i class="fas fa-eye text-gray-600" aria-hidden="true"></i>
-              </button>
-              <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <i class="fas fa-pen text-gray-600" aria-hidden="true"></i>
-              </button>
-              <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <i class="fas fa-link text-gray-600" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
+        <!-- mobile settings trigger (only mobile) -->
+        <button id="open-settings" class="md:hidden" aria-label="Open settings">
+          <i class="fas fa-cog text-gray-700 text-xl" aria-hidden="true"></i>
+        </button>
 
-          <div class="max-w-md mx-auto flex justify-center space-x-4">
-            <button id="back-to-edit" class="text-red-600 hover:text-red-800 font-medium">
-              ← Back to edit
-            </button>
-            <button id="convert-more" class="text-red-600 hover:text-red-800 font-medium">
-              Convert more files →
-            </button>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <!-- footer -->
-    <footer class="site-footer" role="contentinfo">
-      <div style="text-align:center; padding:14px 10px; font-size:14px; color:#374151;">
-
-        <a href="/pages/faq" style="color:#374151; text-decoration:none; margin:0 6px;">FAQ</a> |
-        <a href="/pages/help" style="color:#374151; text-decoration:none; margin:0 6px;">How to use</a> |
-        <a href="/pages/contact" style="color:#374151; text-decoration:none; margin:0 6px;">Contact</a> |
-        <a href="/pages/terms" style="color:#374151; text-decoration:none; margin:0 6px;">Terms</a> |
-        <a href="/pages/privacy" style="color:#374151; text-decoration:none; margin:0 6px;">Privacy</a> |
-        <a href="/pages/cookie" style="color:#374151; text-decoration:none; margin:0 6px;">Cookies</a> |
-        <a href="/pages/security" style="color:#374151; text-decoration:none; margin:0 6px;">Security</a>
-
-        <span style="margin-left:12px; color:#6b7280;">
-          ©
-          <script>document.write(new Date().getFullYear());</script> PDF99 - All rights reserved.
-        </span>
-
+        <!-- single add-more file input -->
+        <input id="add-more-input" class="file-input" type="file" accept="image/jpeg" multiple />
       </div>
-    </footer>
 
-    <!-- Converting overlay -->
-    <div id="converting-overlay" aria-hidden="true" style="
+      <!-- Download Screen (unchanged) -->
+      <div id="download-screen" class="hidden py-16 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Your images have been converted to PDF
+        </h2>
+        <div class="bg-white rounded-xl shadow-sm p-8 max-w-md mx-auto mb-8">
+          <h3 class="text-xl font-semibold mb-6">Download PDF</h3>
+          <button id="download-pdf"
+            class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full shadow-md mb-6">
+            Download PDF
+          </button>
+
+          <div class="flex justify-center space-x-4 mb-8">
+            <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-eye text-gray-600" aria-hidden="true"></i>
+            </button>
+            <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-pen text-gray-600" aria-hidden="true"></i>
+            </button>
+            <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-link text-gray-600" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="max-w-md mx-auto flex justify-center space-x-4">
+          <button id="back-to-edit" class="text-red-600 hover:text-red-800 font-medium">
+            ← Back to edit
+          </button>
+          <button id="convert-more" class="text-red-600 hover:text-red-800 font-medium">
+            Convert more files →
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div style="text-align:center; padding:14px 10px; font-size:14px; color:#374151;">
+
+      <a href="/pages/faq" style="color:#374151; text-decoration:none; margin:0 6px;">FAQ</a> |
+      <a href="/pages/help" style="color:#374151; text-decoration:none; margin:0 6px;">How to use</a> |
+      <a href="/pages/contact" style="color:#374151; text-decoration:none; margin:0 6px;">Contact</a> |
+      <a href="/pages/terms" style="color:#374151; text-decoration:none; margin:0 6px;">Terms</a> |
+      <a href="/pages/privacy" style="color:#374151; text-decoration:none; margin:0 6px;">Privacy</a> |
+      <a href="/pages/cookie" style="color:#374151; text-decoration:none; margin:0 6px;">Cookies</a> |
+      <a href="/pages/security" style="color:#374151; text-decoration:none; margin:0 6px;">Security</a>
+
+      <span style="margin-left:12px; color:#6b7280;">
+        ©
+        <script>document.write(new Date().getFullYear());</script> PDF99 - All rights reserved.
+      </span>
+
+    </div>
+  </footer>
+
+  <!-- Converting overlay -->
+  <div id="converting-overlay" aria-hidden="true" style="
         display: none;
         position: fixed;
         inset: 0;
@@ -866,7 +855,7 @@
         z-index: 1400;
         flex-direction: column;
       ">
-      <div style="
+    <div style="
           width: 92%;
           max-width: 520px;
           display: flex;
@@ -874,19 +863,19 @@
           align-items: center;
           gap: 16px;
         ">
-        <div style="width: 140px; height: 140px; position: relative">
-          <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="gradient" x1="0%" x2="100%">
-                <stop offset="0%" stop-color="#ef4444" />
-                <stop offset="100%" stop-color="#fb7185" />
-              </linearGradient>
-            </defs>
-            <circle class="ring-bg" cx="70" cy="70" r="52" fill="none" stroke="#f3f4f6" stroke-width="10"></circle>
-            <circle id="ring-fg" class="ring-fg" cx="70" cy="70" r="52" fill="none" stroke="url(#gradient)"
-              stroke-width="10" stroke-dasharray="326.725" stroke-dashoffset="326.725"></circle>
-          </svg>
-          <div style="
+      <div style="width: 140px; height: 140px; position: relative">
+        <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradient" x1="0%" x2="100%">
+              <stop offset="0%" stop-color="#ef4444" />
+              <stop offset="100%" stop-color="#fb7185" />
+            </linearGradient>
+          </defs>
+          <circle class="ring-bg" cx="70" cy="70" r="52" fill="none" stroke="#f3f4f6" stroke-width="10"></circle>
+          <circle id="ring-fg" class="ring-fg" cx="70" cy="70" r="52" fill="none" stroke="url(#gradient)"
+            stroke-width="10" stroke-dasharray="326.725" stroke-dashoffset="326.725"></circle>
+        </svg>
+        <div style="
               position: absolute;
               left: 0;
               right: 0;
@@ -898,25 +887,25 @@
               flex-direction: column;
               pointer-events: none;
             ">
-            <div id="ring-percent" style="font-size: 20px; font-weight: 700; color: #111827">
-              0%
-            </div>
-            <div id="ring-status" style="font-size: 13px; color: #6b7280; margin-top: 6px">
-              Uploading
-            </div>
+          <div id="ring-percent" style="font-size: 20px; font-weight: 700; color: #111827">
+            0%
+          </div>
+          <div id="ring-status" style="font-size: 13px; color: #6b7280; margin-top: 6px">
+            Uploading
           </div>
         </div>
-        <div style="text-align: center; color: #111827; font-weight: 600">
-          Generating PDF, please wait...
-        </div>
+      </div>
+      <div style="text-align: center; color: #111827; font-weight: 600">
+        Generating PDF, please wait...
       </div>
     </div>
+  </div>
 
-    <!-- JS: UI helpers + original app JS (logic untouched) -->
-    <script defer src="assets/js/jpgToPDF.js"></script>
+  <!-- JS: UI helpers + original app JS (logic untouched) -->
+  <script defer src="assets/js/jpgToPDF.js"></script>
 
-    <noscript>
-      <div style="
+  <noscript>
+    <div style="
           padding: 16px;
           background: #fff;
           border-radius: 8px;
@@ -924,31 +913,31 @@
           max-width: 800px;
           text-align: center;
         ">
-        This JPG to PDF converter runs in the browser using JavaScript. Please
-        enable JavaScript to use the tool.
-      </div>
-    </noscript>
+      This JPG to PDF converter runs in the browser using JavaScript. Please
+      enable JavaScript to use the tool.
+    </div>
+  </noscript>
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-57TC57Z3');</script>
+  <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC8H85HKF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'G-KC8H85HKF1');
-    </script>
+    gtag('config', 'G-KC8H85HKF1');
+  </script>
 </body>
 
 </html>
