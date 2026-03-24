@@ -1059,6 +1059,65 @@
             font-size: 12px;
             margin-top: 4px;
         }
+
+         /* Trust section */
+        .trust-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f0f2f5;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .trust-card {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            color: #ef4444;
+            margin-bottom: 16px;
+        }
+
+        .trust-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .trust-card p {
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Optional: subtle hover effect */
+        .trust-card:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+
+        @media (max-width: 640px) {
+            .trust-section {
+                padding: 24px 16px;
+            }
+            .trust-grid {
+                gap: 24px;
+            }
+            .trust-card h3 {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
@@ -1190,6 +1249,65 @@
                         <i class="fas fa-download text-gray-600"></i>
                     </div>
                 </div>
+
+                 <!-- Trusted Company Section - Exactly as shown in your screenshot/design -->
+    <div class="trust-section">
+        <div class="trust-grid">
+            <!-- Trusted company -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Trusted company</h3>
+                <p>PDFgear is a well-received brand in the PDF industry. Your files or data won't be saved, they will be completely deleted once you leave the website. For more details, please see our Privacy Policy.</p>
+            </div>
+
+            <!-- Free and no sign-up -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-unlock-alt"></i>
+                </div>
+                <h3>Free and no sign-up</h3>
+                <p>PDFgear is a 100% free PDF merger online service. You won't be asked to sign up for an account whatsoever, and your email address or credit card information is never required.</p>
+            </div>
+
+            <!-- Powerful PDF merger -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3>Powerful PDF merger</h3>
+                <p>PDFgear helps seamlessly combine two or more PDF documents into one. Single-page PDFs, multi-page PDFs, large PDFs, and small PDF files are all supported.</p>
+            </div>
+
+            <!-- Works on any device -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Works on any device</h3>
+                <p>PDFgear is a cloud-based and cross-platform PDF combiner that works on all mainstream devices including Windows, Mac, Linux, Android, iOS, Chromebook, etc.</p>
+            </div>
+
+            <!-- Easy to use -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h3>Easy to use</h3>
+                <p>PDFgear is made as user-friendly as possible. From PDFgear's intuitive workplace, you can effortlessly check imported PDF files, and insert additional or delete unwanted files.</p>
+            </div>
+
+            <!-- PDF merger with no limit -->
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3>PDF merger with no limit</h3>
+                <p>PDFgear is free to use and it doesn't have any limitations. The number of PDF files used for combining is unlimited, and the output PDF file is watermark-free.</p>
+            </div>
+        </div>
+    </div>
 
                 <!-- Info sections (content adapted for watermark) -->
                 <div class="pdf-sections">
