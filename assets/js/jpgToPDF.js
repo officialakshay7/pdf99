@@ -749,3 +749,14 @@ function formatFileSize(bytes) {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
+
+// Mobile menu toggle
+function openSidebar() {
+    sidebar.hidden = false;
+    sidebar.setAttribute("aria-hidden", "false");
+}
+
+function closeSidebar() {
+    sidebar.hidden = true;
+    sidebar.setAttribute("aria-hidden", "true");
+}
