@@ -176,14 +176,6 @@
 
     /* mobile sidebar */
     /* Make sidebar above overlay so it's fully visible and interactive */
-.mobile-sidebar {
-  display: none;
-}
-
-.mobile-sidebar.active {
-  display: block;
-}
-
     .mobile-sidebar {
         position: fixed;
         left: 0;
