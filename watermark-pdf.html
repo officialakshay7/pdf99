@@ -1059,6 +1059,37 @@
             font-size: 12px;
             margin-top: 4px;
         }
+
+        /* faq collapsable */
+        .faq-item {
+            border-bottom: 1px solid #eef2f6;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
     </style>
 </head>
 
@@ -1345,16 +1376,19 @@
                             <h2>Frequently Asked Questions</h2>
                         </div>
 
-                        <div style="margin: 0 auto;">
-                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
-                                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
+                        <div class="faq-container" style="margin: 0 auto;">
+                            <div class="faq-item" style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
+                                <h3 class="faq-question"
+                                    style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827;">
                                     Is my file uploaded to your servers when I add watermarks?
                                 </h3>
-                                <p style="color: #6b7280; line-height: 1.7; margin: 0;">
-                                    No, all watermarking happens locally in your browser. Your PDF files never leave
-                                    your device,
-                                    ensuring complete privacy and security.
-                                </p>
+                                <div class="faq-answer">
+                                    <p style="color: #6b7280; line-height: 1.7; margin: 0;">
+                                        No, all watermarking happens locally in your browser. Your PDF files never leave
+                                        your device,
+                                        ensuring complete privacy and security.
+                                    </p>
+                                </div>
                             </div>
 
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0;">
@@ -2364,6 +2398,37 @@
                 mobileMoreIcon?.classList.toggle('fa-chevron-up', isOpen);
             });
         })();
+    </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach((question) => {
+
+            question.addEventListener("click", () => {
+
+                const item = question.parentElement;
+
+                // Close all others
+                document.querySelectorAll(".faq-item").forEach((faq) => {
+                    if (faq !== item) {
+                        faq.classList.remove("active");
+                        faq.querySelector(".faq-answer").style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current
+                item.classList.toggle("active");
+
+                const answer = item.querySelector(".faq-answer");
+
+                if (item.classList.contains("active")) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+
+            });
+
+        });
     </script>
 
     <noscript>
