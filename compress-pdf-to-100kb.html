@@ -31,7 +31,7 @@
     <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-compress-pdf.png" />
 
     <!-- Performance hints unchanged -->
-    <link rel="preload" href="/assets/font/Lexend-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/font/Lexend-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Favicon & manifest unchanged -->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
@@ -129,94 +129,114 @@
     </script>
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": "https://www.pdf99.org/compress-pdf-to-100kb#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does PDF99 upload my file to any server when compressing to 100KB?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely not. Everything runs inside your browser - your file never leaves your device."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I really get a 10 MB PDF down to 100KB?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "It depends on content. Image-heavy documents can shrink dramatically, often reaching 100KB. Text-only files may already be small, but our extreme mode pushes hard toward the target."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What compression modes are available for 100KB?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You have three presets: Extreme (under 100KB), Recommended (balanced, aims for 100KB), and Near 100KB (higher quality, may slightly exceed). Plus manual sliders for JPEG quality and render scale."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will my text become blurry after 100KB compression?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Text stays sharp because it's re-rendered as vector-like images. Our engine prioritizes readability even at 100KB."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is it possible to compress several PDFs to 100KB at once?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, you can batch-process multiple files. Each will be compressed individually, and you can download them separately or as a ZIP."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the maximum file size I can compress to 100KB?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Since everything is local, the limit depends on your device's RAM. Most modern computers handle up to 100 MB source files easily."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does JPEG quality affect the 100KB target?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Lower JPEG values (10-25%) produce smaller files, helping you hit 100KB. Higher values preserve detail but increase size."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need to sign up to use the 100KB compressor?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No registration, no email - it's completely free and anonymous."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I compress password-protected PDFs?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Currently we don't support encrypted files. Please remove the password protection first."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will the text remain searchable after compression?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, because we reconstruct the PDF from rendered images, the text layer is flattened, but the visual text remains selectable and searchable (as an image of text)."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.pdf99.org/compress-pdf-to-100kb#faq",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "Why do I need to compress a PDF to 100KB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many websites require PDF files under a specific size limit, such as 100KB, before allowing uploads. Compressing a PDF to 100KB makes it easier to submit documents to job portals, government forms, exam applications, and email services that have strict file size rules."
       }
-    </script>
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is 100KB PDF compression really 100% private and secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your files are processed directly in your browser, which means they never leave your device. We do not upload or store your files on any server, making the process safe and private."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What if my PDF size is already under 100KB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your PDF size is already below 100KB, you may not need compression. However, you can still use the tool safely, as it will not increase your file size unnecessarily."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can I get exactly 100KB every time after compression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The final file size depends on the content inside your PDF. Our compression system aims to keep files under or close to 100KB, but small variations may occur depending on the document."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Will scanned documents become unreadable after compressing to 100KB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, most scanned documents remain readable after compression. The tool reduces image size while maintaining text clarity, and you can adjust quality settings if needed."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can I compress multiple PDFs to 100KB at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can upload multiple PDF files and compress them at once. Each file is processed individually and can be downloaded separately or together as a ZIP file."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is there a file size limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main limit depends on your device's memory and performance. Most modern computers and smartphones can handle PDFs up to 100MB or more."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How do the sliders affect file size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lower JPEG quality settings and smaller render scales produce smaller file sizes. Increasing these values improves image clarity but may increase file size slightly."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account to use the tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No account or registration is required. You can use the compression tool instantly without signing up."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What about password-protected PDFs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Password-protected PDFs cannot be processed until the password is removed. Once the file is unlocked, you can upload it again and compress it normally."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Will text be searchable after 100KB PDF compression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most compressed PDFs, text becomes part of the image layer. Some digitally created documents may still support search depending on how the original file was generated."
+      }
+    }
+
+  ]
+}
+</script>
 
     <!-- libs (unchanged) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
@@ -988,7 +1008,6 @@
                     <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
                     <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
                     <a href="compress-pdf-to-500kb">Compress PDF to 500kb</a>
-
                 </div>
             </div>
         </nav>
@@ -1001,7 +1020,6 @@
         <div class="nav-inner">
             <div class="nav-left">
                 <div class="brand">
-
                     <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
                 </div>
             </div>
@@ -1054,7 +1072,8 @@
                     Compress PDF to 100KB
                 </h1>
                 <p class="text-gray-600 text-center mb-8">
-                    Reduce PDF size to 100KB - entirely in your browser. Free online 100kb PDF compression tool
+                    Reduce PDF size to 100KB - entirely in your browser. Free online
+                    100kb PDF compression tool
                 </p>
 
                 <div id="drop-area"
@@ -1125,25 +1144,29 @@
                         </div>
 
                         <p class="info-text">
-                            100KB PDF compression means reducing the size of a large PDF file to around
-                            100 kilobytes while keeping the content clear and readable. Many PDF files,
-                            especially scanned documents or files with images, can easily reach sizes of
-                            several megabytes. When you compress a PDF to 100KB, the file becomes much
-                            smaller and easier to upload, send, or store without losing essential
-                            information. This is especially helpful when uploading documents to websites
-                            that have strict file size limits, such as job applications, government forms,
-                            exam portals, or email attachments where smaller files are required.
+                            100KB PDF compression means reducing the size of a large PDF
+                            file to around 100 kilobytes while keeping the content clear and
+                            readable. Many PDF files, especially scanned documents or files
+                            with images, can easily reach sizes of several megabytes. When
+                            you compress a PDF to 100KB, the file becomes much smaller and
+                            easier to upload, send, or store without losing essential
+                            information. This is especially helpful when uploading documents
+                            to websites that have strict file size limits, such as job
+                            applications, government forms, exam portals, or email
+                            attachments where smaller files are required.
                         </p>
 
                         <p class="info-text">
-                            Our tool reduces PDF size to 100KB by rebuilding the document page by page
-                            using smart compression techniques. Images inside the PDF are optimized,
-                            unnecessary data is removed, and resolution is adjusted to keep the document
-                            readable. You can choose from preset compression levels or manually adjust
-                            settings such as JPEG quality and render scale to get better results. This
-                            level of control helps create a smaller PDF file that still looks neat and
-                            professional. The final result is a lightweight PDF that loads faster, uploads
-                            quickly, and is perfect for sharing online or saving storage space on your
+                            Our tool reduces PDF size to 100KB by rebuilding the document
+                            page by page using smart compression techniques. Images inside
+                            the PDF are optimized, unnecessary data is removed, and
+                            resolution is adjusted to keep the document readable. You can
+                            choose from preset compression levels or manually adjust
+                            settings such as JPEG quality and render scale to get better
+                            results. This level of control helps create a smaller PDF file
+                            that still looks neat and professional. The final result is a
+                            lightweight PDF that loads faster, uploads quickly, and is
+                            perfect for sharing online or saving storage space on your
                             device.
                         </p>
                     </section>
@@ -1180,64 +1203,72 @@
                         </div>
                         <div class="article-wrap">
                             <p>
-                                Large PDF files can be difficult to manage when you need to meet a strict
-                                100KB size requirement. This commonly happens when uploading documents
-                                to job portals, government websites, visa applications, or online forms
-                                that only allow small file sizes. Files such as scanned contracts,
-                                résumés, certificates, or presentations can quickly grow to several
-                                megabytes, making compression necessary. A reliable 100KB PDF compression
-                                process removes unnecessary file data while keeping the most important
-                                content readable. In most cases, compression works in two main stages:
-                                first, each page is rendered into optimized images, and then those images
-                                are re-encoded using smart JPEG compression and controlled downsampling.
-                                The result is a compact PDF file that stays close to 100KB while still
-                                maintaining acceptable quality for viewing, sharing, or printing.
+                                Large PDF files can be difficult to manage when you need to
+                                meet a strict 100KB size requirement. This commonly happens
+                                when uploading documents to job portals, government websites,
+                                visa applications, or online forms that only allow small file
+                                sizes. Files such as scanned contracts, résumés, certificates,
+                                or presentations can quickly grow to several megabytes, making
+                                compression necessary. A reliable 100KB PDF compression
+                                process removes unnecessary file data while keeping the most
+                                important content readable. In most cases, compression works
+                                in two main stages: first, each page is rendered into
+                                optimized images, and then those images are re-encoded using
+                                smart JPEG compression and controlled downsampling. The result
+                                is a compact PDF file that stays close to 100KB while still
+                                maintaining acceptable quality for viewing, sharing, or
+                                printing.
                             </p>
 
                             <h3>Best practices for hitting 100KB</h3>
                             <ol>
                                 <li>
                                     <strong>Start with “Extreme” if size is critical.</strong>
-                                    This setting helps achieve the smallest possible file size and is
-                                    useful when upload limits are strict, although image quality may
-                                    reduce slightly.
+                                    This setting helps achieve the smallest possible file size
+                                    and is useful when upload limits are strict, although image
+                                    quality may reduce slightly.
                                 </li>
                                 <li>
                                     <strong>Use “Recommended” for mixed content.</strong>
-                                    This option works well for PDFs that contain both text and images,
-                                    offering a good balance between file size and readability.
+                                    This option works well for PDFs that contain both text and
+                                    images, offering a good balance between file size and
+                                    readability.
                                 </li>
                                 <li>
                                     <strong>Adjust JPEG quality manually.</strong>
-                                    Lower quality values, typically between 15-30%, often help reduce
-                                    PDF size to around 100KB while keeping text readable.
+                                    Lower quality values, typically between 15-30%, often help
+                                    reduce PDF size to around 100KB while keeping text readable.
                                 </li>
                                 <li>
                                     <strong>Lower render scale (0.8-1.0) for tiny files,</strong>
-                                    while slightly higher values such as 1.4-1.6 can improve text
-                                    sharpness when clarity is more important than extreme compression.
+                                    while slightly higher values such as 1.4-1.6 can improve
+                                    text sharpness when clarity is more important than extreme
+                                    compression.
                                 </li>
                                 <li>
                                     <strong>Batch compress multiple files</strong>
-                                    when working with several documents at once. This saves time and
-                                    ensures all files meet the same upload size requirements.
+                                    when working with several documents at once. This saves time
+                                    and ensures all files meet the same upload size
+                                    requirements.
                                 </li>
                             </ol>
 
                             <h3>When 100KB compression saves the day</h3>
                             <p>
-                                Compressing a PDF to 100KB becomes useful in many real-life situations.
-                                Students often need smaller files to upload assignments or entrance
-                                forms to educational portals. Freelancers and office professionals
-                                reduce PDF size before sending invoices, contracts, or reports through
-                                email services that limit attachment sizes. Real estate agents, teachers,
-                                and small business owners frequently share brochures, notices, and
-                                forms through messaging apps where smaller files load faster and use
-                                less data. HR teams and legal departments also benefit from smaller
-                                PDFs when collecting résumés or sharing official documents. When the
-                                compression process runs locally in the browser, your files remain
-                                private and secure, ensuring that sensitive personal or professional
-                                information never leaves your device.
+                                Compressing a PDF to 100KB becomes useful in many real-life
+                                situations. Students often need smaller files to upload
+                                assignments or entrance forms to educational portals.
+                                Freelancers and office professionals reduce PDF size before
+                                sending invoices, contracts, or reports through email services
+                                that limit attachment sizes. Real estate agents, teachers, and
+                                small business owners frequently share brochures, notices, and
+                                forms through messaging apps where smaller files load faster
+                                and use less data. HR teams and legal departments also benefit
+                                from smaller PDFs when collecting résumés or sharing official
+                                documents. When the compression process runs locally in the
+                                browser, your files remain private and secure, ensuring that
+                                sensitive personal or professional information never leaves
+                                your device.
                             </p>
                         </div>
                     </section>
@@ -1250,142 +1281,184 @@
                         <div style="margin: 0 auto">
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Is it really 100% private?
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    ">
+                                    Why do I need to compress a PDF to 100KB?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Yes. Your files are processed in your browser - we never see
-                                    them, and they never leave your computer.
+                                    Many websites require PDF files under a specific size limit, such as
+                                    100KB, before allowing uploads. Compressing a PDF to 100KB makes it
+                                    easier to submit documents to job portals, government forms, exam
+                                    applications, and email services that have strict file size rules.
                                 </p>
                             </div>
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    What if my PDF is already under 100KB?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Is 100KB PDF compression really 100% private and secure?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Then you probably don't need compression! But you can still
-                                    use the tool - it won't enlarge the file.
+                                    Yes. Your files are processed directly in your browser, which means
+                                    they never leave your device. We do not upload or store your files
+                                    on any server, making the process safe and private when you compress
+                                    PDF to 100KB or reduce PDF size for sensitive documents.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Can I get exactly 100KB every time?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    What if my PDF size is already under 100KB?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    The final size depends on content. Our algorithm aims for
-                                    ≤100KB in Extreme mode, but slight variations may occur. The
-                                    sliders let you dial in closer.
+                                    If your PDF size is already below 100KB, you may not need compression.
+                                    However, you can still use the tool safely, as it will not increase
+                                    your file size unnecessarily. This makes it useful for checking file
+                                    size before uploading documents.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Will scanned documents become unreadable?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Can I get exactly 100KB every time after compression?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Not at all. Even at 100KB, scanned text remains legible. You
-                                    can preview the result by toggling the quality settings.
+                                    The final file size depends on the content inside your PDF.
+                                    Our compression system aims to keep files under or close to
+                                    100KB, especially when using higher compression settings.
+                                    Small variations may occur, but adjusting the sliders helps
+                                    you get closer to your target size.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Can I compress multiple PDFs at once?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Will scanned documents become unreadable after compressing to 100kb?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Absolutely. Select several files and we'll compress each to
-                                    ~100KB. Download individually or as a ZIP.
+                                    No, most scanned documents remain readable after compression.
+                                    The tool carefully reduces image size while maintaining text
+                                    clarity. You can preview results and adjust quality settings
+                                    if you want clearer text after compressing the PDF to 100KB.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Can I compress multiple PDFs to 100KB at once?
+                                </h3>
+                                <p style="color: #6b7280">
+                                    Yes, you can upload multiple PDF files and compress them to 100KB in
+                                    one click. Each file will be processed individually, allowing
+                                    you to download them separately or together as a ZIP file
+                                    after compression.
+                                </p>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
+                                <h3 style="
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
                                     Is there a file size limit?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Only your device's memory. Most modern computers handle PDFs
-                                    up to 100MB without breaking a sweat.
+                                    The main limit depends on your device's memory and performance.
+                                    Most modern computers and smartphones can easily handle PDFs
+                                    up to 100MB or more when reducing PDF size to 100KB or similar
+                                    targets.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
                                     How do the sliders affect file size?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    Lower JPEG quality (10-20%) and render scale (0.8-1.0)
-                                    produce smaller files. Increase them for better clarity at
-                                    the cost of size.
+                                    Lower JPEG quality settings and smaller render scales produce
+                                    smaller file sizes. Increasing these values improves image
+                                    clarity but may increase file size slightly. Adjusting both
+                                    settings helps you find the right balance between quality
+                                    and compression.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Do I need to create an account?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Do I need to create an account to use the tool?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    No sign-up, no payments - it's completely free and
-                                    anonymous.
+                                    No account or registration is required. You can use the
+                                    compression tool instantly without signing up, making it
+                                    fast and convenient for quick PDF size reduction tasks.
                                 </p>
                             </div>
+
                             <div style="border-bottom: 1px solid #eef2f6; padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
                                     What about password-protected PDFs?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    We can't open encrypted files. Remove the password first,
-                                    then compress.
+                                    Password-protected PDFs cannot be processed until the
+                                    password is removed. Once the file is unlocked, you can
+                                    upload it again and compress it normally.
                                 </p>
                             </div>
+
                             <div style="padding: 20px 0">
                                 <h3 style="
-                      font-size: 1.1rem;
-                      font-weight: 600;
-                      margin-bottom: 10px;
-                    ">
-                                    Will text be searchable after compression?
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+            ">
+                                    Will text be searchable after 100KB PDF compression?
                                 </h3>
                                 <p style="color: #6b7280">
-                                    The text becomes part of the image, so you can't select it
-                                    as text, but you can search the PDF if it was born-digital.
-                                    For scanned documents, it's image-only.
+                                    In most compressed PDFs, text becomes part of the image layer.
+                                    This means text selection may not always be available. However,
+                                    documents created digitally may still support search depending
+                                    on how the original file was generated.
                                 </p>
                             </div>
+
                         </div>
                     </section>
 
                     <!-- CTA Section -->
-                    <section style="margin-top:60px; margin-bottom:40px;">
+                    <section style="margin-top: 60px; margin-bottom: 40px">
                         <div class="bg-red-600 rounded-xl p-8 text-center shadow-xl">
                             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
                                 Looking for Balanced Compression?
