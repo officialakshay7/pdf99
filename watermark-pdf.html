@@ -1061,15 +1061,13 @@
         }
 
         /* faq collapsable */
-        .faq-item {
-            border-bottom: 1px solid #eef2f6;
-            padding: 20px 0;
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
         }
 
         .faq-question {
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
             position: relative;
             padding-right: 25px;
         }
@@ -1083,12 +1081,6 @@
 
         .faq-item.active .faq-question::after {
             content: "-";
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
         }
     </style>
 </head>
@@ -2407,7 +2399,7 @@
 
                 const item = question.parentElement;
 
-                // Close all others
+                // Close other FAQs
                 document.querySelectorAll(".faq-item").forEach((faq) => {
                     if (faq !== item) {
                         faq.classList.remove("active");
@@ -2429,6 +2421,14 @@
             });
 
         });
+
+        // Open first FAQ automatically
+        const firstFAQ = document.querySelector(".faq-item");
+        if (firstFAQ) {
+            firstFAQ.classList.add("active");
+            const firstAnswer = firstFAQ.querySelector(".faq-answer");
+            firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+        }
     </script>
 
     <noscript>
