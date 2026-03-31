@@ -202,9 +202,9 @@
 </script>
 
   <!-- libs -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
 
 
   <!-- <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
@@ -1695,7 +1695,42 @@
   </div>
 
   <!-- JS: UI helpers + original app JS (logic untouched) -->
-  <!-- <script defer src="assets/js/jpgToPDF.js"></script> -->
+  <script defer>
+    let libsLoaded = false;
+
+    function loadLibs() {
+      return new Promise((resolve) => {
+        if (libsLoaded) return resolve();
+
+        const libs = [
+          'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js'
+          // add other script URLs here
+        ];
+
+        let loaded = 0;
+        libs.forEach((src) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = () => {
+            loaded++;
+            if (loaded === libs.length) {
+              libsLoaded = true;
+              resolve();
+            }
+          };
+          document.head.appendChild(script);
+        });
+      });
+    }
+
+    // Preload libs on first interaction
+    ['mousemove', 'touchstart', 'scroll'].forEach(event => {
+      window.addEventListener(event, () => loadLibs(), { once: true, passive: true });
+    });
+  </script>
+
   <script defer>
     // UI helpers (dropdown, mobile sidebar, stacked buttons)
     (function () {
