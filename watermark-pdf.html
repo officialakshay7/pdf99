@@ -209,7 +209,7 @@
     </script>
 
     <!-- libs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <script>
         if (window["pdfjsLib"])
             pdfjsLib.GlobalWorkerOptions.workerSrc =
@@ -217,18 +217,18 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    
-    <!-- libs -->
-  <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/all.min.css">
-  </noscript>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
 
-  <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/tailwind/output.css">
-  </noscript>
+    <!-- libs -->
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/all.min.css">
+    </noscript>
+
+    <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/tailwind/output.css">
+    </noscript>
     <!-- <link rel="preload" href="/tailwind/output.css" as="style">
     <link rel="stylesheet" href="/tailwind/output.css"> -->
 
@@ -1086,70 +1086,70 @@
     </style>
 
     <script>
-    // Google Analytics 4 Lazy Loader (Optimized)
+        // Google Analytics 4 Lazy Loader (Optimized)
 
-    (function () {
+        (function () {
 
-      const measurementId = "G-KC8H85HKF1";
-      let loaded = false;
-      let timerId;
+            const measurementId = "G-KC8H85HKF1";
+            let loaded = false;
+            let timerId;
 
-      function loadAnalytics(trigger) {
+            function loadAnalytics(trigger) {
 
-        if (loaded) return;
-        loaded = true;
+                if (loaded) return;
+                loaded = true;
 
-        // Remove listeners
-        window.removeEventListener('scroll', onInteract);
-        window.removeEventListener('mousemove', onInteract);
-        window.removeEventListener('touchstart', onInteract);
-        window.removeEventListener('keydown', onInteract);
-        window.removeEventListener('click', onInteract);
+                // Remove listeners
+                window.removeEventListener('scroll', onInteract);
+                window.removeEventListener('mousemove', onInteract);
+                window.removeEventListener('touchstart', onInteract);
+                window.removeEventListener('keydown', onInteract);
+                window.removeEventListener('click', onInteract);
 
-        clearTimeout(timerId);
+                clearTimeout(timerId);
 
-        // Load GA script
-        const script = document.createElement('script');
-        script.src =
-          `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+                // Load GA script
+                const script = document.createElement('script');
+                script.src =
+                    `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
 
-        script.async = true;
+                script.async = true;
 
-        document.head.appendChild(script);
+                document.head.appendChild(script);
 
-        // Initialize GA
-        window.dataLayer = window.dataLayer || [];
+                // Initialize GA
+                window.dataLayer = window.dataLayer || [];
 
-        window.gtag = function () {
-          window.dataLayer.push(arguments);
-        };
+                window.gtag = function () {
+                    window.dataLayer.push(arguments);
+                };
 
-        window.gtag('js', new Date());
+                window.gtag('js', new Date());
 
-        window.gtag('config', measurementId, {
-          transport_type: 'beacon'
-        });
+                window.gtag('config', measurementId, {
+                    transport_type: 'beacon'
+                });
 
-      }
+            }
 
-      function onInteract(e) {
-        loadAnalytics(e.type);
-      }
+            function onInteract(e) {
+                loadAnalytics(e.type);
+            }
 
-      // Load on interaction
-      window.addEventListener('scroll', onInteract, { passive: true, once: true });
-      window.addEventListener('mousemove', onInteract, { passive: true, once: true });
-      window.addEventListener('touchstart', onInteract, { passive: true, once: true });
-      window.addEventListener('keydown', onInteract, { passive: true, once: true });
-      window.addEventListener('click', onInteract, { passive: true, once: true });
+            // Load on interaction
+            window.addEventListener('scroll', onInteract, { passive: true, once: true });
+            window.addEventListener('mousemove', onInteract, { passive: true, once: true });
+            window.addEventListener('touchstart', onInteract, { passive: true, once: true });
+            window.addEventListener('keydown', onInteract, { passive: true, once: true });
+            window.addEventListener('click', onInteract, { passive: true, once: true });
 
-      // Fallback: Load after 5 seconds
-      timerId = setTimeout(function () {
-        loadAnalytics('timeout');
-      }, 5000);
+            // Fallback: Load after 5 seconds
+            timerId = setTimeout(function () {
+                loadAnalytics('timeout');
+            }, 5000);
 
-    })();
-  </script>
+        })();
+    </script>
 </head>
 
 <body>
@@ -2061,6 +2061,45 @@
             <div class="text-gray-500 mt-2">Please wait</div>
         </div>
     </div>
+
+    <!-- JS: UI helpers + original app JS (logic untouched) -->
+    <script defer>
+        let libsLoaded = false;
+
+        function loadLibs() {
+            return new Promise((resolve) => {
+                if (libsLoaded) return resolve();
+
+                const libs = [
+                    'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js'
+                    // add other script URLs here
+                ];
+
+                let loaded = 0;
+                libs.forEach((src) => {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = () => {
+                        loaded++;
+                        if (loaded === libs.length) {
+                            libsLoaded = true;
+                            resolve();
+                        }
+                    };
+                    document.head.appendChild(script);
+                });
+            });
+        }
+
+        // Preload libs on first interaction
+        ['mousemove', 'touchstart', 'scroll'].forEach(event => {
+            window.addEventListener(event, () => loadLibs(), { once: true, passive: true });
+        });
+    </script>
 
     <!-- JavaScript for watermarking functionality -->
     <script defer>

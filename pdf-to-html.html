@@ -207,7 +207,7 @@
 </script>
 
     <!-- libs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <script>
         if (window["pdfjsLib"])
             pdfjsLib.GlobalWorkerOptions.workerSrc =
@@ -215,7 +215,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.min.js"></script> -->
 
     
     <!-- libs -->
@@ -1679,6 +1679,46 @@
             </div>
         </div>
     </div>
+
+    <!-- JS: UI helpers + original app JS (logic untouched) -->
+    <script defer>
+        let libsLoaded = false;
+
+        function loadLibs() {
+            return new Promise((resolve) => {
+                if (libsLoaded) return resolve();
+
+                const libs = [
+                    // 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.min.js'
+                    // add other script URLs here
+                ];
+
+                let loaded = 0;
+                libs.forEach((src) => {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.onload = () => {
+                        loaded++;
+                        if (loaded === libs.length) {
+                            libsLoaded = true;
+                            resolve();
+                        }
+                    };
+                    document.head.appendChild(script);
+                });
+            });
+        }
+
+        // Preload libs on first interaction
+        ['mousemove', 'touchstart', 'scroll'].forEach(event => {
+            window.addEventListener(event, () => loadLibs(), { once: true, passive: true });
+        });
+    </script>
 
     <!-- JS: UI + PDF to HTML conversion logic -->
     <script defer>
