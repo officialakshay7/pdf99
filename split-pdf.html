@@ -235,15 +235,15 @@
 
 
     <!-- libs -->
-    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="/assets/css/all.min.css">
-    </noscript>
+  <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+  </noscript>
 
-    <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="/tailwind/output.css">
-    </noscript>
+  <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/tailwind/output.css">
+  </noscript>
     <!-- <link rel="preload" href="/tailwind/output.css" as="style">
     <link rel="stylesheet" href="/tailwind/output.css"> -->
 
@@ -915,70 +915,70 @@
     </style>
 
     <script>
-        // Google Analytics 4 Lazy Loader (Optimized)
+    // Google Analytics 4 Lazy Loader (Optimized)
 
-        (function () {
+    (function () {
 
-            const measurementId = "G-KC8H85HKF1";
-            let loaded = false;
-            let timerId;
+      const measurementId = "G-KC8H85HKF1";
+      let loaded = false;
+      let timerId;
 
-            function loadAnalytics(trigger) {
+      function loadAnalytics(trigger) {
 
-                if (loaded) return;
-                loaded = true;
+        if (loaded) return;
+        loaded = true;
 
-                // Remove listeners
-                window.removeEventListener('scroll', onInteract);
-                window.removeEventListener('mousemove', onInteract);
-                window.removeEventListener('touchstart', onInteract);
-                window.removeEventListener('keydown', onInteract);
-                window.removeEventListener('click', onInteract);
+        // Remove listeners
+        window.removeEventListener('scroll', onInteract);
+        window.removeEventListener('mousemove', onInteract);
+        window.removeEventListener('touchstart', onInteract);
+        window.removeEventListener('keydown', onInteract);
+        window.removeEventListener('click', onInteract);
 
-                clearTimeout(timerId);
+        clearTimeout(timerId);
 
-                // Load GA script
-                const script = document.createElement('script');
-                script.src =
-                    `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+        // Load GA script
+        const script = document.createElement('script');
+        script.src =
+          `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
 
-                script.async = true;
+        script.async = true;
 
-                document.head.appendChild(script);
+        document.head.appendChild(script);
 
-                // Initialize GA
-                window.dataLayer = window.dataLayer || [];
+        // Initialize GA
+        window.dataLayer = window.dataLayer || [];
 
-                window.gtag = function () {
-                    window.dataLayer.push(arguments);
-                };
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
 
-                window.gtag('js', new Date());
+        window.gtag('js', new Date());
 
-                window.gtag('config', measurementId, {
-                    transport_type: 'beacon'
-                });
+        window.gtag('config', measurementId, {
+          transport_type: 'beacon'
+        });
 
-            }
+      }
 
-            function onInteract(e) {
-                loadAnalytics(e.type);
-            }
+      function onInteract(e) {
+        loadAnalytics(e.type);
+      }
 
-            // Load on interaction
-            window.addEventListener('scroll', onInteract, { passive: true, once: true });
-            window.addEventListener('mousemove', onInteract, { passive: true, once: true });
-            window.addEventListener('touchstart', onInteract, { passive: true, once: true });
-            window.addEventListener('keydown', onInteract, { passive: true, once: true });
-            window.addEventListener('click', onInteract, { passive: true, once: true });
+      // Load on interaction
+      window.addEventListener('scroll', onInteract, { passive: true, once: true });
+      window.addEventListener('mousemove', onInteract, { passive: true, once: true });
+      window.addEventListener('touchstart', onInteract, { passive: true, once: true });
+      window.addEventListener('keydown', onInteract, { passive: true, once: true });
+      window.addEventListener('click', onInteract, { passive: true, once: true });
 
-            // Fallback: Load after 5 seconds
-            timerId = setTimeout(function () {
-                loadAnalytics('timeout');
-            }, 5000);
+      // Fallback: Load after 5 seconds
+      timerId = setTimeout(function () {
+        loadAnalytics('timeout');
+      }, 5000);
 
-        })();
-    </script>
+    })();
+  </script>
 </head>
 
 <body>
@@ -989,13 +989,12 @@
 
     <!-- mobile sidebar -->
     <div id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
-        <!-- <button id="mobile-sidebar-close" class="close">✕</button> -->
-        <button id="mobile-sidebar-close" class="close" tabindex="-1">✕</button>
+        <button id="mobile-sidebar-close" class="close">✕</button>
         <nav>
-            <a href="https://www.pdf99.org/" tabindex="-1">Home</a>
-            <a href="pdf-converter" tabindex="-1">PDF Converter</a>
-            <a href="compress-pdf" tabindex="-1">Compress PDF</a>
-            <a href="merge-pdf" tabindex="-1">Merge PDF</a>
+            <a href="https://www.pdf99.org/">Home</a>
+            <a href="pdf-converter">PDF Converter</a>
+            <a href="compress-pdf">Compress PDF</a>
+            <a href="merge-pdf">Merge PDF</a>
 
             <hr style="margin: 12px 0; border: none; border-top: 1px solid #eef2f6" />
 
@@ -1005,18 +1004,18 @@
                     <i id="mobile-more-icon" class="fas fa-chevron-down"></i>
                 </div>
                 <div id="mobile-more-list" class="mobile-more-list">
-                    <a href="jpg-to-pdf" tabindex="-1">JPG to PDF</a>
-                    <a href="pdf-to-jpg" tabindex="-1">PDF to JPG</a>
-                    <a href="split-pdf" tabindex="-1">Split PDF</a>
-                    <a href="rotate-pdf" tabindex="-1">Rotate PDF</a>
-                    <a href="watermark-pdf" tabindex="-1">Watermark PDF</a>
-                    <a href="crop-pdf" tabindex="-1">Crop PDF</a>
-                    <a href="pdf-to-html" tabindex="-1">PDF to HTML</a>
-                    <a href="remove-pdf-pages" tabindex="-1">Remove PDF Pages</a>
-                    <a href="extract-pdf-pages" tabindex="-1">Extract PDF Pages</a>
-                    <a href="compress-pdf-to-100kb" tabindex="-1">Compress PDF to 100kb</a>
-                    <a href="compress-pdf-to-200kb" tabindex="-1">Compress PDF to 200kb</a>
-                    <a href="compress-pdf-to-500kb" tabindex="-1">Compress PDF to 500kb</a>
+                    <a href="jpg-to-pdf">JPG to PDF</a>
+                    <a href="pdf-to-jpg">PDF to JPG</a>
+                    <a href="split-pdf">Split PDF</a>
+                    <a href="rotate-pdf">Rotate PDF</a>
+                    <a href="watermark-pdf">Watermark PDF</a>
+                    <a href="crop-pdf">Crop PDF</a>
+                    <a href="pdf-to-html">PDF to HTML</a>
+                    <a href="remove-pdf-pages">Remove PDF Pages</a>
+                    <a href="extract-pdf-pages">Extract PDF Pages</a>
+                    <a href="compress-pdf-to-100kb">Compress PDF to 100kb</a>
+                    <a href="compress-pdf-to-200kb">Compress PDF to 200kb</a>
+                    <a href="compress-pdf-to-500kb">Compress PDF to 500kb</a>
 
                 </div>
             </div>
@@ -1030,7 +1029,7 @@
         <div class="nav-inner">
             <div class="nav-left">
                 <div class="brand">
-
+                    
                     <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
                 </div>
             </div>
@@ -1786,14 +1785,6 @@
                     document.body.classList.remove("panel-open");
                 }
             });
-
-            // When opening sidebar
-            sidebar.setAttribute('aria-hidden', 'false');
-            sidebar.querySelectorAll('a, button').forEach(el => el.removeAttribute('tabindex'));
-
-            // When closing sidebar
-            sidebar.setAttribute('aria-hidden', 'true');
-            sidebar.querySelectorAll('a, button').forEach(el => el.setAttribute('tabindex', '-1'));
         })();
 
         // ===== app JS =====
