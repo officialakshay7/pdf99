@@ -1076,7 +1076,7 @@
     <div class="nav-inner">
       <div class="nav-left">
         <div class="brand">
-          
+
           <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
         </div>
       </div>
@@ -1193,16 +1193,22 @@
               <h2>What is PDF Merging?</h2>
             </div>
             <p class="info-text">
-              When you merge PDF files, you're combining two or more separate documents into one single file. A PDF
-              merger is a tool that makes it easy to join PDF documents together without any hassle. Think of it like
+              When you merge PDF files, you're combining two or more separate PDF documents into one single PDF file. A
+              PDF
+              merger is a tool that makes it easy to join multiple PDF documents together without any hassle or losing
+              quality. Think of it like
               stapling different papers into one packet, except it's all digital. Whether you need to combine PDF files
-              for a work presentation, join PDF scans from different sources, or simply want to merge PDF documents to
+              for a work presentation or for day to day work use, join PDF scans from different sources, or simply want
+              to merge PDF documents to
               keep everything organized in one place, the process is straightforward. Instead of sending five separate
-              email attachments, you can use a PDF merger to create one neat file. The ability to combine PDF documents
+              email attachments, you can use a PDF merger to create one neat and clean merged PDF file. The ability to
+              combine PDF documents
               saves time for both you and whoever receives your files. With PDF99's merge PDF tool, you can not only
-              join PDF files together but also rearrange pages, remove ones you don't need, and create a polished final
-              document in just seconds. It's perfect for anyone who regularly works with multiple PDF files and needs to
-              merge PDF content into organized, professional packages.
+              join PDF files together but also rearrange pages, remove the pages you don't need, and create a polished
+              final
+              PDF document in just a few seconds. It's perfect for anyone who regularly works with multiple PDF files
+              and needs to
+              merge PDF content into organized, professional document.
             </p>
           </section>
 
@@ -1212,9 +1218,9 @@
               <h2>Why Merge PDFs?</h2>
             </div>
             <ul class="info-list">
-              <li><strong>Simplify sharing:</strong> Send one clean file instead of cluttering someone's inbox with
-                multiple attachments when you combine PDF documents.</li>
-              <li><strong>Organize documents:</strong> Put related pages together in one place for easier reading,
+              <li><strong>Simplify sharing:</strong> Send one single clean PDF file instead of sharing multiple
+                attachments when you combine PDF documents.</li>
+              <li><strong>Organize documents:</strong> Arrange related pages together in one place for easier reading,
                 printing, and filing.</li>
               <li><strong>Prepare reports:</strong> Use a PDF merger to bring together chapters, appendices, cover
                 pages, and scanned content into one complete document.</li>
@@ -1231,7 +1237,8 @@
             <div class="article-wrap">
               <p>The need to combine PDF files comes up all the time in both work and personal situations. Whether
                 you're gathering invoices for expense reports, putting together a portfolio for job applications, or
-                assembling scanned documents from different sources, a reliable PDF merger makes everything easier. When
+                assembling scanned documents from different sources, a reliable PDF merger makes everything much easier
+                and faster. When
                 you merge PDF documents, you keep everything organized and accessible in one convenient file. PDF99's
                 merge PDF feature lets you upload multiple files, drag and drop to reorder pages exactly how you want
                 them, and export one polished document. You can join PDF files from contracts, presentations, forms, and
@@ -1241,11 +1248,13 @@
               <h3>Best practices</h3>
               <ol>
                 <li><strong>Check page order:</strong> Before you finalize and merge PDF files, preview everything to
-                  make sure pages flow logically from start to finish.</li>
+                  make sure pages flow logically from start to the end.</li>
                 <li><strong>Remove duplicates:</strong> When you combine PDF documents, delete any repeated pages or
-                  blank pages that snuck in to keep your final file clean.</li>
+                  blank pages that stuck in to keep your final file clean.</li>
                 <li><strong>Optimize after merge:</strong> Once you join PDF files together, run the merged document
-                  through a compressor if it ended up larger than expected for easier sharing.</li>
+                  through a <a href="/pdf-compressor">PDF compressor</a> if it's file size is too large than expected
+                  file size for easier
+                  sharing.</li>
                 <li><strong>Use bookmarks:</strong> For longer documents, consider adding bookmarks or a table of
                   contents after you merge PDF files so readers can navigate easily.</li>
                 <li><strong>Test before sending:</strong> Open your merged file and scroll through it completely to
@@ -1253,8 +1262,9 @@
               </ol>
 
               <h3>When to use</h3>
-              <p>You'll want to merge PDF files in countless everyday scenarios. Students use a PDF merger to combine
-                PDF documents like research papers, assignment sheets, and reference materials into one submission file.
+              <p>You'll need to merge PDF files in day to day work life. Students use a PDF merger to combine
+                PDF documents like research papers, assignment sheets, and reference materials into one single PDF
+                submission file.
                 Job seekers join PDF files containing resumes, cover letters, portfolio samples, and references for
                 complete application packages. Accountants combine PDF invoices and receipts for monthly reporting. Real
                 estate agents merge PDF property listings, inspection reports, and contract documents for client
@@ -1665,43 +1675,43 @@
   </div>
 
   <!-- JS: UI helpers + original app JS (logic untouched) -->
-    <script defer>
-        let libsLoaded = false;
+  <script defer>
+    let libsLoaded = false;
 
-        function loadLibs() {
-            return new Promise((resolve) => {
-                if (libsLoaded) return resolve();
+    function loadLibs() {
+      return new Promise((resolve) => {
+        if (libsLoaded) return resolve();
 
-                const libs = [
-                    'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js'
-                    // add other script URLs here
-                ];
+        const libs = [
+          'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js'
+          // add other script URLs here
+        ];
 
-                let loaded = 0;
-                libs.forEach((src) => {
-                    const script = document.createElement('script');
-                    script.src = src;
-                    script.onload = () => {
-                        loaded++;
-                        if (loaded === libs.length) {
-                            libsLoaded = true;
-                            resolve();
-                        }
-                    };
-                    document.head.appendChild(script);
-                });
-            });
-        }
-
-        // Preload libs on first interaction
-        ['mousemove', 'touchstart', 'scroll'].forEach(event => {
-            window.addEventListener(event, () => loadLibs(), { once: true, passive: true });
+        let loaded = 0;
+        libs.forEach((src) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = () => {
+            loaded++;
+            if (loaded === libs.length) {
+              libsLoaded = true;
+              resolve();
+            }
+          };
+          document.head.appendChild(script);
         });
-    </script>
+      });
+    }
+
+    // Preload libs on first interaction
+    ['mousemove', 'touchstart', 'scroll'].forEach(event => {
+      window.addEventListener(event, () => loadLibs(), { once: true, passive: true });
+    });
+  </script>
 
   <!-- JS: UI helpers + app JS -->
   <script defer>
