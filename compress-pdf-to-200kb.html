@@ -2285,160 +2285,293 @@
         }
 
         // compressAllFiles: rasterize pages via pdf.js, encode JPEG with selected quality, rebuild with jsPDF
+        // async function compressAllFiles() {
+        //     const outputs = [];
+        //     for (let i = 0; i < state.files.length; i++) {
+        //         const item = state.files[i];
+        //         const file = item.file;
+        //         const nameBase = file.name.replace(/\.[^/.]+$/, "");
+        //         const arrayBuffer = await file.arrayBuffer();
+        //         let pdf;
+        //         try {
+        //             const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+        //             pdf = await loadingTask.promise;
+        //         } catch (e) {
+        //             // if pdf.js fails, fall back to original file
+        //             outputs.push({
+        //                 name: file.name,
+        //                 blob: file,
+        //                 originalSize: item.origSize || file.size,
+        //                 newSize: item.origSize || file.size,
+        //                 compressed: false,
+        //             });
+        //             continue;
+        //         }
+
+        //         const numPages = pdf.numPages;
+        //         const pageImages = [];
+
+        //         for (let p = 1; p <= numPages; p++) {
+        //             try {
+        //                 const page = await pdf.getPage(p);
+
+        //                 // Get original PDF page size in "points" (scale:1) - includes rotation
+        //                 const viewportAt1 = page.getViewport({ scale: 1 });
+
+        //                 // Render at higher pixel scale for quality (user-configurable)
+        //                 const renderScale =
+        //                     typeof state.renderScale === "number" ? state.renderScale : 1.5;
+        //                 const viewport = page.getViewport({ scale: renderScale });
+
+        //                 // Create canvas at the rendered pixel size
+        //                 const canvas = document.createElement("canvas");
+        //                 canvas.width = Math.round(viewport.width);
+        //                 canvas.height = Math.round(viewport.height);
+        //                 const ctx = canvas.getContext("2d");
+
+        //                 // Render page to canvas
+        //                 await page.render({ canvasContext: ctx, viewport }).promise;
+
+        //                 // Use JPEG by default (quality 0..1). For lossless use "image/png" (much larger).
+        //                 const q =
+        //                     typeof state.quality === "number" ? state.quality : 0.4;
+        //                 const dataUrl = canvas.toDataURL("image/jpeg", q);
+
+        //                 // Store both the rendered pixel size and the original page size (pts)
+        //                 pageImages.push({
+        //                     dataUrl,
+        //                     pixelWidth: canvas.width,
+        //                     pixelHeight: canvas.height,
+        //                     origWidthPts: viewportAt1.width,
+        //                     origHeightPts: viewportAt1.height,
+        //                 });
+
+        //                 try {
+        //                     page.cleanup && page.cleanup();
+        //                 } catch (e) { }
+        //             } catch (errPage) {
+        //                 console.warn("Page render failed", errPage);
+        //             }
+        //         }
+
+        //         try {
+        //             pdf.destroy && pdf.destroy();
+        //         } catch (e) { }
+
+        //         if (pageImages.length === 0) {
+        //             // nothing to pack -> fallback to original
+        //             outputs.push({
+        //                 name: file.name,
+        //                 blob: file,
+        //                 originalSize: item.origSize || file.size,
+        //                 newSize: item.origSize || file.size,
+        //                 compressed: false,
+        //             });
+        //             continue;
+        //         }
+
+        //         // Build new PDF using jsPDF - use 'pt' units and the original page dimensions to preserve physical size
+        //         let outPdf = null;
+        //         try {
+        //             for (let pi = 0; pi < pageImages.length; pi++) {
+        //                 const img = pageImages[pi];
+
+        //                 // Safety/clamp: very large page dims may cause issues in some viewers or exceed memory.
+        //                 // We preserve size when possible; if a dimension is extremely large, clamp to a safe max while
+        //                 // preserving aspect ratio. Adjust SAFE_MAX_PT if you want a different ceiling.
+        //                 const SAFE_MAX_PT = 2000 * 1.0; // 2000 points (~27.8 inches) default safe ceiling
+        //                 let pageW = img.origWidthPts;
+        //                 let pageH = img.origHeightPts;
+        //                 // If either dimension exceeds SAFE_MAX_PT, scale both down proportionally.
+        //                 if (pageW > SAFE_MAX_PT || pageH > SAFE_MAX_PT) {
+        //                     const scaleDown = Math.min(
+        //                         SAFE_MAX_PT / pageW,
+        //                         SAFE_MAX_PT / pageH
+        //                     );
+        //                     pageW = pageW * scaleDown;
+        //                     pageH = pageH * scaleDown;
+        //                 }
+
+        //                 if (pi === 0) {
+        //                     outPdf = new jsPDF({
+        //                         unit: "pt",
+        //                         format: [pageW, pageH],
+        //                     });
+        //                     outPdf.addImage(img.dataUrl, "JPEG", 0, 0, pageW, pageH);
+        //                 } else {
+        //                     outPdf.addPage([pageW, pageH]);
+        //                     outPdf.addImage(img.dataUrl, "JPEG", 0, 0, pageW, pageH);
+        //                 }
+        //             }
+        //         } catch (errBuild) {
+        //             console.error("Building compressed PDF failed", errBuild);
+        //         }
+
+        //         if (!outPdf) {
+        //             outputs.push({
+        //                 name: file.name,
+        //                 blob: file,
+        //                 originalSize: item.origSize || file.size,
+        //                 newSize: item.origSize || file.size,
+        //                 compressed: false,
+        //             });
+        //             continue;
+        //         }
+
+        //         const blob = outPdf.output("blob");
+
+        //         // If compressed blob is not smaller, fallback to original to avoid forced expansion
+        //         if (blob.size >= (item.origSize || file.size)) {
+        //             outputs.push({
+        //                 name: file.name,
+        //                 blob: file,
+        //                 originalSize: item.origSize || file.size,
+        //                 newSize: item.origSize || file.size,
+        //                 compressed: false,
+        //             });
+        //         } else {
+        //             outputs.push({
+        //                 name: `${nameBase}-200kb.pdf`,
+        //                 blob,
+        //                 originalSize: item.origSize || file.size,
+        //                 newSize: blob.size,
+        //                 compressed: true,
+        //             });
+        //         }
+        //     }
+        //     return outputs;
+        // }
+
         async function compressAllFiles() {
+            const TARGET_BYTES = 200 * 1024; // 200 KB hard target
             const outputs = [];
+
             for (let i = 0; i < state.files.length; i++) {
                 const item = state.files[i];
                 const file = item.file;
                 const nameBase = file.name.replace(/\.[^/.]+$/, "");
                 const arrayBuffer = await file.arrayBuffer();
+
                 let pdf;
                 try {
-                    const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
-                    pdf = await loadingTask.promise;
+                    pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
                 } catch (e) {
-                    // if pdf.js fails, fall back to original file
                     outputs.push({
-                        name: file.name,
-                        blob: file,
+                        name: file.name, blob: file,
                         originalSize: item.origSize || file.size,
-                        newSize: item.origSize || file.size,
-                        compressed: false,
+                        newSize: item.origSize || file.size, compressed: false,
                     });
                     continue;
                 }
 
                 const numPages = pdf.numPages;
-                const pageImages = [];
 
-                for (let p = 1; p <= numPages; p++) {
-                    try {
-                        const page = await pdf.getPage(p);
+                // --- Iterative compression: try progressively harder settings ---
+                // Each attempt: [renderScale, jpegQuality]
+                const attempts = [
+                    [1.2, 0.55],
+                    [1.0, 0.45],
+                    [1.0, 0.35],
+                    [0.9, 0.28],
+                    [0.8, 0.20],
+                    [0.7, 0.15],
+                    [0.6, 0.10],
+                ];
 
-                        // Get original PDF page size in "points" (scale:1) - includes rotation
-                        const viewportAt1 = page.getViewport({ scale: 1 });
+                // Also respect user's manual slider/preset as a FIRST attempt (honour their choice)
+                const userAttempt = [state.renderScale, state.quality];
+                const allAttempts = [userAttempt, ...attempts];
 
-                        // Render at higher pixel scale for quality (user-configurable)
-                        const renderScale =
-                            typeof state.renderScale === "number" ? state.renderScale : 1.5;
-                        const viewport = page.getViewport({ scale: renderScale });
+                let bestBlob = null;
+                let bestSize = Infinity;
 
-                        // Create canvas at the rendered pixel size
-                        const canvas = document.createElement("canvas");
-                        canvas.width = Math.round(viewport.width);
-                        canvas.height = Math.round(viewport.height);
-                        const ctx = canvas.getContext("2d");
+                for (const [renderScale, jpegQuality] of allAttempts) {
+                    const pageImages = [];
 
-                        // Render page to canvas
-                        await page.render({ canvasContext: ctx, viewport }).promise;
-
-                        // Use JPEG by default (quality 0..1). For lossless use "image/png" (much larger).
-                        const q =
-                            typeof state.quality === "number" ? state.quality : 0.4;
-                        const dataUrl = canvas.toDataURL("image/jpeg", q);
-
-                        // Store both the rendered pixel size and the original page size (pts)
-                        pageImages.push({
-                            dataUrl,
-                            pixelWidth: canvas.width,
-                            pixelHeight: canvas.height,
-                            origWidthPts: viewportAt1.width,
-                            origHeightPts: viewportAt1.height,
-                        });
-
+                    for (let p = 1; p <= numPages; p++) {
                         try {
-                            page.cleanup && page.cleanup();
-                        } catch (e) { }
-                    } catch (errPage) {
-                        console.warn("Page render failed", errPage);
-                    }
-                }
+                            const page = await pdf.getPage(p);
+                            const viewportAt1 = page.getViewport({ scale: 1 });
+                            const viewport = page.getViewport({ scale: renderScale });
 
-                try {
-                    pdf.destroy && pdf.destroy();
-                } catch (e) { }
+                            const canvas = document.createElement("canvas");
+                            canvas.width = Math.round(viewport.width);
+                            canvas.height = Math.round(viewport.height);
+                            const ctx = canvas.getContext("2d");
+                            await page.render({ canvasContext: ctx, viewport }).promise;
 
-                if (pageImages.length === 0) {
-                    // nothing to pack -> fallback to original
-                    outputs.push({
-                        name: file.name,
-                        blob: file,
-                        originalSize: item.origSize || file.size,
-                        newSize: item.origSize || file.size,
-                        compressed: false,
-                    });
-                    continue;
-                }
-
-                // Build new PDF using jsPDF - use 'pt' units and the original page dimensions to preserve physical size
-                let outPdf = null;
-                try {
-                    for (let pi = 0; pi < pageImages.length; pi++) {
-                        const img = pageImages[pi];
-
-                        // Safety/clamp: very large page dims may cause issues in some viewers or exceed memory.
-                        // We preserve size when possible; if a dimension is extremely large, clamp to a safe max while
-                        // preserving aspect ratio. Adjust SAFE_MAX_PT if you want a different ceiling.
-                        const SAFE_MAX_PT = 2000 * 1.0; // 2000 points (~27.8 inches) default safe ceiling
-                        let pageW = img.origWidthPts;
-                        let pageH = img.origHeightPts;
-                        // If either dimension exceeds SAFE_MAX_PT, scale both down proportionally.
-                        if (pageW > SAFE_MAX_PT || pageH > SAFE_MAX_PT) {
-                            const scaleDown = Math.min(
-                                SAFE_MAX_PT / pageW,
-                                SAFE_MAX_PT / pageH
-                            );
-                            pageW = pageW * scaleDown;
-                            pageH = pageH * scaleDown;
-                        }
-
-                        if (pi === 0) {
-                            outPdf = new jsPDF({
-                                unit: "pt",
-                                format: [pageW, pageH],
+                            const dataUrl = canvas.toDataURL("image/jpeg", jpegQuality);
+                            pageImages.push({
+                                dataUrl,
+                                origWidthPts: viewportAt1.width,
+                                origHeightPts: viewportAt1.height,
                             });
-                            outPdf.addImage(img.dataUrl, "JPEG", 0, 0, pageW, pageH);
-                        } else {
-                            outPdf.addPage([pageW, pageH]);
-                            outPdf.addImage(img.dataUrl, "JPEG", 0, 0, pageW, pageH);
+                            try { page.cleanup && page.cleanup(); } catch (_) { }
+                        } catch (errPage) {
+                            console.warn("Page render failed", errPage);
                         }
                     }
-                } catch (errBuild) {
-                    console.error("Building compressed PDF failed", errBuild);
+
+                    if (pageImages.length === 0) continue;
+
+                    // Build PDF
+                    let outPdf = null;
+                    try {
+                        const SAFE_MAX_PT = 2000;
+                        for (let pi = 0; pi < pageImages.length; pi++) {
+                            const img = pageImages[pi];
+                            let pageW = img.origWidthPts;
+                            let pageH = img.origHeightPts;
+                            if (pageW > SAFE_MAX_PT || pageH > SAFE_MAX_PT) {
+                                const scaleDown = Math.min(SAFE_MAX_PT / pageW, SAFE_MAX_PT / pageH);
+                                pageW *= scaleDown; pageH *= scaleDown;
+                            }
+                            if (pi === 0) {
+                                outPdf = new jsPDF({ unit: "pt", format: [pageW, pageH] });
+                            } else {
+                                outPdf.addPage([pageW, pageH]);
+                            }
+                            outPdf.addImage(img.dataUrl, "JPEG", 0, 0, pageW, pageH);
+                        }
+                    } catch (errBuild) {
+                        console.error("Build failed at attempt", renderScale, jpegQuality, errBuild);
+                        continue;
+                    }
+
+                    if (!outPdf) continue;
+                    const blob = outPdf.output("blob");
+
+                    // Track the best (smallest) result we've found so far
+                    if (blob.size < bestSize) {
+                        bestBlob = blob;
+                        bestSize = blob.size;
+                    }
+
+                    // Stop as soon as we're under target
+                    if (blob.size <= TARGET_BYTES) break;
                 }
 
-                if (!outPdf) {
-                    outputs.push({
-                        name: file.name,
-                        blob: file,
-                        originalSize: item.origSize || file.size,
-                        newSize: item.origSize || file.size,
-                        compressed: false,
-                    });
-                    continue;
-                }
+                try { pdf.destroy && pdf.destroy(); } catch (_) { }
 
-                const blob = outPdf.output("blob");
+                const originalSize = item.origSize || file.size;
 
-                // If compressed blob is not smaller, fallback to original to avoid forced expansion
-                if (blob.size >= (item.origSize || file.size)) {
+                if (!bestBlob || bestBlob.size >= originalSize) {
+                    // Compression made it bigger or failed — return original
                     outputs.push({
-                        name: file.name,
-                        blob: file,
-                        originalSize: item.origSize || file.size,
-                        newSize: item.origSize || file.size,
-                        compressed: false,
+                        name: file.name, blob: file,
+                        originalSize, newSize: originalSize, compressed: false,
                     });
                 } else {
                     outputs.push({
                         name: `${nameBase}-200kb.pdf`,
-                        blob,
-                        originalSize: item.origSize || file.size,
-                        newSize: blob.size,
-                        compressed: true,
+                        blob: bestBlob,
+                        originalSize,
+                        newSize: bestBlob.size,
+                        compressed: bestBlob.size <= TARGET_BYTES,
                     });
                 }
             }
+
             return outputs;
         }
 
