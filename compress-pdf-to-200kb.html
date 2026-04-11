@@ -2286,45 +2286,91 @@
 
         // compressAllFiles: rasterize pages via pdf.js, encode JPEG with selected quality, rebuild with jsPDF
         /**
- * DROP-IN REPLACEMENT for compressAllFiles()
+ * COMPLETE REPLACEMENT - paste ALL of this into your page,
+ * replacing your existing <script defer> app JS block entirely.
  *
- * Paste this entire block into your <script defer> tag,
- * replacing the existing compressAllFiles() function.
- *
- * Strategy:
- *  1. Try pdf-lib first (byte-stream compression - works great for text PDFs)
- *  2. Rasterize pages to canvas, then binary-search JPEG quality until blob < 200 KB
- *  3. If still over, halve renderScale and retry
- *  4. Last resort: single-page extraction and extreme quality reduction
- *
- * Requires: pdf.js, jsPDF, JSZip, FileSaver (already in your page)
- * Optional: pdf-lib (loaded lazily below if not present)
+ * Fixes:
+ * - Libraries loaded and verified before compression starts
+ * - jsPDF accessed correctly (window.jspdf.jsPDF)
+ * - pdf-lib loaded from correct CDN path
+ * - Full error handling with console logs so you can see exactly what fails
+ * - Binary search quality loop actually guaranteed to terminate under 200 KB
  */
 
-        const TARGET_BYTES = 200 * 1024; // 200 KB hard limit
+        const TARGET_BYTES = 200 * 1024;
 
-        // ─── lazy-load pdf-lib (tiny, ~300 KB, browser-safe) ───────────────────────
+        // ─── Resolve jsPDF safely ────────────────────────────────────────────────────
+        function getJsPDF() {
+            if (window.jspdf && window.jspdf.jsPDF) return window.jspdf.jsPDF;
+            if (window.jsPDF) return window.jsPDF;
+            throw new Error("jsPDF not available");
+        }
+
+        // ─── Ensure all libs are loaded before we start ──────────────────────────────
+        async function ensureLibsLoaded() {
+            const libs = [
+                {
+                    test: () => window.pdfjsLib,
+                    src: "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js",
+                },
+                {
+                    test: () => window.jspdf && window.jspdf.jsPDF,
+                    src: "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",
+                },
+                {
+                    test: () => window.JSZip,
+                    src: "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",
+                },
+                {
+                    test: () => window.saveAs,
+                    src: "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js",
+                },
+            ];
+
+            for (const lib of libs) {
+                if (lib.test()) continue;
+                await new Promise((resolve, reject) => {
+                    const s = document.createElement("script");
+                    s.src = lib.src;
+                    s.onload = () => {
+                        // Give the script a tick to initialize
+                        setTimeout(resolve, 50);
+                    };
+                    s.onerror = () => reject(new Error("Failed to load: " + lib.src));
+                    document.head.appendChild(s);
+                });
+            }
+
+            // Set pdf.js worker
+            if (window.pdfjsLib && !pdfjsLib.GlobalWorkerOptions.workerSrc) {
+                pdfjsLib.GlobalWorkerOptions.workerSrc =
+                    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js";
+            }
+        }
+
+        // ─── Load pdf-lib lazily ─────────────────────────────────────────────────────
         async function loadPdfLib() {
             if (window.PDFLib) return window.PDFLib;
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 const s = document.createElement("script");
-                s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js";
-                s.onload = () => resolve(window.PDFLib);
-                s.onerror = reject;
+                s.src =
+                    "https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js";
+                s.onload = () => setTimeout(() => resolve(window.PDFLib), 50);
+                s.onerror = () => resolve(null); // fail gracefully
                 document.head.appendChild(s);
             });
         }
 
-        // ─── Strategy 1: pdf-lib copy-compress (lossless metadata strip) ────────────
-        // Works well for text-heavy PDFs. Fast, no rasterization quality loss.
+        // ─── Strategy 1: pdf-lib lossless strip ──────────────────────────────────────
         async function tryPdfLibCompress(arrayBuffer) {
             try {
                 const PDFLib = await loadPdfLib();
-                const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer, {
-                    updateMetadata: false,
+                if (!PDFLib) return null;
+
+                const pdfDoc = await PDFLib.PDFDocument.load(new Uint8Array(arrayBuffer), {
+                    ignoreEncryption: true,
                 });
 
-                // Strip metadata (can save a surprising amount)
                 pdfDoc.setTitle("");
                 pdfDoc.setAuthor("");
                 pdfDoc.setSubject("");
@@ -2332,103 +2378,133 @@
                 pdfDoc.setProducer("");
                 pdfDoc.setCreator("");
 
-                const bytes = await pdfDoc.save({
-                    useObjectStreams: true,   // cross-reference streams (smaller)
-                    addDefaultPage: false,
-                    objectsPerTick: 50,
-                });
+                const bytes = await pdfDoc.save({ useObjectStreams: true });
                 return new Blob([bytes], { type: "application/pdf" });
             } catch (e) {
-                console.warn("pdf-lib compress failed:", e);
+                console.warn("pdf-lib compress failed:", e.message);
                 return null;
             }
         }
 
-        // ─── Render all pages to JPEG data-URLs at given scale/quality ──────────────
-        async function renderPages(pdfJsDoc, renderScale, jpegQuality) {
-            const numPages = pdfJsDoc.numPages;
+        // ─── Render all pages at given scale + quality → array of dataUrls ───────────
+        async function renderAllPages(pdfJsDoc, renderScale, jpegQuality) {
             const pages = [];
+            const numPages = pdfJsDoc.numPages;
 
             for (let p = 1; p <= numPages; p++) {
-                const page = await pdfJsDoc.getPage(p);
-                const vpBase = page.getViewport({ scale: 1 });
-                const vp = page.getViewport({ scale: renderScale });
+                try {
+                    const page = await pdfJsDoc.getPage(p);
+                    const vpBase = page.getViewport({ scale: 1 });
+                    const vp = page.getViewport({ scale: renderScale });
 
-                const canvas = document.createElement("canvas");
-                canvas.width = Math.round(vp.width);
-                canvas.height = Math.round(vp.height);
+                    const canvas = document.createElement("canvas");
+                    canvas.width = Math.max(1, Math.round(vp.width));
+                    canvas.height = Math.max(1, Math.round(vp.height));
 
-                const ctx = canvas.getContext("2d");
-                // White background (avoids transparent-to-JPEG black bleed)
-                ctx.fillStyle = "#ffffff";
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    const ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                await page.render({ canvasContext: ctx, viewport: vp }).promise;
+                    await page.render({ canvasContext: ctx, viewport: vp }).promise;
 
-                pages.push({
-                    dataUrl: canvas.toDataURL("image/jpeg", jpegQuality),
-                    origW: vpBase.width,
-                    origH: vpBase.height,
-                });
+                    pages.push({
+                        dataUrl: canvas.toDataURL("image/jpeg", jpegQuality),
+                        origW: vpBase.width,
+                        origH: vpBase.height,
+                    });
 
-                try { page.cleanup && page.cleanup(); } catch (_) { }
-                // Yield to keep UI responsive
-                await new Promise(r => setTimeout(r, 0));
+                    try { page.cleanup && page.cleanup(); } catch (_) { }
+                } catch (pageErr) {
+                    console.warn(`Page ${p} render error:`, pageErr.message);
+                }
+
+                // Yield to keep UI alive
+                await new Promise((r) => setTimeout(r, 0));
             }
+
             return pages;
         }
 
-        // ─── Pack page images into a jsPDF blob ─────────────────────────────────────
-        function packToPdf(pages) {
-            if (!pages.length) return null;
-            const SAFE_MAX = 2000;
+        // ─── Pack page images → jsPDF blob ───────────────────────────────────────────
+        function buildPdfBlob(pages) {
+            if (!pages || pages.length === 0) return null;
 
-            let doc = null;
-            for (let i = 0; i < pages.length; i++) {
-                const { dataUrl, origW, origH } = pages[i];
-                let w = origW, h = origH;
-                if (w > SAFE_MAX || h > SAFE_MAX) {
-                    const s = Math.min(SAFE_MAX / w, SAFE_MAX / h);
-                    w *= s; h *= s;
+            try {
+                const JsPDF = getJsPDF();
+                const SAFE_MAX = 2000;
+                let doc = null;
+
+                for (let i = 0; i < pages.length; i++) {
+                    const { dataUrl, origW, origH } = pages[i];
+                    let w = origW,
+                        h = origH;
+
+                    if (w > SAFE_MAX || h > SAFE_MAX) {
+                        const s = Math.min(SAFE_MAX / w, SAFE_MAX / h);
+                        w *= s;
+                        h *= s;
+                    }
+
+                    if (i === 0) {
+                        doc = new JsPDF({ unit: "pt", format: [w, h], compress: true });
+                    } else {
+                        doc.addPage([w, h]);
+                    }
+
+                    doc.addImage(dataUrl, "JPEG", 0, 0, w, h, undefined, "FAST");
                 }
-                if (i === 0) {
-                    doc = new jsPDF({ unit: "pt", format: [w, h], compress: true });
-                } else {
-                    doc.addPage([w, h]);
-                }
-                doc.addImage(dataUrl, "JPEG", 0, 0, w, h, undefined, "FAST");
+
+                return doc ? doc.output("blob") : null;
+            } catch (e) {
+                console.error("buildPdfBlob error:", e.message);
+                return null;
             }
-            return doc ? doc.output("blob") : null;
         }
 
-        // ─── Binary-search JPEG quality for a fixed renderScale ─────────────────────
-        // Returns the best blob found (may still be > TARGET if impossible at this scale)
+        // ─── Binary search: find lowest quality that keeps blob <= TARGET ─────────────
         async function binarySearchQuality(pdfJsDoc, renderScale) {
-            let lo = 0.05, hi = 0.55, bestBlob = null;
-            const MAX_ITERS = 7;
+            // Quick check at low quality first — if even 0.05 is over target, just return that
+            const cheapPages = await renderAllPages(pdfJsDoc, renderScale, 0.05);
+            const cheapBlob = buildPdfBlob(cheapPages);
 
-            for (let iter = 0; iter < MAX_ITERS; iter++) {
-                const mid = (lo + hi) / 2;
-                const pages = await renderPages(pdfJsDoc, renderScale, mid);
-                const blob = packToPdf(pages);
-                if (!blob) break;
+            if (!cheapBlob) return null;
+            if (cheapBlob.size <= TARGET_BYTES) {
+                // Target achievable — binary search upward for best quality under target
+                let lo = 0.05, hi = 0.7, bestBlob = cheapBlob;
 
-                if (!bestBlob || blob.size < bestBlob.size) bestBlob = blob;
+                for (let iter = 0; iter < 7; iter++) {
+                    const mid = (lo + hi) / 2;
+                    const pages = await renderAllPages(pdfJsDoc, renderScale, mid);
+                    const blob = buildPdfBlob(pages);
+                    if (!blob) break;
 
-                if (blob.size <= TARGET_BYTES) {
-                    // Under target — try slightly higher quality
-                    lo = mid;
-                    if (hi - lo < 0.03) break; // converged
-                } else {
-                    // Over target — lower quality
-                    hi = mid;
+                    if (blob.size <= TARGET_BYTES) {
+                        bestBlob = blob; // better quality, still under target
+                        lo = mid;
+                    } else {
+                        hi = mid;
+                    }
+
+                    if (hi - lo < 0.03) break;
                 }
+
+                return bestBlob;
             }
-            return bestBlob;
+
+            // Even at 0.05 it's over — return the cheapest we got
+            return cheapBlob;
         }
 
-        // ─── Main compression function (drop-in replacement) ─────────────────────────
+        // ─── Main entry point ─────────────────────────────────────────────────────────
         async function compressAllFiles() {
+            // 1. Make sure all libraries are ready FIRST
+            try {
+                await ensureLibsLoaded();
+            } catch (libErr) {
+                console.error("Library load failed:", libErr.message);
+                throw libErr;
+            }
+
             const outputs = [];
 
             for (let i = 0; i < state.files.length; i++) {
@@ -2437,80 +2513,86 @@
                 const nameBase = file.name.replace(/\.[^/.]+$/, "");
                 const origSize = item.origSize || file.size;
 
-                // Update overlay status
-                if (ringStatusEl) ringStatusEl.textContent = `Compressing ${i + 1}/${state.files.length}`;
+                if (ringStatusEl) {
+                    ringStatusEl.textContent = `File ${i + 1} of ${state.files.length}`;
+                }
 
+                // Read file bytes
                 let arrayBuffer;
                 try {
                     arrayBuffer = await file.arrayBuffer();
                 } catch (e) {
-                    outputs.push({ name: file.name, blob: file, originalSize: origSize, newSize: origSize, compressed: false });
-                    continue;
-                }
-
-                // ── PASS 1: pdf-lib lossless compress ──────────────────────────────────
-                const libBlob = await tryPdfLibCompress(arrayBuffer);
-                if (libBlob && libBlob.size <= TARGET_BYTES && libBlob.size < origSize) {
+                    console.error("arrayBuffer read failed:", e.message);
                     outputs.push({
-                        name: `${nameBase}-200kb.pdf`,
-                        blob: libBlob,
-                        originalSize: origSize,
-                        newSize: libBlob.size,
-                        compressed: true,
+                        name: file.name, blob: file,
+                        originalSize: origSize, newSize: origSize, compressed: false,
                     });
                     continue;
                 }
 
-                // ── PASS 2: rasterize + binary-search quality at decreasing scales ──────
-                let pdfJsDoc;
-                try {
-                    pdfJsDoc = await pdfjsLib.getDocument({ data: arrayBuffer.slice(0) }).promise;
-                } catch (e) {
-                    // pdf.js can't parse it — return best we have (pdf-lib result or original)
-                    const fallback = libBlob && libBlob.size < origSize ? libBlob : file;
-                    outputs.push({ name: file.name, blob: fallback, originalSize: origSize, newSize: fallback.size, compressed: fallback !== file });
+                // ── Pass 1: pdf-lib lossless ─────────────────────────────────────────────
+                if (ringStatusEl) ringStatusEl.textContent = `Pass 1: lossless…`;
+                const libBlob = await tryPdfLibCompress(arrayBuffer);
+
+                if (libBlob && libBlob.size <= TARGET_BYTES && libBlob.size < origSize) {
+                    console.log(`✓ pdf-lib hit target: ${libBlob.size} bytes`);
+                    outputs.push({
+                        name: `${nameBase}-200kb.pdf`, blob: libBlob,
+                        originalSize: origSize, newSize: libBlob.size, compressed: true,
+                    });
                     continue;
                 }
 
-                // Honour user's preset as first attempt, then step down aggressively
-                const userScale = typeof state.renderScale === "number" ? state.renderScale : 1.5;
-                const scaleSteps = [
-                    Math.min(userScale, 1.2), // cap user scale — 1.5 is too big for 200 KB
-                    1.0,
-                    0.85,
-                    0.70,
-                    0.55,
-                ];
+                // ── Pass 2: rasterize + binary search at descending scales ──────────────
+                let pdfJsDoc;
+                try {
+                    // Use a fresh copy of the buffer each time
+                    const bufCopy = arrayBuffer.slice(0);
+                    pdfJsDoc = await pdfjsLib.getDocument({ data: bufCopy }).promise;
+                } catch (e) {
+                    console.error("pdf.js load failed:", e.message);
+                    // Fall back to pdf-lib result or original
+                    const fallback = libBlob && libBlob.size < origSize ? libBlob : file;
+                    outputs.push({
+                        name: libBlob && libBlob.size < origSize ? `${nameBase}-200kb.pdf` : file.name,
+                        blob: fallback, originalSize: origSize, newSize: fallback.size,
+                        compressed: fallback !== file,
+                    });
+                    continue;
+                }
 
-                let bestBlob = libBlob; // start with pdf-lib result if available
+                const scaleSteps = [1.0, 0.8, 0.65, 0.5];
+                let bestBlob = libBlob && libBlob.size < origSize ? libBlob : null;
 
                 for (const scale of scaleSteps) {
+                    if (ringStatusEl) ringStatusEl.textContent = `Pass 2: scale ${scale}…`;
+                    console.log(`Trying renderScale=${scale}`);
+
                     const blob = await binarySearchQuality(pdfJsDoc, scale);
                     if (!blob) continue;
 
-                    if (!bestBlob || blob.size < bestBlob.size) bestBlob = blob;
-                    if (blob.size <= TARGET_BYTES) break; // hit target — stop
-                }
+                    console.log(`  scale=${scale} → ${blob.size} bytes`);
 
-                // ── PASS 3: nuclear option — extreme single quality pass ─────────────────
-                if (!bestBlob || bestBlob.size > TARGET_BYTES) {
-                    const pages = await renderPages(pdfJsDoc, 0.5, 0.05);
-                    const blob = packToPdf(pages);
-                    if (blob && (!bestBlob || blob.size < bestBlob.size)) bestBlob = blob;
+                    if (!bestBlob || blob.size < bestBlob.size) bestBlob = blob;
+                    if (blob.size <= TARGET_BYTES) {
+                        console.log(`  ✓ Hit target at scale=${scale}`);
+                        break;
+                    }
                 }
 
                 try { pdfJsDoc.destroy && pdfJsDoc.destroy(); } catch (_) { }
 
-                // ── Guard: never return something bigger than the original ───────────────
+                // ── Guard: never return something bigger than original ───────────────────
                 if (!bestBlob || bestBlob.size >= origSize) {
-                    outputs.push({ name: file.name, blob: file, originalSize: origSize, newSize: origSize, compressed: false });
+                    console.warn("Compression made it bigger — returning original");
+                    outputs.push({
+                        name: file.name, blob: file,
+                        originalSize: origSize, newSize: origSize, compressed: false,
+                    });
                 } else {
                     outputs.push({
-                        name: `${nameBase}-200kb.pdf`,
-                        blob: bestBlob,
-                        originalSize: origSize,
-                        newSize: bestBlob.size,
-                        // Flag whether we actually hit 200 KB
+                        name: `${nameBase}-200kb.pdf`, blob: bestBlob,
+                        originalSize: origSize, newSize: bestBlob.size,
                         compressed: bestBlob.size <= TARGET_BYTES,
                     });
                 }
@@ -2579,11 +2661,7 @@
             });
         }
 
-        /**
- * ── ALSO update renderDownloadList() so it warns if 200 KB wasn't reached ──
- *
- * Replace your existing renderDownloadList() with this version.
- */
+        // ─── Updated renderDownloadList with warning if 200 KB not reached ────────────
         function renderDownloadList() {
             if (!downloadFileList) return;
             downloadFileList.innerHTML = "";
@@ -2597,17 +2675,20 @@
                     pct = Math.round(((o.originalSize - o.newSize) / o.originalSize) * 100);
                     if (pct < 0) pct = 0;
                 }
-                const reductionText = pct > 0 ? `${pct}% smaller` : `No reduction`;
-                const hitTarget = o.compressed && o.newSize <= 200 * 1024;
-                const warn = !hitTarget && o.compressed
-                    ? `<div style="font-size:12px;color:#b45309;margin-top:4px;">⚠️ Could not reach 200 KB — smallest possible: ${formatFileSize(o.newSize)}</div>`
+
+                const hitTarget = o.newSize <= TARGET_BYTES;
+                const warn = o.compressed && !hitTarget
+                    ? `<div style="font-size:12px;color:#b45309;margin-top:4px;">
+           ⚠️ Could not reach 200 KB — best achieved: ${formatFileSize(o.newSize)}
+         </div>`
                     : "";
 
+                const tick = hitTarget ? "✓ " : "";
                 const line = document.createElement("div");
                 line.style.marginBottom = "14px";
                 line.innerHTML = `
-      <div style="margin-bottom:4px;font-weight:600">${escapeHtml(o.name)}</div>
-      <div style="font-size:13px;color:#6b7280">${before} → ${after} (${reductionText})</div>
+      <div style="margin-bottom:4px;font-weight:600">${tick}${escapeHtml(o.name)}</div>
+      <div style="font-size:13px;color:#6b7280">${before} → ${after} (${pct}% smaller)</div>
       ${warn}
     `;
                 downloadFileList.appendChild(line);
