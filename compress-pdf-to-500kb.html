@@ -31,7 +31,7 @@
     <meta name="twitter:image" content="https://www.pdf99.org/assets/og-image-compress-pdf.png" />
 
     <!-- Performance hints -->
-        <link rel="preload" href="/assets/font/Lexend-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/font/Lexend-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Favicon & manifest -->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
@@ -228,17 +228,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
 
-    
-    <!-- libs -->
-  <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/all.min.css">
-  </noscript>
 
-  <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/tailwind/output.css">
-  </noscript>
+    <!-- libs -->
+    <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/all.min.css">
+    </noscript>
+
+    <link rel="preload" href="/tailwind/output.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/tailwind/output.css">
+    </noscript>
     <!-- <link rel="preload" href="/tailwind/output.css" as="style" />
     <link rel="stylesheet" href="/tailwind/output.css" /> -->
 
@@ -955,70 +955,70 @@
     </style>
 
     <script>
-    // Google Analytics 4 Lazy Loader (Optimized)
+        // Google Analytics 4 Lazy Loader (Optimized)
 
-    (function () {
+        (function () {
 
-      const measurementId = "G-KC8H85HKF1";
-      let loaded = false;
-      let timerId;
+            const measurementId = "G-KC8H85HKF1";
+            let loaded = false;
+            let timerId;
 
-      function loadAnalytics(trigger) {
+            function loadAnalytics(trigger) {
 
-        if (loaded) return;
-        loaded = true;
+                if (loaded) return;
+                loaded = true;
 
-        // Remove listeners
-        window.removeEventListener('scroll', onInteract);
-        window.removeEventListener('mousemove', onInteract);
-        window.removeEventListener('touchstart', onInteract);
-        window.removeEventListener('keydown', onInteract);
-        window.removeEventListener('click', onInteract);
+                // Remove listeners
+                window.removeEventListener('scroll', onInteract);
+                window.removeEventListener('mousemove', onInteract);
+                window.removeEventListener('touchstart', onInteract);
+                window.removeEventListener('keydown', onInteract);
+                window.removeEventListener('click', onInteract);
 
-        clearTimeout(timerId);
+                clearTimeout(timerId);
 
-        // Load GA script
-        const script = document.createElement('script');
-        script.src =
-          `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+                // Load GA script
+                const script = document.createElement('script');
+                script.src =
+                    `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
 
-        script.async = true;
+                script.async = true;
 
-        document.head.appendChild(script);
+                document.head.appendChild(script);
 
-        // Initialize GA
-        window.dataLayer = window.dataLayer || [];
+                // Initialize GA
+                window.dataLayer = window.dataLayer || [];
 
-        window.gtag = function () {
-          window.dataLayer.push(arguments);
-        };
+                window.gtag = function () {
+                    window.dataLayer.push(arguments);
+                };
 
-        window.gtag('js', new Date());
+                window.gtag('js', new Date());
 
-        window.gtag('config', measurementId, {
-          transport_type: 'beacon'
-        });
+                window.gtag('config', measurementId, {
+                    transport_type: 'beacon'
+                });
 
-      }
+            }
 
-      function onInteract(e) {
-        loadAnalytics(e.type);
-      }
+            function onInteract(e) {
+                loadAnalytics(e.type);
+            }
 
-      // Load on interaction
-      window.addEventListener('scroll', onInteract, { passive: true, once: true });
-      window.addEventListener('mousemove', onInteract, { passive: true, once: true });
-      window.addEventListener('touchstart', onInteract, { passive: true, once: true });
-      window.addEventListener('keydown', onInteract, { passive: true, once: true });
-      window.addEventListener('click', onInteract, { passive: true, once: true });
+            // Load on interaction
+            window.addEventListener('scroll', onInteract, { passive: true, once: true });
+            window.addEventListener('mousemove', onInteract, { passive: true, once: true });
+            window.addEventListener('touchstart', onInteract, { passive: true, once: true });
+            window.addEventListener('keydown', onInteract, { passive: true, once: true });
+            window.addEventListener('click', onInteract, { passive: true, once: true });
 
-      // Fallback: Load after 5 seconds
-      timerId = setTimeout(function () {
-        loadAnalytics('timeout');
-      }, 5000);
+            // Fallback: Load after 5 seconds
+            timerId = setTimeout(function () {
+                loadAnalytics('timeout');
+            }, 5000);
 
-    })();
-  </script>
+        })();
+    </script>
 </head>
 
 <body>
@@ -1068,7 +1068,7 @@
         <div class="nav-inner">
             <div class="nav-left">
                 <div class="brand">
-                    
+
                     <a href="/" class="text-2xl font-bold text-red-600">PDF99</a>
                 </div>
             </div>
@@ -1121,8 +1121,7 @@
                     Compress PDF to 500KB
                 </h1>
                 <p class="text-gray-600 text-center mb-8">
-                    Reduce any PDF to 500KB or less - directly in your browser. No
-                    uploads, no data leaving your device.
+                    Reduce PDF size to 500KB or less, without losing readability or its quality.
                 </p>
 
                 <div id="drop-area"
@@ -1154,7 +1153,7 @@
                     <!-- Steps -->
                     <section>
                         <div class="section-head mt-20">
-                            <h2>How to compress a PDF to 500KB in three steps</h2>
+                            <h2>3 simple steps to compress PDF to 500KB or less</h2>
                         </div>
                         <div class="steps-3-wrap">
                             <div class="steps-3-grid">
@@ -1189,23 +1188,34 @@
                     <!-- What is 500KB compression? -->
                     <section style="margin-top: 60px">
                         <div class="section-head">
-                            <h2>What does 500KB compression mean?</h2>
+                            <h2>What 500KB PDF compression really mean?</h2>
                         </div>
                         <p class="info-text">
-                            Compressing a PDF to 500KB means taking a larger file - maybe
-                            5MB, 10MB, or even 50MB - and shrinking it down to roughly half
-                            a megabyte. Our tool rebuilds your PDF page by page, optimizing
-                            images, reducing resolution where needed, and applying smart
-                            JPEG compression. The result is a file that's small enough for
-                            email, online forms, and quick sharing, while keeping text and
-                            graphics perfectly readable.
+                            Compressing a PDF to 500KB simply means reducing the size of a larger file-maybe 5MB, 10MB,
+                            or even 50MB, so that it becomes small enough to upload or share easily. Many websites, job
+                            portals, and online forms have strict file size limits, and trying to upload a large PDF can
+                            often lead to errors or rejection. That's where compression becomes really helpful. Instead
+                            of manually editing pages or lowering quality yourself, our tool takes care of the process
+                            automatically.
+
+                            When you upload your file, the tool works behind the scenes to rebuild the PDF page by page.
+                            It carefully optimizes images, slightly reduces resolution where it won't affect
+                            readability, and applies smart compression methods to keep the file size low. At the same
+                            time, it makes sure that text remains sharp and clear, so your document still looks neat and
+                            professional. Unnecessary data that increases file size is also removed to make the file
+                            lighter.
+
+                            In the end, you get a smaller, more manageable PDF that's easy to upload to websites, attach
+                            to emails, or share through messaging apps. The best part is that the document still looks
+                            clean and readable, so you don't have to worry about losing important details while reducing
+                            the file size.
                         </p>
                     </section>
 
                     <!-- Why 500KB? -->
                     <section style="margin-top: 60px">
                         <div class="section-head">
-                            <h2>Why compress to 500KB?</h2>
+                            <h2>Why compress a PDF to 500KB?</h2>
                         </div>
                         <ul class="info-list">
                             <li>
@@ -1237,13 +1247,25 @@
                         </div>
                         <div class="article-wrap">
                             <p>
-                                Whether you're submitting a resume, sending an invoice, or
-                                uploading a scanned contract, the 500KB limit is everywhere.
-                                PDF99's 500KB compressor gives you precise control. We use a
-                                two-pass approach: first rendering each page at an optimized
-                                scale, then applying JPEG compression that balances size and
-                                clarity. You can choose from three presets or manually tweak
-                                the settings until you hit that sweet spot.
+                                Whether you're submitting a resume, sending an invoice, or uploading a scanned contract,
+                                you've probably noticed how often the 500KB file size limit shows up on websites and
+                                online forms. It can be frustrating when your document looks perfectly fine but still
+                                won't upload because it's just a little too large. That's why having a reliable
+                                compression tool makes such a big difference. Instead of guessing what settings to
+                                change, you can simply upload your file and let the tool guide you toward the right
+                                size.
+
+                                Our 500KB compressor is built to give you both convenience and control. Behind the
+                                scenes, it follows a careful two-step process. First, each page of your PDF is rendered
+                                at a scale that keeps text readable while reducing unnecessary bulk. After that, smart
+                                image compression is applied to balance file size and visual clarity. The goal is not
+                                just to shrink the file, but to keep it looking clean and professional.
+
+                                You also get the flexibility to choose how your file is compressed. If you want
+                                something quick, you can select from three simple presets designed for common needs. If
+                                you prefer more control, you can manually adjust the settings until you find the perfect
+                                balance between size and quality—helping you reach that 500KB target without
+                                compromising readability.
                             </p>
                             <h3>Best practices for hitting 500KB</h3>
                             <ol>
@@ -1274,13 +1296,29 @@
                             </ol>
                             <h3>When you need 500KB compression</h3>
                             <p>
-                                Students compressing essays for Turnitin, freelancers emailing
-                                portfolios, real estate agents sending property brochures, HR
-                                teams collecting resumes - the 500KB target is a common
-                                requirement. Legal documents, medical records, and tax forms
-                                often need to be under 500KB for secure portal uploads. Our
-                                tool handles them all locally: your sensitive data never
-                                touches a server, so privacy is guaranteed.
+                                There are many everyday situations where keeping your PDF under 500KB becomes necessary.
+                                Students often need to compress essays, assignments, or research papers before uploading
+                                them to platforms like Turnitin or college submission portals that have strict size
+                                limits.
+                                Freelancers also run into this requirement when emailing portfolios, proposals, or
+                                sample
+                                work to clients who prefer smaller attachments that download quickly. In fields like
+                                real
+                                estate, agents frequently share property brochures and listing details, and keeping
+                                those
+                                files small makes it easier to send them through email or messaging apps without delays.
+
+                                The 500KB limit is also common in professional and official settings. HR teams regularly
+                                collect resumes and job applications, while government portals may require documents
+                                such
+                                as ID proofs, certificates, or application forms to be uploaded within a specific size
+                                range. Sensitive files like legal documents, medical reports, or tax forms often need to
+                                meet these limits to ensure smooth uploads to secure systems.
+
+                                Our tool is designed to handle all these situations with ease. The compression process
+                                happens directly on your device, which means your files stay private and under your
+                                control. Your sensitive information isn't uploaded to any external server, giving you
+                                peace of mind while reducing your file size.
                             </p>
                         </div>
                     </section>
