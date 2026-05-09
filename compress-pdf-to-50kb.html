@@ -493,7 +493,7 @@ body.panel-open .add-more-btn, body.panel-open #open-settings, body.panel-open .
               </button>
             </div>
             <div class="space-y-4">
-              <div class="option-card selected" data-quality="0.25" id="quality-recommended" role="button" tabindex="0">
+              <div class="option-card selected" data-quality="0.25" id="quality-recommended" data-quality="0.25" role="button" tabindex="0">
                 <div class="radio"><span class="dot"></span></div>
                 <div class="text"><div class="title">Recommended for 50KB</div><div class="subtitle">Balanced quality. Targets ~50KB.</div></div>
               </div>
@@ -517,8 +517,7 @@ body.panel-open .add-more-btn, body.panel-open #open-settings, body.panel-open .
                 <div class="text-xs text-gray-500 mt-2">Lower = smaller file. Higher = better quality but larger.</div>
               </div>
               <button id="convert-btn-desktop"
-                class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full shadow-md"
-                style="width:100%;cursor:pointer;">
+                style="width:100%;cursor:pointer;background:#dc2626;color:#fff;font-weight:500;padding:12px 24px;border-radius:9999px;box-shadow:0 4px 14px rgba(0,0,0,.15);border:none;display:none;">
                 Compress to ~50KB
               </button>
             </div>
@@ -1064,5 +1063,17 @@ function formatFileSize(bytes) {
 </script>
 
 <noscript><div style="padding:16px;background:#fff;border-radius:8px;margin:18px auto;max-width:800px;text-align:center;">This Compress PDF to 50KB tool requires JavaScript. Please enable JavaScript to use it.</div></noscript>
+
+// Show desktop compress button on wide screens
+(function() {
+  function toggleDesktopBtn() {
+    var btn = document.getElementById('convert-btn-desktop');
+    if (!btn) return;
+    btn.style.display = window.innerWidth >= 768 ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', toggleDesktopBtn);
+  window.addEventListener('resize', toggleDesktopBtn);
+})();
+
 </body>
 </html>
