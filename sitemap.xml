@@ -1,34 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.pdf99.org/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.pdf99.org/jpg-to-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/compress-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/merge-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/split-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/pdf-to-jpg/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/html-to-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/rotate-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/watermark-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.pdf99.org/compress-pdf-to-50kb/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pdf99.org/compress-pdf-to-100kb/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pdf99.org/compress-pdf-to-200kb/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pdf99.org/compress-pdf-to-500kb/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.pdf99.org/protect-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/unlock-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/sign-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/edit-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/about/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.pdf99.org/contact/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://www.pdf99.org/faq/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/how-to-compress-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/jpg-vs-png/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/best-free-pdf-tools-2026/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/what-is-pdf/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/how-to-merge-pdfs/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/pdf-file-too-large/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/blog/how-to-extract-pages/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.pdf99.org/privacy/</loc><lastmod>2026-05-17</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.pdf99.org/terms/</loc><lastmod>2026-05-17</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.pdf99.org/disclaimer/</loc><lastmod>2026-05-17</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.pdf99.org/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/jpg-to-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/compress-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/merge-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/split-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/pdf-to-jpg/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/html-to-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/rotate-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/watermark-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/about/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/faq/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/contact/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/privacy/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/terms/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/disclaimer/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/how-to-compress-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/jpg-vs-png/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/best-free-pdf-tools-2026/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/what-is-pdf/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/how-to-merge-pdfs/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/pdf-file-too-large/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/blog/how-to-extract-pages/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/compress-pdf-to-500kb/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/compress-pdf-to-200kb/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.pdf99.org/compress-pdf-to-100kb/</loc>
+  <lastmod>2026-05-20T05:46:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
 </urlset>
