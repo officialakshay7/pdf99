@@ -5,7 +5,7 @@
 (function () {
 
   const API_BASE = 'https://pdf99-ratings.officialakshay71.workers.dev/api/ratings';
-
+  // Replace Your-Subdomain to correctly point to your deployed API endpoint
   // Tool slug from body data attribute or dropzone element
   const dropzoneEl = document.getElementById('dropzone');
   if (!dropzoneEl) return;
