@@ -5,7 +5,7 @@
 (function () {
 
   const API_BASE = 'https://pdf99-ratings.officialakshay71.workers.dev/api/ratings';
-
+  // Replace Your-Subdomain to correctly point to your deployed API endpoint
   // Tool slug from body data attribute or dropzone element
   const dropzoneEl = document.getElementById('dropzone');
   if (!dropzoneEl) return;
@@ -151,24 +151,17 @@
       btn.setAttribute('aria-label', `${i} star${i>1?'s':''}`);
       btn.dataset.stars = i;
       btn.innerHTML = '★';
-      btn.addEventListener('mouseenter', () => { hoveredStar=i; updateStarUI(selectedStar); updateFace(i); });
-      btn.addEventListener('mouseleave', () => { hoveredStar=0; updateStarUI(selectedStar); updateFace(selectedStar); });
+      btn.addEventListener('mouseenter', () => { hoveredStar=i; renderModalStars(selectedStar); updateFace(i); });
+      btn.addEventListener('mouseleave', () => { hoveredStar=0; renderModalStars(selectedStar); updateFace(selectedStar); });
+      btn.addEventListener('focus',      () => { hoveredStar=i; renderModalStars(selectedStar); updateFace(i); });
+      btn.addEventListener('blur',       () => { hoveredStar=0; renderModalStars(selectedStar); updateFace(selectedStar); });
       btn.addEventListener('click',      () => {
         selectedStar = i; hoveredStar = 0;
-        updateStarUI(i); updateFace(i);
-        document.getElementById('rmSubmit').disabled = false;
+        renderModalStars(i); updateFace(i);
+        document.getElementById('rmSubmit').removeAttribute('disabled');
       });
       el.appendChild(btn);
     }
-  }
-
-  function updateStarUI(highlight) {
-    const el = document.getElementById('rmStars'); if (!el) return;
-    const buttons = el.querySelectorAll('button');
-    buttons.forEach((btn, idx) => {
-      const starNum = idx + 1;
-      btn.className = 'rm-star-btn' + (starNum <= (hoveredStar || highlight) ? ' rm-star-filled' : '');
-    });
   }
 
   function updateFace(stars) {
