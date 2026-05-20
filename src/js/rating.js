@@ -1,5 +1,5 @@
 /* ================================================
-   PDF99 — Rating Widget & Popup Modal
+   PDF99 — Rating Widget & Popup Modal Updated
    ================================================ */
 'use strict';
 (function () {
