@@ -4,7 +4,7 @@
 'use strict';
 (function () {
 
-  const API_BASE = 'https://pdf99-ratings.YOUR-SUBDOMAIN.workers.dev/api/ratings';
+  const API_BASE = 'https://pdf99-ratings.officialakshay71.workers.dev/api/ratings';
 
   // Tool slug from body data attribute or dropzone element
   const dropzoneEl = document.getElementById('dropzone');
