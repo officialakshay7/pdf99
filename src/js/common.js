@@ -9,7 +9,7 @@ window.PDF99 = (function () {
 
   P.$ = id => document.getElementById(id);
   P.escHtml = s => String(s).replace(/[&<>"']/g,
-    c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   /* ── Toast ─────────────────────────────────── */
   let _toastTimer = null;
@@ -25,9 +25,9 @@ window.PDF99 = (function () {
   /* ── Theme ──────────────────────────────────── */
   P.applyTheme = dark => {
     if (dark) document.documentElement.setAttribute('data-theme', 'dark');
-    else document.documentElement.removeAttribute('data-theme');
+    else      document.documentElement.removeAttribute('data-theme');
     const m = P.$('moonIcon'), s = P.$('sunIcon');
-    if (m) m.style.display = dark ? 'none' : 'block';
+    if (m) m.style.display = dark ? 'none'  : 'block';
     if (s) s.style.display = dark ? 'block' : 'none';
   };
   P.applyTheme(localStorage.getItem('pdf99-theme') === 'dark');
@@ -38,7 +38,7 @@ window.PDF99 = (function () {
   });
 
   /* ── Drawer ─────────────────────────────────── */
-  function openDrawer() { P.$('drawer')?.classList.add('open'); P.$('drawerOverlay')?.classList.add('open'); }
+  function openDrawer()  { P.$('drawer')?.classList.add('open');    P.$('drawerOverlay')?.classList.add('open'); }
   function closeDrawer() { P.$('drawer')?.classList.remove('open'); P.$('drawerOverlay')?.classList.remove('open'); }
   P.$('drawerClose')?.addEventListener('click', closeDrawer);
   P.$('drawerOverlay')?.addEventListener('click', closeDrawer);
@@ -46,10 +46,10 @@ window.PDF99 = (function () {
     .forEach(a => a.addEventListener('click', closeDrawer));
 
   /* ── Mega Menu ──────────────────────────────── */
-  const megaMenu = P.$('megaMenu');
+  const megaMenu   = P.$('megaMenu');
   const megaToggle = P.$('megaMenuToggle');
-  function openMegaMenu() { megaMenu?.removeAttribute('hidden'); megaToggle?.setAttribute('aria-expanded', 'true'); }
-  function closeMegaMenu() { megaMenu?.setAttribute('hidden', ''); megaToggle?.setAttribute('aria-expanded', 'false'); }
+  function openMegaMenu()  { megaMenu?.removeAttribute('hidden'); megaToggle?.setAttribute('aria-expanded','true'); }
+  function closeMegaMenu() { megaMenu?.setAttribute('hidden',''); megaToggle?.setAttribute('aria-expanded','false'); }
   if (megaToggle) {
     megaToggle.addEventListener('click', e => {
       e.stopPropagation();
@@ -75,34 +75,34 @@ window.PDF99 = (function () {
 
   /* ── Tools list ─────────────────────────────── */
   P.TOOLS = [
-    { name: 'JPG to PDF', icon: 'image', href: '/jpg-to-pdf/' },
-    { name: 'Compress PDF', icon: 'compress', href: '/compress-pdf/' },
-    { name: 'Merge PDF', icon: 'merge', href: '/merge-pdf/' },
-    { name: 'Split PDF', icon: 'split', href: '/split-pdf/' },
-    { name: 'PDF to JPG', icon: 'image', href: '/pdf-to-jpg/' },
-    { name: 'HTML to PDF', icon: 'html', href: '/html-to-pdf/' },
-    { name: 'Rotate PDF', icon: 'rotate', href: '/rotate-pdf/' },
-    { name: 'Watermark PDF', icon: 'watermark', href: '/watermark-pdf/' },
-    { name: 'Compress to 500KB', icon: 'compress', href: '/compress-pdf-to-500kb/' },
-    { name: 'Compress to 200KB', icon: 'compress', href: '/compress-pdf-to-200kb/' },
-    { name: 'Compress to 100KB', icon: 'compress', href: '/compress-pdf-to-100kb/' },
-    { name: 'Compress to 50KB', icon: 'compress', href: '/compress-pdf-to-50kb/' },
-    { name: 'Protect PDF', icon: 'protect', href: '/protect-pdf/' },
-    { name: 'Unlock PDF', icon: 'unlock', href: '/unlock-pdf/' },
-    { name: 'Sign PDF', icon: 'sign', href: '/sign-pdf/' },
-    { name: 'Edit PDF', icon: 'edit', href: '/edit-pdf/' },
-    { name: 'Extract Images', icon: 'extract', href: '#' },
-    { name: 'Remove Pages', icon: 'remove-pages', href: '#' },
-    { name: 'Extract Pages', icon: 'extract', href: '#' },
-    { name: 'Rearrange Pages', icon: 'rearrange', href: '#' },
-    { name: 'Web to PDF', icon: 'web', href: '#' },
-    { name: 'PDF OCR', icon: 'ocr', href: '#' },
-    { name: 'Page Numbers', icon: 'page-numbers', href: '#' },
-    { name: 'Compare PDFs', icon: 'compare', href: '#' },
-    { name: 'Optimize PDF', icon: 'optimize', href: '#' },
-    { name: 'Redact PDF', icon: 'redact', href: '#' },
-    { name: 'Create PDF', icon: 'create', href: '#' },
-    { name: 'PDF Converter', icon: 'convert', href: '#' },
+    {name:'JPG to PDF',            icon:'image',        href:'/jpg-to-pdf/'           },
+    {name:'Compress PDF',          icon:'compress',     href:'/compress-pdf/'         },
+    {name:'Merge PDF',             icon:'merge',        href:'/merge-pdf/'            },
+    {name:'Split PDF',             icon:'split',        href:'/split-pdf/'            },
+    {name:'PDF to JPG',            icon:'image',        href:'/pdf-to-jpg/'           },
+    {name:'HTML to PDF',           icon:'html',         href:'/html-to-pdf/'          },
+    {name:'Rotate PDF',            icon:'rotate',       href:'/rotate-pdf/'           },
+    {name:'Watermark PDF',         icon:'watermark',    href:'/watermark-pdf/'        },
+    {name:'Compress to 500KB',     icon:'compress',     href:'/compress-pdf-to-500kb/'},
+    {name:'Compress to 200KB',     icon:'compress',     href:'/compress-pdf-to-200kb/'},
+    {name:'Compress to 100KB',     icon:'compress',     href:'/compress-pdf-to-100kb/'},
+    {name:'Compress to 50KB',      icon:'compress',     href:'/compress-pdf-to-50kb/' },
+    {name:'Protect PDF',           icon:'protect',      href:'/protect-pdf/'          },
+    {name:'Unlock PDF',            icon:'unlock',       href:'/unlock-pdf/'           },
+    {name:'Sign PDF',              icon:'sign',         href:'/sign-pdf/'             },
+    {name:'Edit PDF',              icon:'edit',         href:'/edit-pdf/'             },
+    {name:'Extract Images',        icon:'extract',      href:'#'                      },
+    {name:'Remove Pages',          icon:'remove-pages', href:'#'                      },
+    {name:'Extract Pages',         icon:'extract',      href:'#'                      },
+    {name:'Rearrange Pages',       icon:'rearrange',    href:'#'                      },
+    {name:'Web to PDF',            icon:'web',          href:'#'                      },
+    {name:'PDF OCR',               icon:'ocr',          href:'#'                      },
+    {name:'Page Numbers',          icon:'page-numbers', href:'#'                      },
+    {name:'Compare PDFs',          icon:'compare',      href:'#'                      },
+    {name:'Optimize PDF',          icon:'optimize',     href:'#'                      },
+    {name:'Redact PDF',            icon:'redact',       href:'#'                      },
+    {name:'Create PDF',            icon:'create',       href:'#'                      },
+    {name:'PDF Converter',         icon:'convert',      href:'#'                      },
   ];
 
   /* ── Tools grid ──────────────────────────────── */
@@ -110,7 +110,7 @@ window.PDF99 = (function () {
   if (grid) {
     P.TOOLS.forEach(({ name, icon, href }) => {
       const a = document.createElement('a');
-      a.href = href; a.className = 'tool-card'; a.setAttribute('role', 'listitem');
+      a.href = href; a.className = 'tool-card'; a.setAttribute('role','listitem');
       if (href === '#') a.addEventListener('click', e => { e.preventDefault(); P.toast(name + ' — coming soon'); });
       a.innerHTML =
         `<img src="/src/icon/star.svg" class="star-icon" alt="" aria-hidden="true">` +
@@ -125,7 +125,7 @@ window.PDF99 = (function () {
     if (!filename || filename.length <= maxLen) return filename;
     const dotIdx = filename.lastIndexOf('.');
     if (dotIdx === -1) return filename.slice(0, maxLen - 3) + '...';
-    const ext = filename.slice(dotIdx);              // e.g. ".pdf"
+    const ext  = filename.slice(dotIdx);              // e.g. ".pdf"
     const base = filename.slice(0, dotIdx);
     const half = Math.floor((maxLen - ext.length - 3) / 2);
     if (half < 3) return filename.slice(0, maxLen - 3) + '...';
@@ -133,14 +133,14 @@ window.PDF99 = (function () {
   };
 
   /* ── Shared dropzone ─────────────────────────── */
-  P.initDropzone = function ({ accept, onFiles, multiple = false }) {
-    const wrap = P.$('dropzoneWrap');
-    const zone = P.$('dropzone');
+  P.initDropzone = function({ accept, onFiles, multiple = false }) {
+    const wrap  = P.$('dropzoneWrap');
+    const zone  = P.$('dropzone');
     const input = P.$('fileInput');
     if (!zone || !input) return;
 
     if (multiple) input.setAttribute('multiple', '');
-    else input.removeAttribute('multiple');
+    else          input.removeAttribute('multiple');
 
     const process = list => {
       const ok = Array.from(list).filter(accept);
@@ -151,15 +151,15 @@ window.PDF99 = (function () {
       wrap?.setAttribute('hidden', '');
       if (ta) {
         ta.removeAttribute('hidden');
-        if (firstUpload) ta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (firstUpload) ta.scrollIntoView({ behavior:'smooth', block:'nearest' });
       }
     };
 
-    P.$('chooseBtn')?.addEventListener('click', () => input.click());
+    P.$('chooseBtn')?.addEventListener('click',  () => input.click());
     P.$('addMoreBtn')?.addEventListener('click', () => input.click());
     input.addEventListener('change', e => { process(e.target.files); input.value = ''; });
     zone.addEventListener('dragenter', e => { e.preventDefault(); zone.classList.add('dragover'); });
-    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
+    zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('dragover'); });
     zone.addEventListener('dragleave', e => { e.preventDefault(); zone.classList.remove('dragover'); });
     zone.addEventListener('drop', e => {
       e.preventDefault(); zone.classList.remove('dragover');
@@ -170,7 +170,7 @@ window.PDF99 = (function () {
   };
 
   /* ── Show result + start-over ────────────────── */
-  P.showResult = function (filename, meta, blob, onStartOver) {
+  P.showResult = function(filename, meta, blob, onStartOver) {
     const rn = P.$('resultName');
     const rm = P.$('resultMeta');
     const ra = P.$('resultArea');
@@ -182,11 +182,11 @@ window.PDF99 = (function () {
     rn.title = filename;   // full name on hover
     rm.textContent = meta;
     ra.removeAttribute('hidden');
-    ra.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    ra.scrollIntoView({ behavior:'smooth', block:'nearest' });
 
     db.onclick = () => {
       const url = URL.createObjectURL(blob);
-      const a = Object.assign(document.createElement('a'), { href: url, download: filename });
+      const a = Object.assign(document.createElement('a'), { href:url, download:filename });
       document.body.appendChild(a); a.click(); document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 2000);
     };
@@ -208,27 +208,4 @@ window.PDF99 = (function () {
   };
 
   return P;
-
-
-  // <!-- Google Analytics lazy loading -->
-  (function () {
-    var loaded = false;
-    function loadGA() {
-      if (loaded) return;
-      loaded = true;
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F9LDFSB1Z6';
-      s.async = true;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-F9LDFSB1Z6', { 'transport_type': 'beacon', 'send_page_view': true });
-      window.gtag = gtag;
-    }
-    window.addEventListener('scroll', loadGA, { once: true, passive: true });
-    window.addEventListener('click', loadGA, { once: true, passive: true });
-    window.addEventListener('touchstart', loadGA, { once: true, passive: true });
-    setTimeout(loadGA, 5000);
-  })();
 })();
