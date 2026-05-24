@@ -4,6 +4,30 @@
    ================================================ */
 'use strict';
 
+
+// Google Analytics lazy loading
+(function(){
+  var loaded=false;
+  function loadGA(){
+    if(loaded)return;
+    loaded=true;
+    var s=document.createElement('script');
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-Y576NQ0ESJ';
+    s.async=true;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','G-Y576NQ0ESJ',{'transport_type':'beacon','send_page_view':true});
+    window.gtag=gtag;
+  }
+  window.addEventListener('scroll',loadGA,{once:true,passive:true});
+  window.addEventListener('click',loadGA,{once:true,passive:true});
+  window.addEventListener('touchstart',loadGA,{once:true,passive:true});
+  setTimeout(loadGA,5000);
+})();
+// Google Analytics lazy loading ends here
+
 window.PDF99 = (function () {
   const P = {};
 
