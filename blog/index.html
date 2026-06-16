@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#167bbb">
   <title>PDF99 Blog — Practical PDF Tips, Guides & How-Tos</title>
-  <meta name="description" content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
+  <meta name="description"
+    content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.pdf99.org/blog/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="PDF99 Blog — Practical PDF Tips, Guides & How-Tos">
-  <meta property="og:description" content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
+  <meta property="og:description"
+    content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
   <meta property="og:url" content="https://www.pdf99.org/blog/">
   <meta property="og:site_name" content="PDF99">
   <meta property="og:image" content="https://www.pdf99.org/og-blog.png">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PDF99 Blog — Practical PDF Tips, Guides & How-Tos">
-  <meta name="twitter:description" content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
+  <meta name="twitter:description"
+    content="Clear guides on working with PDFs — how to compress, merge, split, convert and more. Written by the PDF99 team without jargon.">
   <meta name="twitter:image" content="https://www.pdf99.org/og-blog.png">
   <meta name="twitter:site" content="@pdf99tools">
   <link rel="shortcut icon" href="/src/img/favicon.ico">
@@ -31,153 +35,219 @@
   <link rel="stylesheet" href="/src/css/styles.css">
   <script src="/src/js/common.js" defer></script>
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Blog","name":"PDF99 Blog","description":"Practical guides on working with PDFs \u2014 compression, conversion, merging and more.","url":"https://www.pdf99.org/blog/","publisher":{"@type":"Organization","@id":"https://www.pdf99.org#org","name":"PDF99","url":"https://www.pdf99.org","logo":{"@type":"ImageObject","url":"https://www.pdf99.org/src/img/logo.svg"}}}
-</script></head>
+</script>
+</head>
+
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header" role="banner">
-  <div class="header-inner">
-    <div class="header-left"><a class="brand" href="/">PDF99</a></div>
-    <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a></div>
-    <div class="header-right">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
-        <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
-        <img id="sunIcon" src="/src/icon/sun.svg" class="icon-lg" alt="" aria-hidden="true" style="display:none">
-      </button>
-      <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu" aria-haspopup="true">
-        <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
-        <span>All tools</span>
-        <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
-      </button>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left"><a class="brand" href="/">PDF99</a></div>
+      <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
+          <img id="sunIcon" src="/src/icon/sun.svg" class="icon-lg" alt="" aria-hidden="true" style="display:none">
+        </button>
+        <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu"
+          aria-haspopup="true">
+          <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
+          <span>All tools</span>
+          <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
+        </button>
+      </div>
     </div>
-  </div>
-  <nav class="mega-menu" id="megaMenu" hidden><div class="mega-menu-inner">
-    <div class="mega-col"><p class="mega-col-title">Tools</p><div class="mega-links-grid">
-      <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to PDF</a>
-      <a href="/compress-pdf/" class="mega-link"><img src="/src/icon/compress.svg" class="icon icon-sm" alt="">Compress PDF</a>
-      <a href="/merge-pdf/" class="mega-link"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge PDF</a>
-      <a href="/split-pdf/" class="mega-link"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split PDF</a>
-      <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to JPG</a>
-      <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to PDF</a>
-      <a href="/rotate-pdf/" class="mega-link"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate PDF</a>
-      <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg" class="icon icon-sm" alt="">Watermark PDF</a>
-    </div></div>
-    <div class="mega-col mega-col-narrow"><p class="mega-col-title">Company</p><div class="mega-links-col">
-      <a href="/about/" class="mega-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
-      <a href="/faq/" class="mega-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
-      <a href="/blog/" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
-      <a href="/contact/" class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-      <a href="/privacy/" class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy</a>
-      <a href="/terms/" class="mega-link"><img src="/src/icon/terms.svg" class="icon icon-sm" alt="">Terms</a>
-    </div></div>
-  </div><div class="mega-menu-backdrop" id="megaMenuBackdrop"></div></nav>
-</header>
-<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
-  <div class="drawer-header"><span class="drawer-title">PDF99</span>
-    <button class="icon-btn" id="drawerClose" aria-label="Close"><img src="/src/icon/close.svg" class="icon-lg" alt="" aria-hidden="true"></button>
-  </div>
-  <div class="drawer-body">
-    <div class="mega-section"><p class="mega-section-title">Tools</p><div class="drawer-grid">
-      <a href="/jpg-to-pdf/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to PDF</a>
-      <a href="/compress-pdf/" class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm" alt="">Compress PDF</a>
-      <a href="/merge-pdf/" class="drawer-item"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge PDF</a>
-      <a href="/split-pdf/" class="drawer-item"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split PDF</a>
-      <a href="/rotate-pdf/" class="drawer-item"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate PDF</a>
-      <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm" alt="">Watermark</a>
-    </div></div>
-    <div class="mega-section"><p class="mega-section-title">Info</p><div class="drawer-links">
-      <a href="/about/" class="drawer-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
-      <a href="/blog/" class="drawer-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
-      <a href="/faq/" class="drawer-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
-      <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-    </div></div>
-  </div>
-</aside>
-<main class="main" id="main-content">
-<section class="hero"><h1 class="hero-title">PDF99 Blog</h1><p class="hero-sub">Practical guides and tips for working with PDFs — written clearly, without the jargon.</p></section>
-<div class="blog-grid"><a href="/blog/how-to-compress-pdf/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/compress.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Guide</span>
-    <h2 class="blog-card-title">How to Compress a PDF Without Losing Quality</h2>
-    <p class="blog-card-excerpt">Large PDFs slow everything down. Here's how to shrink them properly, without making your document look blurry or broken, using free tools.</p>
-    <div class="blog-card-meta">May 12, 2026 &middot; 5 min read</div>
-  </div>
-</a>
-<a href="/blog/jpg-vs-png/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/image.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Explained</span>
-    <h2 class="blog-card-title">JPG vs PNG: Which Format Should You Use?</h2>
-    <p class="blog-card-excerpt">JPG and PNG are everywhere but built for different jobs. A plain-English breakdown of when to use each one — and why it matters for PDFs.</p>
-    <div class="blog-card-meta">May 8, 2026 &middot; 4 min read</div>
-  </div>
-</a>
-<a href="/blog/best-free-pdf-tools-2026/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/pdf-file.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Roundup</span>
-    <h2 class="blog-card-title">The Best Free PDF Tools in 2026</h2>
-    <p class="blog-card-excerpt">We tested dozens of free PDF tools so you don't have to. Here's what's actually worth using in 2026, and what to avoid.</p>
-    <div class="blog-card-meta">May 1, 2026 &middot; 6 min read</div>
-  </div>
-</a>
-<a href="/blog/what-is-pdf/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/pdf-file.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Explained</span>
-    <h2 class="blog-card-title">What is a PDF File and Why Is It Everywhere?</h2>
-    <p class="blog-card-excerpt">A plain-English explanation of what a PDF is, why it became the universal document format, and when to use it versus other formats.</p>
-    <div class="blog-card-meta">May 20, 2026 &middot; 5 min read</div>
-  </div>
-</a>
-<a href="/blog/how-to-merge-pdfs/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/merge.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Guide</span>
-    <h2 class="blog-card-title">How to Merge Multiple PDFs into One File</h2>
-    <p class="blog-card-excerpt">Step-by-step guide to combining multiple PDF files into one document — free, online, without installing any software.</p>
-    <div class="blog-card-meta">May 18, 2026 &middot; 4 min read</div>
-  </div>
-</a>
-<a href="/blog/pdf-file-too-large/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/compress.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Guide</span>
-    <h2 class="blog-card-title">My PDF is Too Large — How to Fix It</h2>
-    <p class="blog-card-excerpt">Practical solutions for when a PDF is too large to email, upload or share. Covers all the reasons a PDF gets large and how to fix each one.</p>
-    <div class="blog-card-meta">May 15, 2026 &middot; 5 min read</div>
-  </div>
-</a>
-<a href="/blog/how-to-extract-pages/" class="blog-card">
-  <div class="blog-card-img"><img src="/src/icon/split.svg" alt="" aria-hidden="true"></div>
-  <div class="blog-card-body">
-    <span class="blog-card-tag">Guide</span>
-    <h2 class="blog-card-title">How to Extract Pages from a PDF</h2>
-    <p class="blog-card-excerpt">How to extract specific pages from a PDF document — step-by-step, using free online tools with no software to install.</p>
-    <div class="blog-card-meta">May 5, 2026 &middot; 4 min read</div>
-  </div>
-</a>
-</div>
-</main>
-<footer class="site-footer" id="footer" role="contentinfo">
-  <nav class="foot-row" aria-label="Footer links">
-    <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
-    <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
-  </nav>
-  <div class="foot-row foot-row-3">
-    <div class="socials">
-      <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
-      <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank" rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
-      <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+    <nav class="mega-menu" id="megaMenu" hidden>
+      <div class="mega-menu-inner">
+        <div class="mega-col">
+          <p class="mega-col-title">Tools</p>
+          <div class="mega-links-grid">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+              PDF</a>
+            <a href="/compress-pdf/" class="mega-link"><img src="/src/icon/compress.svg" class="icon icon-sm"
+                alt="">Compress PDF</a>
+            <a href="/merge-pdf/" class="mega-link"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+              PDF</a>
+            <a href="/split-pdf/" class="mega-link"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+              PDF</a>
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+              JPG</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+              PDF</a>
+            <a href="/rotate-pdf/" class="mega-link"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+              PDF</a>
+            <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+                alt="">Watermark PDF</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Company</p>
+          <div class="mega-links-col">
+            <a href="/about/" class="mega-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
+            <a href="/faq/" class="mega-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+            <a href="/blog/" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+            <a href="/contact/" class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+                alt="">Contact</a>
+            <a href="/privacy/" class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm"
+                alt="">Privacy</a>
+            <a href="/terms/" class="mega-link"><img src="/src/icon/terms.svg" class="icon icon-sm" alt="">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
+    </nav>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer-header"><span class="drawer-title">PDF99</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close"><img src="/src/icon/close.svg" class="icon-lg" alt=""
+          aria-hidden="true"></button>
     </div>
-    <div class="foot-domain">www.pdf99.org</div>
-    <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt="" aria-hidden="true"> English</button>
-  </div>
-  <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14" alt="love"> for PDF</div>
-</footer>
-<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="drawer-body">
+      <div class="mega-section">
+        <p class="mega-section-title">Tools</p>
+        <div class="drawer-grid">
+          <a href="/jpg-to-pdf/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+            PDF</a>
+          <a href="/compress-pdf/" class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm"
+              alt="">Compress PDF</a>
+          <a href="/merge-pdf/" class="drawer-item"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+            PDF</a>
+          <a href="/split-pdf/" class="drawer-item"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+            PDF</a>
+          <a href="/rotate-pdf/" class="drawer-item"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+            PDF</a>
+          <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+              alt="">Watermark</a>
+        </div>
+      </div>
+      <div class="mega-section">
+        <p class="mega-section-title">Info</p>
+        <div class="drawer-links">
+          <a href="/about/" class="drawer-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
+          <a href="/blog/" class="drawer-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+          <a href="/faq/" class="drawer-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+          <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+              alt="">Contact</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="main" id="main-content">
+    <section class="hero">
+      <h1 class="hero-title">PDF99 Blog</h1>
+      <p class="hero-sub">Practical guides and tips for working with PDFs — written clearly, without the jargon.</p>
+    </section>
+    <div class="blog-grid">
+      <a href="/blog/how-to-compress-pdf/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/compress.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Guide</span>
+          <h2 class="blog-card-title">How to Compress a PDF Without Losing Quality</h2>
+          <p class="blog-card-excerpt">Large PDFs slow everything down. Here's how to shrink them properly, without
+            making your document look blurry or broken, using free tools.</p>
+          <div class="blog-card-meta">May 12, 2026 &middot; 5 min read</div>
+        </div>
+      </a>
+
+      <a href="/blog/how-to-compress-pdf-to-specific-size/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/compress.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Guide</span>
+          <h2 class="blog-card-title">How to Compress a PDF to a Specific Size</h2>
+          <p class="blog-card-excerpt">Learn how to compress your PDF to a precise file size, whether it's 50KB, 100KB,
+            or more.</p>
+          <div class="blog-card-meta">June 16, 2026 &middot; 7 min read</div>
+        </div>
+      </a>
+
+      <a href="/blog/jpg-vs-png/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/image.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Explained</span>
+          <h2 class="blog-card-title">JPG vs PNG: Which Format Should You Use?</h2>
+          <p class="blog-card-excerpt">JPG and PNG are everywhere but built for different jobs. A plain-English
+            breakdown of when to use each one — and why it matters for PDFs.</p>
+          <div class="blog-card-meta">May 8, 2026 &middot; 4 min read</div>
+        </div>
+      </a>
+      <a href="/blog/best-free-pdf-tools-2026/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/pdf-file.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Roundup</span>
+          <h2 class="blog-card-title">The Best Free PDF Tools in 2026</h2>
+          <p class="blog-card-excerpt">We tested dozens of free PDF tools so you don't have to. Here's what's actually
+            worth using in 2026, and what to avoid.</p>
+          <div class="blog-card-meta">May 1, 2026 &middot; 6 min read</div>
+        </div>
+      </a>
+      <a href="/blog/what-is-pdf/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/pdf-file.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Explained</span>
+          <h2 class="blog-card-title">What is a PDF File and Why Is It Everywhere?</h2>
+          <p class="blog-card-excerpt">A plain-English explanation of what a PDF is, why it became the universal
+            document format, and when to use it versus other formats.</p>
+          <div class="blog-card-meta">May 20, 2026 &middot; 5 min read</div>
+        </div>
+      </a>
+      <a href="/blog/how-to-merge-pdfs/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/merge.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Guide</span>
+          <h2 class="blog-card-title">How to Merge Multiple PDFs into One File</h2>
+          <p class="blog-card-excerpt">Step-by-step guide to combining multiple PDF files into one document — free,
+            online, without installing any software.</p>
+          <div class="blog-card-meta">May 18, 2026 &middot; 4 min read</div>
+        </div>
+      </a>
+      <a href="/blog/pdf-file-too-large/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/compress.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Guide</span>
+          <h2 class="blog-card-title">My PDF is Too Large — How to Fix It</h2>
+          <p class="blog-card-excerpt">Practical solutions for when a PDF is too large to email, upload or share. Covers
+            all the reasons a PDF gets large and how to fix each one.</p>
+          <div class="blog-card-meta">May 15, 2026 &middot; 5 min read</div>
+        </div>
+      </a>
+      <a href="/blog/how-to-extract-pages/" class="blog-card">
+        <div class="blog-card-img"><img src="/src/icon/split.svg" alt="" aria-hidden="true"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Guide</span>
+          <h2 class="blog-card-title">How to Extract Pages from a PDF</h2>
+          <p class="blog-card-excerpt">How to extract specific pages from a PDF document — step-by-step, using free
+            online tools with no software to install.</p>
+          <div class="blog-card-meta">May 5, 2026 &middot; 4 min read</div>
+        </div>
+      </a>
+    </div>
+  </main>
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <nav class="foot-row" aria-label="Footer links">
+      <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
+    </nav>
+    <div class="foot-row foot-row-3">
+      <div class="socials">
+        <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
+        <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
+        <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+      </div>
+      <div class="foot-domain">www.pdf99.org</div>
+      <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt=""
+          aria-hidden="true"> English</button>
+    </div>
+    <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14"
+        alt="love"> for PDF</div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
+
 </html>
