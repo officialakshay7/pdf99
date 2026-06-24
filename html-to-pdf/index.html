@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#167bbb">
   <title>HTML to PDF Converter — Paste HTML, Get PDF Free | PDF99</title>
-  <meta name="description" content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
+  <meta name="description"
+    content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.pdf99.org/html-to-pdf/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="HTML to PDF Converter — Paste HTML, Get PDF Free | PDF99">
-  <meta property="og:description" content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
+  <meta property="og:description"
+    content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
   <meta property="og:url" content="https://www.pdf99.org/html-to-pdf/">
   <meta property="og:site_name" content="PDF99">
   <meta property="og:image" content="https://www.pdf99.org/src/img/og-html-to-pdf.png">
@@ -19,7 +22,8 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HTML to PDF Converter — Paste HTML, Get PDF Free | PDF99">
-  <meta name="twitter:description" content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
+  <meta name="twitter:description"
+    content="Paste any HTML code and convert it to an A4 PDF document in seconds. Runs entirely in your browser — your content never leaves your device. Completely free.">
   <meta name="twitter:image" content="https://www.pdf99.org/src/img/og-html-to-pdf.png">
   <meta name="twitter:site" content="@pdf99tools">
   <link rel="shortcut icon" href="/src/img/favicon.ico">
@@ -34,195 +38,340 @@
   <script src="/src/js/common.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
   <script src="/src/js/html-to-pdf.js" defer></script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://www.pdf99.org/html-to-pdf/#app","name":"HTML to PDF Converter","url":"https://www.pdf99.org/html-to-pdf/","description":"Convert HTML code to PDF documents online for free, in-browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows, macOS, Linux, Android, iOS","browserRequirements":"Requires JavaScript. Works in all modern browsers.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","@id":"https://www.pdf99.org#org","name":"PDF99"}},{"@type":"HowTo","@id":"https://www.pdf99.org/html-to-pdf/#howto","name":"How to use HTML to PDF Converter","description":"Convert HTML code to PDF documents online for free, in-browser.","step":[{"@type":"HowToStep","position":1,"name":"Paste your HTML","text":"Copy your HTML source code into the text area. Use inline styles for best results."},{"@type":"HowToStep","position":2,"name":"Click Convert","text":"Hit Convert to PDF. jsPDF renders your markup."},{"@type":"HowToStep","position":3,"name":"Download","text":"Click Download to save your PDF."}]},{"@type":"FAQPage","@id":"https://www.pdf99.org/html-to-pdf/#faq","mainEntity":[{"@type":"Question","name":"Can I convert a URL?","acceptedAnswer":{"@type":"Answer","text":"Full URL-to-PDF with rendered CSS and JavaScript requires a server component \u2014 coming soon. For now, paste the page source."}},{"@type":"Question","name":"Does CSS work?","acceptedAnswer":{"@type":"Answer","text":"Inline styles work well. External stylesheets may not fully apply."}},{"@type":"Question","name":"What page size is the output?","acceptedAnswer":{"@type":"Answer","text":"A4 portrait. More sizes coming soon."}},{"@type":"Question","name":"Is my content private?","acceptedAnswer":{"@type":"Answer","text":"Yes \u2014 conversion happens in your browser. Nothing is sent to our servers."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PDF99","item":"https://www.pdf99.org"},{"@type":"ListItem","position":2,"name":"HTML to PDF Converter","item":"https://www.pdf99.org/html-to-pdf/"}]},{"@type":"Organization","@id":"https://www.pdf99.org#org","name":"PDF99","url":"https://www.pdf99.org","logo":{"@type":"ImageObject","url":"https://www.pdf99.org/src/img/logo.svg"}}]}
 </script>
   <script src="/src/js/rating.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header" role="banner">
-  <div class="header-inner">
-    <div class="header-left"><a class="brand" href="/" aria-label="PDF99 home">PDF99</a></div>
-    <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a></div>
-    <div class="header-right">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
-        <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
-        <img id="sunIcon"  src="/src/icon/sun.svg"  class="icon-lg" alt="" aria-hidden="true" style="display:none">
-      </button>
-      <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu" aria-haspopup="true">
-        <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
-        <span>All tools</span>
-        <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
-      </button>
-    </div>
-  </div>
-  <nav class="mega-menu" id="megaMenu" aria-label="All PDF tools" hidden>
-    <div class="mega-menu-inner">
-      <div class="mega-col">
-        <p class="mega-col-title">PDF Tools</p>
-        <div class="mega-links-grid">
-          <a href="/jpg-to-pdf/"    class="mega-link"><img src="/src/icon/image.svg"       class="icon icon-sm" alt="">JPG to PDF</a>
-          <a href="/compress-pdf/"  class="mega-link"><img src="/src/icon/compress.svg"    class="icon icon-sm" alt="">Compress PDF</a>
-          <a href="/merge-pdf/"     class="mega-link"><img src="/src/icon/merge.svg"       class="icon icon-sm" alt="">Merge PDF</a>
-          <a href="/split-pdf/"     class="mega-link"><img src="/src/icon/split.svg"       class="icon icon-sm" alt="">Split PDF</a>
-          <a href="/pdf-to-jpg/"    class="mega-link"><img src="/src/icon/image.svg"       class="icon icon-sm" alt="">PDF to JPG</a>
-          <a href="/html-to-pdf/"   class="mega-link"><img src="/src/icon/html.svg"        class="icon icon-sm" alt="">HTML to PDF</a>
-          <a href="/rotate-pdf/"    class="mega-link"><img src="/src/icon/rotate.svg"      class="icon icon-sm" alt="">Rotate PDF</a>
-          <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg"   class="icon icon-sm" alt="">Watermark PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/edit.svg"        class="icon icon-sm" alt="">Edit PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/sign.svg"        class="icon icon-sm" alt="">Sign PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/protect.svg"     class="icon icon-sm" alt="">Protect PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/unlock.svg"      class="icon icon-sm" alt="">Unlock PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/ocr.svg"         class="icon icon-sm" alt="">PDF OCR</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/compare.svg"     class="icon icon-sm" alt="">Compare PDFs</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/redact.svg"      class="icon icon-sm" alt="">Redact PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/create.svg"      class="icon icon-sm" alt="">Create PDF</a>
-        </div>
-      </div>
-      <div class="mega-col mega-col-narrow">
-        <p class="mega-col-title">Convert to PDF</p>
-        <div class="mega-links-col">
-          <a href="/jpg-to-pdf/"  class="mega-link"><img src="/src/icon/image.svg"  class="icon icon-sm" alt="">JPG to PDF</a>
-          <a href="#"             class="mega-link"><img src="/src/icon/png.svg"    class="icon icon-sm" alt="">PNG to PDF</a>
-          <a href="#"             class="mega-link"><img src="/src/icon/word.svg"   class="icon icon-sm" alt="">Word to PDF</a>
-          <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg"  class="icon icon-sm" alt="">HTML to PDF</a>
-        </div>
-        <p class="mega-col-title" style="margin-top:18px">Convert from PDF</p>
-        <div class="mega-links-col">
-          <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to JPG</a>
-          <a href="#"            class="mega-link"><img src="/src/icon/word.svg"  class="icon icon-sm" alt="">PDF to Word</a>
-        </div>
-      </div>
-      <div class="mega-col mega-col-narrow">
-        <p class="mega-col-title">Company</p>
-        <div class="mega-links-col">
-          <a href="/about/"      class="mega-link"><img src="/src/icon/about.svg"   class="icon icon-sm" alt="">About PDF99</a>
-          <a href="/faq/"        class="mega-link"><img src="/src/icon/faq.svg"     class="icon icon-sm" alt="">FAQ</a>
-          <a href="/blog/"       class="mega-link"><img src="/src/icon/edit.svg"    class="icon icon-sm" alt="">Blog</a>
-          <a href="/contact/"    class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-          <a href="/privacy/"    class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy Policy</a>
-          <a href="/terms/"      class="mega-link"><img src="/src/icon/terms.svg"   class="icon icon-sm" alt="">Terms of Use</a>
-          <a href="/disclaimer/" class="mega-link"><img src="/src/icon/legal.svg"   class="icon icon-sm" alt="">Disclaimer</a>
-        </div>
-      </div>
-    </div>
-    <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
-  </nav>
-</header>
-<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="drawer-header">
-    <span class="drawer-title">PDF99</span>
-    <button class="icon-btn" id="drawerClose" aria-label="Close menu"><img src="/src/icon/close.svg" class="icon-lg" alt="" aria-hidden="true"></button>
-  </div>
-  <div class="drawer-body">
-    <div class="mega-section"><p class="mega-section-title">PDF Tools</p><div class="drawer-grid">
-      <a href="/jpg-to-pdf/"    class="drawer-item"><img src="/src/icon/image.svg"    class="icon icon-sm" alt="">JPG to PDF</a>
-      <a href="/compress-pdf/"  class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm" alt="">Compress PDF</a>
-      <a href="/merge-pdf/"     class="drawer-item"><img src="/src/icon/merge.svg"    class="icon icon-sm" alt="">Merge PDF</a>
-      <a href="/split-pdf/"     class="drawer-item"><img src="/src/icon/split.svg"    class="icon icon-sm" alt="">Split PDF</a>
-      <a href="/pdf-to-jpg/"    class="drawer-item"><img src="/src/icon/image.svg"    class="icon icon-sm" alt="">PDF to JPG</a>
-      <a href="/html-to-pdf/"   class="drawer-item"><img src="/src/icon/html.svg"     class="icon icon-sm" alt="">HTML to PDF</a>
-      <a href="/rotate-pdf/"    class="drawer-item"><img src="/src/icon/rotate.svg"   class="icon icon-sm" alt="">Rotate PDF</a>
-      <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm" alt="">Watermark</a>
-    </div></div>
-    <div class="mega-section"><p class="mega-section-title">Company</p><div class="drawer-links">
-      <a href="/about/"   class="drawer-link"><img src="/src/icon/about.svg"   class="icon icon-sm" alt="">About</a>
-      <a href="/blog/"    class="drawer-link"><img src="/src/icon/edit.svg"    class="icon icon-sm" alt="">Blog</a>
-      <a href="/faq/"     class="drawer-link"><img src="/src/icon/faq.svg"     class="icon icon-sm" alt="">FAQ</a>
-      <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-      <a href="/privacy/" class="drawer-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy</a>
-    </div></div>
-  </div>
-</aside>
-<main class="main" id="main-content">
-<section class="hero" aria-labelledby="hero-h"><h1 class="hero-title" id="hero-h">HTML to PDF</h1><p class="hero-sub">Paste HTML code and convert it to a PDF document — free, instant, and processed entirely in your browser.</p><ul class="badges"><li><span class="check">✓</span> Free</li><li><span class="check">✓</span> In-browser</li><li><span class="check">✓</span> No sign-up</li><li><span class="check">✓</span> A4 output</li></ul></section>
-<div class="dropzone-rating-bar" aria-label="Tool rating">
-    <img src="/src/icon/star.svg" class="icon icon-star" alt="" aria-hidden="true">
-    <span id="rwValue"></span><span id="rwSep" style="display:none"> / 5 &nbsp;</span><span id="rwCount">Loading…</span>
-    <button class="rw-rate-link" id="rwRateBtn" type="button">Rate this tool</button>
-  </div>
-  <div id="toolArea" style="display:block">
-    <div class="thumbs-dropzone" style="padding:20px">
-      <div class="input-group">
-        <label for="optHtml">Paste your HTML content below</label>
-        <textarea class="text-input" id="optHtml" rows="12" placeholder="&lt;h1&gt;Your heading&lt;/h1&gt;&#10;&lt;p&gt;Your content here...&lt;/p&gt;"></textarea>
-      </div>
-    </div>
-    <div class="convert-row" style="margin-top:14px"><button class="convert-btn" id="convertBtn">Convert to PDF</button></div><div id="resultArea" hidden>
-  <div class="result-card" aria-live="polite">
-    <img src="/src/icon/pdf-file.svg" class="icon-result-pdf" alt="PDF ready">
-    <div class="result-info">
-      <div class="result-name" id="resultName">output.pdf</div>
-      <div class="result-meta" id="resultMeta">Ready</div>
-    </div>
-    <div class="result-actions">
-      <button class="download-btn" id="downloadBtn">
-        <img src="/src/icon/download.svg" class="icon icon-white" alt="" aria-hidden="true"> Download
-      </button>
-      <button class="start-over-btn" id="startOverBtn">↺ Start over</button>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-  <div class="ad-section" aria-label="Advertisement">
-  <p class="ad-label">Advertisement</p>
-  <div class="ad-box">
-    <div class="ad-content">
-      <div><div class="ad-brand">PDF99</div><div class="ad-tag">Desktop App</div></div>
-      <img src="/src/img/logo.svg" width="60" height="60" alt="" aria-hidden="true">
-      <a href="#" class="ad-cta">Get it free</a>
-    </div>
-  </div>
-  <p class="ad-foot">Keeping this tool free thanks to ads</p>
-</div>
-<section class="info-section" aria-labelledby="why-h">
-  <h2 class="section-title" id="why-h">Why use PDF99?</h2>
-  <div class="info-grid">
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-easy.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Paste HTML, get PDF</h3><p>Copy any HTML snippet into the text area and click Convert. The tool renders your markup and saves it as an A4 PDF.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-security.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Runs in your browser</h3><p>jsPDF's html() renderer handles conversion locally. Your HTML content never leaves your device.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-file.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Inline styles supported</h3><p>Inline CSS styling is applied in the output. Basic HTML — headings, paragraphs, lists — all render correctly.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-clock.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>A4 portrait output</h3><p>Output is formatted as standard A4 with sensible margins.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-monitor.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Fast conversion</h3><p>Most documents convert in under five seconds.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-upload.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Free, no watermarks</h3><p>No account needed, no branding added to your PDF.</p></div>
-</div>
-</section>
-    <section class="what-section" aria-labelledby="what-h">
-  <h2 class="section-title" id="what-h">What is HTML to PDF conversion?</h2>
-  <div class="what-body"><p>HTML to PDF converts web markup into a printable PDF document. This is used to generate reports and invoices from web applications, save rendered web content for offline reading, convert email templates into shareable PDFs, or produce printed output from any HTML source. PDF99's in-browser converter uses jsPDF, which means your HTML content never leaves your device.</p></div>
-</section>
-<section class="how-section" aria-labelledby="how-h"><h2 class="section-title" id="how-h">How to convert HTML to PDF</h2><div class="steps"><div class="step"><div class="step-num" aria-hidden="true">1</div><h3>Paste your HTML</h3><p>Copy your HTML source code into the text area. Use inline styles for best results.</p></div><div class="step"><div class="step-num" aria-hidden="true">2</div><h3>Click Convert</h3><p>Hit Convert to PDF. jsPDF renders your markup.</p></div><div class="step"><div class="step-num" aria-hidden="true">3</div><h3>Download</h3><p>Click Download to save your PDF.</p></div></div></section>
-<section class="qa-section" aria-labelledby="faq-h"><h2 class="section-title" id="faq-h">Frequently asked questions</h2>
-<div class="qa-item"><button class="qa-q" aria-expanded="true" aria-controls="qa0"><span>Can I convert a URL?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa0"><p>Full URL-to-PDF with rendered CSS and JavaScript requires a server component — coming soon. For now, paste the page source.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa1"><span>Does CSS work?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa1" hidden><p>Inline styles work well. External stylesheets may not fully apply.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa2"><span>What page size is the output?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa2" hidden><p>A4 portrait. More sizes coming soon.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa3"><span>Is my content private?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa3" hidden><p>Yes — conversion happens in your browser. Nothing is sent to our servers.</p></div></div>
-</section>
-  <button class="rating-submit" type="button" style="display:none"><img src="/src/icon/star.svg" class="icon icon-white" alt="" aria-hidden="true"> Submit rating</button>
-</div>
 
-<section class="more-tools-section" aria-labelledby="tools-h"><h2 class="section-title" id="tools-h">More free PDF tools</h2><div class="tools-grid" id="toolsGrid" role="list"></div><div class="all-tools-wrap"><a href="/" class="all-tools-cta"><img src="/src/icon/apps.svg" class="icon icon-white" alt="" aria-hidden="true"> View all tools</a></div></section>
-</main>
-<footer class="site-footer" id="footer" role="contentinfo">
-  <nav class="foot-row" aria-label="Footer links">
-    <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
-    <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
-  </nav>
-  <div class="foot-row foot-row-3">
-    <div class="socials">
-      <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
-      <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank" rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
-      <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left"><a class="brand" href="/" aria-label="PDF99 home">PDF99</a></div>
+      <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
+          <img id="sunIcon" src="/src/icon/sun.svg" class="icon-lg" alt="" aria-hidden="true" style="display:none">
+        </button>
+        <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu"
+          aria-haspopup="true">
+          <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
+          <span>All tools</span>
+          <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
+        </button>
+      </div>
     </div>
-    <div class="foot-domain">www.pdf99.org</div>
-    <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt="" aria-hidden="true"> English</button>
-  </div>
-  <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14" alt="love"> for PDF</div>
-</footer>
-<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <nav class="mega-menu" id="megaMenu" aria-label="All PDF tools" hidden>
+      <div class="mega-menu-inner">
+        <div class="mega-col">
+          <p class="mega-col-title">PDF Tools</p>
+          <div class="mega-links-grid">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+              PDF</a>
+            <a href="/compress-pdf/" class="mega-link"><img src="/src/icon/compress.svg" class="icon icon-sm"
+                alt="">Compress PDF</a>
+            <a href="/merge-pdf/" class="mega-link"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+              PDF</a>
+            <a href="/split-pdf/" class="mega-link"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+              PDF</a>
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+              JPG</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+              PDF</a>
+            <a href="/rotate-pdf/" class="mega-link"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+              PDF</a>
+            <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+                alt="">Watermark PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Edit PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/sign.svg" class="icon icon-sm" alt="">Sign PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/protect.svg" class="icon icon-sm" alt="">Protect PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/unlock.svg" class="icon icon-sm" alt="">Unlock PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/ocr.svg" class="icon icon-sm" alt="">PDF OCR</a>
+            <a href="#" class="mega-link"><img src="/src/icon/compare.svg" class="icon icon-sm" alt="">Compare PDFs</a>
+            <a href="#" class="mega-link"><img src="/src/icon/redact.svg" class="icon icon-sm" alt="">Redact PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/create.svg" class="icon icon-sm" alt="">Create PDF</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Convert to PDF</p>
+          <div class="mega-links-col">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+              PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/png.svg" class="icon icon-sm" alt="">PNG to PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/word.svg" class="icon icon-sm" alt="">Word to PDF</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+              PDF</a>
+          </div>
+          <p class="mega-col-title" style="margin-top:18px">Convert from PDF</p>
+          <div class="mega-links-col">
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+              JPG</a>
+            <a href="#" class="mega-link"><img src="/src/icon/word.svg" class="icon icon-sm" alt="">PDF to Word</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Company</p>
+          <div class="mega-links-col">
+            <a href="/about/" class="mega-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About
+              PDF99</a>
+            <a href="/faq/" class="mega-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+            <a href="/blog/" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+            <a href="/contact/" class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+                alt="">Contact</a>
+            <a href="/privacy/" class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy
+              Policy</a>
+            <a href="/terms/" class="mega-link"><img src="/src/icon/terms.svg" class="icon icon-sm" alt="">Terms of
+              Use</a>
+            <a href="/disclaimer/" class="mega-link"><img src="/src/icon/legal.svg" class="icon icon-sm"
+                alt="">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+      <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
+    </nav>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span class="drawer-title">PDF99</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close menu"><img src="/src/icon/close.svg" class="icon-lg"
+          alt="" aria-hidden="true"></button>
+    </div>
+    <div class="drawer-body">
+      <div class="mega-section">
+        <p class="mega-section-title">PDF Tools</p>
+        <div class="drawer-grid">
+          <a href="/jpg-to-pdf/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+            PDF</a>
+          <a href="/compress-pdf/" class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm"
+              alt="">Compress PDF</a>
+          <a href="/merge-pdf/" class="drawer-item"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+            PDF</a>
+          <a href="/split-pdf/" class="drawer-item"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+            PDF</a>
+          <a href="/pdf-to-jpg/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+            JPG</a>
+          <a href="/html-to-pdf/" class="drawer-item"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+            PDF</a>
+          <a href="/rotate-pdf/" class="drawer-item"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+            PDF</a>
+          <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+              alt="">Watermark</a>
+        </div>
+      </div>
+      <div class="mega-section">
+        <p class="mega-section-title">Company</p>
+        <div class="drawer-links">
+          <a href="/about/" class="drawer-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
+          <a href="/blog/" class="drawer-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+          <a href="/faq/" class="drawer-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+          <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+              alt="">Contact</a>
+          <a href="/privacy/" class="drawer-link"><img src="/src/icon/privacy.svg" class="icon icon-sm"
+              alt="">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="main" id="main-content">
+    <section class="hero" aria-labelledby="hero-h">
+      <h1 class="hero-title" id="hero-h">HTML to PDF</h1>
+      <p class="hero-sub">Paste HTML code and convert it to a PDF document — free, instant, and processed entirely in
+        your browser.</p>
+      <ul class="badges">
+        <li><span class="check">✓</span> Free</li>
+        <li><span class="check">✓</span> In-browser</li>
+        <li><span class="check">✓</span> No sign-up</li>
+        <li><span class="check">✓</span> A4 output</li>
+      </ul>
+    </section>
+    <div class="dropzone-rating-bar" aria-label="Tool rating">
+      <img src="/src/icon/star.svg" class="icon icon-star" alt="" aria-hidden="true">
+      <span id="rwValue"></span><span id="rwSep" style="display:none"> / 5 &nbsp;</span><span
+        id="rwCount">Loading…</span>
+      <button class="rw-rate-link" id="rwRateBtn" type="button">Rate this tool</button>
+    </div>
+    <div id="toolArea" style="display:block">
+      <div class="thumbs-dropzone" style="padding:20px">
+        <div class="input-group">
+          <label for="optHtml">Paste your HTML content below</label>
+          <textarea class="text-input" id="optHtml" rows="12"
+            placeholder="&lt;h1&gt;Your heading&lt;/h1&gt;&#10;&lt;p&gt;Your content here...&lt;/p&gt;"></textarea>
+        </div>
+      </div>
+      <div class="convert-row" style="margin-top:14px"><button class="convert-btn" id="convertBtn">Convert to
+          PDF</button></div>
+      <div id="resultArea" hidden>
+        <div class="result-card" aria-live="polite">
+          <img src="/src/icon/pdf-file.svg" class="icon-result-pdf" alt="PDF ready">
+          <div class="result-info">
+            <div class="result-name" id="resultName">output.pdf</div>
+            <div class="result-meta" id="resultMeta">Ready</div>
+          </div>
+          <div class="result-actions">
+            <button class="download-btn" id="downloadBtn">
+              <img src="/src/icon/download.svg" class="icon icon-white" alt="" aria-hidden="true"> Download
+            </button>
+            <button class="start-over-btn" id="startOverBtn">↺ Start over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="ad-section" aria-label="Advertisement">
+      <p class="ad-label">Advertisement</p>
+      <div class="ad-box">
+        <div class="ad-content">
+          <div>
+            <div class="ad-brand">PDF99</div>
+            <div class="ad-tag">Desktop App</div>
+          </div>
+          <img src="/src/img/logo.svg" width="60" height="60" alt="" aria-hidden="true">
+          <a href="#" class="ad-cta">Get it free</a>
+        </div>
+      </div>
+      <p class="ad-foot">Keeping this tool free thanks to ads</p>
+    </div>
+    <section class="info-section" aria-labelledby="why-h">
+      <h2 class="section-title" id="why-h">Why use PDF99?</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-easy.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Paste HTML, get PDF</h3>
+          <p>Copy any HTML snippet into the text area and click Convert. The tool renders your markup and saves it as an
+            A4 PDF.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-security.svg" width="38" height="38" alt=""
+              aria-hidden="true"></div>
+          <h3>Runs in your browser</h3>
+          <p>jsPDF's html() renderer handles conversion locally. Your HTML content never leaves your device.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-file.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Inline styles supported</h3>
+          <p>Inline CSS styling is applied in the output. Basic HTML — headings, paragraphs, lists — all render
+            correctly.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-clock.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>A4 portrait output</h3>
+          <p>Output is formatted as standard A4 with sensible margins.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-monitor.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Fast conversion</h3>
+          <p>Most documents convert in under five seconds.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-upload.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Free, no watermarks</h3>
+          <p>No account needed, no branding added to your PDF.</p>
+        </div>
+      </div>
+    </section>
+    <section class="what-section" aria-labelledby="what-h">
+      <h2 class="section-title" id="what-h">What is HTML to PDF conversion?</h2>
+      <div class="what-body">
+        <p>HTML to PDF converts web markup into a printable PDF document. This is used to generate reports and invoices
+          from web applications, save rendered web content for offline reading, convert email templates into shareable
+          PDFs, or produce printed output from any HTML source. PDF99's in-browser converter uses jsPDF, which means
+          your HTML content never leaves your device.</p>
+      </div>
+    </section>
+    <section class="how-section" aria-labelledby="how-h">
+      <h2 class="section-title" id="how-h">How to convert HTML to PDF</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Paste your HTML</h3>
+          <p>Copy your HTML source code into the text area. Use inline styles for best results.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Click Convert</h3>
+          <p>Hit Convert to PDF. jsPDF renders your markup.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Download</h3>
+          <p>Click Download to save your PDF.</p>
+        </div>
+      </div>
+    </section>
+    <section class="qa-section" aria-labelledby="faq-h">
+      <h2 class="section-title" id="faq-h">Frequently asked questions</h2>
+      <div class="qa-item"><button class="qa-q" aria-expanded="true" aria-controls="qa0"><span>Can I convert a
+            URL?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button>
+        <div class="qa-a" id="qa0">
+          <p>Full URL-to-PDF with rendered CSS and JavaScript requires a server component — coming soon. For now, paste
+            the page source.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa1"><span>Does CSS
+            work?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button>
+        <div class="qa-a" id="qa1" hidden>
+          <p>Inline styles work well. External stylesheets may not fully apply.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa2"><span>What page
+            size is the output?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt=""
+            aria-hidden="true"></button>
+        <div class="qa-a" id="qa2" hidden>
+          <p>A4 portrait. More sizes coming soon.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa3"><span>Is my
+            content private?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt=""
+            aria-hidden="true"></button>
+        <div class="qa-a" id="qa3" hidden>
+          <p>Yes — conversion happens in your browser. Nothing is sent to our servers.</p>
+        </div>
+      </div>
+    </section>
+    <button class="rating-submit" type="button" style="display:none"><img src="/src/icon/star.svg"
+        class="icon icon-white" alt="" aria-hidden="true"> Submit rating</button>
+    </div>
+
+    <section class="more-tools-section" aria-labelledby="tools-h">
+      <h2 class="section-title" id="tools-h">More free PDF tools</h2>
+      <div class="tools-grid" id="toolsGrid" role="list"></div>
+      <div class="all-tools-wrap"><a href="/" class="all-tools-cta"><img src="/src/icon/apps.svg"
+            class="icon icon-white" alt="" aria-hidden="true"> View all tools</a></div>
+    </section>
+  </main>
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <nav class="foot-row" aria-label="Footer links">
+      <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
+    </nav>
+    <div class="foot-row foot-row-3">
+      <div class="socials">
+        <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
+        <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
+        <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+      </div>
+      <div class="foot-domain">www.pdf99.org</div>
+      <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt=""
+          aria-hidden="true"> English</button>
+    </div>
+    <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14"
+        alt="love"> for PDF</div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
+
 </html>

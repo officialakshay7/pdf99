@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#167bbb">
   <title>Merge PDF Files Online Free — Combine PDFs Instantly | PDF99</title>
-  <meta name="description" content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
+  <meta name="description"
+    content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.pdf99.org/merge-pdf/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Merge PDF Files Online Free — Combine PDFs Instantly | PDF99">
-  <meta property="og:description" content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
+  <meta property="og:description"
+    content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
   <meta property="og:url" content="https://www.pdf99.org/merge-pdf/">
   <meta property="og:site_name" content="PDF99">
   <meta property="og:image" content="https://www.pdf99.org/src/img/og-merge-pdf.png">
@@ -19,7 +22,8 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Merge PDF Files Online Free — Combine PDFs Instantly | PDF99">
-  <meta name="twitter:description" content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
+  <meta name="twitter:description"
+    content="Combine two or more PDF documents into a single file in seconds. Drag thumbnails to set the order, then merge. Free, no watermarks, works on every device.">
   <meta name="twitter:image" content="https://www.pdf99.org/src/img/og-merge-pdf.png">
   <meta name="twitter:site" content="@pdf99tools">
   <link rel="shortcut icon" href="/src/img/favicon.ico">
@@ -34,226 +38,370 @@
   <script src="/src/js/common.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
   <script src="/src/js/merge-pdf.js" defer></script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://www.pdf99.org/merge-pdf/#app","name":"Merge PDF Files","url":"https://www.pdf99.org/merge-pdf/","description":"Combine multiple PDF documents into one file online for free.","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows, macOS, Linux, Android, iOS","browserRequirements":"Requires JavaScript. Works in all modern browsers.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","@id":"https://www.pdf99.org#org","name":"PDF99"}},{"@type":"HowTo","@id":"https://www.pdf99.org/merge-pdf/#howto","name":"How to use Merge PDF Files","description":"Combine multiple PDF documents into one file online for free.","step":[{"@type":"HowToStep","position":1,"name":"Upload your PDFs","text":"Add two or more PDF files using the picker or drag and drop."},{"@type":"HowToStep","position":2,"name":"Check the order","text":"Files merge in the order shown in the thumbnail area."},{"@type":"HowToStep","position":3,"name":"Merge and download","text":"Click Merge PDFs and download your combined document."}]},{"@type":"FAQPage","@id":"https://www.pdf99.org/merge-pdf/#faq","mainEntity":[{"@type":"Question","name":"How many PDFs can I merge?","acceptedAnswer":{"@type":"Answer","text":"No limit."}},{"@type":"Question","name":"Do merged PDFs have watermarks?","acceptedAnswer":{"@type":"Answer","text":"Never."}},{"@type":"Question","name":"Can I merge password-protected PDFs?","acceptedAnswer":{"@type":"Answer","text":"Not directly \u2014 use Unlock PDF (coming soon) first."}},{"@type":"Question","name":"Is my data private?","acceptedAnswer":{"@type":"Answer","text":"Yes. Merging runs in your browser using PDF-lib."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PDF99","item":"https://www.pdf99.org"},{"@type":"ListItem","position":2,"name":"Merge PDF Files","item":"https://www.pdf99.org/merge-pdf/"}]},{"@type":"Organization","@id":"https://www.pdf99.org#org","name":"PDF99","url":"https://www.pdf99.org","logo":{"@type":"ImageObject","url":"https://www.pdf99.org/src/img/logo.svg"}}]}
 </script>
   <script src="/src/js/rating.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header" role="banner">
-  <div class="header-inner">
-    <div class="header-left"><a class="brand" href="/" aria-label="PDF99 home">PDF99</a></div>
-    <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a></div>
-    <div class="header-right">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
-        <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
-        <img id="sunIcon"  src="/src/icon/sun.svg"  class="icon-lg" alt="" aria-hidden="true" style="display:none">
-      </button>
-      <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu" aria-haspopup="true">
-        <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
-        <span>All tools</span>
-        <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
-      </button>
-    </div>
-  </div>
-  <nav class="mega-menu" id="megaMenu" aria-label="All PDF tools" hidden>
-    <div class="mega-menu-inner">
-      <div class="mega-col">
-        <p class="mega-col-title">PDF Tools</p>
-        <div class="mega-links-grid">
-          <a href="/jpg-to-pdf/"    class="mega-link"><img src="/src/icon/image.svg"       class="icon icon-sm" alt="">JPG to PDF</a>
-          <a href="/compress-pdf/"  class="mega-link"><img src="/src/icon/compress.svg"    class="icon icon-sm" alt="">Compress PDF</a>
-          <a href="/merge-pdf/"     class="mega-link"><img src="/src/icon/merge.svg"       class="icon icon-sm" alt="">Merge PDF</a>
-          <a href="/split-pdf/"     class="mega-link"><img src="/src/icon/split.svg"       class="icon icon-sm" alt="">Split PDF</a>
-          <a href="/pdf-to-jpg/"    class="mega-link"><img src="/src/icon/image.svg"       class="icon icon-sm" alt="">PDF to JPG</a>
-          <a href="/html-to-pdf/"   class="mega-link"><img src="/src/icon/html.svg"        class="icon icon-sm" alt="">HTML to PDF</a>
-          <a href="/rotate-pdf/"    class="mega-link"><img src="/src/icon/rotate.svg"      class="icon icon-sm" alt="">Rotate PDF</a>
-          <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg"   class="icon icon-sm" alt="">Watermark PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/edit.svg"        class="icon icon-sm" alt="">Edit PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/sign.svg"        class="icon icon-sm" alt="">Sign PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/protect.svg"     class="icon icon-sm" alt="">Protect PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/unlock.svg"      class="icon icon-sm" alt="">Unlock PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/ocr.svg"         class="icon icon-sm" alt="">PDF OCR</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/compare.svg"     class="icon icon-sm" alt="">Compare PDFs</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/redact.svg"      class="icon icon-sm" alt="">Redact PDF</a>
-          <a href="#"               class="mega-link"><img src="/src/icon/create.svg"      class="icon icon-sm" alt="">Create PDF</a>
-        </div>
-      </div>
-      <div class="mega-col mega-col-narrow">
-        <p class="mega-col-title">Convert to PDF</p>
-        <div class="mega-links-col">
-          <a href="/jpg-to-pdf/"  class="mega-link"><img src="/src/icon/image.svg"  class="icon icon-sm" alt="">JPG to PDF</a>
-          <a href="#"             class="mega-link"><img src="/src/icon/png.svg"    class="icon icon-sm" alt="">PNG to PDF</a>
-          <a href="#"             class="mega-link"><img src="/src/icon/word.svg"   class="icon icon-sm" alt="">Word to PDF</a>
-          <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg"  class="icon icon-sm" alt="">HTML to PDF</a>
-        </div>
-        <p class="mega-col-title" style="margin-top:18px">Convert from PDF</p>
-        <div class="mega-links-col">
-          <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to JPG</a>
-          <a href="#"            class="mega-link"><img src="/src/icon/word.svg"  class="icon icon-sm" alt="">PDF to Word</a>
-        </div>
-      </div>
-      <div class="mega-col mega-col-narrow">
-        <p class="mega-col-title">Company</p>
-        <div class="mega-links-col">
-          <a href="/about/"      class="mega-link"><img src="/src/icon/about.svg"   class="icon icon-sm" alt="">About PDF99</a>
-          <a href="/faq/"        class="mega-link"><img src="/src/icon/faq.svg"     class="icon icon-sm" alt="">FAQ</a>
-          <a href="/blog/"       class="mega-link"><img src="/src/icon/edit.svg"    class="icon icon-sm" alt="">Blog</a>
-          <a href="/contact/"    class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-          <a href="/privacy/"    class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy Policy</a>
-          <a href="/terms/"      class="mega-link"><img src="/src/icon/terms.svg"   class="icon icon-sm" alt="">Terms of Use</a>
-          <a href="/disclaimer/" class="mega-link"><img src="/src/icon/legal.svg"   class="icon icon-sm" alt="">Disclaimer</a>
-        </div>
-      </div>
-    </div>
-    <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
-  </nav>
-</header>
-<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="drawer-header">
-    <span class="drawer-title">PDF99</span>
-    <button class="icon-btn" id="drawerClose" aria-label="Close menu"><img src="/src/icon/close.svg" class="icon-lg" alt="" aria-hidden="true"></button>
-  </div>
-  <div class="drawer-body">
-    <div class="mega-section"><p class="mega-section-title">PDF Tools</p><div class="drawer-grid">
-      <a href="/jpg-to-pdf/"    class="drawer-item"><img src="/src/icon/image.svg"    class="icon icon-sm" alt="">JPG to PDF</a>
-      <a href="/compress-pdf/"  class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm" alt="">Compress PDF</a>
-      <a href="/merge-pdf/"     class="drawer-item"><img src="/src/icon/merge.svg"    class="icon icon-sm" alt="">Merge PDF</a>
-      <a href="/split-pdf/"     class="drawer-item"><img src="/src/icon/split.svg"    class="icon icon-sm" alt="">Split PDF</a>
-      <a href="/pdf-to-jpg/"    class="drawer-item"><img src="/src/icon/image.svg"    class="icon icon-sm" alt="">PDF to JPG</a>
-      <a href="/html-to-pdf/"   class="drawer-item"><img src="/src/icon/html.svg"     class="icon icon-sm" alt="">HTML to PDF</a>
-      <a href="/rotate-pdf/"    class="drawer-item"><img src="/src/icon/rotate.svg"   class="icon icon-sm" alt="">Rotate PDF</a>
-      <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm" alt="">Watermark</a>
-    </div></div>
-    <div class="mega-section"><p class="mega-section-title">Company</p><div class="drawer-links">
-      <a href="/about/"   class="drawer-link"><img src="/src/icon/about.svg"   class="icon icon-sm" alt="">About</a>
-      <a href="/blog/"    class="drawer-link"><img src="/src/icon/edit.svg"    class="icon icon-sm" alt="">Blog</a>
-      <a href="/faq/"     class="drawer-link"><img src="/src/icon/faq.svg"     class="icon icon-sm" alt="">FAQ</a>
-      <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm" alt="">Contact</a>
-      <a href="/privacy/" class="drawer-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy</a>
-    </div></div>
-  </div>
-</aside>
-<main class="main" id="main-content">
-<section class="hero" aria-labelledby="hero-h"><h1 class="hero-title" id="hero-h">Merge PDF Files</h1><p class="hero-sub">Combine multiple PDF documents into one file online — free, fast, and with full control over page order.</p><ul class="badges"><li><span class="check">✓</span> Free</li><li><span class="check">✓</span> No watermarks</li><li><span class="check">✓</span> Any number of files</li><li><span class="check">✓</span> Secure</li></ul></section>
-<div id="dropzoneWrap">
-  <div class="dropzone" id="dropzone" role="region" aria-label="File upload area">
-    <div class="dropzone-top">
-      <div class="protection">
-        <img src="/src/icon/shield.svg" class="icon icon-green" alt="" aria-hidden="true">
-        <span>File protection active</span>
-        <button class="info-i" id="protectionInfo" aria-label="About file security">i</button>
-      </div>
-    </div>
-    <div class="dropzone-center">
-      <button class="choose-btn" id="chooseBtn">
-        <img src="/src/icon/upload.svg" class="icon-lg icon-white" alt="" aria-hidden="true"> Choose PDF files
-      </button>
-      <p class="drop-hint">or drag and drop multiple PDFs here</p>
-      <p class="terms">By using this tool you agree to our <a href="/terms/">terms of use</a></p>
-    </div>
-    <input type="file" id="fileInput" accept="application/pdf,.pdf" multiple hidden tabindex="-1" aria-hidden="true">
-    <div class="dropzone-bottom">
-      <div class="rating" id="dropzoneRating" aria-label="Tool rating">
-        <img src="/src/icon/star.svg" class="icon icon-star" alt="" aria-hidden="true">
-        <span id="rwValue"></span><span id="rwSep" style="display:none"> / 5 &nbsp;</span><span id="rwCount">Loading…</span>
-        <button class="rw-rate-link" id="rwRateBtn" type="button">Rate this tool</button>
-      </div>
-    </div>
-  </div>
-</div>
-  <div id="toolArea" hidden>
-    <div class="thumbs-dropzone">
-      <p class="tool-area-title">Drag thumbnails to reorder · click to select</p>
-      
-      <div class="thumbs" id="thumbs" role="list"></div>
-      <div class="thumbs-footer">
-        <div class="thumbs-sort-icons">
-          <button class="thumb-ctrl-btn" id="sortAzBtn" aria-label="Sort A to Z" title="Sort A→Z"><img src="/src/icon/sort-az.svg" width="18" height="18" alt="" aria-hidden="true"></button>
-          <button class="thumb-ctrl-btn" id="sortZaBtn" aria-label="Sort Z to A" title="Sort Z→A"><img src="/src/icon/sort-za.svg" width="18" height="18" alt="" aria-hidden="true"></button>
-        </div>
-        <div class="thumbs-cloud-icons">
-          <button class="thumb-ctrl-btn" id="addMoreBtn" aria-label="Add more files" title="Add more"><img src="/src/icon/upload.svg" width="18" height="18" alt="" aria-hidden="true"></button>
-        </div>
-      </div>
-    </div>
-    <div class="convert-row"><button class="convert-btn" id="convertBtn">Merge PDFs</button></div>
-    <p id="convertStatus" style="text-align:center;color:var(--text-muted);font-size:14px;margin-top:8px;min-height:20px"></p>
-    <div id="resultArea" hidden>
-  <div class="result-card" aria-live="polite">
-    <img src="/src/icon/pdf-file.svg" class="icon-result-pdf" alt="PDF ready">
-    <div class="result-info">
-      <div class="result-name" id="resultName">output.pdf</div>
-      <div class="result-meta" id="resultMeta">Ready</div>
-    </div>
-    <div class="result-actions">
-      <button class="download-btn" id="downloadBtn">
-        <img src="/src/icon/download.svg" class="icon icon-white" alt="" aria-hidden="true"> Download
-      </button>
-      <button class="start-over-btn" id="startOverBtn">↺ Start over</button>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-  <div class="ad-section" aria-label="Advertisement">
-  <p class="ad-label">Advertisement</p>
-  <div class="ad-box">
-    <div class="ad-content">
-      <div><div class="ad-brand">PDF99</div><div class="ad-tag">Desktop App</div></div>
-      <img src="/src/img/logo.svg" width="60" height="60" alt="" aria-hidden="true">
-      <a href="#" class="ad-cta">Get it free</a>
-    </div>
-  </div>
-  <p class="ad-foot">Keeping this tool free thanks to ads</p>
-</div>
-<section class="info-section" aria-labelledby="why-h">
-  <h2 class="section-title" id="why-h">Why use PDF99?</h2>
-  <div class="info-grid">
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-easy.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Combine any number of files</h3><p>Add as many PDFs as you need — no limit on documents or total page count.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-file.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Control the order</h3><p>Files are merged in the order shown. Add them in sequence from the start.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-security.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Runs in your browser</h3><p>PDF-lib merges documents locally. Your files aren't uploaded to a remote server.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-clock.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Preserves original quality</h3><p>Pages are copied exactly — no re-rendering, no quality loss.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-monitor.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Handles different page sizes</h3><p>Mixed page dimensions and orientations are preserved exactly.</p></div>
-<div class="info-card"><div class="info-icon"><img src="/src/icon/info-upload.svg" width="38" height="38" alt="" aria-hidden="true"></div><h3>Free, no watermarks</h3><p>No limits, no branding added to your output.</p></div>
-</div>
-</section>
-    <section class="what-section" aria-labelledby="what-h">
-  <h2 class="section-title" id="what-h">What does merging PDFs mean?</h2>
-  <div class="what-body"><p>Merging combines multiple separate PDF files into a single document. Each source PDF contributes its pages to the output in the order you specify. The pages are not re-rendered or altered — they are copied exactly. This is used to combine separate scanned pages into one document, combine report sections from different authors, or consolidate multiple invoices into one submission.</p></div>
-</section>
-<section class="how-section" aria-labelledby="how-h"><h2 class="section-title" id="how-h">How to merge PDF files</h2><div class="steps"><div class="step"><div class="step-num" aria-hidden="true">1</div><h3>Upload your PDFs</h3><p>Add two or more PDF files using the picker or drag and drop.</p></div><div class="step"><div class="step-num" aria-hidden="true">2</div><h3>Check the order</h3><p>Files merge in the order shown in the thumbnail area.</p></div><div class="step"><div class="step-num" aria-hidden="true">3</div><h3>Merge and download</h3><p>Click Merge PDFs and download your combined document.</p></div></div></section>
-<section class="qa-section" aria-labelledby="faq-h"><h2 class="section-title" id="faq-h">Frequently asked questions</h2>
-<div class="qa-item"><button class="qa-q" aria-expanded="true" aria-controls="qa0"><span>How many PDFs can I merge?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa0"><p>No limit.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa1"><span>Do merged PDFs have watermarks?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa1" hidden><p>Never.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa2"><span>Can I merge password-protected PDFs?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa2" hidden><p>Not directly — use Unlock PDF (coming soon) first.</p></div></div>
-<div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa3"><span>Is my data private?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button><div class="qa-a" id="qa3" hidden><p>Yes. Merging runs in your browser using PDF-lib.</p></div></div>
-</section>
-  <button class="rating-submit" type="button" style="display:none"><img src="/src/icon/star.svg" class="icon icon-white" alt="" aria-hidden="true"> Submit rating</button>
-</div>
 
-<section class="more-tools-section" aria-labelledby="tools-h"><h2 class="section-title" id="tools-h">More free PDF tools</h2><div class="tools-grid" id="toolsGrid" role="list"></div><div class="all-tools-wrap"><a href="/" class="all-tools-cta"><img src="/src/icon/apps.svg" class="icon icon-white" alt="" aria-hidden="true"> View all tools</a></div></section>
-</main>
-<footer class="site-footer" id="footer" role="contentinfo">
-  <nav class="foot-row" aria-label="Footer links">
-    <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
-    <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
-  </nav>
-  <div class="foot-row foot-row-3">
-    <div class="socials">
-      <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
-      <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank" rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
-      <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left"><a class="brand" href="/" aria-label="PDF99 home">PDF99</a></div>
+      <div class="header-center"><a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo"></a>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true">
+          <img id="sunIcon" src="/src/icon/sun.svg" class="icon-lg" alt="" aria-hidden="true" style="display:none">
+        </button>
+        <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu"
+          aria-haspopup="true">
+          <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true">
+          <span>All tools</span>
+          <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true">
+        </button>
+      </div>
     </div>
-    <div class="foot-domain">www.pdf99.org</div>
-    <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt="" aria-hidden="true"> English</button>
-  </div>
-  <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14" alt="love"> for PDF</div>
-</footer>
-<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <nav class="mega-menu" id="megaMenu" aria-label="All PDF tools" hidden>
+      <div class="mega-menu-inner">
+        <div class="mega-col">
+          <p class="mega-col-title">PDF Tools</p>
+          <div class="mega-links-grid">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+              PDF</a>
+            <a href="/compress-pdf/" class="mega-link"><img src="/src/icon/compress.svg" class="icon icon-sm"
+                alt="">Compress PDF</a>
+            <a href="/merge-pdf/" class="mega-link"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+              PDF</a>
+            <a href="/split-pdf/" class="mega-link"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+              PDF</a>
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+              JPG</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+              PDF</a>
+            <a href="/rotate-pdf/" class="mega-link"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+              PDF</a>
+            <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+                alt="">Watermark PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Edit PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/sign.svg" class="icon icon-sm" alt="">Sign PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/protect.svg" class="icon icon-sm" alt="">Protect PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/unlock.svg" class="icon icon-sm" alt="">Unlock PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/ocr.svg" class="icon icon-sm" alt="">PDF OCR</a>
+            <a href="#" class="mega-link"><img src="/src/icon/compare.svg" class="icon icon-sm" alt="">Compare PDFs</a>
+            <a href="#" class="mega-link"><img src="/src/icon/redact.svg" class="icon icon-sm" alt="">Redact PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/create.svg" class="icon icon-sm" alt="">Create PDF</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Convert to PDF</p>
+          <div class="mega-links-col">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+              PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/png.svg" class="icon icon-sm" alt="">PNG to PDF</a>
+            <a href="#" class="mega-link"><img src="/src/icon/word.svg" class="icon icon-sm" alt="">Word to PDF</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+              PDF</a>
+          </div>
+          <p class="mega-col-title" style="margin-top:18px">Convert from PDF</p>
+          <div class="mega-links-col">
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+              JPG</a>
+            <a href="#" class="mega-link"><img src="/src/icon/word.svg" class="icon icon-sm" alt="">PDF to Word</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Company</p>
+          <div class="mega-links-col">
+            <a href="/about/" class="mega-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About
+              PDF99</a>
+            <a href="/faq/" class="mega-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+            <a href="/blog/" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+            <a href="/contact/" class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+                alt="">Contact</a>
+            <a href="/privacy/" class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm" alt="">Privacy
+              Policy</a>
+            <a href="/terms/" class="mega-link"><img src="/src/icon/terms.svg" class="icon icon-sm" alt="">Terms of
+              Use</a>
+            <a href="/disclaimer/" class="mega-link"><img src="/src/icon/legal.svg" class="icon icon-sm"
+                alt="">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+      <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
+    </nav>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <span class="drawer-title">PDF99</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close menu"><img src="/src/icon/close.svg" class="icon-lg"
+          alt="" aria-hidden="true"></button>
+    </div>
+    <div class="drawer-body">
+      <div class="mega-section">
+        <p class="mega-section-title">PDF Tools</p>
+        <div class="drawer-grid">
+          <a href="/jpg-to-pdf/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">JPG to
+            PDF</a>
+          <a href="/compress-pdf/" class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm"
+              alt="">Compress PDF</a>
+          <a href="/merge-pdf/" class="drawer-item"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="">Merge
+            PDF</a>
+          <a href="/split-pdf/" class="drawer-item"><img src="/src/icon/split.svg" class="icon icon-sm" alt="">Split
+            PDF</a>
+          <a href="/pdf-to-jpg/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="">PDF to
+            JPG</a>
+          <a href="/html-to-pdf/" class="drawer-item"><img src="/src/icon/html.svg" class="icon icon-sm" alt="">HTML to
+            PDF</a>
+          <a href="/rotate-pdf/" class="drawer-item"><img src="/src/icon/rotate.svg" class="icon icon-sm" alt="">Rotate
+            PDF</a>
+          <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+              alt="">Watermark</a>
+        </div>
+      </div>
+      <div class="mega-section">
+        <p class="mega-section-title">Company</p>
+        <div class="drawer-links">
+          <a href="/about/" class="drawer-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="">About</a>
+          <a href="/blog/" class="drawer-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="">Blog</a>
+          <a href="/faq/" class="drawer-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="">FAQ</a>
+          <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+              alt="">Contact</a>
+          <a href="/privacy/" class="drawer-link"><img src="/src/icon/privacy.svg" class="icon icon-sm"
+              alt="">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="main" id="main-content">
+    <section class="hero" aria-labelledby="hero-h">
+      <h1 class="hero-title" id="hero-h">Merge PDF Files</h1>
+      <p class="hero-sub">Combine multiple PDF documents into one file online — free, fast, and with full control over
+        page order.</p>
+      <ul class="badges">
+        <li><span class="check">✓</span> Free</li>
+        <li><span class="check">✓</span> No watermarks</li>
+        <li><span class="check">✓</span> Any number of files</li>
+        <li><span class="check">✓</span> Secure</li>
+      </ul>
+    </section>
+    <div id="dropzoneWrap">
+      <div class="dropzone" id="dropzone" role="region" aria-label="File upload area">
+        <div class="dropzone-top">
+          <div class="protection">
+            <img src="/src/icon/shield.svg" class="icon icon-green" alt="" aria-hidden="true">
+            <span>File protection active</span>
+            <button class="info-i" id="protectionInfo" aria-label="About file security">i</button>
+          </div>
+        </div>
+        <div class="dropzone-center">
+          <button class="choose-btn" id="chooseBtn">
+            <img src="/src/icon/upload.svg" class="icon-lg icon-white" alt="" aria-hidden="true"> Choose PDF files
+          </button>
+          <p class="drop-hint">or drag and drop multiple PDFs here</p>
+          <p class="terms">By using this tool you agree to our <a href="/terms/">terms of use</a></p>
+        </div>
+        <input type="file" id="fileInput" accept="application/pdf,.pdf" multiple hidden tabindex="-1"
+          aria-hidden="true">
+        <div class="dropzone-bottom">
+          <div class="rating" id="dropzoneRating" aria-label="Tool rating">
+            <img src="/src/icon/star.svg" class="icon icon-star" alt="" aria-hidden="true">
+            <span id="rwValue"></span><span id="rwSep" style="display:none"> / 5 &nbsp;</span><span
+              id="rwCount">Loading…</span>
+            <button class="rw-rate-link" id="rwRateBtn" type="button">Rate this tool</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="toolArea" hidden>
+      <div class="thumbs-dropzone">
+        <p class="tool-area-title">Drag thumbnails to reorder · click to select</p>
+
+        <div class="thumbs" id="thumbs" role="list"></div>
+        <div class="thumbs-footer">
+          <div class="thumbs-sort-icons">
+            <button class="thumb-ctrl-btn" id="sortAzBtn" aria-label="Sort A to Z" title="Sort A→Z"><img
+                src="/src/icon/sort-az.svg" width="18" height="18" alt="" aria-hidden="true"></button>
+            <button class="thumb-ctrl-btn" id="sortZaBtn" aria-label="Sort Z to A" title="Sort Z→A"><img
+                src="/src/icon/sort-za.svg" width="18" height="18" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="thumbs-cloud-icons">
+            <button class="thumb-ctrl-btn" id="addMoreBtn" aria-label="Add more files" title="Add more"><img
+                src="/src/icon/upload.svg" width="18" height="18" alt="" aria-hidden="true"></button>
+          </div>
+        </div>
+      </div>
+      <div class="convert-row"><button class="convert-btn" id="convertBtn">Merge PDFs</button></div>
+      <p id="convertStatus"
+        style="text-align:center;color:var(--text-muted);font-size:14px;margin-top:8px;min-height:20px"></p>
+      <div id="resultArea" hidden>
+        <div class="result-card" aria-live="polite">
+          <img src="/src/icon/pdf-file.svg" class="icon-result-pdf" alt="PDF ready">
+          <div class="result-info">
+            <div class="result-name" id="resultName">output.pdf</div>
+            <div class="result-meta" id="resultMeta">Ready</div>
+          </div>
+          <div class="result-actions">
+            <button class="download-btn" id="downloadBtn">
+              <img src="/src/icon/download.svg" class="icon icon-white" alt="" aria-hidden="true"> Download
+            </button>
+            <button class="start-over-btn" id="startOverBtn">↺ Start over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="ad-section" aria-label="Advertisement">
+      <p class="ad-label">Advertisement</p>
+      <div class="ad-box">
+        <div class="ad-content">
+          <div>
+            <div class="ad-brand">PDF99</div>
+            <div class="ad-tag">Desktop App</div>
+          </div>
+          <img src="/src/img/logo.svg" width="60" height="60" alt="" aria-hidden="true">
+          <a href="#" class="ad-cta">Get it free</a>
+        </div>
+      </div>
+      <p class="ad-foot">Keeping this tool free thanks to ads</p>
+    </div>
+    <section class="info-section" aria-labelledby="why-h">
+      <h2 class="section-title" id="why-h">Why use PDF99?</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-easy.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Combine any number of files</h3>
+          <p>Add as many PDFs as you need — no limit on documents or total page count.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-file.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Control the order</h3>
+          <p>Files are merged in the order shown. Add them in sequence from the start.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-security.svg" width="38" height="38" alt=""
+              aria-hidden="true"></div>
+          <h3>Runs in your browser</h3>
+          <p>PDF-lib merges documents locally. Your files aren't uploaded to a remote server.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-clock.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Preserves original quality</h3>
+          <p>Pages are copied exactly — no re-rendering, no quality loss.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-monitor.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Handles different page sizes</h3>
+          <p>Mixed page dimensions and orientations are preserved exactly.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="/src/icon/info-upload.svg" width="38" height="38" alt="" aria-hidden="true">
+          </div>
+          <h3>Free, no watermarks</h3>
+          <p>No limits, no branding added to your output.</p>
+        </div>
+      </div>
+    </section>
+    <section class="what-section" aria-labelledby="what-h">
+      <h2 class="section-title" id="what-h">What does merging PDFs mean?</h2>
+      <div class="what-body">
+        <p>Merging combines multiple separate PDF files into a single document. Each source PDF contributes its pages to
+          the output in the order you specify. The pages are not re-rendered or altered — they are copied exactly. This
+          is used to combine separate scanned pages into one document, combine report sections from different authors,
+          or consolidate multiple invoices into one submission.</p>
+      </div>
+    </section>
+    <section class="how-section" aria-labelledby="how-h">
+      <h2 class="section-title" id="how-h">How to merge PDF files</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Upload your PDFs</h3>
+          <p>Add two or more PDF files using the picker or drag and drop.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Check the order</h3>
+          <p>Files merge in the order shown in the thumbnail area.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Merge and download</h3>
+          <p>Click Merge PDFs and download your combined document.</p>
+        </div>
+      </div>
+    </section>
+    <section class="qa-section" aria-labelledby="faq-h">
+      <h2 class="section-title" id="faq-h">Frequently asked questions</h2>
+      <div class="qa-item"><button class="qa-q" aria-expanded="true" aria-controls="qa0"><span>How many PDFs can I
+            merge?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button>
+        <div class="qa-a" id="qa0">
+          <p>No limit.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa1"><span>Do merged
+            PDFs have watermarks?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt=""
+            aria-hidden="true"></button>
+        <div class="qa-a" id="qa1" hidden>
+          <p>Never.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa2"><span>Can I merge
+            password-protected PDFs?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt=""
+            aria-hidden="true"></button>
+        <div class="qa-a" id="qa2" hidden>
+          <p>Not directly — use Unlock PDF (coming soon) first.</p>
+        </div>
+      </div>
+      <div class="qa-item qa-item-gap"><button class="qa-q" aria-expanded="false" aria-controls="qa3"><span>Is my data
+            private?</span><img src="/src/icon/chevron-down.svg" class="chev icon" alt="" aria-hidden="true"></button>
+        <div class="qa-a" id="qa3" hidden>
+          <p>Yes. Merging runs in your browser using PDF-lib.</p>
+        </div>
+      </div>
+    </section>
+    <button class="rating-submit" type="button" style="display:none"><img src="/src/icon/star.svg"
+        class="icon icon-white" alt="" aria-hidden="true"> Submit rating</button>
+    </div>
+
+    <section class="more-tools-section" aria-labelledby="tools-h">
+      <h2 class="section-title" id="tools-h">More free PDF tools</h2>
+      <div class="tools-grid" id="toolsGrid" role="list"></div>
+      <div class="all-tools-wrap"><a href="/" class="all-tools-cta"><img src="/src/icon/apps.svg"
+            class="icon icon-white" alt="" aria-hidden="true"> View all tools</a></div>
+    </section>
+  </main>
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <nav class="foot-row" aria-label="Footer links">
+      <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
+    </nav>
+    <div class="foot-row foot-row-3">
+      <div class="socials">
+        <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook"></a>
+        <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X"></a>
+        <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn"></a>
+      </div>
+      <div class="foot-domain">www.pdf99.org</div>
+      <button class="lang-btn" aria-label="Change language"><img src="/src/icon/globe.svg" class="icon-sm" alt=""
+          aria-hidden="true"> English</button>
+    </div>
+    <div class="foot-copy">&copy; 2026 PDF99 &mdash; Made with <img src="/src/icon/heart.svg" width="14" height="14"
+        alt="love"> for PDF</div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
+
 </html>
