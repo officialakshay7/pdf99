@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#167bbb" />
+  <title>What is PDF Compression and How Does It Actually Work? | PDF99 Blog</title>
+  <meta name="description" content="A plain-English explanation of how PDF compression works, the difference between lossless and lossy compression, and when to use each." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.pdf99.org/blog/what-is-pdf-compression/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What is PDF Compression and How Does It Actually Work? | PDF99 Blog" />
+  <meta property="og:description" content="A plain-English explanation of how PDF compression works, the difference between lossless and lossy compression, and when to use each." />
+  <meta property="og:url" content="https://www.pdf99.org/blog/what-is-pdf-compression/" />
+  <meta property="og:site_name" content="PDF99" />
+  <meta property="og:image" content="https://www.pdf99.org/src/img/og-compress-pdf.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What is PDF Compression and How Does It Actually Work? | PDF99 Blog" />
+  <meta name="twitter:description" content="A plain-English explanation of how PDF compression works, the difference between lossless and lossy compression, and when to use each." />
+  <meta name="twitter:image" content="https://www.pdf99.org/src/img/og-compress-pdf.png" />
+  <meta name="twitter:site" content="@pdf99tools" />
+  <link rel="shortcut icon" href="/src/img/favicon.ico" />
+  <link rel="icon" href="/src/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/img/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/src/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/styles.css" />
+  <script src="/src/js/common.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"What is PDF Compression and How Does It Actually Work?","description":"A plain-English explanation of how PDF compression works, the difference between lossless and lossy compression, and when to use each.","datePublished":"July 17, 2026","dateModified":"July 17, 2026","url":"https://www.pdf99.org/blog/what-is-pdf-compression/","image":{"@type":"ImageObject","url":"https://www.pdf99.org/src/img/og-compress-pdf.png","width":1200,"height":630},"author":{"@type":"Organization","name":"PDF99","url":"https://www.pdf99.org"},"publisher":{"@type":"Organization","name":"PDF99","url":"https://www.pdf99.org","logo":{"@type":"ImageObject","url":"https://www.pdf99.org/src/img/logo.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.pdf99.org/blog/what-is-pdf-compression/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PDF99","item":"https://www.pdf99.org"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.pdf99.org/blog/"},{"@type":"ListItem","position":3,"name":"What is PDF Compression and How Does It Actually Work?","item":"https://www.pdf99.org/blog/what-is-pdf-compression/"}]}]}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left"><a class="brand" href="/">PDF99</a></div>
+      <div class="header-center">
+        <a href="/"><img src="/src/img/logo.svg" width="58" height="58" alt="PDF99 logo" /></a>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <img id="moonIcon" src="/src/icon/moon.svg" class="icon-lg" alt="" aria-hidden="true" />
+          <img id="sunIcon" src="/src/icon/sun.svg" class="icon-lg" alt="" aria-hidden="true" style="display: none" />
+        </button>
+        <button class="all-tools-btn" id="megaMenuToggle" aria-expanded="false" aria-controls="megaMenu"
+          aria-haspopup="true">
+          <img src="/src/icon/apps.svg" class="icon icon-sm" alt="" aria-hidden="true" />
+          <span>All tools</span>
+          <img src="/src/icon/chevron-down.svg" class="icon icon-sm chev-down" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+    <nav class="mega-menu" id="megaMenu" hidden>
+      <div class="mega-menu-inner">
+        <div class="mega-col">
+          <p class="mega-col-title">Tools</p>
+          <div class="mega-links-grid">
+            <a href="/jpg-to-pdf/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="" />JPG to
+              PDF</a>
+            <a href="/compress-pdf/" class="mega-link"><img src="/src/icon/compress.svg" class="icon icon-sm"
+                alt="" />Compress PDF</a>
+            <a href="/merge-pdf/" class="mega-link"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="" />Merge
+              PDF</a>
+            <a href="/split-pdf/" class="mega-link"><img src="/src/icon/split.svg" class="icon icon-sm" alt="" />Split
+              PDF</a>
+            <a href="/pdf-to-jpg/" class="mega-link"><img src="/src/icon/image.svg" class="icon icon-sm" alt="" />PDF to
+              JPG</a>
+            <a href="/html-to-pdf/" class="mega-link"><img src="/src/icon/html.svg" class="icon icon-sm" alt="" />HTML
+              to PDF</a>
+            <a href="/rotate-pdf/" class="mega-link"><img src="/src/icon/rotate.svg" class="icon icon-sm"
+                alt="" />Rotate PDF</a>
+            <a href="/watermark-pdf/" class="mega-link"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+                alt="" />Watermark PDF</a>
+          </div>
+        </div>
+        <div class="mega-col mega-col-narrow">
+          <p class="mega-col-title">Company</p>
+          <div class="mega-links-col">
+            <a href="/about/" class="mega-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="" />About</a>
+            <a href="/faq/" class="mega-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="" />FAQ</a>
+            <a href="/blog/" class="mega-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="" />Blog</a>
+            <a href="/contact/" class="mega-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+                alt="" />Contact</a>
+            <a href="/privacy/" class="mega-link"><img src="/src/icon/privacy.svg" class="icon icon-sm"
+                alt="" />Privacy</a>
+            <a href="/terms/" class="mega-link"><img src="/src/icon/terms.svg" class="icon icon-sm" alt="" />Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="mega-menu-backdrop" id="megaMenuBackdrop"></div>
+    </nav>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer-header">
+      <span class="drawer-title">PDF99</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close">
+        <img src="/src/icon/close.svg" class="icon-lg" alt="" aria-hidden="true" />
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="mega-section">
+        <p class="mega-section-title">Tools</p>
+        <div class="drawer-grid">
+          <a href="/jpg-to-pdf/" class="drawer-item"><img src="/src/icon/image.svg" class="icon icon-sm" alt="" />JPG
+            to PDF</a>
+          <a href="/compress-pdf/" class="drawer-item"><img src="/src/icon/compress.svg" class="icon icon-sm"
+              alt="" />Compress PDF</a>
+          <a href="/merge-pdf/" class="drawer-item"><img src="/src/icon/merge.svg" class="icon icon-sm" alt="" />Merge
+            PDF</a>
+          <a href="/split-pdf/" class="drawer-item"><img src="/src/icon/split.svg" class="icon icon-sm" alt="" />Split
+            PDF</a>
+          <a href="/rotate-pdf/" class="drawer-item"><img src="/src/icon/rotate.svg" class="icon icon-sm"
+              alt="" />Rotate PDF</a>
+          <a href="/watermark-pdf/" class="drawer-item"><img src="/src/icon/watermark.svg" class="icon icon-sm"
+              alt="" />Watermark</a>
+        </div>
+      </div>
+      <div class="mega-section">
+        <p class="mega-section-title">Info</p>
+        <div class="drawer-links">
+          <a href="/about/" class="drawer-link"><img src="/src/icon/about.svg" class="icon icon-sm" alt="" />About</a>
+          <a href="/blog/" class="drawer-link"><img src="/src/icon/edit.svg" class="icon icon-sm" alt="" />Blog</a>
+          <a href="/faq/" class="drawer-link"><img src="/src/icon/faq.svg" class="icon icon-sm" alt="" />FAQ</a>
+          <a href="/contact/" class="drawer-link"><img src="/src/icon/contact.svg" class="icon icon-sm"
+              alt="" />Contact</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+<main class="main" id="main-content">
+  <article>
+    <div class="article-hero">
+      <span class="article-tag">Guide</span>
+      <h1 class="article-title">What is PDF Compression and How Does It Actually Work?</h1>
+      <div class="article-meta">
+        <span>July 17, 2026</span>
+        <span>6 min read</span>
+        <span>By PDF99 Team</span>
+      </div>
+    </div>
+    <div class="article-body">
+      
+<p>When someone tells you to "compress a PDF" before emailing it, you probably just use a tool and hope for the best. Understanding what's actually happening during compression helps you make better decisions — choosing the right quality level, knowing which files will compress well and which won't, and understanding why some PDFs refuse to get much smaller regardless of what you do.</p>
+
+<h2>What makes a PDF file large in the first place?</h2>
+<p>A PDF is a container. It holds different types of content: text, images, fonts, vector graphics, and structural metadata. Each of these contributes to file size in different ways.</p>
+<p><strong>Images</strong> are typically the biggest contributor to PDF file size. A single full-resolution photograph can be 3-8MB on its own. When embedded in a PDF without compression, it stays that size. Most of a 20MB PDF's bulk is usually the images inside it.</p>
+<p><strong>Fonts</strong> add 100-400KB per typeface. PDFs often embed entire font files to ensure correct rendering on systems that don't have the font installed. A document using five different fonts might embed 1-2MB of font data.</p>
+<p><strong>Text content</strong> itself is compact — a page of typed text is only a few kilobytes when compressed. Text is rarely the problem.</p>
+<p><strong>Metadata and structure</strong> includes revision history (from repeated editing and saving), embedded thumbnails, form data, XMP metadata, and the structural cross-reference table. In heavily edited documents, this overhead can add 500KB to several MB of essentially invisible data.</p>
+
+<h2>Lossless vs lossy compression</h2>
+<p>This distinction matters a lot for understanding what's happening to your document.</p>
+<p><strong>Lossless compression</strong> reduces file size without discarding any data. The original content can be perfectly reconstructed from the compressed file. Examples include ZIP compression, PDF object stream compression, and metadata stripping. When you remove metadata and revision history from a PDF, you're doing lossless compression — the visible content is completely unchanged.</p>
+<p><strong>Lossy compression</strong> discards data permanently to achieve greater size reduction. JPEG compression of images is the classic example. When a JPEG image is re-encoded at lower quality, some image detail is permanently discarded and the image is slightly less sharp. The trade-off is that lossy compression can reduce file sizes far more dramatically than lossless approaches.</p>
+<p>Most PDF compressors do both: lossless cleanup of structure and metadata, followed by lossy re-encoding of embedded images at lower quality to achieve significant size reduction.</p>
+
+<h2>What happens when you compress a PDF with PDF99?</h2>
+<p>When you use the <a href="https://www.pdf99.org/compress-pdf/">PDF99 Compress PDF tool</a>, the compression process works in stages.</p>
+<p>First, metadata is stripped. Title, author, subject, keywords, revision history, and embedded thumbnail images are all removed. This alone can reduce certain PDFs by 10-30%, particularly files that have been through multiple rounds of editing in Word or Acrobat.</p>
+<p>Second, if PDF.js is available and you've chosen a quality setting below 90%, each page is re-rendered at your target DPI and re-encoded as a JPEG image at your chosen quality level. This is where most of the size reduction comes from for image-heavy documents. The trade-off is that re-rendering effectively converts the page to a raster image — if the original had vector graphics or was created digitally, the output will be slightly less crisp at high zoom levels.</p>
+<p>The quality slider controls how aggressively images are re-encoded. At 90%, the visual difference from the original is imperceptible to most people. At 50%, images are noticeably softer but text remains readable. At 30%, the document is functional but image quality is visibly degraded.</p>
+
+<h2>Why do some PDFs barely compress?</h2>
+<p>If you run a PDF through a compressor and it barely shrinks, there are a few likely reasons.</p>
+<p>The PDF was already optimised when created. Modern PDF creation software (Adobe InDesign, the latest Acrobat, most cloud document services) already applies compression during export. There's little left to squeeze out.</p>
+<p>The PDF contains mostly text and vector graphics. These compress very efficiently already. A text-only legal document might be 200KB with minimal image content — compressing it to 180KB is about the best you can do.</p>
+<p>The images inside the PDF are already JPEG-compressed at a similar quality level to what you're targeting. Re-encoding an already-compressed JPEG doesn't make it significantly smaller — it just loses a bit more quality with minimal size benefit.</p>
+
+<h2>The right quality setting for different use cases</h2>
+<p>75-85% quality: ideal for most business documents that will be read on screen or printed at A4/Letter size. The compression is significant (typically 40-70% reduction) and the visual difference from the original is imperceptible in normal use.</p>
+<p>50-65% quality: suitable for documents where file size is the priority and fine image detail isn't critical. Web previews, quick-share documents, and filing copies work well at this level.</p>
+<p>Below 50%: use only when you have a hard file size limit and no other option. Text remains readable but photographic content will look clearly compressed.</p>
+
+<div class="article-cta">
+  <h3>Compress your PDF with quality control — free</h3>
+  <p>Quality slider, DPI control, and real compression. No sign-up required.</p>
+  <a href="https://www.pdf99.org/compress-pdf/" class="all-tools-cta" style="display:inline-flex;text-decoration:none">Compress PDF →</a>
+</div>
+
+    </div>
+  <div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+  <h3 style="font-size:18px;font-weight:700;margin:0 0 16px">Related articles</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px">
+    <a href="/blog/how-to-compress-pdf/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">How to compress a PDF without losing quality →</a><a href="/blog/pdf-file-too-large/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">My PDF is too large — how to fix it →</a><a href="/blog/how-to-reduce-pdf-size-on-iphone/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">Compress PDF on iPhone →</a>
+  </div>
+</div></article>
+</main>
+<footer class="site-footer" id="footer" role="contentinfo">
+    <nav class="foot-row" aria-label="Footer links">
+      <a href="/about/">About</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a> <a href="/contact/">Contact</a><a
+        href="/privacy/">Privacy</a> <a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a>
+    </nav>
+    <div class="foot-row foot-row-3">
+      <div class="socials">
+        <a href="https://www.facebook.com/pdf99" class="social" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/facebook.svg" width="16" height="16" alt="Facebook" /></a>
+        <a href="https://twitter.com/pdf99tools" class="social" aria-label="X/Twitter" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/twitter-x.svg" width="14" height="14" alt="X" /></a>
+        <a href="https://www.linkedin.com/company/pdf99-tools" class="social" aria-label="LinkedIn" target="_blank"
+          rel="noopener noreferrer"><img src="/src/icon/linkedin.svg" width="16" height="16" alt="LinkedIn" /></a>
+      </div>
+      <div class="foot-domain">www.pdf99.org</div>
+      <button class="lang-btn" aria-label="Change language">
+        <img src="/src/icon/globe.svg" class="icon-sm" alt="" aria-hidden="true" />
+        English
+      </button>
+    </div>
+    <div class="foot-copy">
+      &copy; 2026 PDF99 &mdash; Made with
+      <img src="/src/icon/heart.svg" width="14" height="14" alt="love" /> for
+      PDF
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
