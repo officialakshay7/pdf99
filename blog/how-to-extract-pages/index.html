@@ -328,7 +328,39 @@
             →</a>
         </div>
       </div>
-    <div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+    
+<h2>When do you actually need to extract pages?</h2>
+<p>Page extraction sounds like an edge case but it comes up constantly in professional and academic work. The most common scenario is sharing a specific section of a larger document. A 200-page annual report might have one chapter that's relevant to a particular colleague — extracting those 20 pages and sending them is more professional than sending the full report and saying 'just read pages 45-65'. The recipient gets exactly what they need and nothing they don't.</p>
+<p>Scanned documents are another major use case. When you scan a stack of mixed documents — invoices, receipts, correspondence — a scanner often produces one large multi-page PDF. Splitting that file by extracting each document separately gives you properly organised individual files rather than one unwieldy combined scan.</p>
+<p>Academic researchers frequently extract specific chapters or sections from published books or papers. A 400-page textbook distributed as a single PDF is difficult to navigate and share. Extracting chapter by chapter produces files that are faster to load, easier to annotate, and simpler to share with specific people who need specific sections.</p>
+
+<h2>The difference between split and extract</h2>
+<p>The terms are used interchangeably but they describe slightly different operations. Splitting usually means dividing a document at specific points — split at page 50 to create two documents: pages 1-50 and pages 51-100. Extracting means selecting specific pages from anywhere in the document and pulling them out — extract pages 3, 7, 12, and 45-48, discarding everything else. PDF99's tool does both: you can select any combination of pages using thumbnails or range input, and download either as individual files or as a single combined PDF.</p>
+
+<h2>Handling large documents</h2>
+<p>For very large PDFs — 100 pages or more — the initial loading takes a moment because every page needs to render as a thumbnail. Once loaded, the thumbnail view makes it fast to identify the pages you want visually without having to know exact page numbers. This is particularly useful for documents where chapter breaks aren't obvious from page numbers alone, or where you're not sure exactly which pages contain the content you're after.</p>
+<p>If you need to extract pages from multiple different sections of a large document in one go, the range input is more efficient than clicking individual thumbnails. The format accepts comma-separated ranges and individual pages: <code>1-5, 12, 20-25, 40</code> selects pages 1 through 5, page 12, pages 20 through 25, and page 40, all at once.</p>
+
+<h2>Output formats: ZIP vs single PDF</h2>
+<p>The choice between ZIP and single PDF output depends on what you're doing with the extracted pages. If you're extracting multiple separate documents from a combined scan — ten invoices from a ten-page PDF — you want individual files, so ZIP is correct. Each extracted page becomes its own numbered PDF.</p>
+<p>If you're extracting a chapter from a book or a section from a report — contiguous pages that form a single coherent document — you want a single PDF. Choosing 'selected pages as one PDF' gives you a clean single document containing exactly your selected pages in order.</p>
+<p>For most everyday extraction tasks, single PDF output is what you want. ZIP is primarily useful when the pages you're extracting aren't related to each other and each needs to be its own file.</p>
+
+<h2>Does extraction change the quality of pages?</h2>
+<p>No. Pages are copied directly from the source PDF without any re-rendering. Text stays as text, images stay at their original resolution, and vector graphics remain scalable. The extracted pages are identical in quality to the corresponding pages in the original document. This is one of the advantages of PDF-lib's approach — it treats pages as self-contained objects that can be copied into a new document without modification.</p>
+<p>The only case where quality could theoretically differ is if the source PDF has page-level permissions that restrict copying — though this is uncommon in everyday documents and the tool handles most such cases transparently.</p>
+
+
+<h2>Practical tips for accurate page selection</h2>
+<p>When working with a long document, the visual thumbnails in the split tool are your best friend — but they're small. Before extracting, take a moment to verify you have the right pages by hovering over thumbnails to see the page number, then cross-referencing with the document's table of contents if one exists. An extraction that grabs pages 45-67 when you needed 46-68 means running the whole process again.</p>
+<p>For documents without clear visual cues — like scanned forms where every page looks similar — use the range input rather than clicking thumbnails. Type the exact range once, verify the selection highlighting covers the right pages, and extract. This is faster and more accurate than clicking individual thumbnails for large selections.</p>
+<p>If you're regularly extracting the same pages from the same document — for example, always extracting the first and last pages of a batch of forms — note the page numbers so you can type the range directly next time rather than browsing through thumbnails.</p>
+
+<h2>Extracting pages from protected PDFs</h2>
+<p>Some PDFs have permission restrictions that prevent copying or extracting content. You'll know this is the case if the split tool gives an error or produces an empty output. The restriction is set by whoever created the PDF — it's a permission flag in the document, not encryption. If you own the document or have authorisation to work with it, removing the restriction using a PDF editor before extracting is the appropriate solution. For documents you don't own, respect the restriction.</p>
+<p>Password-protected PDFs that require a password to open won't be processable unless you provide the password. If the tool prompts for a password and you have it, entering it allows normal extraction. If you don't have the password, the content isn't accessible.</p>
+
+<div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
   <h3 style="font-size:18px;font-weight:700;margin:0 0 16px">Related articles</h3>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px">
     <a href="/blog/how-to-split-pdf-into-chapters/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">How to split a PDF into chapters →</a><a href="/blog/how-to-merge-pdfs/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">How to merge multiple PDFs →</a><a href="/blog/best-pdf-tools-for-students/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">Best free PDF tools for students →</a>

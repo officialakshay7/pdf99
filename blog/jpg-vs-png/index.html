@@ -324,7 +324,39 @@
             →</a>
         </div>
       </div>
-    </article>
+    
+<h2>File size comparison in practice</h2>
+<p>The size difference between JPG and PNG for the same image can be dramatic — but it depends entirely on image content. For a photograph taken on a phone, JPG at 80% quality typically produces a file of 2-4MB. The same photograph as PNG is usually 12-25MB. That's a 5-6x size difference, which is why no one stores or shares photographs as PNG.</p>
+<p>For a screenshot of a webpage or a simple logo with flat colours and crisp edges, the relationship reverses. A screenshot saved as JPG will show visible compression artefacts around text and interface elements, and may actually be larger than a PNG of the same image. PNG handles solid colours and sharp edges far more efficiently than JPG. A simple icon that's 50KB as PNG might be 80KB as JPG with visible quality loss.</p>
+<p>The rule: photographs → JPG. Everything else → consider PNG first, then decide based on file size.</p>
+
+<h2>When to use PNG for images that go into PDFs</h2>
+<p>This matters specifically for PDF creation workflows. If you're converting images to PDF using a tool like <a href='/jpg-to-pdf/'>PDF99's JPG to PDF converter</a>, JPG files are the right input format for photographs. The converter embeds the images and the resulting PDF handles them efficiently.</p>
+<p>For screenshots, diagrams, and interface images that will go into a PDF — say, a tutorial document with annotated screenshots — PNG is better input because the sharp edges of UI elements, text, and lines reproduce more cleanly in the PDF output. The size difference in the final PDF is less dramatic because PDF embeds images using its own compression, but the quality difference is visible, particularly in screenshots with small text.</p>
+
+<h2>Transparency: PNG's exclusive feature</h2>
+<p>One capability PNG has that JPG completely lacks is transparency. PNG supports an alpha channel — a per-pixel transparency value that lets backgrounds show through. This is why logos, icons, and design assets are almost always PNG. Place a PNG logo with a transparent background on any coloured slide or document and it blends naturally. Place a JPG of the same logo and you get a white or coloured rectangle around it.</p>
+<p>If you're adding a logo, watermark, or any image with a non-rectangular shape to a document, and the background of the image should be transparent, you need PNG. JPG cannot represent transparency at all — every pixel has a fully opaque colour. This is non-negotiable for design work.</p>
+
+<h2>WebP: the format you'll hear more about</h2>
+<p>A third format worth knowing is WebP, developed by Google. It achieves JPG-like quality at 25-35% smaller file sizes, and supports transparency like PNG. Browser support is now universal. For web use — images on websites — WebP is increasingly the right choice over both JPG and PNG.</p>
+<p>For PDF workflows specifically, WebP support in PDF creation tools varies. PDF99's JPG to PDF tool accepts WebP files alongside JPG, PNG, and other common formats. For offline tools and professional PDF software, JPG and PNG remain more universally supported inputs.</p>
+
+<h2>Which format for sharing on WhatsApp and email?</h2>
+<p>For photos shared on messaging apps and email, JPG is almost always correct. WhatsApp, iMessage, and email clients all handle JPG natively and display it immediately. Large PNG files sometimes get compressed or converted by messaging apps, which can actually reduce quality — you end up with a compressed JPG of a PNG, losing the quality advantage you started with.</p>
+<p>The practical advice: save camera photos as JPG (most cameras do this automatically), save logos and graphics as PNG, use WebP for web output if your tools support it, and convert images to JPG before embedding them in PDFs unless transparency is required.</p>
+
+
+<h2>Common mistakes people make with file formats</h2>
+<p>Saving a logo as JPG is one of the most common format mistakes. Logos typically have flat colours, sharp edges, and text — exactly the type of content that JPG handles poorly. The compression creates a soft, slightly blurry look around the edges and colour banding in solid areas. If someone sends you a company logo in JPG format and asks you to use it in a document or presentation, the result will look slightly degraded. Always use PNG for logos.</p>
+<p>The reverse mistake is saving photographs as PNG for web use. A photograph that would be 200KB as JPG might be 2MB as PNG. If that image is on a webpage, it loads 10 times more slowly with no visible quality improvement. Websites that use PNG for photographic content have noticeably slower load times, particularly on mobile networks.</p>
+<p>Saving a screenshot as JPG for sharing is another common error. Screenshots of applications, websites, or documents contain text and interface elements with sharp edges. JPG compression makes text slightly soft and creates visible artefacts around high-contrast edges. Screenshots should almost always be PNG for quality and are often smaller as PNG than as JPG because of how efficiently PNG compresses synthetic images.</p>
+
+<h2>Converting between JPG and PNG</h2>
+<p>You can convert between JPG and PNG easily in any image editor or using online tools. One important thing to know: converting JPG to PNG does not restore any quality lost during JPG compression. The quality loss from JPG encoding is permanent — converting to PNG just changes the file format while preserving the already-compressed pixels. If you need a high-quality PNG of an image, start from the original uncompressed source rather than converting from a JPG.</p>
+<p>Converting PNG to JPG for photographs is fine and is often the right move for file size. Just choose a quality setting of 80-85% — this is the sweet spot where file size reduction is substantial (often 80% smaller) and quality loss is imperceptible at normal viewing sizes.</p>
+
+</article>
   </main>
   <footer class="site-footer" id="footer" role="contentinfo">
     <nav class="foot-row" aria-label="Footer links">

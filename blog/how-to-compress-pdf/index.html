@@ -327,7 +327,28 @@
           look unprofessional.
         </p>
       </div>
-    <div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+    
+<h2>Step-by-step: compressing a PDF with PDF99</h2>
+<p>The compression process using <a href='/compress-pdf/'>PDF99's online tool</a> takes under a minute for most documents. Here's exactly what to do.</p>
+<p>Upload your PDF by dragging it onto the upload area or clicking Choose File. The tool shows you a thumbnail of the file and its current size. Next, choose your quality setting using the slider. If you're not sure where to start, 75% is a safe default — it produces files that are typically 40-65% smaller than the original with no visible degradation at normal screen viewing size. If you need more reduction, try 60%. If quality is critical and you just want to strip metadata and reduce size slightly, try 85-90%.</p>
+<p>The DPI setting controls how images are re-rendered. 150 DPI is the default and appropriate for most uses — screen reading, email, digital filing. If the PDF will only ever be viewed on screen and never printed, 96-120 DPI produces smaller files with no visible difference. If the PDF needs to be printed at A4 or larger, keep DPI at 150 or above.</p>
+<p>Click Compress PDF and wait. For a 5-10 page document the process typically takes 5-15 seconds. For a 50-page scanned document it may take 30-60 seconds. When complete, the result shows you the new file size and the percentage reduction achieved. If the result is acceptable, click Download.</p>
+
+<h2>When compression doesn't reduce the file size much</h2>
+<p>You've run a PDF through the compressor and it barely got smaller. This happens for several specific reasons. The most common is that the PDF was already optimised when it was created — modern PDF creation software applies compression automatically on export. If your file came from Google Docs, Notion, or a current version of Word, it's probably already compact. Running it through a compressor will make it slightly smaller but not dramatically so.</p>
+<p>The second reason is that the file contains mostly vector graphics and text rather than raster images. Text in a PDF compresses extremely efficiently and is rarely the cause of large files. If your large PDF contains mostly typed content with simple graphics, the reduction you'll get from compression is modest.</p>
+<p>Third: the images inside the PDF may already be JPEG-compressed at a quality level similar to what you're targeting. Re-encoding a JPEG that's already at 70% quality to 70% quality produces minimal size change with a small additional quality loss. If your PDF is already well-compressed and you need it significantly smaller, you're at the practical limit of what compression can achieve without making the output look poor.</p>
+
+<h2>Compressing to a specific file size target</h2>
+<p>Some upload portals are very specific about file size limits — 200KB, 500KB, 1MB. Manually adjusting the quality slider and re-running compression until you hit the target is tedious. PDF99 has dedicated tools for the most common targets: <a href='/compress-pdf-to-50kb/'>compress to 50KB</a>, <a href='/compress-pdf-to-100kb/'>compress to 100KB</a>, <a href='/compress-pdf-to-200kb/'>compress to 200KB</a>, and <a href='/compress-pdf-to-500kb/'>compress to 500KB</a>. Each tool automatically searches for the right quality setting to hit the target without you needing to experiment manually.</p>
+
+<h2>Compressing PDFs on mobile</h2>
+<p>The PDF99 compression tool works in any mobile browser — Safari on iPhone, Chrome on Android. The process is identical to desktop: open the URL, upload your file from your phone's storage or cloud drive, adjust settings, and download. For detailed iPhone-specific steps including the Print to PDF method, see <a href='/blog/how-to-reduce-pdf-size-on-iphone/'>How to reduce PDF size on iPhone</a>.</p>
+
+<h2>Keeping quality where it matters</h2>
+<p>The final thing worth saying about compression: always check the output before sending it anywhere important. Download the compressed file, open it, and check a few pages — particularly any pages with photographs, fine print, or detailed graphics. Zoom to 100% in your PDF viewer. If it looks good at that zoom level, it will look fine in normal use. If you see pixelation or blurring that bothers you, go back and try a higher quality setting. The goal is the smallest file that still looks acceptable for the purpose. For a document that will be read on screen at normal size, you can usually compress more aggressively than you'd think.</p>
+
+<div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
   <h3 style="font-size:18px;font-weight:700;margin:0 0 16px">Related articles</h3>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px">
     <a href="/blog/what-is-pdf-compression/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">What is PDF compression and how does it work? →</a><a href="/blog/how-to-reduce-pdf-size-on-iphone/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">How to reduce PDF size on iPhone →</a><a href="/blog/pdf-file-too-large/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">My PDF is too large — how to fix it →</a>

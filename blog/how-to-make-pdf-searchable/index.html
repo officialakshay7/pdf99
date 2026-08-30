@@ -177,6 +177,36 @@
 <p>Before running OCR, check whether the PDF already has a text layer. Open it in any PDF viewer, press Ctrl+F (or Cmd+F on Mac), and search for a word you can see on the first page. If the search highlights that word, the document is already searchable. If no results appear, you need OCR.</p>
 <p>An even quicker check: try to click and drag to select some text on the page. In a searchable PDF, dragging selects text and highlights it. In a scanned image PDF, dragging has no effect or shows a rubber-band selection that doesn't highlight any text.</p>
 
+
+<h2>Step-by-step: making a PDF searchable with Google Drive</h2>
+<p>Google Drive's OCR is the most accessible free option for most people. Here's the exact process.</p>
+<ol>
+<li>Go to drive.google.com and sign in to your Google account</li>
+<li>Click New → File upload and select your scanned PDF</li>
+<li>Once uploaded, right-click the PDF in Drive and choose Open with → Google Docs</li>
+<li>Google automatically runs OCR and opens the document in Google Docs with recognised text</li>
+<li>To get a searchable PDF back: in Google Docs, go to File → Download → PDF Document (.pdf)</li>
+<li>The downloaded PDF contains both the original scan image and a hidden text layer — it's now searchable</li>
+</ol>
+<p>The quality of Google's OCR is excellent for clean, well-scanned text in major languages. The text layer is hidden behind the original scan image, so the document looks identical — you just gain the ability to search, select, and copy text.</p>
+
+<h2>Checking OCR accuracy before you rely on it</h2>
+<p>OCR is not perfect. Before depending on a searchable PDF for important searches — finding a specific clause in a contract, locating a name in a long document — it's worth checking the accuracy of the recognised text.</p>
+<p>Open the OCR'd PDF in any viewer and try Ctrl+F to search for a word you can see on the first page. If it highlights correctly, the OCR captured that word accurately. Then try selecting text by clicking and dragging — see if the selected text matches what's visually on the page. For critical documents, copy a paragraph of text and paste it into a text editor to compare it with the original visually.</p>
+<p>Common OCR errors include: confusing '1' (one) with 'l' (lowercase L) and 'I' (uppercase i), misreading digits in handwritten or stylised numbers, combining two short words into one, and breaking one long word into two. For standard typed documents at reasonable scan quality, accuracy is typically 98-99% — high enough for searching but worth verifying for critical data extraction.</p>
+
+<h2>Batch OCR for multiple documents</h2>
+<p>If you have many documents to make searchable — an archive of scanned files, a folder of historical records — processing them one at a time is tedious. Google Drive allows you to upload multiple PDFs and open each with Google Docs individually, but for large batches this is still time-consuming.</p>
+<p>For bulk OCR, consider using Google Cloud Vision API (free for limited volumes, pay-per-use above that), Adobe Acrobat's batch OCR processing (requires a paid subscription), or the open-source Tesseract OCR engine which can be run from the command line on multiple files with a simple script. For non-technical users, ABBYY FineReader offers batch processing with a free trial.</p>
+
+<h2>What happens to the original scan?</h2>
+<p>Adding an OCR text layer does not change or overwrite the original scan. The page image remains exactly as scanned — every pixel is preserved. The text layer is invisible and sits beneath the image, used only by search functions and accessibility tools. This means the document looks identical before and after OCR. A human reading the document sees the original scan; a search engine or screen reader also sees the text layer.</p>
+<p>File size typically increases slightly after OCR — the hidden text layer adds a small amount of data, usually a few percent of the original size. For a 10-page scanned PDF that's 5MB, the OCR'd version might be 5.2MB. This is negligible for most purposes.</p>
+
+<h2>Making future scans searchable from the start</h2>
+<p>The best solution for searchability is to use scanning software that applies OCR automatically during the scan. Google Drive's mobile scanner (available in the Google Drive app for Android and iOS) automatically creates searchable PDFs. Microsoft Lens also applies OCR during scanning. Apple's document scanner in iOS creates image-based PDFs by default, but uploading to Google Drive and opening with Google Docs immediately adds searchability.</p>
+<p>For physical scanners and photocopiers in offices, many modern models have built-in OCR settings. Check your scanner's software settings for options like 'searchable PDF' or 'OCR output' — enabling these means every scan you produce is immediately searchable without a post-processing step.</p>
+
 <div class="article-cta">
   <h3>PDF OCR — coming soon to PDF99</h3>
   <p>Browser-based OCR to make scanned PDFs searchable. Free, no sign-up.</p>

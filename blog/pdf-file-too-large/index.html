@@ -360,7 +360,35 @@
             PDF →</a>
         </div>
       </div>
-    <div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
+    
+<h2>Diagnosing your specific situation</h2>
+<p>Not all large PDFs have the same cause, and the right solution depends on which category yours falls into. Spend 30 seconds on diagnosis before trying to compress.</p>
+<p>Open the PDF and look at the content. Lots of photographs on every page? The images are almost certainly the cause — compression will help significantly. Plain typed text on white backgrounds with no images? The PDF shouldn't be large at all — something else is going on, likely metadata, embedded fonts, or revision history. Scanned pages? The entire document is images, even if it looks like typed text — standard compression applies but the results depend on the original scan quality and DPI.</p>
+
+<h2>Solution 1: Use targeted compression for specific size limits</h2>
+<p>If you need to hit a specific file size limit — a portal that accepts PDFs up to 200KB, an email system that caps attachments at 500KB — PDF99 has dedicated tools that automatically find the right quality setting to reach the target.</p>
+<ul>
+<li><a href='/compress-pdf-to-50kb/'>Compress to 50KB</a> — for government portals and strict form upload limits</li>
+<li><a href='/compress-pdf-to-100kb/'>Compress to 100KB</a> — for job application and HR portals</li>
+<li><a href='/compress-pdf-to-200kb/'>Compress to 200KB</a> — the most common document submission limit</li>
+<li><a href='/compress-pdf-to-500kb/'>Compress to 500KB</a> — for email and general sharing</li>
+</ul>
+<p>Each tool tries progressively lower quality settings until the output fits within the target size. You don't need to experiment manually.</p>
+
+<h2>Solution 2: Split the document if only part is needed</h2>
+<p>If you're trying to email or upload a large document but the recipient only needs part of it, extracting the relevant pages is often the best solution. A 50-page report where the recipient needs chapter 3 (pages 18-27) is much easier to handle as a 10-page extract than as a compressed version of the full report. The extract will be smaller, load faster, and be more directly useful.</p>
+<p><a href='/split-pdf/'>PDF99's split tool</a> lets you select specific pages using visual thumbnails or a page range like 18-27. Download the selection as a clean single PDF or as individual page files in a ZIP.</p>
+
+<h2>Solution 3: Re-create digitally if the PDF is a scan of a typed document</h2>
+<p>This sounds like more work than it is and is often the best solution. If your large PDF is a scanned photograph of a typed document — a contract, a letter, a certificate — and you have access to the original typed version, exporting it directly to PDF from the source application produces a dramatically smaller file. A Word document exported to PDF is typically 100-500KB. A scan of the same printed document is typically 2-10MB. The digital export is also higher quality, searchable, and doesn't have the slightly soft appearance of scanned text.</p>
+
+<h2>Solution 4: Check if the file is encrypted or password protected</h2>
+<p>Password-protected and encrypted PDFs sometimes don't compress well because their content streams are already encrypted, making further compression less effective. If your large PDF is protected, removing the protection first (if you have the password and authorisation to do so) may allow the compression tool to work more effectively on the underlying content.</p>
+
+<h2>When nothing works</h2>
+<p>If you've tried compression and the file still exceeds your size limit, consider these alternatives. Upload to Google Drive or Dropbox and share a link rather than an attachment — most portals and email systems that cap file sizes are fine with a Drive link to a larger file. For portal uploads specifically, contact the portal administrator — many size limits are set conservatively and can be raised for legitimate professional documents. For email specifically, consider whether the recipient actually needs the full document or whether a summary with a link to the full version would serve the purpose better.</p>
+
+<div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
   <h3 style="font-size:18px;font-weight:700;margin:0 0 16px">Related articles</h3>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px">
     <a href="/blog/what-is-pdf-compression/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">What is PDF compression? →</a><a href="/blog/how-to-compress-pdf/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">How to compress a PDF without losing quality →</a><a href="/blog/how-to-reduce-pdf-size-on-iphone/" style="display:block;padding:12px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:14px;font-weight:600;line-height:1.4">Compress PDF on iPhone and iPad →</a>

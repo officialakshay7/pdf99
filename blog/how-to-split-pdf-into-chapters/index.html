@@ -183,6 +183,29 @@
 <h2>After splitting: compress if needed</h2>
 <p>Individual chapter PDFs are smaller than the original by definition, but individual chapters from image-heavy documents can still be several MB each. If you need to share chapters by email or upload them to a portal with size limits, run the extracted chapters through the <a href="https://www.pdf99.org/compress-pdf/">PDF99 Compress tool</a> before sending.</p>
 
+
+<h2>Splitting a book into chapters: practical step-by-step</h2>
+<p>A textbook or long reference document is the most common use case. Here's an efficient approach for splitting a complete book into individual chapters.</p>
+<p>First, find the page numbers. Open the PDF in any viewer and check whether it has bookmarks (the outline/navigation panel on the left). If bookmarks exist, they tell you exactly which page each chapter starts on. If no bookmarks exist, manually note the starting page of each chapter by scrolling through — most textbooks have a table of contents that lists page numbers.</p>
+<p>Then use <a href='/split-pdf/'>PDF99's split tool</a> to extract each chapter one at a time. Type the page range for Chapter 1 (e.g. 1-22), click Extract, download the file, rename it immediately (e.g. Chapter-01-Introduction.pdf), then go back and extract Chapter 2 (23-67). Working methodically through the book this way takes 5-10 minutes for a typical textbook and produces a clean set of individual chapter files.</p>
+<p>Rename files immediately after downloading — don't let your Downloads folder fill up with files named 'split-pdf-output.pdf' that you'll have to identify later.</p>
+
+<h2>Splitting annual reports and business documents</h2>
+<p>Annual reports, board packs, and large business documents are frequently split for distribution. Different stakeholders need different sections — the finance team needs the financial statements, the marketing team needs the brand performance section, the board needs the executive summary.</p>
+<p>For these documents, the approach depends on whether recipients need to know what they're missing. If you're sending just the financial statements, extract those pages and send them as a clean file labelled 'Financial Statements — Annual Report 2026'. Don't send the whole report with a note saying 'see pages 45-67' — extracting the relevant pages is more professional and easier for the recipient.</p>
+
+<h2>Splitting by even and odd pages for double-sided scans</h2>
+<p>A specific technical use case: some scanners produce two-sided document scans where odd pages come from one scan pass and even pages from another, resulting in separate PDFs that need to be interleaved. This is different from simple chapter splitting.</p>
+<p>For this interleaving problem, <a href='/merge-pdf/'>PDF99's merge tool</a> won't interleave — it appends. You'd need a dedicated interleaving tool or a script. However, for the simpler case of extracting just the odd or even pages from a double-sided scan where pages were scanned out of order, the split tool's range input handles it: type 1,3,5,7,9 or similar to extract specific pages.</p>
+
+<h2>When splitting isn't the right answer</h2>
+<p>Not every large PDF benefits from splitting. Consider whether recipients actually need individual files, or whether a well-bookmarked single PDF is more useful. A 200-page PDF with a clickable table of contents and working bookmarks is often easier to navigate than 20 separate chapter files that users have to open individually.</p>
+<p>Adding bookmarks to an existing PDF requires a desktop tool like Adobe Acrobat or the free PDF editor Sejda. If the PDF was created from a Word document that had heading styles applied, the bookmarks often export automatically — check the source document's export settings before splitting unnecessarily.</p>
+<p>The split-vs-bookmark decision: split if different people need different sections, or if file size is a constraint. Keep whole if recipients need the full document and navigation tools (bookmarks, search) will serve them better than separate files.</p>
+
+<h2>Compressing after splitting</h2>
+<p>Individual chapter PDFs are often still larger than necessary, especially if they come from a scan-heavy book. After splitting, run each chapter through <a href='/compress-pdf/'>PDF99's compress tool</a> at 70-80% quality. A 50-page scanned chapter that starts at 25MB might compress to 4-6MB — much more manageable to share by email or upload to a course platform. If you need to hit specific size limits for an LMS or email system, the <a href='/compress-pdf-to-200kb/'>target-size compression tools</a> handle it automatically.</p>
+
 <div class="article-cta">
   <h3>Split your PDF by page range — free</h3>
   <p>Visual thumbnails, page range input, ZIP or single PDF output.</p>

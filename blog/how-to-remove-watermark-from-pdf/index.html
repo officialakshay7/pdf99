@@ -177,6 +177,25 @@
 <p>PDF99 adds text watermarks to PDF pages as drawn text elements. The watermark is embedded in the page content stream — it's not a removable annotation layer. This means once you've added a watermark with PDF99, removing it requires either the original pre-watermarked PDF or PDF editing software that can manipulate the page content stream directly.</p>
 <p>This is actually intentional behaviour. A watermark that's trivially removable by the recipient isn't much of a watermark. If you need a removable watermark — one you can strip before a document is finalised — keep the original unwatermarked file and add the watermark only to distribution copies.</p>
 
+
+<h2>What PDF99's watermark tool does — and the implication for removal</h2>
+<p>When you add a watermark using <a href='/watermark-pdf/'>PDF99's watermark tool</a>, the text is drawn directly into each page's content stream using diagonal positioned text with your chosen opacity. This is intentional — a watermark that a recipient can trivially remove in one click isn't much of a deterrent. The watermark becomes part of the rendered page, not a floating layer above it.</p>
+<p>The practical implication: once you've watermarked a document with PDF99, the only guaranteed clean copy is the original file you uploaded before watermarking. This is why it's good practice to keep the original and add watermarks only to distribution copies, never to your master file. If you're creating watermarked versions for review and unwatermarked versions for final delivery, keep both and work from the original each time.</p>
+
+<h2>Prevention: how to manage watermarks properly from the start</h2>
+<p>Most watermark removal headaches come from poor workflow management rather than a genuine need to strip protection. Here's the workflow that avoids the problem entirely.</p>
+<p>Keep your original, unwatermarked document in a clearly labelled location — a 'masters' or 'originals' folder. When you need to share a draft, export a copy and watermark that copy. When the draft is approved and you need a clean final version, go back to your original master and export a clean copy from there. Never work directly on the watermarked copy.</p>
+<p>For businesses that regularly share watermarked previews — designers, photographers, consultants — this original-plus-copies workflow is standard practice. The watermarked copies are disposable; the master is the asset.</p>
+
+<h2>When you genuinely can't get the original</h2>
+<p>Sometimes the original file genuinely isn't available. Maybe the software that created it no longer exists, the original author is unavailable, or the file was lost. In these cases, the options are more limited.</p>
+<p>For stamp annotation watermarks (those added as PDF annotation objects rather than content), many PDF editors — including the full version of Adobe Acrobat — can view and delete annotations. Right-clicking an annotation in Acrobat shows a delete option. This works only for true annotation watermarks, not content-embedded ones.</p>
+<p>For image-based PDFs where the entire page is a photograph, AI inpainting tools can sometimes fill in the area behind a watermark convincingly. Tools like Adobe Firefly's inpainting, Canva's background removal, or dedicated watermark removal apps approach this as an image editing problem. Results vary considerably — simple watermarks over plain backgrounds often clean up well, while complex watermarks over detailed content rarely produce acceptable results.</p>
+<p>The honest assessment: if you don't have the original and the watermark is properly embedded in the content, you either accept the watermarked version, recreate the document from scratch, or reach out to whoever can provide an original copy. There is no reliable, universal solution.</p>
+
+<h2>Related tools on PDF99</h2>
+<p>If you need to add a watermark to your own documents, <a href='/watermark-pdf/'>PDF99's watermark tool</a> lets you add custom text at any opacity from 10% to 80%. For protecting documents with a CONFIDENTIAL or DRAFT stamp before sharing for review, try a 30-40% opacity — visible enough to be noticed, light enough not to obscure the content underneath. If you need to protect documents against editing rather than copying, <a href='/protect-pdf/'>password protection</a> is the appropriate tool.</p>
+
 <div class="article-cta">
   <h3>Add a professional watermark to your PDF — free</h3>
   <p>Custom text, adjustable opacity, diagonal placement on every page.</p>
