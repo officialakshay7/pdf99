@@ -173,11 +173,6 @@
 <p>The quality of results varies significantly depending on the complexity of the watermark, its opacity, and what's underneath it. Diagonal text watermarks at moderate opacity over solid backgrounds sometimes clean up well. Heavy watermarks over complex images, or watermarks positioned over important text, typically produce visible artifacts.</p>
 <p>This approach has obvious copyright implications if used on documents you don't own, and the results are rarely as clean as starting from an unwatermarked original.</p>
 
-<h2>What PDF99's watermark tool does (and doesn't) do</h2>
-<p>PDF99 adds text watermarks to PDF pages as drawn text elements. The watermark is embedded in the page content stream — it's not a removable annotation layer. This means once you've added a watermark with PDF99, removing it requires either the original pre-watermarked PDF or PDF editing software that can manipulate the page content stream directly.</p>
-<p>This is actually intentional behaviour. A watermark that's trivially removable by the recipient isn't much of a watermark. If you need a removable watermark — one you can strip before a document is finalised — keep the original unwatermarked file and add the watermark only to distribution copies.</p>
-
-
 <h2>What PDF99's watermark tool does — and the implication for removal</h2>
 <p>When you add a watermark using <a href='/watermark-pdf/'>PDF99's watermark tool</a>, the text is drawn directly into each page's content stream using diagonal positioned text with your chosen opacity. This is intentional — a watermark that a recipient can trivially remove in one click isn't much of a deterrent. The watermark becomes part of the rendered page, not a floating layer above it.</p>
 <p>The practical implication: once you've watermarked a document with PDF99, the only guaranteed clean copy is the original file you uploaded before watermarking. This is why it's good practice to keep the original and add watermarks only to distribution copies, never to your master file. If you're creating watermarked versions for review and unwatermarked versions for final delivery, keep both and work from the original each time.</p>

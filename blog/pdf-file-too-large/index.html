@@ -264,104 +264,7 @@
           to diagnosing and fixing oversized PDFs.
         </p>
 
-        <h2>First, understand why it's large</h2>
-        <p>PDF size comes from a few main sources:</p>
-        <ul>
-          <li>
-            <strong>Embedded images</strong> — especially uncompressed or
-            high-resolution photos. This is the most common cause of large
-            PDFs.
-          </li>
-          <li>
-            <strong>Scanned pages</strong> — a scanned document is just images
-            in a PDF wrapper. Each page can be 500 KB to several MB.
-          </li>
-          <li>
-            <strong>Embedded fonts</strong> — PDFs often embed the full font
-            file (200–500 KB each). Documents using many fonts accumulate this
-            quickly.
-          </li>
-          <li>
-            <strong>Revision history</strong> — PDFs edited repeatedly in
-            Acrobat or Word can accumulate "update layers" that bloat the
-            file.
-          </li>
-          <li>
-            <strong>Metadata and hidden objects</strong> — thumbnails, XMP
-            metadata, and redundant structure data.
-          </li>
-        </ul>
-
-        <h2>Solution 1: Use a PDF compressor</h2>
-        <p>
-          The quickest fix is our
-          <a href="/compress-pdf/">Compress PDF tool</a>. It strips metadata,
-          removes redundant objects and re-encodes embedded images at lower
-          resolution. For most documents, this produces a meaningfully smaller
-          file with no visible quality change.
-        </p>
-        <p>
-          If you need to hit a specific size target — for example, an upload
-          form that requires PDFs under 500 KB — try our size-targeted
-          compressors:
-          <a href="/compress-pdf-to-500kb/">Compress to 500KB</a>,
-          <a href="/compress-pdf-to-200kb/">Compress to 200KB</a> or
-          <a href="/compress-pdf-to-100kb/">Compress to 100KB</a>.
-        </p>
-
-        <h2>Solution 2: Reduce image resolution before creating the PDF</h2>
-        <p>
-          If you're creating a PDF from images, the resolution of those images
-          directly determines the PDF size. For on-screen reading, 96 DPI is
-          sufficient. For print, 150 DPI covers most needs. Most phone cameras
-          produce images at 12 MP or more — that's far more resolution than
-          any PDF viewer needs.
-        </p>
-        <p>
-          Resize your images before converting them to PDF. Our
-          <a href="/jpg-to-pdf/">JPG to PDF converter</a> handles this
-          automatically.
-        </p>
-
-        <h2>Solution 3: Split the PDF</h2>
-        <p>
-          If you only need to share part of the document,
-          <a href="/split-pdf/">split out the relevant pages</a> rather than
-          sending the whole thing. A 20-page report with a 2-page summary is
-          much faster to share when extracted as a 2-page file.
-        </p>
-
-        <h2>Solution 4: Print to PDF</h2>
-        <p>
-          Opening the PDF and using File → Print → Save as PDF creates a fresh
-          version processed through your operating system's PDF engine. This
-          often strips revision history, flattens layers and removes metadata.
-          It's free, built-in to every OS, and worth trying before reaching
-          for dedicated tools.
-        </p>
-
-        <h2>When nothing works</h2>
-        <p>
-          Some PDFs are large because they simply contain a lot of content. A
-          100-page document with full-page high-resolution photographs will
-          always be large. At some point, the choices are: reduce image
-          quality more aggressively, split the document, or use a file
-          transfer service (Dropbox, WeTransfer, Google Drive) instead of
-          email.
-        </p>
-
-        <div class="article-cta">
-          <h3>Compress your PDF — free</h3>
-          <p>
-            Multiple compression options — standard, or compress to a specific
-            size target.
-          </p>
-          <a href="/compress-pdf/" class="all-tools-cta" style="display: inline-flex; text-decoration: none">Compress
-            PDF →</a>
-        </div>
-      </div>
-    
-<h2>Diagnosing your specific situation</h2>
+        <h2>Diagnosing your specific situation</h2>
 <p>Not all large PDFs have the same cause, and the right solution depends on which category yours falls into. Spend 30 seconds on diagnosis before trying to compress.</p>
 <p>Open the PDF and look at the content. Lots of photographs on every page? The images are almost certainly the cause — compression will help significantly. Plain typed text on white backgrounds with no images? The PDF shouldn't be large at all — something else is going on, likely metadata, embedded fonts, or revision history. Scanned pages? The entire document is images, even if it looks like typed text — standard compression applies but the results depend on the original scan quality and DPI.</p>
 
@@ -387,6 +290,20 @@
 
 <h2>When nothing works</h2>
 <p>If you've tried compression and the file still exceeds your size limit, consider these alternatives. Upload to Google Drive or Dropbox and share a link rather than an attachment — most portals and email systems that cap file sizes are fine with a Drive link to a larger file. For portal uploads specifically, contact the portal administrator — many size limits are set conservatively and can be raised for legitimate professional documents. For email specifically, consider whether the recipient actually needs the full document or whether a summary with a link to the full version would serve the purpose better.</p>
+
+
+<h2>Size limits by context: a quick reference</h2>
+<p>Knowing the typical size limit for your context helps you choose how aggressively to compress. Here are the most common limits you'll encounter.</p>
+<p><strong>Email (Gmail, Outlook):</strong> 25MB per email total. In practice, keep PDF attachments under 10MB so there's room for other attachments. Very large PDFs are better shared via Google Drive link.</p>
+<p><strong>WhatsApp:</strong> 100MB per file for documents. But files over 16MB can be slow to send and open on mobile connections. Aim for under 5MB for any document you expect recipients to open on their phones.</p>
+<p><strong>Job application portals:</strong> Most commonly 2MB, 5MB, or 10MB per document. Some older portals cap at 200KB or 500KB for supporting documents. Check before uploading — portal error messages about file size sometimes don't appear until after you've already tried to submit.</p>
+<p><strong>Government and council portals:</strong> Often the most restrictive — 50KB to 500KB is common. If a government portal is rejecting your PDF, the <a href="/compress-pdf-to-200kb/">target-size compression tools</a> are the fastest solution.</p>
+<p><strong>University submission portals (Turnitin, Canvas, Moodle):</strong> Typically 20MB or higher. Rarely a practical issue unless you're submitting a large design portfolio or multimedia coursework.</p>
+<p><strong>Cloud storage (Google Drive, Dropbox, OneDrive):</strong> No meaningful per-file limit for PDFs in practice. Storage quota limits apply to total account usage, not individual files.</p>
+
+<h2>When the portal claims your file is fine but still rejects it</h2>
+<p>Sometimes a portal reports that your file is under the size limit but still rejects it. This usually means a secondary restriction is in play. Common secondary checks portals run include: total page count (some portals cap at 10 or 20 pages regardless of file size), PDF version (very old portals may not support PDF 1.6 or later features), password protection (portals almost always reject encrypted PDFs), and file corruption (a PDF that looks fine in your viewer may have structural issues that portal validation catches).</p>
+<p>For the page count issue: use <a href="/split-pdf/">PDF99's split tool</a> to extract the specific pages you need rather than sending the full document. For password protection: remove it before uploading (the tool for this is coming soon on PDF99 — for now, printing to PDF removes most protection). For corruption: open the PDF in a browser tab, use the browser's print function, and save as PDF. This re-generates a clean file from the rendered content.</p>
 
 <div class="related-posts" style="margin-top:48px;padding-top:28px;border-top:1px solid var(--border)">
   <h3 style="font-size:18px;font-weight:700;margin:0 0 16px">Related articles</h3>

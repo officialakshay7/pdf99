@@ -365,19 +365,6 @@
   </div>
 </section>
 <section class="what-section" aria-labelledby="rotate-tech-h">
-  <h2 class="section-title" id="rotate-tech-h">Rotation in PDFs: what's actually changing?</h2>
-  <div class="what-body">
-    
-<p>This is worth understanding because it affects quality expectations. When you rotate a page in a PDF, you're not re-rendering the content. You're changing a number in the PDF's page metadata — specifically the <code>/Rotate</code> entry — which tells PDF viewers how to display that page. The actual content stream is identical before and after rotation.</p>
-<p>This is very different from rotating a JPG image, where pixels are physically rearranged and image quality can degrade slightly with each operation. PDF rotation is lossless by definition. A document rotated 10 times will be identical in quality to one rotated once, because no pixel data is ever changed.</p>
-<p>The practical implication is that you can rotate PDFs as many times as you like without any concern about degrading the document. Scanned PDFs, generated PDFs, and PDFs with embedded images all rotate equally well.</p>
-<p>One nuance: if your PDF has a mix of correctly and incorrectly oriented pages, the current tool lets you rotate all pages, odd pages only, or even pages only. True per-page rotation selection is on the roadmap.</p>
-
-  </div>
-</section>
-
-    
-<section class="what-section" aria-labelledby="rotate-lossless-h">
   <h2 class="section-title" id="rotate-lossless-h">Why PDF rotation is always lossless</h2>
   <div class="what-body">
     <p>Unlike rotating a JPEG image — where pixel data is physically rearranged and image quality can degrade slightly with each operation — rotating a PDF page is a metadata change. The PDF format stores a rotation value (<code>/Rotate</code>) for each page, which tells viewers how to display it. Changing this value from 0 to 90 doesn't touch any pixel data or content. Text, images, and graphics are completely unchanged.</p>

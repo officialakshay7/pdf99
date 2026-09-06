@@ -189,6 +189,27 @@
 <p>The trade-off is file size: a PNG of a text-heavy document page is typically 3-5x larger than a JPG of the same page at 90% quality. For photographic content, the PNG size advantage disappears — JPG is better for photos.</p>
 <p>PDF99's converter produces JPG output. If you specifically need PNG output for diagram-heavy or text-heavy PDFs, a desktop tool like Preview on Mac (File → Export as PNG) or an online tool with PNG output may be more appropriate for your use case.</p>
 
+
+<h2>Batch converting multiple PDFs</h2>
+<p>If you have several PDFs to convert — a folder of reports, a set of scanned documents, multiple chapters of a book — converting them one at a time is tedious. PDF99's PDF to JPG converter supports multiple PDF uploads, placing each PDF's pages in a separate subfolder within the downloaded ZIP. This keeps pages from different source PDFs organised without mixing them together.</p>
+<p>For very large batches (50+ PDFs), browser-based conversion can strain device memory. The practical approach is to convert in groups of 10-15 PDFs at a time. Each group produces a ZIP, which you can extract and organise before moving to the next group. It takes a little longer than a single operation but avoids memory issues that can cause browser tabs to crash on lower-spec devices.</p>
+
+<h2>What to do with the JPG images after converting</h2>
+<p>The most common next steps after PDF-to-JPG conversion, and how to handle each one effectively.</p>
+<p><strong>Inserting into PowerPoint or Keynote:</strong> Use Insert → Picture → From File (PowerPoint) or drag the JPG directly onto a slide. For best results, insert at the natural size the image was rendered at rather than scaling up — scaling up a 144 DPI image to fill a 4K screen will show pixelation. If the image looks soft in the presentation, re-convert at 216 DPI.</p>
+<p><strong>Uploading to a website or CMS:</strong> Most content management systems accept JPG images directly. The web-optimised setting (72 DPI, 80% quality) produces files of 50-200KB per page — appropriate for web display. Images at this setting load quickly and look sharp on standard screens including retina/HiDPI displays when displayed at their natural viewing size.</p>
+<p><strong>Sharing via WhatsApp or email:</strong> The ZIP file needs to be extracted first. On iPhone, tap the ZIP in the Files app to extract. On Android, use a file manager app. On Windows or Mac, double-click the ZIP. Once extracted, share individual JPGs normally — messaging apps handle JPG natively.</p>
+<p><strong>Importing into design tools (Canva, Figma, Adobe):</strong> All major design tools accept JPG images via drag-and-drop or their import dialog. At 144 DPI, images are sharp at typical design canvas sizes. At 216 DPI, you have room to crop and zoom without quality degradation.</p>
+
+<h2>Preserving text quality in converted images</h2>
+<p>One challenge with PDF-to-JPG conversion is that JPEG compression handles text worse than it handles photographs. Text has sharp, high-contrast edges — exactly the kind of detail that JPEG compression tends to blur and create artefacts around. At 92% quality and 144 DPI (the defaults), text is usually perfectly readable. But at lower quality settings or with very small text, the JPEG artefacts around character edges can make text look slightly fuzzy.</p>
+<p>If text sharpness is critical — for example, converting a document where legal text or numerical data needs to be clearly legible in the image — use a higher quality setting (95%+) and 216 DPI. Alternatively, if the images are only needed for a specific purpose like a website thumbnail where text detail doesn't matter, a lower quality setting is fine.</p>
+<p>For documents where you need both small file sizes and sharp text, PNG format is technically superior to JPEG because it uses lossless compression that preserves sharp edges exactly. The trade-off is file size — a PNG of a text-heavy page is typically 2-4x larger than a JPEG at 90% quality. PDF99's converter produces JPEG output; for PNG output, Preview on Mac (File → Export as PNG) or a dedicated PDF-to-PNG converter handles this case.</p>
+
+<h2>Checking quality before you use the images</h2>
+<p>Always check a sample of the converted images before using them for anything important. Open one of the JPGs from the ZIP at 100% size — not zoomed to fit the screen, but actual pixel size — and assess quality at that level. Check areas with small text, check photograph details, and check any charts or diagrams with fine lines.</p>
+<p>If what you see at 100% zoom meets your quality standard for the intended use, the full set is ready. If it doesn't, go back and re-convert at a higher DPI or quality setting. It's a 30-second check that saves the frustration of discovering quality problems after you've already used the images somewhere.</p>
+
 <div class="article-cta">
   <h3>Convert PDF to JPG — free, quality control included</h3>
   <p>Resolution selector, quality slider, ZIP download. No sign-up required.</p>

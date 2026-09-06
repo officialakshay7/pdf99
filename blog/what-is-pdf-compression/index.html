@@ -183,6 +183,30 @@
 <p>50-65% quality: suitable for documents where file size is the priority and fine image detail isn't critical. Web previews, quick-share documents, and filing copies work well at this level.</p>
 <p>Below 50%: use only when you have a hard file size limit and no other option. Text remains readable but photographic content will look clearly compressed.</p>
 
+
+<h2>Compression in practice: a before and after</h2>
+<p>To make compression tangible, consider a typical scenario. A 10-page report created in Microsoft Word, with several charts and two embedded photographs, exports to PDF at around 4.5MB. Running it through PDF99's compression tool at 75% quality and 150 DPI reduces it to approximately 1.1MB — a 76% reduction. Open both files side by side at 100% zoom and they look identical. Zoom to 400% on a photograph and the compressed version shows slightly softer edges. At any size a human would normally read a document, the difference is invisible.</p>
+<p>Now take a different document — a 20-page scanned contract, photographed with an office scanner at 300 DPI and saved without any compression. The PDF starts at 18MB. At 75% quality and 100 DPI, it compresses to 1.8MB. At 50% quality and 72 DPI, it drops to 680KB. The text remains readable at both settings when viewing at normal reading size, though fine print in footnotes becomes noticeably softer at the more aggressive setting.</p>
+<p>These examples illustrate why there's no single "right" compression setting. It depends on what the PDF contains, how it will be used, and how small it needs to be.</p>
+
+<h2>What metadata stripping does — and what it doesn't do</h2>
+<p>Before re-encoding images, PDF99 strips document metadata: the title, author, subject, keywords, creator application, producer, and creation date stored in the PDF's document info dictionary. It also removes revision history — the record of previous edits that PDF editors like Acrobat append to the file each time you save. In heavily-edited documents this revision history can add 500KB to several megabytes of invisible overhead.</p>
+<p>Metadata stripping alone sometimes produces surprising results. A 3MB PDF that contains only text and simple graphics might drop to 1.8MB just from removing metadata and revision history — no image recompression at all. If your PDF was created from a Word document that went through 20 rounds of tracked changes, the revision history can dwarf the actual content in terms of file size.</p>
+<p>What metadata stripping doesn't do: it doesn't touch the visible content of the document in any way. No text is changed, no images are resampled. It's a purely structural operation that removes data the reader never needed to display the document.</p>
+
+<h2>Choosing between quality levels: a practical guide</h2>
+<p>The quality setting in PDF99's compressor controls how aggressively JPEG re-encoding is applied to embedded images. Here's a practical guide to choosing the right level for common use cases.</p>
+<p><strong>90% quality:</strong> Indistinguishable from the original at any normal viewing size. Use this when quality is paramount and you just want to strip metadata and remove revision history. File size reduction is modest — 10-30% for most documents.</p>
+<p><strong>75-80% quality:</strong> The sweet spot for most purposes. Virtually no visible difference at reading size. Photographs look sharp, text is crisp, diagrams render cleanly. File size reduction is typically 40-65%. This is the default for good reason.</p>
+<p><strong>60-70% quality:</strong> Appropriate when you need to hit a specific size target (like a 500KB portal limit) and the document is image-heavy. Slight softening visible on photographs when zoomed. Text remains perfectly sharp throughout.</p>
+<p><strong>Below 50% quality:</strong> Use only when a hard size limit leaves no other option. Text remains readable. Photographic content shows visible JPEG blocking artefacts. Appropriate for scanned documents where content legibility is the only requirement, not appearance.</p>
+
+<h2>Browser-based vs server-side compression: what's the difference?</h2>
+<p>PDF99 compresses PDFs entirely in your browser using PDF.js and PDF-lib. This approach has specific implications worth understanding.</p>
+<p>Browser-based compression is private — your PDF never leaves your device. It also means compression speed depends on your device's processing power rather than a server's capacity. A complex 50-page PDF might take 30-60 seconds on an older phone but under 10 seconds on a modern laptop.</p>
+<p>Server-side PDF compression tools (where you upload to a server and download the result) can sometimes achieve better compression ratios because they have access to more sophisticated tools — Ghostscript, for example, can perform optimisations that JavaScript PDF libraries can't replicate in a browser context. The trade-off is that your document travels to and from a remote server, which raises privacy considerations for sensitive documents.</p>
+<p>For everyday documents — CVs, invoices, reports — browser-based compression at PDF99 achieves more than adequate reduction. For highly sensitive documents, the in-browser approach means your file never leaves your device. For situations where you need maximum compression and privacy is less of a concern, a server-side tool with Ghostscript may produce a smaller result.</p>
+
 <div class="article-cta">
   <h3>Compress your PDF with quality control — free</h3>
   <p>Quality slider, DPI control, and real compression. No sign-up required.</p>
